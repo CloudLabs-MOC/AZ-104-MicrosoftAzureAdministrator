@@ -44,7 +44,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
-3. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\06\\az104-06-vms-loop-template.json** and **\\Allfiles\\Labs\\06\\az104-06-vms-loop-parameters.json** into the Cloud Shell home directory.
+3. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\06\\az104-06-vms-loop-template.json** and **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\06\\az104-06-vms-loop-parameters.json** into the Cloud Shell home directory.
 
 1. Edit the **Parameters** file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
 
@@ -276,7 +276,7 @@ In this task, you will configure and test routing between the two spoke virtual 
 
    > **Note**: Now you need to create and configure user defined routes on the spoke virtual networks.
 
-1. In the Azure portal, search and select **Route tables** and, on the **Route tables** blade, click **+ Add**.
+1. In the Azure portal, search and select **Route tables** and, on the **Route tables** blade, click **+ Create**.
 
 1. Create a route table with the following settings (leave others with their default values):
 
@@ -301,9 +301,12 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Setting | Value |
     | --- | --- |
     | Route name | **az104-06-route-vnet2-to-vnet3** |
-    | Address prefix | **10.63.0.0/20** |
+    | Address prefix destination | **IP Addresses** |
+    |Destination IP addresses/CIDR ranges|**10.63.0.0/20**|
     | Next hop type | **Virtual appliance** |
     | Next hop address | **10.60.0.4** |
+    
+    ![image](https://github.com/shashankms9/AZ-104-MicrosoftAzureAdministrator/blob/ab94418fa1e182aeed9ed5f22c7fc597dbac8068/Instructions/CloudLabs.AI/Images/L6-t4-15.png)
 
 1. Click **OK**
 
@@ -343,7 +346,8 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Setting | Value |
     | --- | --- |
     | Route name | **az104-06-route-vnet3-to-vnet2** |
-    | Address prefix | **10.62.0.0/20** |
+    | Address prefix destination | **IP Addresses** |
+    |Destination IP addresses/CIDR ranges|**10.63.0.0/20**|
     | Next hop type | **Virtual appliance** |
     | Next hop address | **10.60.0.4** |
 
@@ -360,7 +364,7 @@ In this task, you will configure and test routing between the two spoke virtual 
 
 1. Click **OK**
 
-1. In the Azure portal, navigate back to the **Network Watcher - Connection troubleshoot** blade.
+1. In the Azure portal, navigate back to the **Network Watcher** select **Connection troubleshoot** under Network diagnostic tools blade.
 
 1. On the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings (leave others with their default values):
 
@@ -397,9 +401,9 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Resource group | az104-06-rg1-[DeploymentId] |
     | Name | **az104-06-lb4** |
     | Region| name of the Azure region into which you deployed all other resources in this lab |
-    | Type | **Public** |
     | SKU | **Standard** |
-    
+    | Type | **Public** |
+     
 1. Click Next: **Frontend IP configuration** >, on the Frountend IP configuration tab click **+ Add a frountend ip** , under **Add frontend IP address** window add following settings
  
     | Setting | Value |
@@ -414,7 +418,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | name | **az104-06-pip4** |
     | Availability zone | **No Zone** |
 
-1. Click Next: **Backend pools**, and click **+ Add**.
+1. Click Next: **Backend pools**, and click **+ Add a backend pool**.
 
 1. Add a backend pool with the following settings (leave others with their default values):
 
@@ -436,11 +440,11 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | --- | --- |
     | Name | **az104-06-lb4-lbrule1** |
     | IP Version | **IPv4** |
-    | Frontend IP Address | **select the LoadBalancerFrontEnd from the drop down**
+    | Frontend IP Address | **select the LoadBalancerFrontEnd from the drop down**|
+    | Backend pool | **az104-06-lb4-be1** |
     | Protocol | **TCP** |
     | Port | **80** |
     | Backend port | **80** |
-    | Backend pool | **az104-06-lb4-be1** |
     | Session persistence | **None** |
     | Idle timeout (minutes) | **4** |
     | TCP reset | **Disabled** |
@@ -465,7 +469,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
     > **Note**: Wait for the Azure load balancer to be provisioned. This should take about 2 minutes.
 
-1. Wait for the load balancing rule to be created, click **Go to resource** and click **Overview**, and note the value of the **Public IP address**.
+1. Wait for the load balancing rule to be created, click **Go to resource**, click **Overview**, click on **Frontend IP configuration** and note the value of the **IP address**.
 
 1. Start another browser window and navigate to the IP address you identified in the previous step.
 
