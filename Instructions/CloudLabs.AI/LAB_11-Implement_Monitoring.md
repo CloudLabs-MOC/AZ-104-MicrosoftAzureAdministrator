@@ -108,9 +108,9 @@ In this task, you will create and configure an Azure Log Analytics workspace and
 
     | Settings | Value |
     | --- | --- |
-    | Name | Automation-DID |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **az104-11-rg1** |
+    | Name | Automation-DID |
     | Location | the name of the Azure region determined based on [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings) |
     | | |
 
@@ -240,12 +240,13 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
     | Settings | Value |
     | --- | --- |
-    | Alert rule name | **CPU Percentage above the test threshold** |
-    | Description | **CPU Percentage above the test threshold** |
     | Severity | **Sev 3** |
-    | Enable rule upon creation | **Yes** |
+    | Alert rule name | **CPU Percentage above the test threshold** |
+    | Alert rule Description | **CPU Percentage above the test threshold** |
+    | Enable upon creation | **Check** |
+    >**Note**:You can Enable upon Creation under Advanced options.
 
-1. Click **Create alert rule**.
+1. Click **Review + Create**, and click on **Create**.
 
     >**Note**: It can take up to 10 minutes for a metric alert rule to become active.
 
