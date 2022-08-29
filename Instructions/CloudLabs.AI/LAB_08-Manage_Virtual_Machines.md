@@ -75,7 +75,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | Public IP | **default** |
     | NIC network security group | **basic** |
     | Public inbound Ports | **None** |
-    | Accelerated networking | **Off**
+    | Enable accelerated networking | **Unchecked**|
     | Place this virtual machine behind an existing load balancing solution? | **Unchecked** |
 
 1. Click **Next: Management >** and, on the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
@@ -148,7 +148,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. On the **Storage accounts** blade, click the name of the storage account into which you uploaded the **az104-08-install_IIS.ps1** script, on the **Containers** blade, click **scripts**, on the **scripts** blade, click **az104-08-install_IIS.ps1**, and then click **Select**.
 
-1. Back on the **Install extension** blade, click **Review+Create then click Create**.
+1. Back on the **Install extension** blade, click **Review+Create** then click **Create**.
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm1**.
 
@@ -297,13 +297,13 @@ In this task you will scale compute for Azure virtual machines by changing their
     >**Note**: This section of the template creates two managed disks and attaches them to **az104-08-vm1**, similarly to the storage configuration of the first virtual machine via the Azure portal.
 
 
-1. Click Save and, back on the Custom template blade, click Review + Create and, on the Review + Create blade, click Create.
+16. Click Save and, back on the Custom template blade, click **Review + Create** and, on the Review + Create blade, click **Create**.
 
     >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Disks** blade of the **az104-08-vm1** virtual machine. This should take no more than 3 minutes.
 
-1. Back on the **az104-08-vm1** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
+17. Back on the **az104-08-vm1** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
 
-1. On the **Run Command Script** blade, type the following and click **Run** to create a drive Z: consisting of the two newly attached disks with the simple layout and fixed provisioning:
+18. On the **Run Command Script** blade, type the following and click **Run** to create a drive Z: consisting of the two newly attached disks with the simple layout and fixed provisioning:
 
    ```powershell
    New-StoragePool -FriendlyName storagepool1 -StorageSubsystemFriendlyName "Windows Storage*" -PhysicalDisks (Get-PhysicalDisk -CanPool $true)
@@ -339,7 +339,8 @@ In this task you will scale compute for Azure virtual machines by changing their
    Register-AzResourceProvider -ProviderNamespace Microsoft.Insights
 
    ```
-
+1. Close the Cloud Shell pane.
+   
 #### Task 5: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
 
 In this task, you will deploy Azure virtual machine scale set across availability zones by using the Azure portal.
@@ -356,7 +357,7 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
     | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines different from the one you used to deploy virtual machines earlier in this lab |
     | Availability zone | **Zones 1, 2, 3** |
     | Image | **Windows Server 2019 Datacenter - Gen1** |
-    | Azure Spot instance | **No** |
+    | Run With Azure Spot instance | **Unchecked** |
     | Size | **Standard D2s_v3** |
     | Username | **Student** |
     | Password | **Provide a secure password** |
@@ -467,7 +468,7 @@ In this task, you will install Windows Server Web Server role on the instances o
 
 1. In the Azure portal, navigate back to the **Virtual machine scale sets** blade and click **az10408vmss0**.
 
-1. On the **az10408vmss0** blade, in the **Settings** section, click **Extensions**, and the click **+ Add**.
+1. On the **az10408vmss0** blade, in the **Settings** section, click **Extensions + applications**, and the click **+ Add**.
 
 1. On the **New resource** blade, click **Custom Script Extension** and then click **Next**.
 
@@ -577,7 +578,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
     >**Note**: The disk attached in the previous step is a raw disk. Before it can be used, it is necessary to create a partition, create a filesystem, and mount it. To accomplish this, you will use Azure virtual machine Custom Script extension. First, you will need to remove the existing Custom Script Extension.
 
-1. In the **Settings** section of the **az10408vmss0** blade, click **Extensions**, click **CustomScriptExtension**, and then click **Uninstall**.
+1. In the **Settings** section of the **az10408vmss0** blade, click **Extensions + applications**, click **CustomScriptExtension**, and then click **Uninstall**.
 
     >**Note**: Wait for uninstallation to complete.
 
