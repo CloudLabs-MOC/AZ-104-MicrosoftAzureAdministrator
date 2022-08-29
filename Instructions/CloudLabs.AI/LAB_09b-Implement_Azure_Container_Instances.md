@@ -32,12 +32,14 @@ In this task, you will create a new container instance for the web application.
     | Setting | Value |
     | ---- | ---- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | Select resource group **az104-09b-rg1** |
+    | Resource group | Select resource group **az104-09b-rg1-DID** |
     | Container name | **az104-9b-c1** |
     | Region | the name of a region where you can provision Azure container instances |
     | Image Source | **Quickstart images** |
     | Image | **mcr.microsoft.com/azuredocs/aci-helloworld:latest (Linux)** |
-
+    
+    >**Note**: select the same region as the RG 
+    
 1. Click **Next: Networking >** and, on the **Networking** tab of the **Create container instance** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
