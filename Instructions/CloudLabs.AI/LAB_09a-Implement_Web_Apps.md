@@ -217,23 +217,23 @@ In this task, you will configure and test autoscaling of Azure web app.
 
 >**Note**: Replace the DID with your deployment ID, DID is your unique deployment id, which can be found under the environment details tab.
 
-1. From the Cloud Shell pane, run the following to start and infinite loop that sends the HTTP requests to the web app:
+10. From the Cloud Shell pane, run the following to start and infinite loop that sends the HTTP requests to the web app:
 
    ```powershell
    while ($true) { Invoke-WebRequest -Uri $webapp.DefaultHostName }
    ```
 
-1. Minimize the Cloud Shell pane (but do not close it) and, on the web app blade, in the **Monitoring** section, click **Process explorer**.
+11. Minimize the Cloud Shell pane (but do not close it) and, on the web app blade, in the **Monitoring** section, click **Process explorer**.
 
     >**Note**: Process explorer facilitates monitoring the number of instances and their resource utilization.
 
-1. Monitor the utilization and the number of instances for a few minutes.
+12. Monitor the utilization and the number of instances for a few minutes.
 
     >**Note**: You may need to **Refresh** the page.
 
-1. Once you notice that the number of instances has increased to 2, reopen the Cloud Shell pane and terminate the script by pressing **Ctrl+C**.
+13. Once you notice that the number of instances has increased to 2, reopen the Cloud Shell pane and terminate the script by pressing **Ctrl+C**.
 
-1. Close the Cloud Shell pane.
+14. Close the Cloud Shell pane.
 
 #### Review
 
