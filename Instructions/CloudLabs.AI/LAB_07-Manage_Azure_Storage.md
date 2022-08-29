@@ -93,7 +93,7 @@ In this task, you will create and configure an Azure Storage account.
 
 1. On the **Networking** tab of the **Create storage account** blade, review the available options, accept the default option **Public endpoint (all networks}** and click **Next: Data protection >**.
 
-1. On the **Data protection** tab of the **Create storage account** blade, review the available options, accept the defaults, click **Review + Create**, wait for the validation process to complete and click **Create**.
+1. On the **Data protection** tab of the **Create storage account** blade, review the available options, accept the defaults, click **Review**, wait for the validation process to complete and click **Create**.
 
     >**Note**: Wait for the Storage account to be created. This should take about 2 minutes.
 
@@ -115,7 +115,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. On the Storage account blade, in the **Data storage** section, click **Containers**.
 
-1. Click **+ Container** and create a container with the following settings:
+1. Click **+ Container** and create a container with the following settings and click Create:
 
     | Setting | Value |
     | --- | --- |
