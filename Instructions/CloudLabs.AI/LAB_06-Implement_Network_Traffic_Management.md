@@ -426,13 +426,12 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | --- | --- |
     | Name | **az104-06-lb4-be1** |
     | Virtual network | **az104-06-vnet01** |
-    | IP version | **IPv4** |
-    | Virtual machine | **az104-06-vm0** |
-    | Virtual machine IP address | **ipconfig1 (10.60.0.4)** |
-    | Virtual machine | **az104-06-vm1** |
-    | Virtual machine IP address | **ipconfig1 (10.60.1.4)** |
 
-1. Click **Add**
+1. Click **+ Add** button can be found below IP configurations. To add Virtual machines and virtual machine scale sets 
+
+1. On the IP configurations to backend pool blade, select the VMs **az104-06-vm0** and **az104-06-vm1** under Virtual Machine and click the **Add** button.  
+    
+1. Click **Save**
 
 1. Click **Next: Inbound rules >**, Add a load balancing rule with the following settings (leave others with their default values):
 
