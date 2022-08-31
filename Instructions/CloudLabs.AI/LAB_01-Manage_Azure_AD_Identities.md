@@ -34,11 +34,11 @@ In this task, you will create and configure Azure AD users.
 
 1. On the Azure Active Directory blade, in the **Manage** section, click **Users**, and then click your user account to display its **Profile** settings. 
 
-1. Click **edit**, in the **Settings** section, set **Usage location** to **United States** and click **save** to apply the change.
+1. Click **edit Properties**, in the **Settings** section, set **Usage location** to **United States** and click **save** to apply the change.
 
     >**Note**: This is necessary in order to assign an Azure AD Premium P2 license to your user account later in this lab.
 
-1. Navigate back to the **Users - All users** blade, and then click **+ Create new user**.
+1. Navigate back to the **Users - All users** blade, and then click **+ New User**, and then click **Create new user**.
 
 1. Create a new user with the following settings (leave others with their defaults):
 
@@ -46,7 +46,7 @@ In this task, you will create and configure Azure AD users.
     | --- | --- |
     | User name | **az104-01a-aaduser1** |
     | Name | **az104-01a-aaduser1** |
-    | Let me create the password | enabled |
+    | Password | select **Let me create the password** |
     | Initial password | **Provide a secure password** |
     | Usage location | **United States** |
     | Job title | **Cloud Administrator** |
@@ -72,7 +72,7 @@ In this task, you will create and configure Azure AD users.
 
 1. In the **InPrivate** browser window, on the Azure AD blade, scroll down to the **Manage** section, click **User settings**, and note that you do not have permissions to modify any configuration options.
 
-1. In the **InPrivate** browser window, on the Azure AD blade, in the **Manage** section, click **Users**, and then click **+ New user**.
+1. In the **InPrivate** browser window, on the Azure AD blade, in the **Manage** section, click **Users**, then click **+ New user** and click **Create a new user**.
 
 1. Create a new user with the following settings (leave others with their defaults):
 
@@ -80,7 +80,7 @@ In this task, you will create and configure Azure AD users.
     | --- | --- |
     | User name | **az104-01a-aaduser2** |
     | Name | **az104-01a-aaduser2** |
-    | Let me create the password | enabled |
+    | Password | select **Let me create the password** |
     | Initial password | **Provide a secure password** |
     | Usage location | **United States** |
     | Job title | **System Administrator** |
@@ -209,7 +209,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
     | --- | --- |
     | User name | **az104-01b-aaduser1** |
     | Name | **az104-01b-aaduser1** |
-    | Let me create the password | enabled |
+    | Password | select **Let me create the password** |
     | Initial password |**Provide a secure password** |
     | Job title | **System Administrator** |
     | Department | **IT** |
@@ -220,7 +220,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 1. Switch back to your default Azure AD tenant by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
 
-1. Navigate back to the **Users - All users** blade, and then click **+ Invite external user**.
+1. Navigate back to the **Users - All users** blade, click **+ New user**, and then click **Invite external user**.
 
 1. Create a new guest user with the following settings (leave others with their defaults):
 
@@ -235,6 +235,8 @@ In this task, you will create Azure AD guest users and grant them access to reso
 1. Click **Invite**. 
 
 1. Back on the **Users - All users** blade, click the entry representing the newly created guest user account.
+
+    >**Note**: Refresh the browser window if you cannot see the guest user. 
 
 1. On the **az104-01b-aaduser1 - Profile** blade, click **Groups**.
 
