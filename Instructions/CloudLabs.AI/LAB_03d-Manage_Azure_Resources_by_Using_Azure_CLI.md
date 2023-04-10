@@ -49,9 +49,9 @@ In this task, you will use the existing resource group for creating the Azure ma
 1. From the Bash session within Cloud Shell, run the following commands with the value of the DeploymentID, you can find Deployment ID from the environmental detail page:
 
    ```sh
-   LOCATION=$(az group show --name 'az104-03c-rg1-DeploymentID' --query location --out tsv)
+   LOCATION=$(az group show --name 'az104-03c-rg1-<inject key="DeploymentID" enableCopy="false"/>' --query location --out tsv)
 
-   RGNAME='az104-03d-rg1-DeploymentID'
+   RGNAME='az104-03d-rg1-<inject key="DeploymentID" enableCopy="false"/>'
    ```
 1. To retrieve properties of the created resource group, run the following:
 
