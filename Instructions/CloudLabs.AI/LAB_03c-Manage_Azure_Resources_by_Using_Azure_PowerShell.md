@@ -48,9 +48,9 @@ In this task, you will use an existing resource group and create an Azure manage
 1. From the PowerShell session within Cloud Shell, run the following commands with the value of the DeploymentID, you can find Deployment ID from the environmental detail page:
 
    ```powershell
-   $location = (Get-AzResourceGroup -Name az104-03b-rg1-DeploymentID).Location
+   $location = (Get-AzResourceGroup -Name az104-03b-rg1-<inject key="DeploymentID" enableCopy="false"/>).Location
 
-   $rgName = 'az104-03c-rg1-<inject key="DeploymentID" enableCopy="false"/>**'
+   $rgName = 'az104-03c-rg1-<inject key="<inject key="DeploymentID" enableCopy="false"/>" enableCopy="false"/>'
    ```
 1. To retrieve properties of the created resource group, run the following:
 
