@@ -206,7 +206,7 @@ In this task, you will create a new Azure AD tenant.
 
 In this task, you will create Azure AD guest users and grant them access to resources in an Azure subscription.
 
-1. In the Azure portal displaying the Contoso Lab Azure AD tenant, in the **Manage** section, click **Users**, and then click **+ New user** then select **Create new user**.
+1. In the Azure portal, go to **Azure Active Directory** displaying the Contoso Lab Azure AD tenant, in the **Manage** section, click **Users**, and then click **+ New user** then select **Create new user**.
 
 1. Create a new user with the following settings (leave others with their defaults):
 
@@ -223,7 +223,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
-1. Switch back to your default Azure AD tenant by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
+1. Switch back to your default Azure AD tenant **Adatum Corporation** by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
 
 1. Navigate back to the **Users - All users** blade, click **+ New user** then select **Invite external user**.
 
