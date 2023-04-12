@@ -71,9 +71,9 @@ In this task, you will create and configure Azure AD users.
 
     >**Note**: While this user account can access the Azure Active Directory tenant, it does not have any access to Azure resources. This is expected since such access would need to be granted explicitly by using Azure Role-Based Access Control. 
 
-1. In the **InPrivate** browser window, on the Azure AD blade, scroll down to the **Manage** section, click **User settings**, and note that you do not have permission to modify any configuration options.
+1. In the **InPrivate** browser window, on the Azure AD blade, scroll down to the **Manage** section, click **User settings**, and note that you do not have permission to modify any configuration options and Signout the user **az104-01a-aaduser2** and   close the Inpraivate window.
 
-1. In the **InPrivate** browser window, on the Azure AD blade, in the **Manage** section, click **Users**, and then click **+ New user** then select **+ Create new user**.
+1. Back in the Azure portal where you are signed in with your **user account** and search for and select **Azure Active Directory**,in the **Manage** section, click **Users**, and then click **+ New user** then select **+ Create new user**.
 
 1. Create a new user with the following settings (leave others with their defaults):
 
