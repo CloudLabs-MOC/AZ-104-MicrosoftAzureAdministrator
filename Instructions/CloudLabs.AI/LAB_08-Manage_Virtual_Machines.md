@@ -40,8 +40,8 @@ In this task, you will deploy Azure virtual machines into different availability
     | Virtual machine name | **az104-08-vm0** |
     | Region | same location of resource group |
     | Availability options | **Availability zone** |
-    | Availability zone | **Zone 1** |
-    | Image | **Windows Server 2019 Datacenter - Gen1** |
+    | Availability zone | **Zones 1** |
+    | Image | **Windows Server 2019 Datacenter - Gen2** |
     | Run with Azure Spot discount | **Unchecked** |
     | Size | **Standard D2s v3** |
     | Username | **Student** |
@@ -58,7 +58,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
 1. Click **Next: Networking >** and, on the **Networking** tab of the **Create a virtual machine** blade, click **Create new** below the **Virtual network** textbox.
 
-1. On the **Create virtual network** blade, specify the following settings (leave others with their default values) and click on "OK":
+1. On the **Create virtual network** blade, specify the following settings (leave others with their default values) and click on **OK**:
 
     | Setting | Value |
     | --- | --- |
@@ -78,7 +78,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | NIC network security group | **basic** |
     | Public inbound Ports | **None** |
     | Enable accelerated networking | **Unchecked**
-    | Place this virtual machine behind an existing load balancing solution? | **Unchecked** |
+    | Load balancing options | **None** |
 
 1. Click **Next: Management >** and, on the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -105,18 +105,18 @@ In this task, you will deploy Azure virtual machines into different availability
 
     >**Note**: You will use this option to deploy the second virtual machine with a matching configuration except for the availability zone.
 
-1. On the **Custom deployment** blade, click **Edit template**, replace the **zones** value from **1** to **2** for the resource types **Microsoft.Network/publicIpAddresses** and **Microsoft.Compute/virtualMachines**, click **Save**, and specify the following settings (leave others with their default values):
+1. On the **Custom deployment** blade, click **Edit parameter**, replace the **VirtualMachine1Zone** value from **1** to **2** for the resource types, click **Save**, and specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Resource group | **az104-08-rg01** |
     | Network Interface Name 1 | **az104-08-vm1-nic1** |
     | Public IP Address Name 1 | **az104-08-vm1-ip** |
-    | Virtual Machine Name, Virtual Machine Name1, Virtual Machine Computer Name  | **az104-08-vm1** |
+    | Virtual Machine Name, Virtual Machine Name1, Virtual Machine Computer Name 1 | **az104-08-vm1** |
     | Admin Username | **Student** |
     | Admin Password | **Provide a secure password** |
     | Enable Hotpatching | **false** |
-    | Zone | **2** |
+    | VirtualMachine1Zone | **2** |
 
     >**Note**: You need to modify parameters corresponding to the properties of the distinct resources you are deploying by using the template, including the virtual machine and its network interface.
 
@@ -149,7 +149,7 @@ In this task, you will install the Windows Server Web Server role on the two Azu
 
 1. On the **scripts** blade, click **Upload**.
 
-1. On the **Upload blob** blade, click on **Browse for files**. In the **Open** dialog box, navigate to the **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\08** folder, select **az104-08-install_IIS.ps1**, click **Open**, and back on the **Upload blob** blade, click **Upload**.
+1. On the **Upload blob** blade, click on **Browse for files**. In the **Open** dialog box, navigate to the **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\08** folder, select **az104-08-install_IIS.ps1**, click **Open**, and back on the **Upload blob** blade, click **Upload**, then close **Upload blob** blade.
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm0**.
 
@@ -284,7 +284,7 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 1. On the **Edit template** blade, in the section displaying the content of the template, replace the line **30** `"vmSize": "Standard_D2s_v3"` with the following line):
 
    ```json
-                    "vmSize": "Standard_DS1_v2"
+            "vmSize": "Standard_DS1_v2"
 
    ```
 
@@ -379,18 +379,18 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     | Virtual machine scale set name | **az10408vmss0** |
     | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines different from the one you used to deploy virtual machines earlier in this lab |
     | Availability zone | **Zones 1, 2, 3** |
-    | Image | **Windows Server 2019 Datacenter - Gen1** |
+    | Image | **Windows Server 2019 Datacenter - Gen2** |
     | Run with Azure Spot discount | **Unchecked** |
     | Size | **Standard D2s_v3** |
     | Username | **Student** |
     | Password | **Provide a secure password** |
-    | Already have a Windows Server license? | **Unchecked** |
-
+    | Licensing | **Unchecked** |
+    | Orchestration mode | **Uniform** |
     >**Note**: For the list of Azure regions which support the deployment of Windows virtual machines to availability zones, refer to [What are Availability Zones in Azure?](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
 
 1. On the **Disks** tab of the **Create a virtual machine scale set** blade, accept the default values and click **Next : Networking >**.
 
-1. On the **Networking** tab of the **Create a virtual machine scale set** blade, click the **Create virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values):
+1. On the **Networking** tab of the **Create a virtual machine scale set** blade, click the **Create virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values), then click on **Ok**:
 
     | Setting | Value |
     | --- | --- |
@@ -403,7 +403,7 @@ In this task, you will deploy the Azure virtual machine scale set across availab
 
 1. Back on the **Networking** tab of the **Create a virtual machine scale set** blade, click the **Edit network interface** icon to the right of the network interface entry.
 
-1. On the **Edit network interface** blade, in the **NIC network security group** section, select **Advanced** and click **Create new** under the **Configure network security group** drop-down list.
+1. On the **Edit network interface** blade, in the **subnet** section select **subnet0**, in the **NIC network security group** section, select **Advanced** and click **Create new** under the **Configure network security group** drop-down list.
 
 1. On the **Create network security group** blade, specify the following settings (leave others with their default values):
 
@@ -411,7 +411,7 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     | --- | --- |
     | Name | **az10408vmss0-nsg** |
 
-1. Click **Add an inbound rule** and add an inbound security rule with the following settings (leave others with their default values):
+1. Click **+ Add an inbound rule** and add an inbound security rule with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -433,8 +433,7 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     | Setting | Value |
     | --- | --- |
     | Load balancing options | **Azure load balancer** |
-    | Select a load balancer | **(new) az10408vmss0-lb** |
-    | Select a backend pool | **(new) bepool** |
+    | Select a load balancer | click on **create a load balancer** then give the name: **az10408vmss0-lb** (leave others with their default values) |
 
 1. On the **Scaling** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Management >**:
 
@@ -448,7 +447,7 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     | Setting | Value |
     | --- | --- |
     | Boot diagnostics | **Enable with custom storage account** |
-    | Diagnostics storage account | Create new storage account with a unique name |
+    | Diagnostics storage account | **default** |
 
     >**Note**: You will need the name of this storage account in the next task.
 
@@ -545,7 +544,7 @@ In this task, you will change the size of virtual machine scale set instances, c
     | --- |--- |
     | Scale mode | **Scale based on a metric** |
 
-1. Click the **+ Add a rule** link and, on the **Scale rule** blade, specify the following settings (leave others with their default values):
+1. Click the **Add a rule** link and, on the **Scale rule** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- |--- |
@@ -602,7 +601,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. Close the Cloud Shell pane.
 
-1. On the **az10408vmss0** blade, in the **Settings** section, click **Disks**, click **+ Create and attach a new disk**, and attach a new managed disk with the following settings (leave others with their default values):
+1. On the **az10408vmss0** blade, in the **Settings** section, click **Disks**, click **+ Create and attach a new disk**, and attach a new managed disk with the following settings (leave others with their default values), then click on **Save**:
 
     | Setting | Value |
     | --- | --- |
