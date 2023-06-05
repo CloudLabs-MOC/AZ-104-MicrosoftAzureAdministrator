@@ -137,7 +137,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
     
     ![image](../media/failedstatus.png)
 
-1. Navigate back to the list of resources of the **az104-03a-rg3** resource group and click the entry representing the **az104-03a-disk2** resource. 
+1. Navigate back to the list of resources of the **az104-03a-rg3(1)** resource group and click the entry representing the **az104-03a-disk2(2)** resource. 
 
     ![image](../media/deleted1.png)
 
