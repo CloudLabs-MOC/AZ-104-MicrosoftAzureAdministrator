@@ -33,7 +33,7 @@ In this task, you will use the Azure portal to create resource groups and create
     |Subscription| the name of the Azure subscription where you created the resource group |
     |Resource Group| the name of a new resource group **az104-03a-rg1(1)** |
     |Disk name| **az104-03a-disk1(2)** |
-    |Region| the name of the Azure region where you created the resource group(3) |
+    |Region| the name of the Azure region where you created the resource group **(3)** |
     |Availability zone| **None** |
     |Source type| **None** |
 
@@ -41,7 +41,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
     ![image](../media/searchfordisk1.png)
 
-1. Change the disk type and size to **Standard HDD(4)** and **32 GiB(4)**, respectively.
+1. Change the disk type and size to **Standard HDD(4)** and **32 GiB(4)**, respectively and Click on **Review+Create**.
 
    ![image](../media/createdisk1.png)    
    
