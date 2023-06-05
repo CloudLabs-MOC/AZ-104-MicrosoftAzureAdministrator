@@ -39,17 +39,17 @@ In this task, you will use the Azure portal to create resource groups and create
 
     >**Note**: When creating a resource, you have the option of creating a new resource group or using an existing one.
 
-   ![image](../media/search for disk 1.png)
+    ![image](../media/searchfordisk1.png)
 
 1. Change the disk type and size to **Standard HDD(4)** and **32 GiB(4)**, respectively.
 
-   ![image](../media/create disk 1.png)    
+   ![image](../media/createdisk1.png)    
    
 1. Click **Review + Create(5)** and then click **Create**.
 
     >**Note**: Wait until the disk is created. This should take less than a minute.
     
-   ![image](../media/created disk pick3.png)
+   ![image](../media/createddiskpick3.png)
 
 #### Task 2: Move resources between resource groups 
 
@@ -94,21 +94,21 @@ In this task, you will apply a resource lock to an Azure resource group containi
     |Availability zone| **None** |
     |Source type| **None** |
     
-   ![image](../media/search for disk 1.png)
+   ![image](../media/searchfordisk1.png)
    
    ![image](../media/disk2create.png)
    
-   ![image](../media/create disk 2.png)
+   ![image](../media/createdisk2.png)
 
 1. Set the disk type and size to **Standard HDD** and **32 GiB(4)**, respectively.
 
 1. Click **Review + Create** and then click **Create**.
 
-   ![image](../media/create disk2.png)
+   ![image](../media/createdisk2.png)
 
 1. Click Go to resouce. 
 
-  ![image](../media/createdcompleted.png)
+   ![image](../media/createdcompleted.png)
 
 1. On the **az104-03a-rg3** resource group blade, click **Locks(1)** then **+ Add(2)** and specify the following settings:
 
