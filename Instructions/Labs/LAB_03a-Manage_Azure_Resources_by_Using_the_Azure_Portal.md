@@ -41,7 +41,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
     ![image](../media/searchfordisk1.png)
 
-1. Change the disk type and size to **Standard HDD(4)** and **32 GiB(4)**, respectively and Click on **Review+Create**.
+1. Change the disk type and size to **Standard HDD(4)** and **32 GiB(4)**, respectively and Click on **Review+Create(5)**.
 
    ![image](../media/createdisk1.png)    
    
