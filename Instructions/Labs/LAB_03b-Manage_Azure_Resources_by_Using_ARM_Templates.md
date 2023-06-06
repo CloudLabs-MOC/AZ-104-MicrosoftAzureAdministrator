@@ -127,19 +127,19 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
     | Setting | Value |
     | --- |--- |
     | Subscription | *the name of the Azure subscription you are using in this lab* |
-    | Resource Group | the name of a **new** resource group **az104-03b-rg1** |
+    | Resource Group | the name of a **new** resource group **az104-03b-rg1(1)** |
     | Region | the name of any Azure region available in the subscription you are using in this lab |
-    | Disk Name | **az104-03b-disk1** |
+    | Disk Name | **az104-03b-disk1(2)** |
     | Location | the value of the location parameter you noted in the previous task |
-    | Sku | **Standard_LRS** |
-    | Disk Size Gb | **32** |
-    | Create Option | **empty** |
-    | Disk Encryption Set Type | **EncryptionAtRestWithPlatformKey** |
-    | Network Access Policy | **AllowAll** |
+    | Sku | **Standard_LRS(4)** |
+    | Disk Size Gb | **32(5)** |
+    | Create Option | **empty(6)** |
+    | Disk Encryption Set Type | **EncryptionAtRestWithPlatformKey(7)** |
+    | Network Access Policy | **AllowAll(8)** |
     
     ![image](../media/customdeployement.png)
 
-1. Select **Review + Create** and then select **Create**.
+1. Select **Review + Create(9)** and then select **Create**.
 
     ![image](../media/createdeployment.png)
 
