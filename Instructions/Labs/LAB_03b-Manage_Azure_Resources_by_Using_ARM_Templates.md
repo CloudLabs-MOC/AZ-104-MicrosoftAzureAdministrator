@@ -47,7 +47,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
      ![image](../media/download.png)
 
-1. On the **Microsoft.ManagedDisk-*XXXXXXXXX* \| Template** blade, click **Inputs(1)**.
+1. On the **Microsoft.ManagedDisk-*YYYYMMDD-DeploymentID* \| Template** blade, click **Inputs(1)**.
 
 1. Note the value of the **location(2)** parameter. You will need it in the next task.
 
