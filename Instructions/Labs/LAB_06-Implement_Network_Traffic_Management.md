@@ -205,9 +205,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Name | **subnet-appgw** |
     | Starting address | **10.60.3.224** |
     | Size | **/27** |
-
-    ![](../Labs/media/l6-image17.png)
-
+    
     > **Note**: This subnet will be used by the Azure Application Gateway instances, which you will deploy later in this task. The Application Gateway requires a dedicated subnet of /27 or larger size.
 
 1. In the Azure portal, search and select **Application Gateways** and, on the **Application Gateways** blade.
