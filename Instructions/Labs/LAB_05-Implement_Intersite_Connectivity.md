@@ -333,14 +333,14 @@ In this task, you want to control network traffic between the perimeter subnet a
     | Setting | Value | 
     | --- | --- |
     | Subscription | your subscription |
-    | Resource group | `az104-05-rg0-`  |
+    | Resource group | `az104-05-rg0-<inject key="DeploymentID" enableCopy="false" />`  |
     | Region | **East US** |
     | Name | `az104-05-vm0` |
     | Propagate gateway routes | **No** |
 
 1. After the route table deploys, select **Go to resource**.
 
-1. Select **Routes** and then **+ Add**. Create a route from the future NVA to the CoreServices virtual network. 
+1. Select **Routes** under Settings and then **+ Add**. Create a route from the future NVA to the CoreServices virtual network. 
 
     | Setting | Value | 
     | --- | --- |
