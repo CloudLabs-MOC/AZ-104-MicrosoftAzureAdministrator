@@ -133,7 +133,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. On mount storage account page, select **I want to create a storage account**. click on Next.
 
-1. Provide the below details to create the storage account and click on **Next**.
+1. Provide the below details to create the storage account and click on **Create**.
 
     >**Note:** As you work with the Cloud Shell a storage account and file share is required. 
 
@@ -184,14 +184,15 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 ## Task 4: Deploy a template with the CLI 
 
-1. Continue in the **Cloud Shell** select **Bash**. **Confirm** your choice.
+1. Continue in the **Cloud Shell** select **Switch to Bash**. **Confirm** your choice.
 
 1. Verify your files are available in the Cloud Shell storage. If you completed the previous task your template files should be available. 
 
     ```sh
     ls
     ```
-
+    >**Note**: If you are not able to see the files, click on **Manage Files**, click on **Upload** and upload the file.
+ 
 1. Select the **Editor** (curly brackets) icon and navigate to the template JSON file.
 
 1. Make a change. For example, change the disk name to **az104-03b-disk4**. Use **Ctrl +S** to save your changes. 
