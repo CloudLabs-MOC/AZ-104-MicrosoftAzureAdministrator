@@ -225,7 +225,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 
     ![image](../media/l4i11.png)
 
-1. Select **Review create** and then **Create**.
+1. Select **Review + create** and then **Create**.
    
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
 
