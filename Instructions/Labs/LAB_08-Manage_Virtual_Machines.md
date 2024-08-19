@@ -366,6 +366,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     | Region         | **<inject key="Region" enableCopy="false"/>** |
     | Storage account name | **str<inject key="DeploymentID" enableCopy="false" />** |
     | File share  | **none** |
+    | Location  | **East US** |
 
 1. Run the following command to create a virtual machine. When prompted, provide a username and password for the VM. While you wait check out the [New-AzVM](https://learn.microsoft.com/powershell/module/az.compute/new-azvm?view=azps-11.1.0) command reference for all the parameters associated with creating a virtual machine.
 
