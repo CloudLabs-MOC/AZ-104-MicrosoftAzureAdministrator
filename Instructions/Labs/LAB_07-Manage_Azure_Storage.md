@@ -273,7 +273,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. Under **Firewalls and virtual networks** tab, for **Public network access** select **Enabled from selected virtual networks and IP addresses**. 
 
-1. Select **add existing virtual network** and select **vnet1** and **default** subnet, select **Add**.
+1. Select **add existing virtual network** and select **vnet1** and **default** subnet, select **Enable**.
 
 1. Be sure to **Save** your changes.
 
