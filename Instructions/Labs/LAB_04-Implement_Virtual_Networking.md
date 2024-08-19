@@ -229,7 +229,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
    
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
 
-1. On the **Overview** blade select **Recordsets** and notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step. 
+1. On the **Overview** blade select **Recordsets** under DNS Management and notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step. 
 
     ![image](../media/l4i12.png)
 
@@ -275,13 +275,13 @@ A private DNS zone provides name resolution services within virtual networks. A 
     | Name | `private.contoso.com` (adjust if you had to rename) |
     | Region | **<inject key="Region" enableCopy="false" />** |
 
-1. Select **Review create** and then **Create**.
+1. Select **Review + create** and then **Create**.
    
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
 
 1. Notice on the **Overview** blade there are no name server records. 
 
-1. Select **Virtual network links** from the left navigation pane and then select **+ Add**. 
+1. Select **Virtual network links** from the left navigation pane under DNS Management and then select **+ Add**. 
 
     | Property | Value    |
     |:---------|:---------|
