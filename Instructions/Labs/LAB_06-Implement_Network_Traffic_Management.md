@@ -115,9 +115,9 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Setting | Value |
     | --- | --- |
     | Name | **az104-06-pip4** |
-    | Availability zone | **No Zone** and click **Ok** |
+    | Availability zone | **No Zone** and click **Save** |
 
-1. Back on **Add frontend IP configuration** click on **Add** and click on **Next : Backend pools>**
+1. Back on **Add frontend IP configuration** click on **Save** and click on **Next : Backend pools>**
 
 1. On **Backend pools** tab, and click **+ Add a Backend pools**.
 
@@ -203,7 +203,8 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Setting | Value |
     | --- | --- |
     | Name | **subnet-appgw** |
-    | Subnet address range | **10.60.3.224/27** |
+    | Starting address | **10.60.3.224** |
+    | Size | **/27** |
 
     ![](../Labs/media/l6-image17.png)
 
