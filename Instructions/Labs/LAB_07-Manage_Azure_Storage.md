@@ -263,7 +263,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. In the **Settings** section, select the **Subnets** blade.
     + Select the **default** subnet.
-    + In the **Service endpoints** section choose **Microsoft.Storage** in the **Services** drop-down.
+    + In the **Service endpoints** section choose **Microsoft.Storage.Global** in the **Services** drop-down.
     + Do not make any other changes.    
     + Be sure to **Save** your changes. 
 
