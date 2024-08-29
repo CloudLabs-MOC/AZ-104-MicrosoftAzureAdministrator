@@ -10,15 +10,15 @@ In this hands-on lab, you'll learn how to manage Azure resources using ARM (Azur
 
 By the end of this lab, you will be able to create, edit, and deploy ARM templates using various methods, including Azure PowerShell, Azure CLI, and Azure Bicep.
 
-**Create an ARM Template**: Learn to create and export an ARM template for a managed disk.
+**Create an ARM Template**: Learn to generate and export an ARM template specifically designed for a managed disk, providing a foundation for consistent resource configuration.
 
-**Edit and Redeploy an ARM Template**: Modify an existing template and redeploy it to create a new resource.
+**Edit and Redeploy an ARM Template**: Gain experience in modifying an existing ARM template and redeploying it to create new resources, ensuring you understand how to update and manage resources efficiently.
 
-**Deploy Using Azure PowerShell**: Use Azure PowerShell in Cloud Shell to deploy a template.
+**Deploy Using Azure PowerShell**: Utilize Azure PowerShell in Cloud Shell to deploy ARM templates, enhancing your ability to automate deployments using script-based methods.
 
-**Deploy Using Azure CLI**: Use Azure CLI in Cloud Shell to deploy a template.
+**Deploy Using Azure CLI**: Leverage the Azure CLI in Cloud Shell to deploy ARM templates, offering an alternative command-line approach for resource management in Azure.
 
-**Deploy Using Azure Bicep**: Deploy a managed disk using a Bicep file.
+**Deploy Using Azure Bicep**: Explore the deployment of managed disks using a Bicep file, introducing you to a simplified, infrastructure-as-code model within Azure.
 
 ## Pre-requisites
 
@@ -44,7 +44,7 @@ In this lab, you’ll use ARM templates, which are JSON files that define and co
 
 # Getting Started with the lab
  
-Welcome to your AZ-104: Microsoft Azure Administrator  workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience:
+Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the Lab guide to switch to different exercises of the lab guide.
  
 ## Accessing Your Lab Environment
  
@@ -119,6 +119,8 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 1. Click **Next** from the bottom right corner to embark on your Lab journey!
  
     ![Start Your Azure Journey](../media/num.png)
+
+   In this hands-on lab, you'll explore managing Azure resources with ARM (Azure Resource Manager) templates. You'll gain experience in creating, modifying, and deploying these templates using various tools, including Azure PowerShell, Azure CLI, and Azure Bicep.
 
 ## Support Contact
 
