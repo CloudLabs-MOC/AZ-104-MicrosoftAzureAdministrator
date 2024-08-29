@@ -60,8 +60,8 @@ The architecture involves organizing Azure subscriptions using management groups
 
 # Getting Started with the lab
  
-Welcome to your AZ-104: Microsoft Azure Administrator  workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience:
- 
+Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the Lab guide to switch to different exercises of the lab guide.
+
 ## Accessing Your Lab Environment
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
@@ -135,6 +135,8 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 1. Click **Next** from the bottom right corner to embark on your Lab journey!
  
     ![Start Your Azure Journey](../media/num.png)
+
+   In this hands-on lab, you'll learn to manage Azure subscriptions and control access using Role-Based Access Control (RBAC). You'll create management groups, assign both built-in and custom roles, and monitor role assignments through the Activity Log. Additionally, you'll implement governance by applying Azure policies and resource tags, ensuring compliance and improving resource management. You'll also configure resource locks to protect critical resources from accidental changes or deletions, equipping you with the skills to enhance organizational oversight and resource security in Azure.
 
 ## Support Contact
 
