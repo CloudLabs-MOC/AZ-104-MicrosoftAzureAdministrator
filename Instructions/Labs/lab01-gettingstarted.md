@@ -47,7 +47,7 @@ In this hands-on lab, the architecture flow includes several essential component
 
 # Getting Started with the Lab
  
-Welcome to your AZ-104: Microsoft Azure Administrator  workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience:
+Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the Lab guide to switch to different exercises of the lab guide.
  
 ## Accessing Your Lab Environment
  
