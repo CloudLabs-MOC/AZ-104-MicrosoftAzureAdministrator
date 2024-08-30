@@ -38,7 +38,7 @@ The architecture involves organizing Azure subscriptions using management groups
 
 **Lab 02a - Manage Subscriptions and RBAC**
 
-![image](../media/lab02a.png)
+![image](../media/01lab02a.png)
 
 **Lab 02b - Manage Governance via Azure Policy**
 
