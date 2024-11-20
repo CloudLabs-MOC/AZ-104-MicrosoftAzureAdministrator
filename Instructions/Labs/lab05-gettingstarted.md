@@ -1,6 +1,52 @@
-# Getting Started with Your AZ-104: Microsoft Azure Administrator Workshop
+# AZ-104: Microsoft Azure Administrator Workshop
+
+### Overall Estimated Duration: 30 minutes
+
+## Overview
+
+In this hands-on lab, you'll learn how to connect virtual networks across different regions, similar to how companies connect their offices. You'll set up virtual machines in different networks, connect them, and make sure they can communicate with each other. You'll also create custom routes to control how network traffic flows. you'll know how to manage network connections between different locations in Azure.
+
+## Objective
+
+By the end of this lab, you will be able to configure virtual network peering, test network connections, and manage network traffic routing across multiple Azure regions.
+
+**Provision the Lab Environment**: Deploy three virtual machines in separate virtual networks, with two in the same Azure region and one in a different region, to set up your network environment.
+
+**Use Network Watcher to Test the Connection**: Verify that the virtual machines in your networks can communicate with each other by using Network Watcher to test the connections.
+
+**Configure Local and Global Virtual Network Peering**: Set up local peering between virtual networks in the same region and global peering between networks in different regions to ensure connectivity.
+
+**Test Intersite Connectivity**: Check the connectivity between the virtual machines across different networks to confirm that your peering configurations are working correctly.
+
+**Create a Custom Route**: Set up a custom route to direct network traffic through a specific virtual network appliance, controlling how traffic flows between subnets.
+
+## Pre-requisites
+
+Fundamental knowledge in configuring and managing virtual networks, including understanding virtual network peering and network traffic routing, essential for establishing intersite connectivity in Azure.
+
+## Architecture
+
+In this lab, you will set up and manage a network environment with three virtual networks and three virtual machines, simulating a multi-site connectivity scenario. The architecture includes configuring local peering for networks within the same region and global peering for networks in different regions to ensure seamless communication. You’ll also create custom routes to control network traffic and use Network Watcher to verify connectivity between the virtual machines, providing a comprehensive understanding of managing intersite network connectivity in Azure.
+
+## Architecture Diagram
+
+![image](../media/lab05.png)
+
+## Explanation of Components
+
+**Virtual Networks**: Virtual networks (VNets) in Azure are isolated networks that enable communication between resources such as virtual machines (VMs). They allow you to define private IP address ranges and segment your network into subnets.
+
+**Virtual Machines**: VMs are computing resources that run your applications and services. In this lab, you'll deploy VMs within different VNets to test and validate connectivity.
+
+**Peering**: Peering connects VNets to allow resources in different VNets to communicate. Local peering is used for VNets in the same region, while global peering connects VNets across different regions. This enables seamless and secure connectivity between resources.
+
+**Network Watcher**: This tool helps monitor and diagnose network issues. In this lab, Network Watcher is used to test connectivity between VMs, ensuring that network peering is correctly configured and that VMs can communicate as expected.
+
+**Custom Routing**: Custom routes are used to direct network traffic through specific paths, such as a network virtual appliance (NVA). This allows you to control traffic flow and ensure it passes through designated points for security or monitoring.
+
+# Getting Started with the lab
  
-Welcome to your AZ-104: Microsoft Azure Administrator  workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience:
+Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the Lab guide to switch to different exercises of the lab guide.
  
 ## Accessing Your Lab Environment
  
@@ -75,6 +121,8 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 1. Click **Next** from the bottom right corner to embark on your Lab journey!
  
     ![Start Your Azure Journey](../media/num.png)
+
+   In this hands-on lab, you'll learn to implement intersite connectivity in Azure, including provisioning virtual networks and virtual machines, configuring local and global peering, and setting up custom routing. This will equip you with essential skills to efficiently manage and troubleshoot network connectivity across multiple Azure regions.
 
 ## Support Contact
 
