@@ -31,21 +31,23 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
     | Setting | Value |
     | --- | --- |
     | Subscription | *your default subscription* (1) | 
-    | Resource Group | **az104-09b-rg1-<inject key="DeploymentID" enableCopy="false" />** (2))
-    | Disk name | **az104-09b-disk1** (3) | 
+    | Resource Group | **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />** (2))
+    | Disk name | **az104-03b-disk1** (3) | 
     | Region | **<inject key="Region" enableCopy="false" />** (4)|
     | Availability zone | **No infrastructure redundancy required** (5) | 
     | Source type | **None** (6)|
-    | Size | Click on **Change size (7)** link |
+    | Size | Click on **chnage size (7)** link |
     | Select a disk size  | Under **Storage type** select **Standard HDD (8)** then select **32 GIB (9)** and click on **OK (10)**. |
     -------------------------------------------------------------------------------------------------------------------------------------
-    ![image](../media/E3T1S3.png)
+    ![image](../media/az104-mod3-image1.png)
 
     ![image](../media/az104-mod3-image2.png)
 
+    ![image](../media/az104-mod3-image3.png)
+
    >**Note:** We are creating a simple managed disk so you can practice with templates. Azure managed disks are block-level storage volumes that are managed by Azure.
 
-1. Select **Review + Create** and then **Create**.
+1. Click **Create**.
 
 1. Monitor the notifications (upper right) and after the deployment select **Go to resource**. 
 
@@ -87,11 +89,11 @@ In this task, you will utilize the previously downloaded Azure Resource Manager 
 
 1. Within the editor pane, make these changes.
 
-    -  Change **disks_az104_09b_disk1_name** to `disk_name` (two places to change line number 5 and 15)
+    -  Change **disks_az104_disk1_name** to `disk_name` (two places to change line number 5 and 15)
 
        ![image](../media/az-104i1.png)
     
-    - Change **az104_09b_disk1** to **az104_09b_disk2** (one place to change line number 6)
+    - Change **az104-03b-disk1** to **az104-03b-disk2** (one place to change line number 6)
 
       ![image](../media/az-104i2.1.png)
 
@@ -114,15 +116,15 @@ In this task, you will utilize the previously downloaded Azure Resource Manager 
     | Setting | Value |
     | --- |--- |
     | Subscription | *your subscription* |
-    | Resource Group | **az104-09b-rg1-<inject key="DeploymentID" enableCopy="false" />** |
+    | Resource Group | **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />** |
     | Region | **<inject key="Region" enableCopy="false" />** |
-    | Disk_name | **az104-09b-disk2**|
+    | Disk_name | **az104-03b-disk2**|
 
 1. Select **Review + Create** and then select **Create**.
 
-1. Select **Go to resource**. Verify **az104-09b-disk2** was created.
+1. Select **Go to resource**. Verify **az104-03b-disk2** was created.
 
-1. On the **Overview** blade, select the resource group, **az104-09b-rg1-<inject key="DeploymentID" enableCopy="false" />**. You should now have two disks.
+1. On the **Overview** blade, select the resource group, **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />**. You should now have two disks.
 
       ![image](../media/az104-mod3-image13.png)
 
@@ -161,7 +163,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
     | Settings | Values |
     |  -- | -- |
     | Subscription | Accept default |
-    | Resource Group | **az104-09b-rg1-<inject key="DeploymentID" enableCopy="false" />** |
+    | Resource Group | **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />** |
     | Region | **<inject key="Region" enableCopy="false" />** |
     | Storage account (Create new) | **str<inject key="DeploymentID" enableCopy="false" />** |
     | File share (Create new) | **none** |
@@ -191,7 +193,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
    ![image](../media/az-104i4.png)
 
-1. Select **template.json** and make a change. For example, change the disk name to **az104-09b-disk3**. Use **Ctrl +S** to save your changes.
+1. Select **template.json** and make a change. For example, change the disk name to **az104-03b-disk3**. Use **Ctrl +S** to save your changes.
 
     ![image](../media/az-104i5.1.png)
 
@@ -200,7 +202,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 1. To deploy to a resource group, use **New-AzResourceGroupDeployment**.
 
     ```powershell
-    New-AzResourceGroupDeployment -ResourceGroupName az104-09b-rg1 -TemplateFile template.json -TemplateParameterFile parameters.json
+    New-AzResourceGroupDeployment -ResourceGroupName az104-03b-rg1-<inject key="DeploymentID" enableCopy="false"/> -TemplateFile template.json -TemplateParameterFile parameters.json
     ```
 
     ![image](../media/az104-mod3-image23.png)
@@ -232,7 +234,7 @@ In this task, you will deploy an Azure Resource Manager (ARM) template using the
 
 1. Select the **Editor** (curly brackets) icon and navigate to the template JSON file.
 
-1. Make a change. For example, change the disk name to **az104-09b-disk1**. Use **Ctrl +S** to save your changes. 
+1. Make a change. For example, change the disk name to **az104-03b-disk4**. Use **Ctrl +S** to save your changes. 
 
    ![image](../media/az-104i6.1.png)
 
@@ -241,7 +243,7 @@ In this task, you will deploy an Azure Resource Manager (ARM) template using the
 1. To deploy to a resource group, use **az deployment group create**.
 
    ```sh
-    az deployment group create --resource-group az104-09b-rg1 --template-file template.json --parameters parameters.json
+    az deployment group create --resource-group az104-03b-rg1-<inject key="DeploymentID" enableCopy="false"/> --template-file template.json --parameters parameters.json
     ```    
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
@@ -295,10 +297,10 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 
    <validation step="95c0111f-ab42-4cdd-a5ca-abd36982cc45" />
  
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed further. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next  task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
 
 ### Review
 
