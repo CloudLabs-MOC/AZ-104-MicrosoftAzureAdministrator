@@ -81,7 +81,7 @@ In this task, you will create and organize management groups to streamline Azure
 
 In this task, you will review the built-in roles and assign the VM Contributor role to a member of the Help Desk. Azure provides a large number of [built-in roles](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles). 
 
-1. Select the **az104-02-mg1** management group.
+1. Select the **az104-mg1** management group.
 
 1. Select the **Access control (IAM)** blade (1), and then the **Roles** (2) tab.
 
@@ -107,9 +107,9 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your scenario. We will also create a new role and remove permissions that are not be necessary. Do you have a plan for managing overlapping permissions?
 
-1. Continue working on your management group. In the **Access control (IAM)** blade, select **+ Add**, from the drop-down menu, select **Add custom role**.
+1. Continue working on your management group. In the **Access control (IAM)** blade, select the **Check access** tab and in the **Create a custom role** box, select **Add**.
 
-   ![image](./media/E2T3S1.png)
+   ![image](./media/l2-image12.png)
 
 1. On the Basics tab specify the following configuration and select **Next**. 
 
@@ -242,12 +242,12 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 
 1. Do not continue with creating the support request. Instead, sign out as the az104-02-aaduser1 user from the Azure portal and close the InPrivate browser window.
 
+<validation step="3fd36f71-74c5-4bba-8d44-9c8ed81fd0be" />
+
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
-
-<validation step="3fd36f71-74c5-4bba-8d44-9c8ed81fd0be" />
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
 
 ## Task 5: Monitor role assignments with the Activity Log
 
