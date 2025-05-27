@@ -303,7 +303,7 @@ In this task, you will test connectivity between virtual machines on the three v
 
 10. In the list of virtual machines, click **az104-05-vm1**.
 
-      ![Image](./Images/vm1.png)
+       ![Image](./Images/vm1.png)
 
 11. On the **az104-05-vm1** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
