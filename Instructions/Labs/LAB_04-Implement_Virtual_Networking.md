@@ -2,7 +2,7 @@
 
 ## Lab overview
 
-This lab focuses on applying security best practices while demonstrating advanced Azure networking concepts.You'll create virtual networks and subnets in Azure to establish a secure, scalable networking environment. You'll implement Application Security Groups (ASGs) and Network Security Groups (NSGs) to manage and enforce access controls, and configure both public and private DNS zones for effective name resolution. 
+This lab focuses on applying security best practices while demonstrating advanced Azure networking concepts. You'll create virtual networks and subnets in Azure to establish a secure, scalable networking environment. You'll implement Application Security Groups (ASGs) and Network Security Groups (NSGs) to manage and enforce access controls, and configure both public and private DNS zones for effective name resolution. 
 
 ## Lab objectives
 
@@ -79,9 +79,9 @@ The organization plans a large amount of growth for core services. In this task,
 
 ### Task 2: Create a virtual network and subnets using a template
 
-In this task, you create the ManufacturingVnet virtual network and associated subnets. The organization anticipates growth for the manufacturing offices so the subnets are sized for the expected growth. For this task, you use a template to create the resources. 
+In this task, you create the ManufacturingVnet virtual network and associated subnets. The organization anticipates growth for the manufacturing offices, so the subnets are sized for the expected growth. For this task, you use a template to create the resources. 
 
-1. In your Lab VM, click on the **File explorer** from the taskbar. Navigate to **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\04** press **Enter**, where you will find the template and parameter file named 
+1. In your Lab VM, click on the **File Explorer** from the taskbar. Navigate to **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\04**, press **Enter**, where you will find the template and parameter file named 
    **az-104-04template** and **az-104-04parameters** that will be used for the custom deployment.
 
     ![image](../media/v5.png)   
@@ -118,7 +118,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Wait for the template to deploy, then click on **Go to resource group**.
 
-1. Confirm (in the portal) the Manufacturing virtual network and subnets were created.
+1. Confirm (in the portal) that the Manufacturing virtual network and subnets were created.
 
     ![image](../media/v8.png)
    
@@ -208,7 +208,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 1. After creating your inbound NSG rule, select **Outbound security rules** from the left navigation pane. 
 
-1. Notice the **AllowInternetOutboundRule** rule. Also notice the rule cannot be deleted and the priority is 65001.
+1. Notice the **AllowInternetOutboundRule** rule. Also, notice that the rule cannot be deleted, and the priority is 65001.
 
 1. Select **+ Add** and then configure an outbound rule that denies access to the internet. When you are finished, select **Add**.
 
@@ -289,7 +289,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
    nslookup www.contoso[DID].com [name server name]
    ```
 
-1. Verify the host name **www.contoso<inject key="DeploymentID" enableCopy="false" />.com** resolves to the IP address you provided. This confirms name resolution is working correctly.
+1. Verify the host name **www.contoso<inject key="DeploymentID" enableCopy="false" />.com** resolves to the IP address you provided. This confirms that name resolution is working correctly.
 
     ![image](../media/v13.png)
 
@@ -297,7 +297,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 
 A private DNS zone provides name resolution services within virtual networks. A private DNS zone is only accessible from the virtual networks that it is linked to and can't be accessed from the internet. 
 
-1. In the portal, search for and select **Private dns zones** resource.
+1. In the portal, search for and select the **Private DNS zones** resource.
 
 1. Select **+ Create**.
 
@@ -314,7 +314,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
    
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
 
-1. Notice on the **Overview** blade there are no name server records. 
+1. Notice on the **Overview** blade, there are no name server records. 
 
 1. In the left navigation pane under **DNS Management**, select **Virtual network links (1)** from the left navigation pane and then select **+ Add (2)**.
 
@@ -329,9 +329,9 @@ A private DNS zone provides name resolution services within virtual networks. A 
 
      ![image](../media/v-15.png)
 
-1. Wait for the link to create. 
+1. Wait for the link to be created. 
 
-1. From the left navigation pane, under DNS Management click on **Record Set (1)**. Click on **+ Add (2)** to  add a record for each virtual machine that needs private name-resolution support and then click on **Add (7)**.
+1. From the left navigation pane, under DNS Management, click on **Record Set (1)**. Click on **+ Add (2)** to  add a record for each virtual machine that needs private name-resolution support, and then click on **Add (7)**.
 
     | Property | Value    |
     |:---------|:---------|
