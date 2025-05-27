@@ -215,11 +215,12 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
     ![](../Labs/Images/az104xxx3.png) 
 
-1. Under subnets click on **Edit**
+1. Under subnets click on **Edit** provide the below details and click on **Save** twice (3) 
 
+    | Setting | Value |
+    | --- | --- |
     | Subnet name | `subnet0` (1) |
     | Subnet range | `10.82.0.0/24` (2) |
-    | Click on **Save** twice (3) |
     
     ![](../Labs/Images/az104xxx2.png) 
 
