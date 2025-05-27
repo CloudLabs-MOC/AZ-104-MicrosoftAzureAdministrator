@@ -16,11 +16,11 @@ In this lab, you will complete the following tasks:
 
 ## Exercise 1: Manage Subscriptions and RBAC
 
-In this exercise you will learn how to organize Azure subscriptions effectively and implement Role-Based Access Control (RBAC) to manage permissions and actions securely.
+In this exercise, you will learn how to organize Azure subscriptions effectively and implement Role-Based Access Control (RBAC) to manage permissions and actions securely.
 
 In this task, you will create and organize management groups to streamline Azure subscription governance. This setup enables efficient policy enforcement and access management across your organization.
 
-1. On the Azure portal, in **Search resources, services and docs (G+/)** box at the top of the portal search for and select **Microsoft Entra ID**.
+1. On the Azure portal, in the **Search resources, services and docs (G+/)** box at the top of the portal, search for and select **Microsoft Entra ID**.
 
    ![image](./media/l2-image3.png) 
     
@@ -36,13 +36,13 @@ In this task, you will create and organize management groups to streamline Azure
 
     ![image](./media/l2-image1.png) 
     
-     >**Note:** The Management Group page may take some-time to load. Please try to refresh the browser in the VM periodically until the Management group page loads.
+     >**Note:** The Management Group page may take some time to load. Please try to refresh the browser in the VM periodically until the Management group page loads.
   
 1. In the list of management groups, click the entry representing the **az104-02-mg1** management group.
 
     ![image](./media/az-104.png)
 
-   > **Note:** If the management group is not pre-created, kindly follow the below steps:
+   > **Note:** If the management group is not pre-created, kindly follow the steps below:
   
    1. On the **Management groups** blade, click **+ Create**.
 
@@ -59,7 +59,7 @@ In this task, you will create and organize management groups to streamline Azure
 
    ![image](./media/az-1042.png)
    
-   > **Note:** If you dont find the Subscription group, follow the below steps:
+   > **Note:** If you don't find the Subscription group, follow the below steps:
    
     1. On the **az104-02-mg1** blade, from the left navigation pane click **Subscriptions** and  click **+ Add**.
    
@@ -69,7 +69,7 @@ In this task, you will create and organize management groups to streamline Azure
    
        ![image](./media/l2-image10.png)
    
-    1. On the **az104-02-mg1 \| Subscriptions** blade, refresh the page and  copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
+    1. On the **az104-02-mg1 \| Subscriptions** blade, refresh the page and  copy the ID of your Azure subscription into the Clipboard. You will need it in the next task.
        
          ![image](./media/l2-image11.png)
 
@@ -97,17 +97,17 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 1. Click **Review + assign** twice to create the role assignment.
 
-   >**Did you know?** This assignment might not actually grant you any additional privileges. If you already have the Owner role, that role includes all permissions associated with the VM Contributor role.
+   >**Did you know?** This assignment might not grant you any additional privileges. If you already have the Owner role, that role includes all permissions associated with the VM Contributor role.
     
 ## Task 3: Create a custom RBAC role
 
-In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your scenario. We will also create a new role and remove permissions that are not be necessary. Do you have a plan for managing overlapping permissions?
+In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your scenario. We will also create a new role and remove permissions that are not necessary. Do you have a plan for managing overlapping permissions?
 
 1. Continue working on your management group. In the **Access control (IAM)** blade, select the **Check access** tab and in the **Create a custom role** box, select **Add**.
 
    ![image](./media/l2-image12.png)
 
-1. On the Basics tab specify the following configuration and select **Next**. 
+1. On the Basics tab, specify the following configuration and select **Next**. 
 
     | Setting | Value |
     | --- | --- |
@@ -140,7 +140,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
    ![image](./media/l2-image18.png)
 
-1. Select **Review + create**, and then select **Create**. Select **OK** when you see the pop up **You have successfully created the custom role "Custom Support Request". It may take the system a few minutes to display your role everywhere**. 
+1. Select **Review + create**, and then select **Create**. Select **OK** when you see the pop-up **You have successfully created the custom role 'Custom Support Request". It may take the system a few minutes to display your role everywhere**. 
 
     >**Note:** At this point, you have created a custom role and assigned it to the management group. 
 
@@ -168,7 +168,7 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 
 1. Click **Create**.
    
-1. In the Azure portal, navigate back to the Management group and and select **az104-02-mg1** to display its **details**.
+1. In the Azure portal, navigate back to the Management group and select **az104-02-mg1** to display its **details**.
 
    ![image](./media/l2-image21.png)
 
@@ -230,7 +230,7 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 
     >**Note**: The presence of the subscription you are using in this lab in the **Subscription** drop-down list indicates that the account you are using has the permissions required to create the subscription-specific support request.
 
-    >**Note**: If you do not see the **Service and subscription limits (quotas)** option, sign out from the Azure portal and sign in back.
+    >**Note**: If you do not see the **Service and subscription limits (quotas)** option, sign out from the Azure portal and sign in again.
 
 1. Do not continue with creating the support request. Instead, sign out as the az104-02-aaduser1 user from the Azure portal and close the InPrivate browser window.
 
@@ -239,9 +239,9 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 
 In this task, you will review the Azure activity log to check for any actions indicating the creation of a new role. This helps ensure proper tracking and auditing of role-based changes within your Azure environment.
 
-1. In the Azure portal, navigate back to the Management group and and select **az104-02-mg1**. The activity log provides insight into subscription-level events. 
+1. In the Azure portal, navigate back to the Management group and select **az104-02-mg1**. The activity log provides insight into subscription-level events. 
 
-1. Select **Activity Log**  from the left navigation pane and click on **Quick Insights** from the list that appears and select **Role assignment**. The activity log can be filtered for specific operations and review the activites for role assignments.  
+1. Select **Activity Log**  from the left navigation pane and click on **Quick Insights** from the list that appears, and select **Role assignment**. The activity log can be filtered for specific operations and review the activities for role assignments.  
 
     ![image](./media/l2-image61.png)
 
@@ -266,7 +266,7 @@ In this task, you will review the Azure activity log to check for any actions in
    
     ![image](./media/l2-image53.png)
 
-1. In the Azure portal, navigate back to the **Users - All users** blade of the **Microsoft Entra ID**, and select  **az104-02-aaduser1** user account click on **Delete**.
+1. In the Azure portal, navigate back to the **Users - All users** blade of the **Microsoft Entra ID**, and select  the **az104-02-aaduser1** user account. Click on **Delete**.
 
     ![image](./media/l2-image57.png)
    
