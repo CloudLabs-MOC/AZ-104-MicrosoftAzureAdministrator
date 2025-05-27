@@ -206,17 +206,22 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 1. On the **Disks** tab, accept the default values and click **Next : Networking >**.
 
-1. On the **Networking** page, click the **Create virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values).  When finished, select **OK** (6).
+1. On the **Networking** page, click the **Edit virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values).
 
     | Setting | Value |
     | --- | --- |
     | Name | **vmss-vnet** (1) |
-    | Resource Group | **az104-08-rg01** (2) |
-    | Address range | `10.82.0.0/20` (delete the existing address range) (3) |
-    | Subnet name | `subnet0` (4) |
-    | Subnet range | `10.82.0.0/24` (5) |
+    | Address range | `10.82.0.0/20` (delete the existing address range) (2) |
 
-    ![](../Labs/Images/l8i11.png) 
+    ![](../Labs/Images/az104xxx3.png) 
+
+1. Under subnets click on **Edit**
+
+    | Subnet name | `subnet0` (1) |
+    | Subnet range | `10.82.0.0/24` (2) |
+    | Click on **Save** twice (3) |
+    
+    ![](../Labs/Images/az104xxx2.png) 
 
 1. In the **Networking** tab, click the **Edit network interface** icon to the right of the network interface entry.
 
