@@ -22,7 +22,7 @@ By the end of this lab, you will have learned to manage Azure resources using RB
 
 ## Pre-requisites
 
-Basic understanding of Azure concepts, and familiarity with RBAC, resource tagging, and Azure Policy management.
+Basic understanding of Azure concepts and familiarity with RBAC, resource tagging, and Azure Policy management.
 
 ## Architecture
 
@@ -42,17 +42,17 @@ Basic understanding of Azure concepts, and familiarity with RBAC, resource taggi
 
 1. **Microsoft Entra ID**: Microsoft Entra ID (formerly Azure Active Directory) is a cloud-based identity and access management service from Microsoft. It helps organizations manage user identities, control access to resources, and ensure secure authentication across various cloud-based and on-premises applications.
 
-2. **Management Groups**: Management Groups are a way to organize and manage your Azure subscriptions at scale. They allow you to group multiple subscriptions together for easier management of policies, role-based access control (RBAC), and compliance across your organization.
+2. **Management Groups**: Management Groups are a way to organize and manage your Azure subscriptions at scale. They allow you to group multiple subscriptions for easier management of policies, role-based access control (RBAC), and compliance across your organization.
 
 3. **Custom RBAC**: Role-Based Access Control refers to the ability to create tailored roles with specific permissions to meet the unique needs of your organization. Unlike built-in roles that come with predefined permissions, custom RBAC roles allow you to define exactly what actions a user or group can perform on Azure resources. 
 
 ## Exercise 2: Manage Governance via Azure Policy
 
-1. Tagging and Policy Enforcement: Create and assign tags to resources for better metadata management and reporting and enforce mandatory tagging on new resources using Azure Policy to ensure compliance.
+1. Tagging and Policy Enforcement: Create and assign tags to resources for better metadata management and reporting, and enforce mandatory tagging on new resources using Azure Policy to ensure compliance.
 
 2. Resource Compliance and Remediation: Use Azure Policy to apply and inherit tags for existing resources and remediate non-compliance.
 
-3. Resource Locks for Protection:Configure resource locks to prevent accidental deletions or modifications and test the effectiveness of locks and their ability to override user permissions.
+3. Resource Locks for Protection: Configure resource locks to prevent accidental deletions or modifications and test the effectiveness of locks and their ability to override user permissions.
 
 ## Architecture diagram
 
@@ -60,11 +60,11 @@ Basic understanding of Azure concepts, and familiarity with RBAC, resource taggi
 
 ## Explanation of Components
 
-1.  **Azure Tags**: Tags can also be enforced using Azure Policy to ensure compliance with organizational standards.Tags are key-value pairs that add metadata to Azure resources, enabling better organization and reporting.
+1.  **Azure Tags**: Tags can also be enforced using Azure Policy to ensure compliance with organizational standards. Tags are key-value pairs that add metadata to Azure resources, enabling better organization and reporting.
 
-2.  **Azure Policy**: Azure Policy helps enforce rules and compliance at scale. It defines governance conditions and actions to be taken if the conditions are not met.Policies also include built-in definitions, such as Require a tag and its value or Inherit a tag from the resource group if missing, ensuring governance consistency across resources.
+2.  **Azure Policy**: Azure Policy helps enforce rules and compliance at scale. It defines governance conditions and actions to be taken if the conditions are not met. Policies also include built-in definitions, such as Require a tag and its value or Inherit a tag from the resource group if missing, ensuring governance consistency across resources.
 
-3.  **Resource Locks**: Resource locks prevent accidental modifications or deletions of resources.Locks are configurable at different levels, such as subscriptions, resource groups, or individual resources, ensuring critical resources remain secure.
+3.  **Resource Locks**: Resource locks prevent accidental modifications or deletions of resources. Locks are configurable at different levels, such as subscriptions, resource groups, or individual resources, ensuring critical resources remain secure.
 
 # Getting Started with the Lab
  
@@ -94,7 +94,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 ## Utilizing the Zoom In/Out Feature
 
-To adjust the zoom level for the environment page, click the A↕ : 100% icon located next to the timer in the lab environment.
+To adjust the zoom level for the environment page, click the A↕: 100% icon located next to the timer in the lab environment.
 
 ![Use the Split Window Feature](../media/gs4n.png)
 
@@ -126,7 +126,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
    
      ![](../Labs/Images/asklater.png)
 
-1. First-time users are often prompted to Stay Signed In, if you see any such pop-up, click on No.
+1. First-time users are often prompted to Stay Signed In. If you see any such pop-up, click on No.
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
     
