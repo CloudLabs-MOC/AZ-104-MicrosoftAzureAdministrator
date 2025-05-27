@@ -28,7 +28,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
     >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
 
-1. On the **Getting Started** screen select **Mount Storage Account**, select the storage account subscription from drop down and click on **Apply**
+1. On the **Getting Started** screen select **Mount Storage Account**, select the storage account subscription from drop-down and click on **Apply**
 
 1. On mount storage account page, select **I want to create a storage account**. click on Next.
 
@@ -324,7 +324,6 @@ In this task, you will test connectivity between virtual machines on the three v
        >**Note**: The test uses TCP 3389 since this port is allowed by default by the operating system firewall.
 
 15. Examine the output of the command and verify that the connection was successful.
-
 
 ## Task 5: Create a custom route 
 
