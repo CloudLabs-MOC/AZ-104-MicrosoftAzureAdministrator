@@ -12,11 +12,11 @@ In this lab, you will explore Azure's virtual networking capabilities by creatin
 
 ## Objective
 
-By the end of this lab you will learn the following:
+By the end of this lab, you will learn the following:
 
-1. **Create Virtual Networks**: Learn how to set up virtual networks (VNets), the backbone of Azure's networking infrastructure, to facilitate communication between resources securely and efficiently.
+1. **Create Virtual Networks**: Learn how to set up virtual networks (VNets), the backbone of Azure's networking infrastructure, to facilitate secure and efficient communication between resources.
 
-2. **Establish secure communication**: Implement ASGs and NSGs to control traffic flow to and from Azure resources, enhancing security and network management.
+2. **Establish secure communication**: Implement Application Security Groups (ASGs) and Network Security Groups (NSGs) to control traffic flow to and from Azure resources, thereby enhancing security and network management.
 
 3. **Configure Public and Private DNS Zones**: Set up public DNS zones to resolve domain names accessible on the internet and private DNS zones for internal name resolution within the virtual network.
 
@@ -50,7 +50,7 @@ In this hands-on lab, the architecture flow includes several essential component
 
 3. **Application Security Groups (ASGs)**: ASGs allow you to group resources with similar security requirements and apply NSG rules to these groups rather than individual resources. This simplifies security management, especially in large deployments.
 
-4. **Public and Private DNS Zones**: Public DNS Zones are used to resolve names for resources exposed to the internet.Private DNS Zones are used to resolve names for internal resources within an Azure VNet.
+4. **Public and Private DNS Zones**: Public DNS Zones are used to resolve names for resources exposed to the internet. Private DNS Zones are used to resolve names for internal resources within an Azure VNet.
 
 # Getting Started with the Lab
  
@@ -80,7 +80,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 ## Utilizing the Zoom In/Out Feature
 
-To adjust the zoom level for the environment page, click the A↕ : 100% icon located next to the timer in the lab environment.
+To adjust the zoom level for the environment page, click the A↕: 100% icon located next to the timer in the lab environment.
 
 ![Use the Split Window Feature](../media/gs4n.png)
 
@@ -112,7 +112,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
    
      ![](../Labs/Images/asklater.png)
 
-1. First-time users are often prompted to Stay Signed In, if you see any such pop-up, click on No.
+1. First-time users are often prompted to Stay Signed In. If you see any such pop-up, click on No.
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
     
