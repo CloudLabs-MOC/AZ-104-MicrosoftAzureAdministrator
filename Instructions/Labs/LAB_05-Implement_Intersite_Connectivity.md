@@ -340,10 +340,11 @@ In this task, you want to control network traffic between the perimeter subnet a
     | Starting address  | `10.50.1.0`  |
     | Size | /24 |
 
-     ![Image](./Images/pax8-image53.png)
+      ![Image](./Images/pax8-image53.png)
 
 1. In the Azure portal, search for and select **Route tables** resource, then click on **+ Create**.
-1.  Speify the following and select **Review + Create**. 
+
+1.  Specify the following and select **Review + Create**. 
 
     | Setting | Value | 
     | --- | --- |
@@ -369,7 +370,7 @@ In this task, you want to control network traffic between the perimeter subnet a
     | Next hop type | **Virtual appliance** (notice your other choices) |
     | Next hop address | `10.50.1.7` (future NVA) |
 
-     ![Image](./Images/pax8-image56.png)
+      ![Image](./Images/pax8-image56.png)
 
 1. The last thing to do is associate the route with the subnet.
 
