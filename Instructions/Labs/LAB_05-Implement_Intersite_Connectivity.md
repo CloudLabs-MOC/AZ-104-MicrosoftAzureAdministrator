@@ -257,7 +257,7 @@ In this task, you will test connectivity between virtual machines on the three v
 
 1. In the Azure portal, search for and select **Virtual machines**.
 
-     ![Image](./Images/vm.png)
+      ![Image](./Images/vm.png)
 
 2. In the list of virtual machines, click **az104-05-vm0**.
 
@@ -269,15 +269,15 @@ In this task, you will test connectivity between virtual machines on the three v
       
       ![Image](./Images/rdp.png)
 
-    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store,e and on Linux computers, you can use an open-source RDP client software.
+      >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store,e and on Linux computers, you can use an open-source RDP client software.
 
-    >**Note**: You can ignore any warning prompts when connecting to the target virtual machines and select Keep.
+      >**Note**: You can ignore any warning prompts when connecting to the target virtual machines and select Keep.
 
 4. When prompted, sign in by using the **Student** username and the password **Pa55w.rd1234**.
 
-   >**Note**: You can click on **Yes** in the pop-up that appears.
+     >**Note**: You can click on **Yes** in the pop-up that appears.
    
-   >**Note**: If you get a prompt related to network discovery, click on Yes
+     >**Note**: If you get a prompt related to network discovery, click on Yes
 
 6. Within the Remote Desktop session to **az104-05-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)** and slect Run as Administrator option.
 
@@ -285,9 +285,9 @@ In this task, you will test connectivity between virtual machines on the three v
    
 7. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm1** (which has the private IP address of **10.51.0.4**) over TCP port 3389:
 
-   ```powershell
-   Test-NetConnection -ComputerName 10.51.0.4 -Port 3389 -InformationLevel 'Detailed'
-   ```
+     ```powershell
+     Test-NetConnection -ComputerName 10.51.0.4 -Port 3389 -InformationLevel 'Detailed'
+     ```
 
     >**Note**: The test uses TCP 3389 since this port is allowed by default by the operating system firewall.
 
@@ -295,15 +295,15 @@ In this task, you will test connectivity between virtual machines on the three v
 
 9. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**):
 
-   ```powershell
-   Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
-   ```
+     ```powershell
+     Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
+     ```
 
 10. Switch back to the Azure portal on your lab computer and navigate back to the blade of the **Virtual machine**.
 
 11. In the list of virtual machines, click **az104-05-vm1**.
 
-    ![Image](./Images/vm1.png)
+     ![Image](./Images/vm1.png)
 
 12. On the **az104-05-vm1** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
@@ -316,10 +316,10 @@ In this task, you will test connectivity between virtual machines on the three v
 14. Within the Remote Desktop session to **az104-05-vm1**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
 
 15. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**) over TCP port 3389:
-
-    ```powershell
-    Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
-    ```
+ 
+     ```powershell
+     Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
+     ```
 
     >**Note**: The test uses TCP 3389 since this port is allowed by default by the operating system firewall.
 
@@ -369,7 +369,7 @@ In this task, you want to control network traffic between the perimeter subnet a
     | Next hop type | **Virtual appliance** (notice your other choices) |
     | Next hop address | `10.50.1.7` (future NVA) |
 
-    ![Image](./Images/pax8-image56.png)
+     ![Image](./Images/pax8-image56.png)
 
 1. The last thing to do is associate the route with the subnet.
 
@@ -380,7 +380,7 @@ In this task, you want to control network traffic between the perimeter subnet a
     | Virtual network | **az104-05-vnet0** |
     | Subnet | **subnet0** |    
 
-    ![Image](./Images/pax8-image57.png)
+      ![Image](./Images/pax8-image57.png)
 
     >**Note**: You have created a user-defined route to direct traffic from the DMZ to the new NVA.  
 
