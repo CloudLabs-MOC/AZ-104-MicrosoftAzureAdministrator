@@ -214,9 +214,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     - **Addon Azure Backup Alert Data**
     - **Azure Site Recovery Jobs**
     - **Azure Site Recovery Events**
-    - **Health**
-
-     ![image](./media/az-104p6.png)
+    - **Allmetrics**
 
 1. In the **Destination details**, place a checkmark next to **Archive to a storage account**. In the Storage account drop-down field, select the storage account that you deployed earlier in this task.
 
@@ -279,7 +277,7 @@ In this task, you will enable replication for a virtual machine to ensure busine
 
    >**Note:** It is important that both of these settings be populated, or the validation will fail. If values are not present, try refreshing the page. If that doesn't work, create an empty storage account and then return to this page.
 
-1. In **Replication settings** select **Show details**. Notice your recovery resources vault in region 2 was automatically selected.
+1. In **Replication settings** select **Show details**. Notice your recovery resources vault 2 was automatically selected.
 
      ![image](./media/T5S10.png)
 
