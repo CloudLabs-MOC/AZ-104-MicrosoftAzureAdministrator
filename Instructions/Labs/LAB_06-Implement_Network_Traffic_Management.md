@@ -84,7 +84,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
    ![](../Labs/media/l6-image11.png)
 
-1. On **Load balancing | Load Balancer** blade, click on **+ Create**.
+1. On **Load balancing and content delivery | Load Balancer** blade, click on **+ Create** and select **Standard Loadbalancer**
 
 1. Create a load balancer with the following settings (leave others with their default values) and click **Next: Frontend IP configuration >** 
 
@@ -211,7 +211,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     ![](../Labs/media/l6-image18.png)
 
-1. On the **Load balancing | Application Gateway** blade, click **+ Create**.
+1. On the **Load balancing and content delivery | Application Gateway** blade, click **+ Create**. and select **Application Gateway**
 
 1. On the **Basics** tab of the **Create an application gateway** blade, specify the following settings (leave others with their default values) and click **Next: Frontends >**
 
