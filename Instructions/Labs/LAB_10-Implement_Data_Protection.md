@@ -22,7 +22,7 @@ In this task, you will deploy two virtual machines that will serve as test envir
 
 1. In the Azure Portal page, in the **Search resources, services and docs (G+/)** box at the top of the portal search for and select **Deploy a custom template** resource.
 
-   ![image](./media/az-104p1.png)
+    ![](../Labs/media/l6-image1.png)
 
 1. On the custom deployment page, select **Build you own template in the editor**.
 
