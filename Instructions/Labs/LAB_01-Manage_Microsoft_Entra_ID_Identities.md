@@ -290,6 +290,8 @@ In this task, you will create a new Microsoft Entra ID tenant, which serves as a
     | Setting | Value |
     | --- | --- |
     | Select a tenant type | **Microsoft Entra ID (1)** |    
+
+    ![](../Labs/media/ap20.png)    
     
 1. Provide the following details and then click **Review + create (4)**
 
