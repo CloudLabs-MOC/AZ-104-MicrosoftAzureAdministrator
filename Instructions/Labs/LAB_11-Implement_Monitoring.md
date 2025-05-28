@@ -245,7 +245,7 @@ In this task, you will utilize Azure Monitor to query and analyze the data colle
 
 1. Select  **Queries**(1) tab, select **Virtual machines** (2). Review the queries that are available. Double-click the **Count heartbeats**(3) query and select **Run**.
 
-    ![image](../media/logonnnnn.png)
+    ![image](./media/logonnnnn.png)
 
 1. You should receive a heartbeat count for when the virtual machine was running.
 
