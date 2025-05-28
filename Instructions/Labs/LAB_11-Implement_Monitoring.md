@@ -25,7 +25,7 @@ In this task, you will deploy a virtual machine (VM) on Azure, which will serve 
 
 1. In the Azure Portal page, in the **Search resources, services and docs (G+/)** box at the top of the portal search for and select **Deploy a custom template** resource.
 
-   ![image](./media/az-104p1.png)
+   ![image](./media/deppp.png)
 
 1. On the custom deployment page, select **Build you own template in the editor**.
 
