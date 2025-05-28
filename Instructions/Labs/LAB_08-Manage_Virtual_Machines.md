@@ -212,10 +212,11 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | --- | --- |
     | Name | **vmss-vnet** (1) |
     | Address range | `10.82.0.0/20` (delete the existing address range) (2) |
+    | Under subnets click on **Edit** (3) |
 
     ![](../Labs/Images/az104xxx3.png) 
 
-1. Under subnets click on **Edit** provide the below details and click on **Save** twice (3) 
+1. Provide the below details and click on **Save** twice (3) 
 
     | Setting | Value |
     | --- | --- |
