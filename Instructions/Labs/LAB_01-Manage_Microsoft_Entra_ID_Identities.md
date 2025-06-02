@@ -36,11 +36,11 @@ In this task, you will set up and customize Microsoft Entra ID users by creating
 
    ![](../Labs/media/lab1-image2.png)
 
-1. From the **User settings**  blade, in the **Manage** section, click **Users**.
+1. On the same page of **Microsoft Entra ID** blade, under the **Manage** section, click **Users**.
 
     ![](../Labs/media/lab1-image3.png)
 
-1. Click your user account to display its **Profile** settings. 
+1. Click on your user account **ODL_User <inject key="DeploymentID"></inject>** to display its **Profile** settings. 
 
      ![](../Labs/media/lab1-image4.png)
 
