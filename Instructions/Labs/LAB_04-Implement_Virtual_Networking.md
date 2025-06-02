@@ -2,7 +2,7 @@
 
 ## Lab overview
 
-This lab focuses on applying security best practices while demonstrating advanced Azure networking concepts.You'll create virtual networks and subnets in Azure to establish a secure, scalable networking environment. You'll implement Application Security Groups (ASGs) and Network Security Groups (NSGs) to manage and enforce access controls, and configure both public and private DNS zones for effective name resolution. 
+This lab focuses on applying security best practices while demonstrating advanced Azure networking concepts. You'll create virtual networks and subnets in Azure to establish a secure, scalable networking environment. You'll implement Application Security Groups (ASGs) and Network Security Groups (NSGs) to manage and enforce access controls, and configure both public and private DNS zones for effective name resolution. 
 
 ## Lab objectives
 
@@ -41,7 +41,7 @@ The organization plans a large amount of growth for core services. In this task,
     | --- | --- |
     | IPv4 address space | **10.20.0.0/16** |
 
-1. Select **+ Add a subnet (1)**. Create the the two subnets **SharedServicesSubnet** and **DatabaseSubnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
+1. Select **+ Add a subnet (1)**. Create the two subnets **SharedServicesSubnet** and **DatabaseSubnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
 
     | **Subnet**             | **Option**           | **Value**              |
     | ---------------------- | -------------------- | ---------------------- |
@@ -75,7 +75,7 @@ The organization plans a large amount of growth for core services. In this task,
 
 ### Task 2: Create a virtual network and subnets using a template
 
-In this task, you create the ManufacturingVnet virtual network and associated subnets. The organization anticipates growth for the manufacturing offices so the subnets are sized for the expected growth. For this task, you use a template to create the resources. 
+In this task, you create the ManufacturingVnet virtual network and associated subnets. The organization anticipates growth for the manufacturing offices, so the subnets are sized for the expected growth. For this task, you use a template to create the resources. 
 
 1. In your Lab VM, navigate to **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\04** where you will find the template and parameter file named **az-104-04template** and **az-104-04parameters** that will be used for the custom deployment.
 
@@ -97,7 +97,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
     ![image](../media/L4T2S7.png)
 
-1. Wait for the template to deploy, then confirm (in the portal) the Manufacturing virtual network and subnets were created.
+1. Wait for the template to deploy, then confirm (in the portal) that the Manufacturing virtual network and subnets were created.
    
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
@@ -184,7 +184,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 1. After creating your inbound NSG rule, select **Outbound security rules (1)** from the left navigation pane. 
 
-1. Notice the **AllowInternetOutboundRule** rule. Also notice the rule cannot be deleted and the priority is 65001.
+1. Notice the **AllowInternetOutboundRule** rule. Also, notice that the rule cannot be deleted and the priority is 65001.
 
 1. Select **+ Add (2)** and then configure an outbound rule that denies access to the internet. When you are finished, select **Add (13)**.
 
@@ -237,9 +237,9 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 
       ![image](../media/L4T4-4.1S4.png)
    
-1. Wait for the DNS zone to deploy and then select **Go to resource**.
+1. Wait for the DNS zone to deploy and select **Go to resource**.
 
-1. On the **DNS Management (1)** blade  select **Recordsets (2)** and notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step. 
+1. On the **DNS Management (1)** blade,  select **Recordsets (2)** and notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step. 
 
       ![image](../media/L4T4-4.1S6.png)
 
@@ -264,15 +264,15 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
       ```sh
      nslookup www.contoso[DID].com [name server name]
       ```
-1. Verify the host name **www.contoso<inject key="DeploymentID" enableCopy="false" />.com** resolves to the IP address you provided. This confirms name resolution is working correctly.
+1. Verify the host name **www.contoso<inject key="DeploymentID" enableCopy="false" />.com** resolves to the IP address you provided. This confirms that name resolution is working correctly.
 
     ![image](../media/L4T4-4.1S10.png)
 
 ###  **4.2 Configure a private DNS zone**
 
-A private DNS zone provides name resolution services within virtual networks. A private DNS zone is only accessible from the virtual networks that it is linked to and can't be accessed from the internet. 
+A private DNS zone provides name resolution services within virtual networks. It is only accessible from the virtual networks it is linked to and cannot be accessed from the Internet. 
 
-1. In the portal, search for and select **Private dns zones** resource.
+1. In the portal, search for and select the **Private DNS zones** resource.
 
 1. Select **+ Create**.
 
@@ -281,7 +281,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
     | Property | Value    |
     |:---------|:---------|
     | Subscription | **Select your subscription (1)** |
-    | Resource group | **az104-rg2-<inject key="DeploymentID" enableCopy="false" /> (2)** |
+    | Resource group | **az104-rg2 (2)** |
     | Name | `private.contoso.com` (adjust if you have to rename) (3) |
     | Region | **<inject key="Region" enableCopy="false" />** (4) |
 
@@ -289,9 +289,9 @@ A private DNS zone provides name resolution services within virtual networks. A 
 
     ![image](../media/L4T4-4.2S4.png)
    
-1. Wait for the DNS zone to deploy and then select **Go to resource**.
+1. Wait for the DNS zone to deploy and select **Go to resource**.
 
-1. Notice on the **Overview** blade there are no name server records. 
+1. Notice on the **Overview** blade, there are no name server records. 
 
 1. In the left navigation pane under **DNS Management (1)**, select **Virtual network links (3)** from the left navigation pane and then select **+ Add (3)**.
 
@@ -305,7 +305,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
     ![image](../media/L4T4-4.2S8i.png)
     ![image](../media/L4T4-4.2S8ii.png)
 
-1. From the left navigation pane, under DNS Management click on **Record Set (1)**. Click on **+ Add (2)** to  add a record for each virtual machine that needs private name-resolution support.
+1. From the left navigation pane, under DNS Management, click on **Record Set (1)**. Click on **+ Add (2)** to  add a record for each virtual machine that needs private name-resolution support.
 
     | Property | Value    |
     |:---------|:---------|
@@ -334,10 +334,10 @@ In this lab, you have completed the following:
 
 Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right). Take a few minutes to try these prompts.
 + Share the top 10 best practices when deploying and configuring a virtual network in Azure.
-+ How do I use Azure PowerShell and Azure CLI commands to create a virtual network with a public IP address and one subnet. 
++ How do I use Azure PowerShell and Azure CLI commands to create a virtual network with a public IP address and one subnet? 
 + Explain Azure Network Security Group inbound and outbound rules and how they are used.
 + What is the difference between Azure Network Security Groups and Azure Application Security Groups? Share examples of when to use each of these groups. 
-+ Give a step-by-step guide on how to troubleshoot any network issues we face when deploying a network on Azure. Also share the thought process used for every step of the troubleshooting.
++ Give a step-by-step guide on how to troubleshoot any network issues we face when deploying a network on Azure. Also, share the thought process used for every step of the troubleshooting.
 
 ## Learn more with self-paced training
 
