@@ -6,11 +6,11 @@ In this lab, you will learn to configure and manage Azure resources, including V
 
 ## Interactive lab simulations
 
-There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
+There are interactive lab simulations that you might find useful for this topic. The simulation lets you click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
 
-+ [Create and configure and Azure load balancer](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20an%20Azure%20load%20balancer). Create a virtual network, backend servers, load balancer, and then test the load balancer.
++ [Create and configure an Azure load balancer](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20an%20Azure%20load%20balancer). Create a virtual network, backend servers, load balancer, and then test the load balancer.
 + [Deploy Azure Application Gateway](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20Azure%20Application%20Gateway). Create an application gateway, create virtual machines, create the backend pool, and test the gateway.
-+ [Implement traffic management](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2010). Implement complete hub and spoke network including virtual machines, virtual networks, peering, load balancer, and application gateway.
++ [Implement traffic management](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2010). Implement a complete hub and spoke network including virtual machines, virtual networks, peering, load balancer, and application gateway.
   
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -18,7 +18,7 @@ In this lab, you will complete the following tasks:
 + Task 2: Configure an Azure Load Balancer.
 + Task 3: Configure an Azure Application Gateway.
 
-## Excercise 1: Implement Traffic Management
+## Exercise 1: Implement Traffic Management
 
 In this exercise, you will configure and implement Azure Traffic Manager to manage traffic distribution across multiple Azure resources for high availability and performance.
 
@@ -26,7 +26,7 @@ In this exercise, you will configure and implement Azure Traffic Manager to mana
 
 In this task, you will use a template to deploy one virtual network, one network security group, and two virtual machines.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Deploy a custom template** (1), and then select **Deploy a custom template** (2) under services.
+1. On the Azure Portal page, in the **Search resources, services and docs (G+/)** box at the top of the portal, enter **Deploy a custom template** (1), and then select **Deploy a custom template** (2) under services.
 
     ![](../Labs/media/l6-image1.png)
 
@@ -58,13 +58,13 @@ In this task, you will use a template to deploy one virtual network, one network
 
     ![](../Labs/media/l6-image9.png)
    
-1. Use the following information to complete the fields on the custom deployment page, leaving all other fields with the default value and select **Review + Create**.
+1. Use the following information to complete the fields on the custom deployment page, leaving all other fields with the default value, and select **Review + Create**.
 
     | Setting       | Value         |
     | ---           | ---           |
     | Subscription  | your Azure subscription |
     | Resource group | **az104-rg2** |
-    | Password      | Provide a secure password (Please make sure the password contains uppercase, lowercase letters, digits and a special character and it is at least 8 characters long.)|
+    | Password      | Provide a secure password (Please make sure the password contains uppercase, lowercase letters, digit,s and a special character and it is at least 8 characters long.)|
 
     ![](../Labs/media/l6-image10.png)
    
@@ -120,7 +120,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
 1. Back on **Add frontend IP configuration** click on **Add** and click on **Next : Backend pools>**.
 
-1. On **Add Backend pools** tab, and add a backend pool with the following settings (leave others with their default values):
+1. On the **Add Backend Pools** tab, add a backend pool with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -140,7 +140,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | --- | --- |
     | Name | **az104-06-lb4-lbrule1** |
     | IP Version | **IPv4** |
-    | Frontend IP Address | select the LoadBalancerFrontEnd from the drop down |
+    | Frontend IP Address | select the LoadBalancerFrontEnd from the drop-down |
     | Backend pool | **az104-06-lb4-be1** |    
     | Protocol | **TCP** |
     | Port | **80** |
@@ -180,7 +180,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
     ![image](../media/az-104(8).png)
 
-1. Open another browser window but this time by using InPrivate mode and verify whether the target vm changes (as indicated by the message).
+1. Open another browser window, but this time by using InPrivate mode, and verify whether the target VM changes (as indicated by the message).
 
     > **Note**: You might need to refresh the browser window or open it again by using InPrivate mode.
    
@@ -215,7 +215,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     ![](../Labs/media/az-x.png)
 
-    > **Note**: This subnet will be used by the Azure Application Gateway instances, which you will deploy later in this task. The Application Gateway requires a dedicated subnet of /27 or larger size.
+    > **Note**: This subnet will be used by the Azure Application Gateway instances, which you will deploy later in this task. The Application Gateway requires a dedicated subnet of /27 or larger.
 
 1. In the Azure portal, search and select **Application Gateways** and, on the **Application Gateways** blade.
 
@@ -237,7 +237,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Virtual network | **az104-06-vnet1** |
     | Subnet | **subnet-appgw** |
 
-1.  On **Frontends** tab, specify the following settings (leave others with their default values):
+1.  On the **Frontends** tab, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -261,7 +261,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     > **Note**: The targets represent the private IP addresses of virtual machines in the spoke virtual networks **az104-06-vm2** and **az104-06-vm3**.
 
-1. Click **Add a backend pool**. This is the backend pool for **images**. Specify the following settings (leave others with their default values). When completed click **Add**.
+1. Click **Add a backend pool**. This is the backend pool for **images**. Specify the following settings (leave others with their default values). When completed, click **Add**.
 
     | Setting | Value |
     | --- | --- |
@@ -269,7 +269,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Add backend pool without targets | **No** |
     | Target Type | Virtual machine and choose **az104-06-nic1 (10.60.1.4)** as Target|
 
-1. Click **Add a backend pool**. This is the backend pool for **video**. Specify the following settings (leave others with their default values). When completed click **Add**.
+1. Click **Add a backend pool**. This is the backend pool for **video**. Specify the following settings (leave others with their default values). When complete, click **Add**.
 
     | Setting | Value |
     | --- | --- |
@@ -316,7 +316,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     ![](../Labs/media/l6-image22.png)
    
-1. On the **Add a routing rule** blade. In the **Path based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then **Add** after the second rule. 
+1. On the **Add a routing rule** blade. In the **Path-based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then **Add** after the second rule. 
 
      ![](../Labs/media/l6-image23.png)
    
@@ -395,7 +395,7 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 + Compare and contrast the Azure Load Balancer with the Azure Application Gateway. Help me decide in which scenarios I should use each product. 
 + What tools are available to troubleshoot connections to an Azure Load Balancer? 
 + What are the basic steps for configuring the Azure Application Gateway? Provide a high-level checklist. 
-+ Create a table highlighting three Azure load balancing solutions. For each solution show supported protocols, routing policies, session affinity, and TLS offloading.
++ Create a table highlighting three Azure load balancing solutions. For each solution, show supported protocols, routing policies, session affinity, and TLS offloading.
 
 ## Learn more with self-paced training
 
@@ -410,7 +410,7 @@ Congratulations on completing the lab. Here are the key points for this lab.
 + Public Load Balancers are used to load balance internet traffic to your VMs. An internal (or private) load balancer is used where private IPs are needed at the frontend only.
 + The Basic load balancer is for small-scale applications that don't need high availability or redundancy. The Standard load balancer is for high performance and ultra-low latency.
 + Azure Application Gateway is a web traffic (OSI layer 7) load balancer that enables you to manage traffic to your web applications.
-+ The Application Gateway Standard tier offers all the L7 functionality, including load balancing, The WAF tier adds a firewall to check for malicious traffic.
-+ An Application Gateway can make routing decisions based on additional attributes of an HTTP request, for example URI path or host headers.
++ The Application Gateway Standard tier offers all the L7 functionality, including load balancing. The WAF tier adds a firewall to check for malicious traffic.
++ An Application Gateway can make routing decisions based on additional attributes of an HTTP request, for example, URI path or host headers.
 
 ### You have successfully completed the lab
