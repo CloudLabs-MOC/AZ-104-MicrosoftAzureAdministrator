@@ -28,12 +28,12 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
     ![Image](./Images/switch-to-powershell-0905.png)
 
-1. In the toolbar of the Cloud Shell pane, click on the **Manage files** dropdown, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-parameters.json** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, click on the **Manage files** dropdown, click **Upload**, and upload one by one the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-parameters.json** into the Cloud Shell home directory.
 
     ![Image](./Images/upload-files-incloudshell-0905a.png)
     ![Image](./Images/upload-files-incloudshell-0905.png)
 
-1.  From the Cloud Shell pane, run the below command to set up the regions for your deployment. Replace **Azure_region_1** with the name of the first Azure region where you want to deploy your virtual machines, and **Azure_region_2** with a different Azure region for the third virtual machine. **For example**, you can use **$location1 = 'eastus'** and **$location2 = 'westus'**. The first two virtual networks and two virtual machines will be deployed in $location1, while the third virtual network and the third virtual machine will be deployed in $location2 within the same resource group. 
+1.  From the Cloud Shell pane, run the following command to set up the regions for your deployment. Replace **Azure_region_1** with the name of the first Azure region where you want to deploy your virtual machines, and **Azure_region_2** with a different Azure region for the third virtual machine. **For example**, you can use **$location1 = 'eastus'** and **$location2 = 'westus'**. The first two virtual networks and two virtual machines will be deployed in $location1, while the third virtual network and the third virtual machine will be deployed in $location2 within the same resource group. 
 
     ```powershell
         $location1 = 'Azure_region_1'
@@ -43,9 +43,9 @@ In this task, you will deploy three virtual machines, each into a separate virtu
         $rgName = 'az104-rg2'
     ```
 
-    >**Note**: In order to identify Azure regions, from the PowerShell session in Cloud Shell, run **(Get-AzLocation).Location** command.
+    >**Note**: In order to identify Azure regions, from the PowerShell session in Cloud Shell, run the **(Get-AzLocation).Location** command.
    
-    >**Note**: If you get a prompt stating **Provided resource group already exists. Are you sure you want to update it?** type N .
+    >**Note**: If you get a prompt stating **Provided resource group already exists. Are you sure you want to update it?** type **N**.
 
 1. From the Cloud Shell pane, run the following to create the three virtual networks and deploy virtual machines into them by using the template and parameter files you uploaded:
 
@@ -58,6 +58,8 @@ In this task, you will deploy three virtual machines, each into a separate virtu
          -location2 $location2
       ```
 
+    >**Note**: If you face any issues in copying and pasting the commands, please paste the command first on a Notepad inside the VM, then paste it in Cloud Shell pane. 
+    
     >**Important**: You will be prompted to provide an admin password. Enter your own Password or give **Pa55w.rd1234**.
     
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 2 minutes.
@@ -70,7 +72,7 @@ In this task, you verify that resources in peered virtual networks can communica
 
 1. From the Azure portal, search for and select **Network Watcher**.
 
-1. From Network Watcher, in the Network diagnostic tools menu in the left navigation pane, select **Connection troubleshoot**.
+1. From Network Watcher, in the **Network diagnostic tools** menu in the left navigation pane, select **Connection troubleshoot**.
 
 1. Use the following information to complete the fields on the **Connection troubleshoot** page and select **Run diagnostic tests** (8).
 
@@ -127,7 +129,7 @@ In this task, you will configure local and global peering between the virtual ne
 
    ![Image](./Images/az-104-6.png)
     
-      >**Note**: You can ignore the warning stating that the vnet does not have a routing gateway.
+      >**Note**: You can ignore the warning stating that the VNet does not have a routing gateway.
 
       >**Note**: This step establishes two local peerings - one from az104-05-vnet0 to az104-05-vnet1 and the other from az104-05-vnet1 to az104-05-vnet0.
 
@@ -162,7 +164,7 @@ In this task, you will configure local and global peering between the virtual ne
     | Local Peering link name | **az104-05-vnet0_to_az104-05-vnet2** (7)|
     | Local virtual network peering settings | **Ensure only the first three boxes are checked** (8)|
 
-    >**Note**: You can ignore the warning stating that the vnet does not have a routing gateway.
+    >**Note**: You can ignore the warning stating that the VNet does not have a routing gateway.
  
     >**Note**: This step establishes two global peerings - one from az104-05-vnet0 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet0.
 
@@ -200,7 +202,7 @@ In this task, you will configure local and global peering between the virtual ne
     | Local Peering link name | **az104-05-vnet1_to_az104-05-vnet2** (7)|
     | Local virtual network peering settings | **Ensure only the first three boxes are checked** (8)|
 
-    >**Note**: You can ignore the warning stating that the vnet does not have a routing gateway.
+    >**Note**: You can ignore the warning stating that the VNet does not have a routing gateway.
  
     >**Note**: This step establishes two global peerings - one from az104-05-vnet1 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet1.
 
@@ -240,7 +242,7 @@ In this task, you will test connectivity between virtual machines on the three v
 
       ![Image](./Images/L5T4S2-0905.png)
 
-3. On the **az104-05-vm0** blade, click **Connect (1)** and select **Connect (2)** from the dropdown menu. Click **Connect via RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
+3. On the **az104-05-vm0** blade, click **Connect (1)** and select **Connect (2)** from the dropdown menu. Click **Connect via RDP** blade, click **Download RDP File**, and follow the prompts to start the Remote Desktop session.
 
       ![Image](./Images/L5T4S3.1-0905.png)
       
@@ -284,9 +286,9 @@ In this task, you will test connectivity between virtual machines on the three v
 
     ![Image](./Images/L5T4S11-0905.png)
 
-12. On the **az104-05-vm1** blade, click **Connect (1)** and select **Connect (2)** from the dropdown menu. Click **Connect via RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
+12. On the **az104-05-vm1** blade, click **Connect (1)** and select **Connect (2)** from the dropdown menu. Click **Connect via RDP** blade, click **Download RDP File**, and follow the prompts to start the Remote Desktop session.
 
-    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store, and on Linux computers, you can use an open source RDP client software.
+    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store, and on Linux computers, you can use an open-source RDP client software.
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
@@ -307,9 +309,9 @@ In this task, you will test connectivity between virtual machines on the three v
 
 ## Task 5: Create a custom route 
 
-In this task, you want to control network traffic between the perimeter subnet and the internal core services subnet. A virtual network appliance will be installed in the core services subnet and all traffic should be routed there. 
+In this task, you want to control network traffic between the perimeter subnet and the internal core services subnet. A virtual network appliance will be installed in the core services subnet, and all traffic should be routed there. 
 
-1. Back in the Azure portal, navigate to Virtual networks resource and select the **az104-05-vnet0** from the list of virtual 
+1. Back in the Azure portal, navigate to the  Virtual networks resource and select the **az104-05-vnet0** from the list of virtual networks 
    networks.
 
 1. Select **Subnets** and then click on **+ Subnet** and click on **Add**
@@ -384,8 +386,8 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + By default, resources in different virtual networks cannot communicate.
 + Virtual network peering enables you to seamlessly connect two or more virtual networks in Azure.
 + Peered virtual networks appear as one for connectivity purposes.
-+ The traffic between virtual machines in peered virtual networks uses the Microsoft backbone infrastructure.
-+ System defined routes are automatically created for each subnet in a virtual network. User-defined routes override or add to the default system routes. 
++ The traffic between virtual machines in peer virtual networks uses the Microsoft backbone infrastructure.
++ System-defined routes are automatically created for each subnet in a virtual network. User-defined routes override or add to the default system routes. 
 + Azure Network Watcher provides a suite of tools to monitor, diagnose, and view metrics and logs for Azure IaaS resources.
 
 ### You have successfully completed the lab
