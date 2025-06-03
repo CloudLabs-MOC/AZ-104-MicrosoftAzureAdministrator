@@ -241,7 +241,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | --- | --- |
     | Name | **vmss1-nsg (1)** |
 
-1. Click **+Add an inbound rule (2)** and add an inbound security rule with the following settings (leave others with their default values) **(3)**:
+1. Click **+Add an inbound rule (1)** and add an inbound security rule with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -253,9 +253,9 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Priority | **1010** |
     | Name | `allow-http` |
 
-1. Click **Add (4)** and, back on the **Create network security group** blade, click on **OK (5)**.
+   ![](../Labs/Images/pax8-image17.png)
 
-   ![](../Labs/Images/az104-18.png)
+1. Click **Add (4)** and, back on the **Create network security group** blade, click on **OK (5)**.
 
 1. On the **Edit network interface** pane, make sure **Public IP address** section is set to **Enabled (1)** then click on **OK (2)**.
 
@@ -334,6 +334,7 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
       
     ![](../Labs/Images/az104-22.png) 
 
+1.  Be sure to Save your changes.
 
 ### 4.2 Scale in rule
 
@@ -351,6 +352,8 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
     | Percentage | **20** (4) |
 
     ![](../Labs/Images/scalein-2002.png) 
+
+1. Be sure to Save your changes.
 
 ### 4.3 Set the instance limits
 
@@ -390,7 +393,7 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
     -Size 'Standard_D2s_v3'
     ```
 
-     ![](../Labs/Images/az104-25.png)
+     ![](../Labs/Images/az104-251.png)
 
       >**Note:** When prompted, please provide a Username as `TestUser` and Password as `Pa55w.rd!!` to create the new VM.
 
