@@ -55,17 +55,12 @@ In this task, you will create and configure an Azure Storage account.
 
 1. Click **Next: Advanced >**, on the **Advanced** tab, review the available options, accept the defaults, and click **Next**.
 
-1. On the **Networking** tab, review the available options and select **Disable public access and use private access under network access (1)** and click **Next (2)**.
+1. On the **Networking** tab of the **Create a storage account** blade, review the available options and select **Disable** for **public network access**. 
+   Click **Next: Data protection >**
 
-     ![image](./media/az104-2.png)
+    ![image](./media/az-d2-3.png)
 
-1. On the **Data protection** tab, review the available options and accept the defaults then click on **Next**. 
-
-1. Review the **Encryption** tab. Notice the additional security options and accept the defaults. Click **Review + Create**.
-
-    ![image](./media/az104-3.png)
-
-1. Wait for the validation process to complete. Then click on **Create**.
+1. On the **Data protection** tab of the **Create a storage account** blade, review the available options and accept the defaults. Click **Review + Create** and wait for the validation process to complete. Then click on **Create**.
 
     >**Note**: Wait for the Storage account to be created. This should take about 2 minutes.
 
@@ -263,9 +258,10 @@ In this task, you will create and configure Azure Files shares.
 
 1. In the Backup tab, **uncheck** **Enable backup** option and then click on **Review + Create** > **Create**.
 
-    ![image](./media/az104-25.png)
-
 1. Click the newly created file share and note the information available on the **az104-07-share** blade.
+
+   ![image](./media/az104-25.png)
+
 
 ### 3.1 Explore Storage Browser and upload a file
 
