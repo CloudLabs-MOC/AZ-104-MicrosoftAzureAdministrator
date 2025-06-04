@@ -107,6 +107,8 @@ In this task, you verify that resources in peered virtual networks can communica
 
     >**Note**: It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected.. 
 
+1. Notice the Connectivity test shows UnReachable. This makes sense because the virtual machines are in different virtual networks.
+
 ### Task 3: Configure local and global virtual network peering
 
 In this task, you will configure local and global peering between the virtual networks you deployed in the previous tasks.
