@@ -244,11 +244,11 @@ In this task, you will test connectivity between virtual machines on the three v
 
       ![Image](./Images/L5T4S2-0905.png)
 
-3. On the **az104-05-vm0** blade, click **Connect (1)** and select **Connect (2)** from the dropdown menu. Click **Connect via RDP** blade, click **Download RDP File**, and follow the prompts to start the Remote Desktop session.
+3. On the **az104-05-vm0** blade, click **Connect (1)** and select **Connect (2)** from the dropdown menu. Click **Download RDP File**, and follow the prompts to start the Remote Desktop session.
 
       ![Image](./Images/L5T4S3.1-0905.png)
       
-      ![Image](./Images/L5T4S3.2-0905.png)
+      ![Image](./Images/disneyl5.1.png)
       
       ![Image](./Images/rdp.png)
 
