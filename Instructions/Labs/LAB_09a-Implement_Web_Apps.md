@@ -144,7 +144,7 @@ In this task, you will swap the staging slot with the production slot.
 
 In this task, you will configure autoscaling of Azure Web App. Autoscaling enables you to maintain optimal performance for your web app when traffic to the web app increases. To determine when the app should scale you can monitor metrics like CPU usage, memory, or bandwidth.
 
-1. In the **Settings** section, select **Scale out (App Service plan) (1)**.
+1. From the left navigation under the **Settings** section, select **Scale out (App Service plan) (1)**.
 
     >**Note:** Ensure you are working on the production slot not the staging slot.  
 
