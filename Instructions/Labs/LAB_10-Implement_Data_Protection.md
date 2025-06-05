@@ -249,9 +249,9 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     - **Addon Azure Backup Alert Data**
     - **Azure Site Recovery Jobs**
     - **Azure Site Recovery Events**
-    - **Health**
+    - **All Metrics**
 
-      ![image](./media/az-104p6.png)
+      ![image](./media/disneyl10.1.png)
 
 1. In the **Destination details**, place a checkmark next to **Archive to a storage account (1)**. In the Storage account drop-down field, select **storagebackup<inject key="DeploymentID" enableCopy="false"/> (2)** that you deployed earlier in this task and then click on **Save (3)**.
 
