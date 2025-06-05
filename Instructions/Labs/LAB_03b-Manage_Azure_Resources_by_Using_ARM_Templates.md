@@ -213,9 +213,9 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 In this task, you will deploy an Azure Resource Manager (ARM) template using the Command-Line Interface (CLI). The Azure CLI provides a powerful, scriptable interface to interact with Azure resources.
 
-1. Continue in the **Cloud Shell** select **Bash**. **Confirm** your choice.
+1. Continue in the **Cloud Shell** select **Switch to Bash**. **Confirm** your choice.
 
-    ![image](../media/L3T4S1.png)
+    ![image](../media/disney1.png)
 
     ![image](../media/L3T4S1i.png)
 
@@ -226,7 +226,17 @@ In this task, you will deploy an Azure Resource Manager (ARM) template using the
     ```
      ![image](../media/az104-mod3-image26.png)
 
-1. Select the **Editor** (curly brackets) icon and navigate to the template JSON file.
+1. Select the **Editor** option.
+
+   ![image](../media/disney2.png)
+
+1. When prompted for confirmation, click on **Confirm**
+
+   ![image](../media/disney3.png)
+
+1. In the classic view, click on the **curly braces**, to move to the Editor pane.
+
+   ![image](../media/disney4.png)
 
 1. Make a change. For example, change the disk name to **az104-09b-disk4**. Use **Ctrl + S** to save your changes. 
 
