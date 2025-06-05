@@ -38,7 +38,7 @@ In this task, you will set up and customize Microsoft Entra ID users by creating
 
 1. From the left navigation pane on the **Microsoft Entra ID** blade, in the **Manage** section, click **Users**.
 
-    ![](../Labs/media/lab1-image3.png)
+    ![](../Labs/media/lab1-image31.png)
 
 1. Click your user account to display its **Profile** settings. 
 
@@ -158,7 +158,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
     
 1. In the Azure portal, navigate back to the Entra ID tenant blade and click **Groups**.
 
-    ![](../Labs/Images/grp.png)        
+    ![](../Labs/Images/grp1.png)        
 
 1. Use the **+ New group** button to create a new group with the following settings:
 
