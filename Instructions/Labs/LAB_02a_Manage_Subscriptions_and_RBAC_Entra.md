@@ -32,7 +32,7 @@ In this exercise, you will learn how to organize Azure subscriptions effectively
 
 In this task, you will create and organize management groups to streamline Azure subscription governance. This setup enables efficient policy enforcement and access management across your organization.
 
-1. On the Azure portal, in the **Search resources, services and docs (G+/)** box at the top of the portal, search for and select **Microsoft Entra ID**.
+1. On the Azure portal, in the **Search box** at the top of the portal, search for**Microsoft Entra ID** and select **Microsoft Entra ID**.
 
    ![image](./media/l2-image3.png) 
     
@@ -89,7 +89,7 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 1. Scroll through the built-in role definitions that are available. **View** a role to get detailed information about the **Permissions**, **JSON**, and **Assignments**. You will often use *owner*, *contributor*, and *reader*. 
 
-1. Select **+ Add**, from the drop-down menu, select **Add role assignment**. 
+1. Select **+ Add(1)**, from the drop-down menu, select **Add role assignment(2)**. 
 
 1. On the **Add role assignment** blade, search for and select the **Virtual Machine Contributor**. The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to. Select **Next**.
 
@@ -136,7 +136,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
    
     >**Note:** An Azure resource provider is a set of REST operations that enable functionality for a specific Azure service. We do not want the Help Desk to be able to have this capability, so it is being removed from the cloned role. 
 
-1. On the **Assignable scopes** tab, ensure your management group is listed, then click **Next**.
+1. On the **Assignable scopes(1)** tab, ensure your management group is listed, then click **Next(2)**.
 
     ![image](./media/l2-image17.png)
 
@@ -144,7 +144,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
    ![image](./media/l2-image18.png)
 
-1. Select **Review + create**, and then select **Create**. Select **OK** when you see the pop-up **You have successfully created the custom role Custom Support Request". It may take the system a few minutes to display your role everywhere**. 
+1. Select **Review + create**, and then select **Create**. Select **OK** when you see the pop-up **You have successfully created the custom role "Support Request Contributor(Custom)". It may take the system a few minutes to display your role everywhere**. 
 
     >**Note:** At this point, you have created a custom role and assigned it to the management group. 
 
@@ -176,13 +176,13 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 
    ![image](./media/l2-image21.png)
 
-1. Click **Access control (IAM)**, click **+ Add** and then **Add role assignment**.
+1. Click **Access control (IAM)(1)**, click **+ Add (2)** and then **Add role assignment(3)**.
 
     ![image](./media/l2-image22.png)
 
    >**Note**: If your custom role is not visible, it can take up to 10 minutes for the custom role to appear after creation.
 
-1. Search and select **Support Request Contributor (Custom) (1)**. Click **Next (3)**.
+1. Search for **Support Request Contributor (Custom) (1)**.and select **Support Request Contributor (Custom) (2)**. Click **Next (3)**.
 
     ![image](./media/L2T4S6-1405.png)
   
@@ -196,7 +196,7 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 
      ![image](./media/L2T4S9-1405.png)
 
-1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password for the user.
+1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password for the user. **********MFA**************
 
    >**Note:** You can open an InPrivate browser window by clicking the **ellipsis** (1) in the top-right corner of the lab VM's browser window and selecting the **New InPrivate Window** option.
 
@@ -210,7 +210,7 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 
     ![image](./media/rgs.png)
    
-1. In the **InPrivate** browser window, in the Azure portal, select **All resources** to verify that the az104-02-aaduser1 user cannot see any resources.
+1. In the **InPrivate** browser window, in the Azure portal, click on **Show portal menu(1)** select **All resources(2)** to verify that the az104-02-aaduser1 user cannot see any resources.
 
    ![image](./media/l2-image47.png)
 
@@ -230,7 +230,7 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 
     ![image](./media/az1043.png)
 
-1. Under the **Which service are you having an issue with?** select the **Service and subscription limits (quotas)** issue type. Select **Next** (4).
+1. Under the **Which service are you having an issue with?** select the **Service and subscription limits (quotas)** issue type. Select **Next**.
 
     ![image](./media/az1044.png)
 
@@ -238,7 +238,7 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 
    ![image](./media/az1045.png)
 
-1. In the **InPrivate** browser window, on the **Problem Description** tab of the **Help + support - New support request** blade, **Service and subscription limits (quotas)** (1) as issue type is selected. Note that the subscription you are using in this lab is listed in the **Subscription** (2) drop-down list.
+1. In the **InPrivate** browser window, on the **Problem description** tab of the **Help + support - New support request** blade, **Service and subscription limits (quotas) (1)**  as issue type is selected. Note that the subscription you are using in this lab is listed in the **Subscription** (2) drop-down list.
     
     ![image](./media/az3.1.png)
 
@@ -268,7 +268,7 @@ In this task, you will review the Azure activity log to check for any actions in
    
    ![image](./media/l2-image54.png)
    
-1. Back on **az104-02-mg1 | Access control (IAM)** Refresh the page on click on  **Support Request Contributor (Custom)** select **ellipsis** and click **Delete**.
+1. Back on **az104-02-mg1 | Access control (IAM) (1)** Refresh the page under **Roles** tab click on  **Support Request Contributor (Custom)** select **ellipsis(3)** and click **Delete(4)**.
    
     ![image](./media/l2-image53.png)
 
@@ -288,7 +288,7 @@ In this task, you will review the Azure activity log to check for any actions in
    
 1. Select **Refresh** to verify that the subscription has successfully moved to the **Tenant Root management group**.
 
-1. Navigate back to the **Management groups** blade, click the **ellipsis** icon to the right of the **az104-02-mg1** management group and click **Delete**,click **Ok** in the pop-up that appears.
+1. Navigate back to the **Management groups** blade, click the **ellipsis** icon to the right of the **az104-02-mg1** management group and click **Delete**,click **Yes** in the pop-up that appears.
 
    >**Note**: If you are unable to delete the **management group**, chances are that the **Azure Subscription** is under the management group. You need to move the **Azure Subscription** out of the **management group** and then delete the group. Make sure you also have the **Owner** permission on the **Tenant Root management group**.
 
