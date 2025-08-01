@@ -22,7 +22,7 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. In the Azure portal, search for and select `Virtual Networks`.
 
-1. Select **Create** on the Virtual networks page.
+1. Select **+Create** on the Virtual networks page.
 
 1. Complete the **Basics** tab with the following details:  
 
@@ -35,7 +35,7 @@ The organization plans a large amount of growth for core services. In this task,
 
      ![image](../media/L4T1S3.png)
 
-1. Click **Next** and subsequently click on **Next** again to move to the **IP Addresses** tab.
+1. Click **Next: Security** and subsequently click on **Next** again to move to the **IP Addresses** tab.
 
     | Setting | Value |
     | --- | --- |
@@ -115,7 +115,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 1. In the Azure portal, search for and select **Application security groups**.
 
-1. Click **Create** and provide the basic information.
+1. Click **+Create** and provide the basic information.
 
       | Setting | Value |
       | -- | -- |
@@ -147,7 +147,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 1. After the NSG is deployed, click **Go to resource**.
 
-1. Under **Settings (1)** click **Subnets (2)**. Select the values mentioned below and then click on **Associate (3)**. Click **OK** to save the association.
+1. Under **Settings (1)** click **Subnets (2)**. Select the values mentioned below and then click on **+Associate (3)**. Click **OK** to save the association.
  
       | Setting | Value |
       | -- | -- |
