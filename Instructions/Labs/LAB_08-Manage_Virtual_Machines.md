@@ -423,7 +423,7 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
 
 ## Task 6: Create a virtual machine using the CLI (option 2)
 
-1. Click on  **Switch to Bash** to create a virtual machine using the CLI.
+1. Click on  **Switch to Bash**  and click on **Confirm** to create a virtual machine using the CLI.
 
     ![](../Labs/Images/az104-27.png)
 
