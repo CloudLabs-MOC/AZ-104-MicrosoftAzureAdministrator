@@ -136,7 +136,7 @@ In this task, you will create a blob container and upload a blob into it.
 
      ![image](./media/l1-image9.png)
 
-1. On the **Access policy** window, under  **Immutable blob storage** select **Add policy**.
+1. On the **Access policy** window, under  **Immutable blob storage** select **+Add policy**.
 
     | Setting | Value |
     | --- | --- |
@@ -177,7 +177,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. Then click **LICENSE**.
 
-1. On the **licenses/LICENSE (1)** pane, review the available options including **Download, Delete, Change tier, and Acquire lease (2)**.
+1. On the **licenses/LICENSE (1)** pane, review the available options including **Download, Refresh, Delete, Change tier, and Acquire lease (2)**.
 
     ![image](./media/az104-16.png)
 
@@ -223,7 +223,7 @@ In this task, you will create a blob container and upload a blob into it.
 
     ![image](./media/l1-image15.png)
 
-1. Open another browser window by using InPrivate mode and navigate to the URL you copied in the previous step.
+1. Open another browser window by using InPrivate mode and navigate to the URL you copied in the previous step and open the file and view it.
 
     ![image](./media/az104-21.png)
 
