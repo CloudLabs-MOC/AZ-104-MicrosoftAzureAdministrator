@@ -110,7 +110,7 @@ In this task, you will configure Web App deployment settings. Deployment setting
     
     - In the **Source** drop-down list, select **External Git (2)**. Notice the other choices
 
-    - In the repository field, enter `https://github.com/Azure-Samples/php-docs-hello-world` **(3)**
+    - In the Repository field, enter `https://github.com/Azure-Samples/php-docs-hello-world` **(3)**
 
     - In the branch field, enter `master` **(4)**
 
