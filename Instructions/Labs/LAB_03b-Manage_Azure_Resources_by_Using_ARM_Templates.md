@@ -20,7 +20,7 @@ In this exercise, you will learn to  manage Azure resources using ARM templates,
 
 In this task, we will create a managed disk in the Azure portal. Managed disks are storage designed to be used with virtual machines. Once the disk is deployed, you will export a template that you can use in other deployments.
 
-1. In Search resources, services, and docs (G+/) box at the top of the portal, enter **Disks**, and then select **Disks** from the results.
+1. In Search resources, services, and docs (G+/) box at the top of the portal, enter **Disks(1)**, and then select **Disks(2)** from the results.
 
    ![image](../media/az104-mod3-image29.png)
 
@@ -57,7 +57,7 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
 
    ![image](../media/L3T1S8.png)
 
-1. Use File Explorer to extract the content of the downloaded file into the **Downloads** folder. Open the downloaded file and extract it to your computer. Notice there are two JSON files (template and parameters). 
+1. Use File Explorer to extract the content of the downloaded file into the **Downloads** folder by right clicking on the **Donaloaded file(1)** and select **Extract All... (2)** and select **Extract**. Notice there are two JSON files (template and parameters). 
     
      ![image](../media/L3T1S9i.png)
 
@@ -91,9 +91,9 @@ In this task, you will utilize the previously downloaded Azure Resource Manager 
 
       ![image](../media/L3T2S5.png)
 
-1. **Save** your changes.
+1. **Save(6)** your changes.
 
-1. Don't forget the parameters file. Select **Edit parameters**, click **Load file**, and upload the **parameters.json**. 
+1. Don't forget the parameters file. Select **Edit parameters**, click **Load file**, and upload the **parameters.json** and click **Save**. 
 
     ![image](../media/az104-mod3-image12.png)
 
