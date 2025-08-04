@@ -26,9 +26,9 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources(1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../media/resourses.png)
+![](./media/resourcetab.png)
 
 ## **Lab Duration Extension**
 
@@ -46,7 +46,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 ## Let's Get Started with Azure Portal
  
-1. On your virtual machine, click on the Azure Portal icon as shown below:
+1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
     ![](./media/portal.png)
  
@@ -66,11 +66,13 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
    
      ![](../Labs/Images/asklater.png)
 
-1. First-time users are often prompted to Stay Signed In, if you see any such pop-up, click on No.
+1. First-time users are often prompted to **Stay signed in**, if you see any such pop-up, click on **No**.
+
+    ![](./media/signedinno.png)
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
     
-     ![](../Labs/Images/maybelater.png)   
+      ![](./media/cancel.png)
 
 1. Click **Next** from the bottom right corner to embark on your Lab journey!
  
