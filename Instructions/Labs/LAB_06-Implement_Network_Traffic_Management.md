@@ -96,12 +96,12 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-rg2** |
-    | Name | **az104-06-lb4** |
-    | Region| **<inject key="Region" enableCopy="false"/>** |
-    | SKU | **Standard** |
-    | Type | **Public** |
+    | Subscription | the name of the Azure subscription you are using in this lab  (1) |
+    | Resource group | **az104-rg2 (2)** |
+    | Name | **az104-06-lb4 (3)** |
+    | Region| **<inject key="Region" enableCopy="false"/>** **(4)** |
+    | SKU | **Standard (5)** |
+    | Type | **Public (6)** |
     | Tier | Leave the default |
 
       ![](../media/L6T2S3.png)
@@ -140,7 +140,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
     ![](../media/L6T2S6.png)
 
-1. Click **Next: Inbound rules >**, **+ Add a load balancing rule** with the following settings (leave others with their default values):
+1. Click **Next: Inbound rules >** then click **+ Add a load balancing rule** with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -157,26 +157,26 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Enable Floating IP | **Disabled** |
     | Health probe | **Create new** |
     
-1. Click **create new** under **Health probe**, on the **Add load balancing rules** blade.
+1. Click **Create new (1)** under **Health probe**, on the **Add load balancing rules** blade.
 
     Add a health probe with the following settings:
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-06-lb4-hp1** |
-    | Protocol | **TCP** |
-    | Port | **80** |
-    | Interval | **5** |
+    | Name | **az104-06-lb4-hp1 (2)** |
+    | Protocol | **TCP (3)** |
+    | Port | **80 (4)** |
+    | Interval | **5 (5)** |
 
     ![](../Labs/media/l6-image13.png)
 
-1. Click **Save** and back on the **Add load balancing rules** blade, click **Save**.
+1. Click **Save (6)** and back on the **Add load balancing rules** blade, click **Save**.
 
 1. Click **Next: Outbound rules >**, followed by **Next: Tags >**, followed by **Next: Review + create >**. Let validation occur, and then click **Create** to submit your deployment.
 
     > **Note**: Wait for the Azure load balancer to be provisioned. This should take about 2 minutes.
 
-1. Wait for the load balancing rule to be created, click **Go to resource** and on the **az104-06-lb4** load balancers blade, in the **Settings** section, click **Frontend IP configuration** and note the value of the **Public IP address**.
+1. Wait for the load balancing rule to be created, click **Go to resource** and on the **az104-06-lb4** load balancers blade, in the **Settings** section, click **Frontend IP configuration (1)** and note the value of the **IP address (2)**.
 
     ![](../media/L6T2S11.png)
 
@@ -201,7 +201,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
 In this task, you will implement an Azure Application Gateway in front of the two Azure virtual machines in the spoke virtual networks.
 
-1. In the Azure portal, search and select **Virtual networks**.
+1. In the Azure portal, search for **Virtual networks (1)** and select **Virtual networks (2)**.
 
     ![](../Labs/media/l6-image15.png)
 
@@ -223,7 +223,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     > **Note**: This subnet will be used by the Azure Application Gateway instances, which you will deploy later in this task. The Application Gateway requires a dedicated subnet of /27 or larger.
 
-1. In the Azure portal, search and select **Application Gateways** and, on the **Application Gateways** blade.
+1. In the Azure portal, search for **Application Gateways(1)** and select **Application Gateways (2)**.
 
     ![](../Labs/media/l6-image18.png)
 
@@ -289,23 +289,23 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     | Setting | Value |
     | --- | --- |
-    | Rule name | **az104-06-appgw5-rl1** |
-    | Priority | **10** |
-    | Listener name | **az104-06-appgw5-rl1l1** |
-    | Frontend IP | **Public IPv4** |
-    | Protocol | **HTTP** |
-    | Port | **80** |
-    | Listener type | **Basic** |
+    | Rule name | **az104-06-appgw5-rl1**   **(1)**|
+    | Priority | **10 (2)** |
+    | Listener name | **az104-06-appgw5-rl1l1  (3)** |
+    | Frontend IP | **Public IPv4 (4)** |
+    | Protocol | **HTTP (5)** |
+    | Port | **80 (6)** |
+    | Listener type | **Basic (7)** |
 
     ![](../Labs/media/l6-image20.png)
    
-1. Switch to the **Backend targets** tab of the **Add a routing rule** blade and specify the following settings (leave others with their default values):
+1. Switch to the **Backend targets (1)** tab of the **Add a routing rule** blade and specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
-    | Target type | **Backend pool** |
-    | Backend target | **az104-06-appgw5-be1** |
-    | Backend setting | Click **Add new** |
+    | Target type | **Backend pool (2)** |
+    | Backend target | **az104-06-appgw5-be1  (3)** |
+    | Backend setting | Click **Add new (4)** |
 
     ![](../Labs/media/l6-image21.png)
    
@@ -313,16 +313,16 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     | Setting | Value |
     | --- | --- |
-    | Backend settings name | **az104-06-appgw5-http1** |
-    | Backend protocol | **HTTP** |
-    | Backend port | **80** |
-    | Cookie-based affinity | **Disable** |
-    | Connection draining | **Disable** |
-    | Request time-out (seconds) | **20** |
+    | Backend settings name | **az104-06-appgw5-http1 (1)** |
+    | Backend protocol | **HTTP (2)** |
+    | Backend port | **80 (3)** |
+    | Cookie-based affinity | **Disable (4)** |
+    | Connection draining | **Disable (4)** |
+    | Request time-out (seconds) | **20  (5)** |
 
     ![](../Labs/media/l6-image22.png)
    
-1. On the **Add a routing rule** blade. In the **Path-based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then **Add** after the second rule. 
+1. On the **Add a routing rule** blade. In the **Path-based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add (5)** after the first rule and then **Add** after the second rule. 
 
      ![](../Labs/media/l6-image23.png)
    
@@ -330,10 +330,10 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     | Setting | Value |
     | --- | --- |
-    | Path | `/image/*` |
-    | Target name | `images` |
-    | Backend settings | **az104-06-appgw5-http1** |
-    | Backend target | `az104-imagebe` |
+    | Path | `/image/*`  (1)|
+    | Target name | `images`  (2) |
+    | Backend settings | **az104-06-appgw5-http1** (3) |
+    | Backend target | `az104-imagebe` (4)|
 
     ![](../Labs/media/l6-image24.png)
    
@@ -354,7 +354,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. In the Azure portal, search and select **Application Gateways** and, on the **Application Gateways** blade, click **az104-06-appgw5**.
 
-1. In the **Application Gateway** resource, in the **Monitoring (1)** sectionfrom the left navigation pane, select **Backend health (2)**.
+1. In the **Application Gateway** resource, in the **Monitoring (1)** section from the left navigation pane, select **Backend health (2)**.
 
 1. Ensure the servers in the backend pool display **Healthy (3)**.
 
