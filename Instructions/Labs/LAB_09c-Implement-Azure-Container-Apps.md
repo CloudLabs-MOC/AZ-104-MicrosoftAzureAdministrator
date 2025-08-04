@@ -4,6 +4,20 @@
 
 In this lab, you will learn how to implement and deploy Azure Container Apps (ACA), a serverless platform designed for running containerized applications with minimal infrastructure management. ACA abstracts the complexities of setting up and managing the underlying Kubernetes clusters, allowing you to focus purely on deploying and running containers in the cloud.
 
+## Estimated timing: 15 minutes
+
+## Lab scenario
+
+Your organization has a web application that runs on a virtual machine in your on-premises data center. The organization wants to move all applications to the cloud but doesn't want to have a large number of servers to manage. You decide to evaluate Azure Container Apps.
+
+## Architecture
+
+The architecture diagram illustrates a two-task workflow. Task 1 involves setting up a Container Apps Environment, identified as "az104-rg9," which hosts multiple container apps. A specific Container App within this environment is highlighted, indicating its role in the process. This setup is designed to manage and deploy containerized applications efficiently. Task 2 focuses on testing and verifying the deployed applications, represented by icons of a tablet and a smartphone, suggesting cross-device compatibility testing. The connection between Task 1 and Task 2 indicates a seamless transition from deployment to validation, ensuring the container apps are functional and reliable across different platforms.
+
+## Architecture diagram
+
+   ![image](.Instructions/Labs/media/9carchi.png)
+
 ## Lab objectives
 
 - Task 1: Create and configure an Azure Container App and environment.
@@ -21,7 +35,7 @@ Azure Container Apps take the concept of a managed Kubernetes cluster a step fur
 
    ![image](./media/l9-image29.png)
    
-1. From **Container Apps**, select **+ Create (1)** drop down and select **+ Web app (2)**.
+1. From **Container Apps**, select **+ Create (1)** drop down and select **+ Container App (2)**.
 
    ![image](../media/az104-40.png)
 
@@ -32,8 +46,9 @@ Azure Container Apps take the concept of a managed Kubernetes cluster a step fur
     | Subscription | Select your Azure subscription **(1)** |
     | Resource group | **az104-rg2 (2)** |
     | Container app name |  **az-104-9c-ca (3)** |
-    | Region    | **<inject key="Region" enableCopy="false" /> (4)** |
-    | Container Apps Environment |  Select **Create new (5)** |
+    | Deployment source |  **Container image (4)** |
+    | Region    | **<inject key="Region" enableCopy="false" /> (5)** |
+    | Container Apps Environment |  Select **Create new (6)** |
 
     ![image](../media/az104-41.png)    
 
