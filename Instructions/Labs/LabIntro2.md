@@ -22,7 +22,7 @@ To get a better understanding of your lab resources and credentials, navigate to
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](../media/split.png)
+![](./media/updatedsplit.png)
  
 ## Managing Your Virtual Machine
  
