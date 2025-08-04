@@ -16,7 +16,7 @@ This architecture illustrates the process of replicating an Azure disk using dif
 
 ## Architecture diagram
 
-   ![image](../media/lab3barchi.png)
+   ![image](Instructions/Labs/media/lab3barchi.png) 
 
 ## Lab objectives
 
