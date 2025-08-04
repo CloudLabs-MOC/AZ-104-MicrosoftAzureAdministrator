@@ -16,7 +16,7 @@ The architecture diagram illustrates a two-task workflow. Task 1 involves settin
 
 ## Architecture diagram
 
-   ![image](.Instructions/Labs/media/9carchi.png)
+   ![image](./media/9carchi.png)
 
 ## Lab objectives
 
