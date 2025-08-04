@@ -4,9 +4,9 @@ Welcome to your AZ-104: Microsoft Azure Administrator  workshop! We've prepared 
  
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/labguide.png)
+![](./media/guide.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -16,7 +16,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/env.png)
+![](./media/updtenv.png)
  
 ## Utilizing the Split Window Feature
  
@@ -48,7 +48,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 1. On your virtual machine, click on the Azure Portal icon as shown below:
  
-    ![Launch Azure Portal](../Labs/Images/azure.png)
+    ![](./media/portal.png)
  
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
