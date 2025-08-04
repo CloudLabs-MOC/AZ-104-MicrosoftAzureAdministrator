@@ -4,6 +4,25 @@
 
 This lab focuses on applying security best practices while demonstrating advanced Azure networking concepts. You'll create virtual networks and subnets in Azure to establish a secure, scalable networking environment. You'll implement Application Security Groups (ASGs) and Network Security Groups (NSGs) to manage and enforce access controls, and configure both public and private DNS zones for effective name resolution. 
 
+## Estimated time: 50 minutes
+
+## Lab scenario
+
+Your global organization plans to implement virtual networks. The immediate goal is to accommodate all the existing resources. However, the organization is in a growth phase and wants to ensure there is additional capacity for the growth.
+
+The CoreServicesVnet virtual network has the largest number of resources. A large amount of growth is anticipated, so a large address space is necessary for this virtual network.
+
+The ManufacturingVnet virtual network contains systems for the operations of the manufacturing facilities. The organization is anticipating a large number of internal connected devices for their systems to retrieve data from.
+
+## Architecture 
+
+This architecture shows a network setup within the Azure resource group az104-rg4 involving two virtual networks for different domains. Task 1 sets up the CoreServicesVnet for contoso.com, which contains subnets for shared services and databases. Task 2 configures the ManufacturingVnet for private.contoso.com, which includes two sensor subnets. Task 3 establishes a secure peering connection between the two virtual networks to enable communication while maintaining network isolation. Finally, Task 4 ensures both virtual networks are associated with their respective DNS domains, enabling name resolution across the connected environments. This setup supports secure and scalable cross-domain communication.
+
+## Architecture diagram
+
+     ![image](../media/lab4archi.png)
+
+
 ## Lab objectives
 
 In this lab, you will complete the following tasks:
@@ -20,28 +39,30 @@ In this exercise, you will create and configure a virtual network to enable secu
 
 The organization plans a large amount of growth for core services. In this task, you create the virtual network and the associated subnets to accommodate the existing resources and planned growth. In this task, you will use the Azure portal. 
 
-1. In the Azure portal, search for and select `Virtual Networks`.
+1. In the Azure portal, search for and select **Virtual Networks**. 
+
+     ![image](../media/lab4vnet.png)
 
 1. Select **+Create** on the Virtual networks page.
 
-1. Complete the **Basics** tab with the following details:  
+1. Complete the **Basics** tab with the following details and click on **Next**:  
 
     |  **Option**         | **Value**            |
     | ------------------ | -------------------- |
-    | Subscription       | Choose the default subscription |(1)
+    | Subscription       | Choose the default subscription (1) |
     | Resource Group     | **az104-rg2** (2)|
     | Name               | **az104-04-vnet1** (3)|
     | Region             |  **<inject key="Region" enableCopy="false" />** (4) |
 
      ![image](../media/L4T1S3.png)
 
-1. Click **Next: Security** and subsequently click on **Next** again to move to the **IP Addresses** tab.
+1. Click **Next: Security** and subsequently click on **Next** again to move to the **IP Addresses** tab and enter the below value.
 
     | Setting | Value |
     | --- | --- |
     | IPv4 address space | **10.20.0.0/16** |
 
-1. Select **+ Add a subnet (1)**. Create the two subnets **SharedServicesSubnet** and **DatabaseSubnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
+1. Select **+ Add a subnet (1)**. Create the two subnets **SharedServicesSubnet and DatabaseSubnet (2)**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
 
     | **Subnet**             | **Option**           | **Value**              |
     | ---------------------- | -------------------- | ---------------------- |
@@ -55,7 +76,7 @@ The organization plans a large amount of growth for core services. In this task,
      ![image](../media/L4T1S6.png)
     >**Note:** Every virtual network must have at least one subnet. Reminder that five IP addresses will always be reserved, so consider that in your planning. 
 
-1. Select **Review + create**.
+1. Select **Review + create (3)**.
 
 1. Verify your configuration passed validation, and then select **Create**.
 
@@ -91,9 +112,9 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Click on the **Edit Parameters** section and click on **Load File** to upload the **az-104-04parameters.json** file and subsequently, click on **Save**
 
-1. In the **Basics** tab, select **az104-rg2** resource group.
+1. In the **Basics** tab, select **az104-rg2 (1)** resource group.
     
-1. Select **Review + create** and then **Create**.
+1. Select **Review + create (2)** and then **Create**.
 
     ![image](../media/L4T2S7.png)
 
@@ -115,6 +136,8 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 1. In the Azure portal, search for and select **Application security groups**.
 
+      ![image](../media/asg.png)
+
 1. Click **+Create** and provide the basic information.
 
       | Setting | Value |
@@ -130,29 +153,31 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 ### **3.2 Create the Network Security Group and associate it with the ASG subnet**
 
-1. In the Azure portal, search for and select **Network security groups**.
+1. In the Azure portal, search for and select **Network security groups**.  
+
+    ![image](../media/nsg.png)
 
 1. Select **+ Create** and provide information on the **Basics** tab. 
 
       | Setting | Value |
       | -- | -- |
-      | Subscription | *your subscription* |
-      | Resource group |  **az104-rg2**  |
-      | Name | **myNSGSecure** |
-      | Region | **<inject key="Region" enableCopy="false" />**  |
+      | Subscription | *your subscription* (1) |
+      | Resource group |  **az104-rg2 (2)**  |
+      | Name | **myNSGSecure (3)** |
+      | Region | **<inject key="Region" enableCopy="false" />** (4) |
 
-1. Click **Review + create** and then after the validation click **Create**.
+1. Click **Review + create (5)** and then after the validation click **Create**.
 
       ![image](../media/L4T3-3.2S3.png)
 
 1. After the NSG is deployed, click **Go to resource**.
 
-1. Under **Settings (1)** click **Subnets (2)**. Select the values mentioned below and then click on **+Associate (3)**. Click **OK** to save the association.
+1. Under **Settings (1)** click **Subnets (2)**. Select the values mentioned below and then click on **+Associate (3)**. Enter below values and click **OK (7)** to save the association.
  
       | Setting | Value |
       | -- | -- |
-      | Virtual network | **az104-04-vnet1** |
-      | Subnet | **SharedServicesSubnet** |
+      | Virtual network | **az104-04-vnet1 (5)** |
+      | Subnet | **SharedServicesSubnet (6)** |
 
       ![image](../media/L4T3-3.2S5i.png)
       ![image](../media/L4T3-3.2S5ii.png)
@@ -222,6 +247,8 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 
 1. In the Azure portal, search for and select **DNS zones**.
 
+      ![image](../media/dnszone.png)
+
 1. Select **+ Create**.
 
 1. Configure the **Basics** tab.
@@ -256,7 +283,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
      
      >**Note:**  In a real-world scenario, you'd enter the public IP address of your web server.
 
-1. Select **Add** and verify **contoso<inject key="DeploymentID" enableCopy="false" />.com** has an A record set named **www**.
+1. Select **Add (6)** and verify **contoso<inject key="DeploymentID" enableCopy="false" />.com** has an A record set named **www**.
 
 1. Open a command prompt, and run the following command:
    In the below code, replace [DID] with **<inject key="DeploymentID" enableCopy="false" />** and [name server name] with the **name server name** you copied in the previous step.
@@ -293,7 +320,7 @@ A private DNS zone provides name resolution services within virtual networks. It
 
 1. Notice on the **Overview** blade, there are no name server records. 
 
-1. In the left navigation pane under **DNS Management (1)**, select **Virtual network links (3)** from the left navigation pane and then select **+ Add (3)**.
+1. In the left navigation pane under **DNS Management (1)**, select **Virtual network links (2)** from the left navigation pane and then select **+ Add (3)**.
 
     | Property | Value    |
     |:---------|:---------|
