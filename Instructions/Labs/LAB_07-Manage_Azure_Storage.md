@@ -4,6 +4,8 @@
 
 In this lab you learn to create storage accounts for Azure blobs and Azure files. You learn to configure and secure blob containers. You also learn to use Storage Browser to configure and secure Azure file shares. 
 
+## Estimated timing: 50 minutes
+
 ## Lab scenario
 
 Your organization is currently storing data in on-premises data stores. Most of these files are not accessed frequently. You would like to minimize the cost of storage by placing infrequently accessed files in lower-priced storage tiers. You also plan to explore different protection mechanisms that Azure Storage offers, including network access, authentication, authorization, and replication. Finally, you want to determine to what extent Azure Files is suitable for hosting your on-premises file shares.
@@ -16,31 +18,32 @@ There are interactive lab simulations that you might find useful for this topic.
   
 + [Manage Azure storage](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2011). Create a storage account and review the configuration. Manage blob storage containers. Configure storage networking. 
 
+## Architecture 
+
+This architecture shows the configuration of Azure storage services within the resource group az104-07-rg7. In Task 1, a Storage account is created, serving as the central point for managing data services. From this storage account, two services are configured: Task 2 sets up a Blob container, which is ideal for storing unstructured data like documents or images, and Task 3 configures a File share, which allows file-level access over SMB protocol. This setup provides flexible storage options for various types of workloads, supporting both object-based and file-based data storage within a single Azure resource group.
+
+## Architecture diagram
+
+  ![Diagram of the tasks.](./media/az104-lab07-architecture.png)
+
 ## Lab objectives
 In this lab, you will complete the following tasks:
 + Task 1: Create and configure a storage account. 
 + Task 2: Create and configure secure blob storage.
 + Task 3: Create and configure secure Azure file storage.
 
-  
-## Estimated timing: 45 minutes
-
-## Architecture diagram
-
-  ![Diagram of the tasks.](./media/az104-lab07-architecture.png)
-
 ## Exercise 1
 
 ### Task 1: Create and configure Azure Storage accounts
 In this task, you will create and configure an Azure Storage account.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage accounts (1)**, and then select **Storage accounts (2)** under services.
+1. On Azure Portal page, in **Search box**  at the top of the portal, enter **Storage accounts (1)**, and then select **Storage accounts (2)** under services.
 
     ![image](./media/l1-image1.png)
 
 1. On **Storage accounts** blade, click on **+ Create**.
    
-1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values) then click on **Next (7)**:
+1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values) then click on **Next (7)**
 
     | Setting | Value |
     | --- | --- |
@@ -66,7 +69,7 @@ In this task, you will create and configure an Azure Storage account.
 
 1. On the deployment blade, click **Go to resource** to display the Azure Storage account blade.
 
-1. On the Storage account resource page, under **Data management** section, click **Redundancy (1)** and note the secondary location **(2)**. 
+1. On the Storage account resource page, under **Data management** section, click **Redundancy** and note the **secondary location**. 
 
     ![image](../media/L7T1S10.png)
 
@@ -84,13 +87,13 @@ In this task, you will create and configure an Azure Storage account.
 
 1. Review the **Overview** blade and the additional configurations that can be changed. These are global settings for the storage account. Notice the storage account can be used for Blob containers, File shares, Queues, and Tables.
 
-1. In the **Security + Networking** section, select **Networking (1)** and notice **public network access is disabled**.
+1. In the **Security + Networking** section, select **Networking** and notice **public network access is Disabled (1)** click on **Manage (2)**.
 
-    ![image](./media/az104-7.png)
+    ![image](./Instructions/Labs/media/managestr.png)
 
-    + Change the **public access level** to **Enabled from all network (2)** and click on **Save (3)** to save your changes. 
+    + Change the Public network access to **Enable(1)** and select **Enabled from all networks (2)** and click on **Save (3)** to save your changes. 
 
-      ![image](./media/az104-6.png)    
+      ![image](.Instructions/Labs/media/strenable.png)    
 
 1. In the **Data management** section, view the **Redundancy** blade and notice the information about your primary data center locations.
 
@@ -98,11 +101,11 @@ In this task, you will create and configure an Azure Storage account.
 
     ![image](./media/az104-8.png)
 
-    + **Name** the rule `Movetocool` **(1)**. Notice your options for limiting the scope of the rule and then click on **Next (2)**.
+    + Name the rule **Movetocool (1)**. Notice your options for limiting the scope of the rule and then click on **Next (2)**.
   
       ![image](./media/l1-image5.png)
     
-    + On the **Base blobs** tab, *if* based blobs were last modified more than `30 days` ago **(1)** *then* **move to cool storage (2)**. Notice your other choices. Notice you can configure other conditions. Select **Add (3)** when you are done exploring.
+    + On the **Base blobs** tab, *if* based blobs were last modified more than (days ago) **30 (1)**  'then' **Move to cool storage (2)**. Notice your other choices. Notice you can configure other conditions. Select **Add (3)** when you are done exploring.
 
       ![image](./media/l1-image6.png)
    
@@ -132,17 +135,17 @@ In this task, you will create a blob container and upload a blob into it.
 
      ![image](./media/az104-10.png)
 
-1. On your container, scroll to the **ellipsis (...) (1)** on the far right, select **Access Policy (2)**.
+1. On your container, scroll to the **ellipsis (...) (1)** on the far right, select **Access policy (2)**.
 
      ![image](./media/l1-image9.png)
 
-1. On the **Access policy** window, under  **Immutable blob storage** select **+Add policy**.
+1. On the **Access policy** window, under  **Immutable blob storage** select **+Add policy**. Enter the values in **Immutable storage policy** and  select **Save (3)**.
 
     | Setting | Value |
     | --- | --- |
     | Policy type | **Time-based retention (1)**  |
     | Set retention period for | `180` days **(2)** |
-    | Select **Save (3)** |
+    
    
      ![image](./media/l1-image10.png)
 
@@ -158,7 +161,7 @@ In this task, you will create a blob container and upload a blob into it.
 
     ![image](./media/az104-14.png)
 
-1. On the **Upload blob** pane, expand the **Advanced (1)** section and specify the following settings (leave others with their default values) and then click on **Upload (6)**:
+1. On the **Upload blob** pane, expand the **Advanced (1)** section and specify the following settings (leave others with their default values) and then click on **Upload (6)**.
 
     | Setting | Value |
     | --- | --- |
@@ -273,7 +276,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. Select your **az104-07-share** directory, notice you can **+ Add directory** on the top navigation pane in the file share window. This lets you create a folder structure. Provide name **az104-07-folder** and click on **OK**
 
-1. Open file explorer, navigate to **Downloads (1)**, right click on empty space, click on **New (2)** -> **Text document (3)**.
+1. Open file explorer, navigate to **Downloads (1)**, right click on empty space, click on **New (2)** then  **Text document (3)**.
 
     ![image](./media/az104-27.png)
 
@@ -308,7 +311,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. Select **+ Create**. 
 
-1. On the create Virtual network page, provide the following details and then click on **Review + create (5)**.
+1. On the create Virtual network page, provide the following details and then click on **Review + create**.
 
     | Setting | Value |
     | --- | --- |
@@ -323,14 +326,14 @@ In this task, you will create and configure Azure Files shares.
 
 1. Wait for the virtual network to deploy, and then select **Go to resource**.
 
-1. In the **Settings** section, select the **Service endpoints** blade, click on **+ Add (2)**.
+1. In the **Settings** section, select the **Service endpoints (1)** blade, click on **+ Add (2)**.
 
     ![image](./media/az104-33.png)
 
 1. On the **Add Service Endpoint**, add the following details and then click on **Add (3)**
 
     + In the Services drop-down select **Microsoft.Storage** **(1)**
-    + In the Subnets drop-down check the **Default** subnet **(2)**   
+    + In the Subnets drop-down check the **default** subnet **(2)**   
 
       ![image](./media/az104-34.png)    
 
