@@ -4,6 +4,12 @@
 
 In this lab, you will learn to configure and manage Azure resources, including Virtual Networks, Load Balancers, Virtual Machines, and Network Security Groups, to create a secure and scalable infrastructure.
 
+## Estimated timing: 50 minutes
+
+## Lab scenario
+
+Your organization has a public website. You need to load balance incoming public requests across different virtual machines. You also need to provide images and videos from different virtual machines. You plan on implementing an Azure Load Balancer and an Azure Application Gateway. All resources are in the same region.
+
 ## Interactive lab simulations
 
 There are interactive lab simulations that you might find useful for this topic. The simulation lets you click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
@@ -26,7 +32,7 @@ In this exercise, you will configure and implement Azure Traffic Manager to mana
 
 In this task, you will use a template to deploy one virtual network, one network security group, and two virtual machines.
 
-1. On the Azure Portal page, in the **Search resources, services and docs (G+/)** box at the top of the portal, enter **Deploy a custom template** (1), and then select **Deploy a custom template** (2) under services.
+1. On the Azure Portal page, in the **Search box**  at the top of the portal, enter **Deploy a custom template (1)** , and then select **Deploy a custom template (2)**  under services.
 
     ![](../Labs/media/l6-image1.png)
 
@@ -38,7 +44,7 @@ In this task, you will use a template to deploy one virtual network, one network
 
    ![](../Labs/media/l6-image3.png)
    
-1. Locate and select the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\06\az104-06-vms-template.json** file and select **Open**.
+1. Locate and select the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\06\az104-06-vms-template.json (1)** file and select **Open (2)**.
 
    ![](../Labs/media/l6-image4.png)
 
@@ -46,7 +52,7 @@ In this task, you will use a template to deploy one virtual network, one network
 
    ![](../Labs/media/l6-image5.png)
    
-1. Select **Edit parameters** > **load** and locate and select **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\06\az104-06-vms-parameters.json** file.
+1. Select **Edit parameters** then click on **Load file** and locate and select **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\06\az104-06-vms-parameters.json** file.
 
    ![](../Labs/media/l6-image6.png)
 
@@ -58,13 +64,13 @@ In this task, you will use a template to deploy one virtual network, one network
 
     ![](../Labs/media/l6-image9.png)
    
-1. Use the following information to complete the fields on the custom deployment page, leaving all other fields with the default value, and select **Review + Create**.
+1. Use the following information to complete the fields on the custom deployment page, leaving all other fields with the default value, and select **Review + Create (4)**.
 
     | Setting       | Value         |
     | ---           | ---           |
-    | Subscription  | your Azure subscription |
-    | Resource group | **az104-rg2** |
-    | Password      | Provide a secure password (Please make sure the password contains uppercase, lowercase letters, digit,s and a special character and it is at least 8 characters long.)|
+    | Subscription  | your Azure subscription (1) |
+    | Resource group | **az104-rg2 (2)** |
+    | Password      | Provide a secure password (Please make sure the password contains uppercase, lowercase letters, digit,s and a special character and it is at least 8 characters long.) (3)|
 
     ![](../Labs/media/l6-image10.png)
    
@@ -80,7 +86,7 @@ In this task, you will use a template to deploy one virtual network, one network
 
 In this task, you will implement an Azure Load Balancer in front of the two Azure virtual machines in the hub virtual network
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Load balancer**, and then select **Load balancers** under services.
+1. On Azure Portal page, in **Search box**  at the top of the portal, enter **Load balancer(1)**, and then select **Load balancers(2)** under services.
 
      ![](../Labs/media/l6-image11.png)
 
