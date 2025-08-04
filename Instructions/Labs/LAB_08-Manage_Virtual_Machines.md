@@ -12,7 +12,7 @@ This architecture shows a high availability setup using Azure virtual machines d
 
 ## Architecture Diagram 
 
-   ![](./Instructions/Labs/media/lab8archi.png)
+   ![](./media/lab8archi.png)
 
 
 ## Lab scenario

@@ -20,9 +20,13 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Architecture
 
+
+The architecture diagram represents an Azure-based deployment using App Service and Web App within the az104-09a-rg9a resource group. It includes a Production slot and a Staging slot for managing application deployments. The Production slot is live, while the Staging slot, integrated with an external Git repository ("Hello world!"), allows for updates and testing. Tasks 1 and 2 involve setting up App Service and Web App, respectively. Task 3 configures external Git deployment, Task 4 handles the swap between slots, and Task 5 manages the App Service Plan with an autoscale rule for dynamic resource adjustment. This setup ensures efficient deployment and scalability.
+
 ## Architecture diagram
 
-  ![image](./Instructions/Labs/media/9alabarchi.png)
+  ![image](./media/9alabarchi.png)
+
 ## Lab objectives
 
 In this lab, you will complete the following tasks:
