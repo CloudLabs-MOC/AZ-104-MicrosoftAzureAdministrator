@@ -89,11 +89,11 @@ In this task, you will create and configure an Azure Storage account.
 
 1. In the **Security + Networking** section, select **Networking** and notice **public network access is Disabled (1)** click on **Manage (2)**.
 
-    ![image](./Instructions/Labs/media/managestr.png)
+    ![image](./media/managestr.png)
 
     + Change the Public network access to **Enable(1)** and select **Enabled from all networks (2)** and click on **Save (3)** to save your changes. 
 
-      ![image](.Instructions/Labs/media/strenable.png)    
+        ![image](./media/strenable.png)    
 
 1. In the **Data management** section, view the **Redundancy** blade and notice the information about your primary data center locations.
 
