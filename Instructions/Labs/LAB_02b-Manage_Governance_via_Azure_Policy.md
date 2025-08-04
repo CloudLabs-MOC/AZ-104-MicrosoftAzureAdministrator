@@ -1,8 +1,10 @@
-# Lab 02: Manage Subscriptions,RBAC and Governance
+# Lab 02: Manage Governance via Azure Policy
 
 ## Lab Overview
 
 In this lab, you will implement management groups to organize your Azure subscriptions for centralized governance and access control. You'll create custom RBAC roles to define specific permissions, ensuring users only access needed resources.These roles will be assigned based on job responsibilities to enforce security and compliance. Finally, you'll use the Activity Log to monitor role assignments, track changes, and ensure adherence to access control policies.
+
+## Estimated timing: 30 minutes
 
 ## Interactive lab simulations
 
@@ -14,6 +16,13 @@ There are several interactive lab simulations that you might find useful for thi
 
 + [Manage governance via Azure policy](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%203). Create and assign tags via the Azure portal. Create an Azure policy that requires tagging. Remediate non-compliant resources.
 
+## Architecture
+
+This diagram shows how Azure policies enforce and remediate resource tagging. In Task 1, a Resource Group is assigned a tag with name Cost Center and value 000. In Task 2, an Azure policy requires that all resources have this tag. When a new Storage Account is created without the tag, the policy denies its creation. In contrast, Task 3 applies a remediation policy that automatically inherits the tag from the Resource Group if it's missing, so the Storage Account is allowed and the tag is added automatically. Finally, Task 4 secures the Resource Group, likely to prevent tag tampering or deletion.
+
+## Architecture diagram
+
+   ![image](./media/lab2barchi.png)
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -30,11 +39,11 @@ In this exercise, you will learn to manage governance via Azure Policy, which in
 
 In this task, you will learn how to create and assign a tag to an Azure resource group through the Azure portal. Tags in Azure are key-value pairs that help in organizing and categorizing resources for better management and reporting.
 
-1. On the Azure Portal page, in the **Search resources, services and docs (G+/)** box at the top of the portal, search and select **Resource group** under services. Select **az104-rg2** Resource group from the list.
+1. On the Azure Portal page, in the **Search box**  at the top of the portal, search for **Resource groups(1)** and select **Resource groups(2)** under services. Select **az104-rg2** Resource group from the list.
 
    ![image](./media/l2-image45.png)
 
-1. On the resource group blade, click **Tags** and create a tag with the following settings, and click on **Apply** to save your change:
+1. On the resource group blade, click **Tags(1)** and **create a tag (2)** with the following settings, and click on **Apply(3)** to save your change:
 
     | Setting | Value |
     | --- | --- |
@@ -47,15 +56,15 @@ In this task, you will learn how to create and assign a tag to an Azure resource
 
 In this task, you will explore how to enforce governance policies by assigning the built-in Require a tag and its value on the resources policy to a specific Azure resource group. This policy ensures that all resources created within the resource group are tagged with a predefined key-value pair, promoting consistency and compliance with organizational standards.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Policy**, and then select **Policy** under services.
+1. On Azure Portal page, in **Search box** at the top of the portal, enter **Policy (1)**, and then select **Policy (2)** under services.
 
    ![image](./media/l2-image28.png)
 
-1. In the **Authoring** section, click **Definitions**. Take a moment to browse through the list of built-in policy definitions that are available for you to use. List all built-in policies that involve the use of tags by selecting the **Tags** entry (and deselecting all other entries) in the **Category** drop-down list and clicking on **Apply**.
+1. In the **Authoring** section, click **Definitions(1)**. Take a moment to browse through the list of built-in policy definitions that are available for you to use. List all built-in policies that involve the use of tags by selecting the **Tags (3)** entry (and deselecting all other entries) in the **Category(2)** drop-down list and clicking on **Apply(4)**.
 
    ![image](./media/l2-image29.png)
 
-1. In the search bar, enter **require** and click the entry representing the **Require a tag and its value on resources** built-in policy, and review its definition.
+1. In the search bar, enter **require (1)** and click the entry representing the **Require a tag and its value on resources (2)** built-in policy, and review its definition.
 
     ![image](./media/l2-image30.png)
    
@@ -86,16 +95,16 @@ In this task, you will explore how to enforce governance policies by assigning t
    
     >**Note**: The **Assignment name** is automatically populated with the policy name you selected, but you can change it. You can also add an optional **Description**. **Assigned by** is automatically populated based on the user name creating the assignment. 
 
-1. Set **Parameters** to the following values:
+1. Set **Parameters** to the following values and click on **Next(3)**:
 
     | Setting | Value |
     | --- | --- |
-    | Tag Name | **Role** |
-    | Tag Value | **Infra** |
+    | Tag Name | **Role (1)** |
+    | Tag Value | **Infra (2)** |
 
    ![image](./media/lab02-new-7.png)
    
-1. Click **Next** and review the **Remediation** tab. Leave the **Create a Managed Identity** checkbox unchecked. 
+1. Review the **Remediation** tab. Leave the **Create a Managed Identity** checkbox unchecked. 
 
     >**Note**: This setting can be used when the policy or initiative includes the **deployIfNotExists** or **Modify** effect.
 
@@ -105,7 +114,9 @@ In this task, you will explore how to enforce governance policies by assigning t
     
     >**Note**: It might take between 5 and 15 minutes for the policy to take effect.
 
-1. On the Azure Portal page, in the **Search resources, services and docs (G+/)** box at the top of the portal, search and select **Storage accounts** under services, and then click **+ Create**.
+1. On the Azure Portal page, in the **Search box** at the top of the portal, search and select **Storage accounts** under services, and then click **+ Create**.
+
+    ![image](./media/createstr.png)
 
 1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to and specify the following settings (leave others with their defaults), click **Review + create**, and then click **Create**:
 
@@ -127,11 +138,11 @@ In this task, you will explore how to enforce governance policies by assigning t
 
 In this task, you will focus on identifying and remediating non-compliant resources by leveraging a different Azure Policy definition. Non-compliant resources are those that do not meet the criteria defined in your organization's governance policies, such as missing mandatory tags or violating security configurations. 
 
-1. In the Azure portal, search for and select **Policy**. 
+1. In the Azure portal, search for **Policy(1)** and select **Policy (2)**. 
 
    ![image](./media/l2-image28.png)
 
-1. In the list of assignments, right-click the ellipsis icon in the row representing the **Require Role tag with Infra value** policy assignment and use the **Delete assignment** menu item to delete the assignment, and then select **Yes**.
+1. In the list of assignments, right-click the **ellipsis(1)** icon in the row representing the **Require Role tag with Infra value** policy assignment and use the **Delete assignment (2)** menu item to delete the assignment, and then select **Yes**.
 
    ![image](./media/l2-image66.png)
 
@@ -148,7 +159,7 @@ In this task, you will focus on identifying and remediating non-compliant resour
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | az104-rg2 |
 
-1. To specify the **Policy definition**, click the ellipsis button and then search for and select **Inherit a tag from the resource group if missing**,* then click on **Add** if not selected in the definition.
+1. To specify the **Policy definition**, click the **ellipsis(1)** button and then search for **Inherit a tag from the resource group if missing(2)** and select **Inherit a tag from the resource group if missing (3)**, then click on **Add(4)** if not selected in the definition.
 
     ![image](./media/l2-image37.png)
 
@@ -156,30 +167,30 @@ In this task, you will focus on identifying and remediating non-compliant resour
 
    >**Note**: You can ignore the above step if the policy definition has appeared automatically.
 
-1. Configure the remaining **Basics** properties of the assignment by specifying the following settings (leave others with their defaults) and click on **Next**.
+1. Configure the remaining **Basics** properties of the assignment by specifying the following settings (leave others with their defaults) and click on **Next (4)**.
 
     | Setting | Value |
     | --- | --- |
-    | Assignment name | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing**|
-    | Description | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing**|
-    | Policy enforcement | Enabled |
+    | Assignment name | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing (1)**|
+    | Description | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing (2)**|
+    | Policy enforcement | **Enabled (3)**|
 
     ![image](./media/lab02-new-8.png)
 
-1. Click **Next** and set **Parameters** to the following values:
+1. Set **Parameters** to the following values and click **Next(2)**:
 
     | Setting | Value |
     | --- | --- |
-    | Tag Name | **Role** |
+    | Tag Name | **Role (1)** |
 
     ![image](./media/lab02-new-9.png)
    
-1. Click **Next** and, on the **Remediation** tab, configure the following settings (leave others with their defaults) and click **Review + Create**.
+1. On the **Remediation** tab, configure the following settings (leave others with their defaults) and click **Review + Create (3)**.
 
     | Setting | Value |
     | --- | --- |
-    | Create a remediation task | enabled |
-    | Policy to remediate | **Inherit a tag from the resource group if missing** |
+    | Create a remediation task | **Enabled(1)** |
+    | Policy to remediate | **Inherit a tag from the resource group if missing (2)** |
 
     >**Note**: This policy definition includes the **Modify** effect.
 
@@ -191,16 +202,16 @@ In this task, you will focus on identifying and remediating non-compliant resour
     
     >**Note**: It might take between 5 and 15 minutes for the policy to take effect.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search and select **Storage accounts** under services and then click **+ Create**. 
+1. On Azure Portal page, in **Search box**  at the top of the portal, search and select **Storage accounts** under services and then click **+ Create**. 
 
-1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to, and specify the following settings (leave others with their defaults) and click **Review + create**:
+1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to, and specify the following settings (leave others with their defaults) and click **Review + create (5)**:
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | az104-rg2 |
-    | Storage account name |  **storage<inject key="DeploymentID" enableCopy="false"/>** |
-    | Redundancy |  **Locally-redundant storage (LRS)** |
+    | Subscription | the name of the Azure subscription you are using in this lab (1) |
+    | Resource Group | **az104-rg2 (2)** |
+    | Storage account name |  **storage<inject key="DeploymentID" enableCopy="false"/>** **(3)** |
+    | Redundancy |  **Locally-redundant storage (LRS) (4)** |
 
     ![image](./media/xxx7.png)
    
@@ -208,7 +219,7 @@ In this task, you will focus on identifying and remediating non-compliant resour
 
    >**Note**: If the validation fails, kindly wait for some time as it might take some time for the policy to take effect for the validation to pass through.
 
-1. Once the new storage account is provisioned, click the **Go to resource** button and, on the **Overview** blade of the newly created storage account, note that the tag **Role** with the value **Infra** has been automatically assigned to the resource.
+1. Once the new storage account is provisioned, click the **Go to resource** button and, on the **Overview** blade of the newly created storage account, note that the **Tag** **Role** with the value **Infra** has been automatically assigned to the resource.
 
    ![image](./media/l2-image43.png)
 
@@ -235,11 +246,11 @@ In this task, you will configure and test a resource lock to safeguard critical 
       | Lock name | `rg-lock` |
       | Lock type | **Delete** (notice the selection for read-only) |
     
-1. Navigate to the resource group **Overview** blade, and select **Delete resource group**.
+1. Navigate to the resource group **Overview (1)** blade, and select **Delete resource group (2)**.
 
     ![image](./media/xxx3.png)
 
-1. In the **Enter resource group name to confirm deletion** textbox, provide the resource group name, `az104-rg2`. Notice you can copy and paste the resource group name and click on **Delete** twice. 
+1. In the **Enter resource group name to confirm deletion (1)** textbox, provide the resource group name, `az104-rg2`. Notice you can copy and paste the resource group name and click on **Delete (2)** twice. 
 
     ![image](./media/xxx4.png)
    
@@ -247,7 +258,7 @@ In this task, you will configure and test a resource lock to safeguard critical 
 
      ![image](./media/xxx5.png)
 
-1. From the **az104-rg2** resource group **Overview** blade, under **Settings** section select **Locks** and Select Locks and proceed to click **Delete** to remove the existing **rg-lock** locks.
+1. From the **az104-rg2** resource group **Overview** blade, under **Settings** section select **Locks(1)** and Select Locks and proceed to click **Delete (2)** to remove the existing **rg-lock** locks.
 
     ![image](./media/xxx6.png)
 

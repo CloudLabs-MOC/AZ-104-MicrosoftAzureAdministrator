@@ -4,6 +4,20 @@
 
 In this lab, you learn about backup and recovery of Azure virtual machines. You learn to create a Recovery Service vault and a backup policy for Azure virtual machines. You learn about disaster recovery with Azure Site Recovery. 
 
+##  Estimated timing: 50 minutes
+
+## Lab scenario
+
+Your organization is evaluating how to backup and restore Azure virtual machines from accidental or malicious data loss. Additionally, the organization wants to explore using Azure Site Recovery for disaster recovery scenarios.
+
+## Architecture
+
+The architecture diagram depicts a multi-region Azure setup with Region 1 and Region 2. In Region 1, Task 1 involves managing "az104-10-vm0," Task 2 handles "az104-rsv-region1," and Task 3 includes Azure Backup. Task 4 monitors the setup. Region 2 hosts Task 5 with "az104-rsv-region2." Data replication occurs between Region 1 and Region 2, ensuring redundancy. This design supports virtual machine management, recovery services, backup, and monitoring across two regions for enhanced reliability and disaster recovery.
+
+## Architecture diagram
+
+   ![image](./media/lab10archi.png)
+
 ## Interactive lab simulation
 
 There is an interactive lab simulation that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
@@ -26,7 +40,7 @@ In this exercise, you will  learn how to configure and perform backups for Azure
 
 In this task, you will deploy two virtual machines that will serve as test environments to explore and evaluate various backup scenarios.
 
-1. In the Azure Portal page, in the **Search resources, services and docs (G+/)** box at the top of the portal search for **Deploy a custom template (1)** and select **Deploy a custom template (2)** resource.
+1. In the Azure Portal page, in the **Search box**  at the top of the portal search for **Deploy a custom template (1)** and select **Deploy a custom template (2)** resource.
 
    ![image](../media/az104-42.png)
 
@@ -54,7 +68,7 @@ In this task, you will deploy two virtual machines that will serve as test envir
 
 1. Then click on **Save**.
 
-1. Use the following information to complete the custom deployment fields, leaving all other fields with their default values and then select Select **Review + create (5)**:
+1. Use the following information to complete the custom deployment fields, leaving all other fields with their default values and then select Select **Review + create (5)**
 
     | Setting       | Value         | 
     | ---           | ---           |
@@ -73,7 +87,7 @@ In this task, you will deploy two virtual machines that will serve as test envir
 
 In this task, you will create a Recovery Services vault, an essential component for managing and safeguarding your backup and disaster recovery needs.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Recovery Services vaults (1)**, and then select **Recovery Services vaults (2)** under services.
+1. On Azure Portal page, in **Search box**  at the top of the portal, enter **Recovery Services vaults (1)**, and then select **Recovery Services vaults (2)** under services.
 
     ![image](./media/l10-image5.png)
 
@@ -108,7 +122,7 @@ In this task, you will create a Recovery Services vault, an essential component 
 
     >**Note**: This setting can be configured only if there are no existing backup items.
 
-1. Back on the **az104-10-rsv1 - Properties** pane, click the **Update** link under **Security Settings > Soft Delete and security settings** label.
+1. Back on the **az104-10-rsv1 - Properties** pane, click the **Update** link under **Security Settings** in **Soft Delete and security settings** label.
 
     ![image](./media/az-104p2.png)
 
@@ -197,7 +211,7 @@ In this task, you will implement Azure virtual-machine level backup to ensure da
 
     ![image](./media/az-104p5.png)
 
-1. Accept the default value in the **Retain Backup Till** drop-down list **(1)**, and click **OK (2)**.
+1. Accept the default value in the **Retain Backup till (1)** drop-down list, and click **OK (2)**.
 
     ![image](../media/az104-59.png)
 
@@ -207,7 +221,7 @@ In this task, you will implement Azure virtual-machine level backup to ensure da
 
 In this task, you will deploy an Azure storage account. Then you will configure the vault to send the logs and metrics to the storage account. This repository can then be used with Log Analytics or other third-party monitoring solutions.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage accounts (1)**, and then select **Storage accounts (2)** under services.
+1. On Azure Portal page, in **Search box** at the top of the portal, enter **Storage accounts (1)**, and then select **Storage accounts (2)** under services.
 
    ![image](../media/az104-60.png)
 
@@ -234,7 +248,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. In the Azure portal, locate and select the **Recovery Services vault** that was created in the previous task.
 
-1. From the left navigation pane,select **Diagnostic Settings (1)** under monitoring and then select **Add diagnostic setting (1)**.
+1. From the left navigation pane under **Monitor (1)**,select **Diagnostic Settings (2)** under monitoring and then select **Add diagnostic setting (3)**.
 
    ![image](./media/l10-image200.png)
 
@@ -275,7 +289,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 In this task, you will enable replication for a virtual machine to ensure business continuity and disaster recovery. 
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Recovery Services vaults**, and then select **Recovery Services vaults** under services. click **+ Create**.
+1. On Azure Portal page, in **Search box**  at the top of the portal, enter **Recovery Services vaults**, and then select **Recovery Services vaults** under services. Then click **+ Create**.
 
 1. On the **Create Recovery Services vault** blade, specify the following settings and then click on **Review + create (5)**.
 

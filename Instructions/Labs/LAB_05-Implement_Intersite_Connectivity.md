@@ -4,6 +4,20 @@
  
  In this lab, you will set up and configure a virtual network, create subnets to organize resources, and implement network security through Network Security Groups (NSGs). 
 
+## Estimated time: 50 minutes
+
+## Lab scenario
+
+Your organization segments core IT apps and services (such as DNS and security services) from other parts of the business, including your manufacturing department. However, in some scenarios, apps and services in the core area need to communicate with apps and services in the manufacturing area. In this lab, you configure connectivity between the segmented areas. This is a common scenario for separating production from development or separating one subsidiary from another.
+
+# Architecture
+
+This architecture demonstrates a secure and connected network setup across two virtual networks in Azure within the az104-rg5 resource group. Task 1 deploys CoreServicesVM in the CoreServicesVNet, while Task 2 deploys ManufacturingVM in the ManufacturingVNet. Both networks are in the East US region and are connected through Task 3 using Network Watcher for monitoring. Task 4 establishes VNet peering to enable direct communication between the VMs, and Task 5 allows CLI-based access and testing. Finally, Task 6 introduces a Perimeter subnet to securely expose services to the internet, protecting internal resources via controlled access.
+1
+## Architecture diagram
+
+  ![Image](./media/lab5archi.png)
+
 ## Lab objectives
 In this lab, you will complete the following tasks:
 + Task 1: Provision the lab environment.
@@ -30,8 +44,9 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 1. In the toolbar of the Cloud Shell pane, click on the **Manage files** dropdown, click **Upload**, and upload one by one the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-parameters.json** into the Cloud Shell home directory.
 
-    ![Image](./Images/upload-files-incloudshell-0905a.png)
     ![Image](./Images/upload-files-incloudshell-0905.png)
+    ![Image](./Images/upload-files-incloudshell-0905a.png)
+
 
 1.  From the Cloud Shell pane, run the following command to set up the regions for your deployment. Replace **Azure_region_1** with the name of the first Azure region where you want to deploy your virtual machines, and **Azure_region_2** with a different Azure region for the third virtual machine. **For example**, you can use **$location1 = 'eastus'** and **$location2 = 'westus'**. The first two virtual networks and two virtual machines will be deployed in $location1, while the third virtual network and the third virtual machine will be deployed in $location2 within the same resource group. 
 
@@ -72,9 +87,11 @@ In this task, you verify that resources in peered virtual networks can communica
 
 1. From the Azure portal, search for and select **Network Watcher**.
 
+    ![Image](./media/entwatch.png)
+
 1. From Network Watcher, in the **Network diagnostic tools** menu in the left navigation pane, select **Connection troubleshoot**.
 
-1. Use the following information to complete the fields on the **Connection troubleshoot** page and select **Run diagnostic tests** (8).
+1. Use the following information to complete the fields on the **Connection troubleshoot** page and select **Run diagnostic tests (8)**.
 
     | Field | Value | 
     | --- | --- |
@@ -98,7 +115,7 @@ In this task, you verify that resources in peered virtual networks can communica
 
 In this task, you will configure local and global peering between the virtual networks you deployed in the previous tasks.
 
-1. In the Azure portal, search for and select **Virtual networks**.
+1. In the Azure portal, search for **virtual networks (1)** and select **Virtual networks (2)**.
 
     ![Image](./Images/selectvnet.png)
 
@@ -120,16 +137,16 @@ In this task, you will configure local and global peering between the virtual ne
     | --- | --- |
     | Remote virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet0** (1) |
     | Virtual network deployment model | **Resource manager** (2)|
-    | I know my resource ID | unselected (3)|
-    | Subscription | the name of the Azure subscription you are using in this lab (4) |
-    | Virtual network | **az104-05-vnet1** (5)|
-    | Remote virtual network peering settings | **Ensure only the first three boxes are checked** (6) |
-    | Local Peering link name | **az104-05-vnet0_to_az104-05-vnet1** (7)|
-    | Local virtual network peering settings | **Ensure only the first three boxes are checked** (8)|
+    | I know my resource ID | unselected |
+    | Subscription | the name of the Azure subscription you are using in this lab (3) |
+    | Virtual network | **az104-05-vnet1** (4)|
+    | Remote virtual network peering settings | **Ensure only the first three boxes are checked** (5) |
+    | Local Peering link name | **az104-05-vnet0_to_az104-05-vnet1** (6)|
+    | Local virtual network peering settings | **Ensure only the first three boxes are checked** (7)|
    
    ![Image](./Images/az-104-3.png)
 
-   ![Image](./Images/az-104-6.png)
+   ![Image](./media/vmsummary2.png)
     
       >**Note**: You can ignore the warning stating that the VNet does not have a routing gateway.
 
@@ -157,14 +174,14 @@ In this task, you will configure local and global peering between the virtual ne
 
     | Setting | Value|
     | --- | --- |
-    | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet0** (1) |
-    | Virtual network deployment model | **Resource manager** (2)|
-    | I know my resource ID | unselected (3)|
-    | Subscription | the name of the Azure subscription you are using in this lab (4) |
-    | Virtual network | **az104-05-vnet2** (5)|
-    | Remote virtual network peering settings | **Ensure only the first three boxes are checked** (6) |
-    | Local Peering link name | **az104-05-vnet0_to_az104-05-vnet2** (7)|
-    | Local virtual network peering settings | **Ensure only the first three boxes are checked** (8)|
+    | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet0**  |
+    | Virtual network deployment model | **Resource manager** |
+    | I know my resource ID | unselected |
+    | Subscription | the name of the Azure subscription you are using in this lab  |
+    | Virtual network | **az104-05-vnet2** |
+    | Remote virtual network peering settings | **Ensure only the first three boxes are checked**  |
+    | Local Peering link name | **az104-05-vnet0_to_az104-05-vnet2** |
+    | Local virtual network peering settings | **Ensure only the first three boxes are checked** |
 
     >**Note**: You can ignore the warning stating that the VNet does not have a routing gateway.
  
@@ -195,14 +212,14 @@ In this task, you will configure local and global peering between the virtual ne
 
     | Setting | Value|
     | --- | --- |
-    | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet1** (1) |
-    | Virtual network deployment model | **Resource manager** (2)|
-    | I know my resource ID | unselected (3)|
-    | Subscription | the name of the Azure subscription you are using in this lab (4) |
+    | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet1**  |
+    | Virtual network deployment model | **Resource manager** |
+    | I know my resource ID | unselected |
+    | Subscription | the name of the Azure subscription you are using in this lab  |
     | Virtual network | **az104-05-vnet2** (5)|
-    | Remote virtual network peering settings | **Ensure only the first three boxes are checked** (6) |
-    | Local Peering link name | **az104-05-vnet1_to_az104-05-vnet2** (7)|
-    | Local virtual network peering settings | **Ensure only the first three boxes are checked** (8)|
+    | Remote virtual network peering settings | **Ensure only the first three boxes are checked**  |
+    | Local Peering link name | **az104-05-vnet1_to_az104-05-vnet2** |
+    | Local virtual network peering settings | **Ensure only the first three boxes are checked** |
 
     >**Note**: You can ignore the warning stating that the VNet does not have a routing gateway.
  
@@ -236,7 +253,7 @@ In this task, you will configure local and global peering between the virtual ne
 
 In this task, you will test connectivity between virtual machines on the three virtual networks that you connected via local and global peering in the previous task.
 
-1. In the Azure portal, search for and select **Virtual machines**.
+1. In the Azure portal, search for **virtual machines (1)**. and select **Virtual machines (2)**.
 
      ![Image](./Images/vm.png)
 
@@ -262,7 +279,7 @@ In this task, you will test connectivity between virtual machines on the three v
    
    >**Note**: If you get a prompt related to network discovery, click on Yes
 
-6. Within the Remote Desktop session to **az104-05-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)** and slect Run as Administrator option.
+6. Within the Remote Desktop session to **az104-05-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)** then select **more** and  slect **Run as Administrator** option.
 
      ![Image](./Images/Virtual%20Networking%20Ex1-t5-p10.png)
    
@@ -290,6 +307,8 @@ In this task, you will test connectivity between virtual machines on the three v
 
 12. On the **az104-05-vm1** blade, click **Connect (1)** and select **Connect (2)** from the dropdown menu. Click **Connect via RDP** blade, click **Download RDP File**, and follow the prompts to start the Remote Desktop session.
 
+      ![Image](./Images/L5T4S3.1-0905.png)
+
     >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store, and on Linux computers, you can use an open-source RDP client software.
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
@@ -316,15 +335,14 @@ In this task, you want to control network traffic between the perimeter subnet a
 1. Back in the Azure portal, navigate to the  Virtual networks resource and select the **az104-05-vnet0** from the list of virtual networks 
    networks.
 
-1. Select **Subnets** and then click on **+ Subnet** and click on **Add**
+1. Select **Subnets** and then click on **+ Subnet** and click on **Add** and the values below.
 
     | Setting | Value | 
     | --- | --- |
     | Name | `perimeter` |
     | Starting address  | `10.50.1.0/24`  |
 
-1. In the Azure portal, search for and select **Route tables** resource, and then select **Review + Create** and subsequently 
-   click on **Create**. 
+1. In the Azure portal, search for and select **Route tables** resource, and then click on **+Create** enter the below values click on **Review+create** and then select**Create**,
 
     | Setting | Value | 
     | --- | --- |
