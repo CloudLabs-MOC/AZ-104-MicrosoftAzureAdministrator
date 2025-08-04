@@ -4,6 +4,20 @@
 
 In this lab, you will explore Azure Monitor's capabilities to gain insights into the performance and configuration of Azure resources, particularly focusing on virtual machines.
 
+## Estimated timing: 40 minutes
+
+## Lab scenario
+
+Your organization has migrated their infrastructure to Azure. It is important that Administrators are notified of any significant infrastructure changes. You plan to examine the capabilities of Azure Monitor, including Log Analytics.
+
+## Architecture
+
+The architecture diagram outlines a workflow within the az104-rg11 resource group. Task 1 manages the virtual machine az104-11-vm0.Task 2 sets an alert for deleting the virtual machine. Task 3 triggers an action to send an email notification. Task 4 activates the alert trigger. Task 6 involves log queries for monitoring. Task 5 adds a processing rule to manage the workflow. This setup ensures automated monitoring, alerting, and notification for virtual machine management, enhancing operational efficiency and responsiveness.
+
+## Architecture diagram
+
+   ![image](./Instructions/Labs/media/lab11archi.png)
+
 ## Lab objectives
 
 In this lab, you will complete the following tasks:
@@ -23,7 +37,7 @@ This exercise involves setting up Azure Monitor to track the performance and con
 
 In this task, you will deploy a virtual machine (VM) on Azure, which will serve as the test environment for monitoring various Azure resources. 
 
-1. In the Azure Portal page, in the **Search resources, services and docs (G+/)** box at the top of the portal search for **Deploy a custom template (1)** and select **Deploy a custom template (2)** resource.
+1. In the Azure Portal page, in the **Search box**  at the top of the portal search for **Deploy a custom template (1)** and select **Deploy a custom template (2)** resource.
 
    ![image](../media/az104-42.png)
 
@@ -69,11 +83,11 @@ In this task, you will deploy a virtual machine (VM) on Azure, which will serve 
 
 1. Now select **Configure Insights**.
 
-1. Select your virtual machine, expand **az104-rg2 (1)** abd then select **az104-11-vm0 (2)**.
+1. Select your virtual machine by, expanding the resource group **az104-rg2 (1)** abd then select **Enable(2)** on virtual machine  **az104-11-vm0** .
 
     ![image](../media/az104-74.png)
 
-1. Then **Enable** (twice).    
+1. Then click on **Enable** (twice).    
 
    ![image](../media/l11i4.png)
 
@@ -85,7 +99,7 @@ In this task, you will deploy a virtual machine (VM) on Azure, which will serve 
 
 In this task, you will set up an alert within Azure Monitor to notify you when a virtual machine (VM) is deleted. Alerts are vital for proactive monitoring, helping you stay informed about critical changes in your resources.
 
-1. Continue on the **Monitor** page , select **Alerts**.
+1. Continue on the **Monitor** page , select **Alerts** from the left pane.
 
    ![image](../media/l11i5.png)
 
@@ -101,7 +115,7 @@ In this task, you will set up an alert within Azure Monitor to notify you when a
 
    ![image](../media/l11i7.png)
 
-1. Search for and select **Delete Virtual Machine (Virtual Machines) (1)**. Notice the other built-in signals. Select **Apply (2)**
+1. Search for **Delete Virtual Machine (Virtual Machines)** and select **Delete Virtual Machine (Virtual Machines) (1)**. Notice the other built-in signals. Select **Apply (2)**
 
     ![image](../media/az104-76.png)
 
@@ -123,13 +137,11 @@ In this task, you will configure an action group that sends an email notificatio
 
     | Setting | Value |
     |---------|---------|
-    | **Project details** |
     | Subscription | your subscription (1) |
     | Resource group | **az104-rg2** (2) |
     | Region | **Global** (default) |
-    | **Instance details** |
-    | Action group name | `Alert the operations team` (must be unique in the resource group) (3) |
-    | Display name | `AlertOpsTeam` (4) |
+    | Action group name | **Alert the operations team (3)** (must be unique in the resource group)  |
+    | Display name | **AlertOpsTeam (4)** |
 
     ![image](../media/L11T3S2.png)
 
@@ -137,8 +149,8 @@ In this task, you will configure an action group that sends an email notificatio
 
     | Setting | Value |
     |---------|---------|
-    | Notification type | Select **Email/SMS message/Push/Voice** |
-    | Name | `VM was deleted` |
+    | Notification type | **Email/SMS message/Push/Voice** |
+    | Name | **VM was deleted** |
 
 1. Click on the **Edit (pencil icon)** icon next to the email entry.
 
@@ -152,12 +164,12 @@ In this task, you will configure an action group that sends an email notificatio
 
    >**Note:** You should receive an email notification saying you were added to an action group. There may be a few minutes delay, but that is a sure sign the rule has deployed.
 
-1. Once the action group is created move to the **Next: Details >** tab and enter the following values for each setting and then select **Review+create (3)**:
+1. Once the action group is created move to the **Next: Details >** tab and enter the following values for each setting and then select **Review+create (3)**.
 
     | Setting | Value |
     |---------|---------|
-    | Alert rule name | `VM was deleted` **(1)** |
-    | Alert rule description | `A VM in your resource group was deleted` **(2)** |
+    | Alert rule name | **VM was deleted (1)** |
+    | Alert rule description | **A VM in your resource group was deleted (2)** |
 
     ![image](../media/az104-78.png)    
 
@@ -189,7 +201,7 @@ In this task, you will manually trigger the alert by performing an action that m
 
     ![image](../media/az104-80.png)
 
-1. In the title bar, select the **Notifications** icon and wait until **vm0** is successfully deleted.
+1. In the title bar, select the **Notifications** icon and wait until **az104-11-vm0** is successfully deleted.
 
 1. Navigate to your email, you should receive a notification email that reads, **Important notice: Azure Monitor alert VM was deleted was activated...** If not, open your email program and look for an email from azure-noreply@microsoft.com.
 
@@ -197,7 +209,7 @@ In this task, you will manually trigger the alert by performing an action that m
    
 1. On the Azure portal resource menu, select **Monitor**, and then select **Alerts** in the menu on the left.
 
-1. You should get the verbose alerts that were generated by deleting **vm0**.
+1. You should get the verbose alerts that were generated by deleting **az104-11-vm0**.
 
    ![image](../media/l11i12.png)
    
@@ -241,13 +253,13 @@ Enter these settings for the scheduling of the alert processing rule and elect *
 
     ![image](../media/az104-81.png)
 
-1. Enter these settings then select **Review+create (4)**:
+1. Enter these settings then select **Review+create (4)**.
 
     | Setting | Value |
     |---------|---------|
     | Resource group | **az104-rg2 (1)** |
-    | Rule name | `Planned Maintenance` **(2)** |
-    | Description | `Suppress notifications during planned maintenance.` **(3)** |
+    | Rule name | **Planned Maintenance**(2)** |
+    | Description | **Suppress notifications during planned maintenance (3)** |
 
     ![image](../media/az104-82.png)    
 
@@ -257,7 +269,7 @@ Enter these settings for the scheduling of the alert processing rule and elect *
 
 In this task, you will utilize Azure Monitor to query and analyze the data collected from the virtual machine. Azure Monitor provides a comprehensive set of tools that enable you to view logs and metrics associated with the VM's performance and health.
 
-1. In the Azure portal, search for and select `Monitor` blade, click **Logs** from the left navigation pane.
+1. In the Azure portal, search for and select **Monitor**, then click on **Logs** from the left navigation pane.
 
     ![image](../media/az104-83.png)
 
@@ -281,7 +293,7 @@ In this task, you will utilize Azure Monitor to query and analyze the data colle
 
 1. Review the query. This query uses the **heartbeat** table. 
 
-1. Replace the query with this one **(1)**, and then click **Run (2)**. Review the resulting chart. 
+1. Replace the query with the below query **(1)**, and then click **Run (2)**. Review the resulting chart. 
 
    ```
     InsightsMetrics
