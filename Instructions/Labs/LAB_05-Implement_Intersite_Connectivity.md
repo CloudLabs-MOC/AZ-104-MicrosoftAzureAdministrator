@@ -16,7 +16,7 @@ This architecture demonstrates a secure and connected network setup across two v
 1
 ## Architecture diagram
 
- ![Image](./Labs/media/lab5archi.png)
+  ![Image](./media/lab5archi.png)
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -87,7 +87,7 @@ In this task, you verify that resources in peered virtual networks can communica
 
 1. From the Azure portal, search for and select **Network Watcher**.
 
-    ![Image](./Instructions/Labs//entwatch.png)
+    ![Image](./media/entwatch.png)
 
 1. From Network Watcher, in the **Network diagnostic tools** menu in the left navigation pane, select **Connection troubleshoot**.
 
@@ -146,7 +146,7 @@ In this task, you will configure local and global peering between the virtual ne
    
    ![Image](./Images/az-104-3.png)
 
-   ![Image](.Instructions/Labs/media/vmsummary2.png)
+   ![Image](./media/vmsummary2.png)
     
       >**Note**: You can ignore the warning stating that the VNet does not have a routing gateway.
 
