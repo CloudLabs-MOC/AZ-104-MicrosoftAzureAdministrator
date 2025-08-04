@@ -1,4 +1,4 @@
-# Lab 11 - Implement Monitoring
+<img width="1594" height="756" alt="image" src="https://github.com/user-attachments/assets/0d413901-00af-4a21-a8f5-f12e75daad3b" /># Lab 11 - Implement Monitoring
 
 ## Lab Overview
 
@@ -16,7 +16,7 @@ The architecture diagram outlines a workflow within the az104-rg11 resource grou
 
 ## Architecture diagram
 
-   ![image](./Instructions/Labs/media/lab11archi.png)
+   ![image](../Instructions/Labs/media/lab11archi.png)
 
 ## Lab objectives
 
