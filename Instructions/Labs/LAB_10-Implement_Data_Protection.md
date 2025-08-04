@@ -16,7 +16,7 @@ The architecture diagram depicts a multi-region Azure setup with Region 1 and Re
 
 ## Architecture diagram
 
-   ![image](.Instructions/Labs/media/lab10archi.png)
+   ![image](./media/lab10archi.png)
 
 ## Interactive lab simulation
 
