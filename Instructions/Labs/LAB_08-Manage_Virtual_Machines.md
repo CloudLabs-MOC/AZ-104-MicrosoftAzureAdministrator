@@ -4,6 +4,21 @@
 
 This lab focuses on deploying scalable and high-availability applications in Azure using Virtual Machines (VMs) and Virtual Machine Scale Sets (VMSS).
 
+## Estimated timing: 50 minutes
+
+## Architecture 
+
+This architecture shows a high availability setup using Azure virtual machines deployed across availability zones. In Task 1, two VMs (az104-vm1 in Zone 1 and az104-vm2 in Zone 2) are deployed to ensure fault tolerance and resilience against zone failures. In Task 2, one of the VMs is selected for resizing and updating, which involves modifying the compute size or configuration and updating the attached storage as needed. This process supports operational maintenance while keeping services running, enhancing both scalability and system uptime.
+
+## Architecture Diagram 
+
+   ![](./Instructions/Labs/media/lab8archi.png)
+
+
+## Lab scenario
+
+Your organization wants to explore deploying and configuring Azure virtual machines. First, you implement an Azure virtual machine with manual scaling. Next, you implement a Virtual Machine Scale Set and explore autoscaling.
+
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
@@ -22,13 +37,13 @@ In this exercise, you will manage Virtual Machines in Azure to deploy, configure
 
 In this task, you will deploy two Azure virtual machines into different availability zones by using the Azure portal. Availability zones offer the highest level of uptime SLA for virtual machines at 99.99%. To achieve this SLA, you must deploy at least two virtual machines across different availability zones.
 
-1. In the Azure portal, search for **Virtual machines (1)** and select **Virtual machines (2)**.
+1. In the Azure portal, search for **Virtual machine (1)** and select **Virtual machines (2)**.
 
    ![](../Labs/Images/AZ104-1.png)
 
-1. On the **Virtual machines** blade, click **+ Create (1)**, and then select in the drop-down **Azure virtual machine (2)**. Notice your other choices.
+1. On the **Virtual machines** blade, click **+ Create (1)**, and then select in the drop-down **Virtual machine (2)**. Notice your other choices.
 
-   ![](../Labs/Images/img1lab8.png)
+   ![](./Instructions/Labs/media/createvm.png)
 
 1. On the **Basics** tab, in the **Availability zone** drop down menu, place a checkmark next to **Zone 2**. This should select both **Zone 1** and **Zone 2**.
 
@@ -48,7 +63,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Availability options | **Availability zone(5)**|
     | Availability zone | **Zone 1, 2** (read the note about using virtual machine scale sets)   |
     | Security type | **Standard (6)** |
-    | Image | **Windows Server 2019 Datacenter - Gen2  (7)**|
+    | Image | **Windows Server 2019 Datacenter - x64 Gen2  (7)**|
     | Run Azure Spot discount | **Unchecked (8)**|
     | Size | **Standard D2s v3 (9)**|
     | Username | **Student** **(10)** |
@@ -125,11 +140,11 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
    ![](../Labs/Images/az104-7.png)
 
-1. Under **Settings** blade, select **Disks (1)**. Under **Data disks** select **+ Create and attach a new disk**.
+1. Under **Settings** blade, select **Disks (1)**. Under **Data disks** select **+ Create and attach a new disk (2)**.
 
    ![](../Labs/Images/az104-8.png)
 
-1. Configure the settings (leave other settings at their default values) **(1)** and then click on **Apply (2)**.
+1. Configure the settings **(1)**  (leave other settings at their default values) and then click on **Apply (2)**.
 
     | Setting | Value |
     | --- | --- |
@@ -147,7 +162,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. Then click **Apply**.     
 
-1. In the azure portal, search and select `Disks`.
+1. In the azure portal, search and select **Disks**.
 
 1. From the list of disks, search for **vm1-disk1 (1)** select the **vm1-disk1 (2)** object.
 
@@ -163,7 +178,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
     - In the **Data disk** section, select **Attach existing disks (2)**
     - Select **VM1-DISK1 (3)** in the **Disk name** drop-down
-    - Verify the disk is now **Standard SSD (4)**
+    - Verify the disk is now **Standard SSD LRS(4)**
     - Select **Apply (5)** to save your changes
 
       ![](../Labs/Images/az104-13.png)
@@ -178,13 +193,13 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 In this task, you will deploy an Azure virtual machine scale set across availability zones. VM Scale Sets reduce the administrative overhead of automation by enabling you to configure metrics or conditions that allow the scale set to horizontally scale, scale in or scale out.
 
-1. In the Azure portal, search for `Virtual machine scale sets` **(1)** and select `Virtual machine scale sets` **(2)**.
+1. In the Azure portal, search for **Virtual machine scale sets (1)** and select **Virtual machine scale sets (2)**.
 
    ![](../Labs/Images/az104-14.png)
 
 1. On the **Virtual machine scale sets** blade, click **+ Create**.
 
-1. On the **Basics** tab of the **Create a virtual machine scale set** page, specify the following settings (leave others with their default values) and click **Next: Spot (16) >**:
+1. On the **Basics** tab of the **Create a virtual machine scale set** page, specify the following settings (leave others with their default values) and click **Next: Spot (16) >**
 
     | Setting | Value |
     | --- | --- |
@@ -239,23 +254,23 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
     | Setting | Value |
     | --- | --- |
-    | Name | **vmss1-nsg (1)** |
+    | Name | **vmss1-nsg** |
 
 1. Click **+Add an inbound rule (1)** and add an inbound security rule with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
-    | Source | **Any** |
-    | Source port ranges | * |
-    | Destination | **Any** |
-    | Service | **HTTP** |
-    | Action | **Allow** |
-    | Priority | **1010** |
-    | Name | `allow-http` |
+    | Source | **Any (2)** |
+    | Source port ranges | * (3) |
+    | Destination | **Any (4)** |
+    | Service | **HTTP (5)** |
+    | Action | **Allow (6)** |
+    | Priority | **1010 (7)** |
+    | Name | **allow-http (8)** |
 
    ![](../Labs/Images/pax8-image17.png)
 
-1. Click **Add (4)** and, back on the **Create network security group** blade, click on **OK (5)**.
+1. Click **Add (9)** and, back on the **Create network security group** blade, click on **OK**.
 
 1. On the **Edit network interface** pane, make sure **Public IP address** section is set to **Enabled (1)** then click on **OK (2)**.
 
@@ -268,7 +283,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Load balancing options | **Azure load balancer (1)** |
     | Select a load balancer | **Create a load balancer (2)** |
 
-1. On the **Create a load balancer** page, specify the load balancer name and take the defaults. Click **Create (4)** when you are done click **Next (5)** and Next again to go to the **Management** tab.
+1. On the **Create a load balancer** page, specify the load balancer name and take the defaults. Click **Create (4)** when you are done click **Next: Management > (5)** and Next again to go to the **Management** tab.
 
     | Setting | Value |
     | --- | --- |
@@ -348,7 +363,7 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
     | --- | --- |
     | Operator | **Less than** (1) |
     | Threshold | **30** (2) |
-    | Operation | **decrease percentage by** (review your other choices) (3) |
+    | Operation | **decrease percentage by (3)** (review your other choices)  |
     | Percentage | **20** (4) |
 
     ![](../Labs/Images/scalein-2002.png) 
