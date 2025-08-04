@@ -4,6 +4,12 @@
 
 In this lab, you will learn to create and configure Azure Web Apps to host websites, including setting the runtime stack and application settings. 
 
+## Estimated timing: 20 minutes
+
+## Lab scenario
+
+Your organization is interested in Azure Web apps for hosting your company websites. The websites are currently hosted in an on-premises data center. The websites are running on Windows servers using the PHP runtime stack. The hardware is nearing end-of-life and will soon need to be replaced. Your organization wants to avoid new hardware costs by using Azure to host the websites.
+
 ## Interactive lab simulations
 
 There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
@@ -12,6 +18,11 @@ There are interactive lab simulations that you might find useful for this topic.
     
 + [Implement Azure web apps](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2013). Create an Azure web app, manage the deployment, and scale the app. 
 
+## Architecture
+
+## Architecture diagram
+
+  ![image](./Instructions/Labs/media/9alabarchi.png)
 ## Lab objectives
 
 In this lab, you will complete the following tasks:
@@ -30,7 +41,7 @@ This exercise involves creating, configuring, and managing Azure Web Apps for ho
 
 In this task, you will create an Azure Web App, which is a platform-as-a-service (PaaS) offering that allows you to deploy and manage web applications in a cloud environment. 
 
-1. In the Azure portal, search for and select **App services (1)**, and, on the **App Services (2)** blade.
+1. In the Azure portal, search for **App services (1)** and select **App Services (2)**.
 
    ![image](./media/l9-image1.png)
 
@@ -79,7 +90,7 @@ In this task, you will create a staging deployment slot in Azure Web Apps, which
 
     >**Note**: The web app, at this point, has a single deployment slot labeled **PRODUCTION**.
 
-1. Click **+ Add slot (2)**, and add a new slot with the following settings then click on **Add (5)**. 
+1. Click **Add slot (2)**, and add a new slot with the following settings then click on **Add (5)**. 
 
     | Setting | Value |
     | --- | ---|
@@ -90,7 +101,7 @@ In this task, you will create a staging deployment slot in Azure Web Apps, which
 
 1. Once you see **Successfully created slot 'staging'** click on **Close**.
      
-1. Back on the **Deployment slots (1)** blade of the web app, click the entry representing the newly created staging slot **(2)**.
+1. Back on the **Deployment slots (1)** blade of the web app, click the entry representing the **newly created staging slot (2)**.
 
    ![](../Labs/Images/az104-30.png)
 
@@ -136,7 +147,7 @@ In this task, you will swap the staging slot with the production slot.
 
 1. Navigate to the **App Service**, then proceed to select the web app you previously created, directing you to the blade showcasing the production slot of the web application.
 
-1. In the **Deployment** section, click **Deployment slots (1)** and then, click **Swap (2)** toolbar icon. ON the **Swap** blade, review the default settings and click **Start Swap (3)**.
+1. In the **Deployment** section, click **Deployment slots (1)** and then, click **Swap (2)** toolbar icon. On the **Swap** blade, review the default settings and click **Start Swap (3)**.
 
    ![image](./media/lab09-new-3.png)
 
