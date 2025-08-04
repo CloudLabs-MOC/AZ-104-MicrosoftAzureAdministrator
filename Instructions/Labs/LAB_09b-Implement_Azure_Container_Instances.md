@@ -24,7 +24,7 @@ This architecture represents the deployment of a containerized application in Az
 
 ## Architecture diagram
 
-    ![image](.Instructions/Labs/media/lab9barchi.png)
+  ![image](.Instructions/Labs/media/lab9barchi.png)
 
 
 ## Lab objectives
