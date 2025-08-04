@@ -16,8 +16,7 @@ The architecture diagram outlines a workflow within the az104-rg11 resource grou
 
 ## Architecture diagram
 
-![](./Instructions/Labs/media/lab11archi.png)
-
+ ![](./Instructions/Labs/media/lab11archi.png)
 
 ## Lab objectives
 
