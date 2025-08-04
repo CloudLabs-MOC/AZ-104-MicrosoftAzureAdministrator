@@ -22,7 +22,7 @@ This architecture illustrates the delegation of administrative roles in an IT la
 
 ## Architecture diagram
 
-![](../Labs/media/lab1-image1.png)
+![](./media/lab1archi.png)
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
