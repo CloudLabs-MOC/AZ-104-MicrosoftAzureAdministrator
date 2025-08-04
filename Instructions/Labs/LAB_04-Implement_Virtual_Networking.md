@@ -20,7 +20,7 @@ This architecture shows a network setup within the Azure resource group az104-rg
 
 ## Architecture diagram
 
-     ![image](../media/lab4archi.png)
+   ![image](./media/lab4archi.png)
 
 
 ## Lab objectives
@@ -41,7 +41,7 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. In the Azure portal, search for and select **Virtual Networks**. 
 
-     ![image](../media/lab4vnet.png)
+     ![image](./media/lab4vnet.png)
 
 1. Select **+Create** on the Virtual networks page.
 
@@ -136,7 +136,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 1. In the Azure portal, search for and select **Application security groups**.
 
-      ![image](../media/asg.png)
+      ![image](./media/asg.png)
 
 1. Click **+Create** and provide the basic information.
 
@@ -155,7 +155,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 1. In the Azure portal, search for and select **Network security groups**.  
 
-    ![image](../media/nsg.png)
+    ![image](./media/nsg.png)
 
 1. Select **+ Create** and provide information on the **Basics** tab. 
 
