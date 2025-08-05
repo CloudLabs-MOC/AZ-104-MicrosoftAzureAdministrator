@@ -396,4 +396,4 @@ You have successfully completed this lab. Click Next from the bottom right corne
 
 ![Start Your Azure Journey](../media/num.png)
 
-### Happy learning 
+### Happy learning !!
