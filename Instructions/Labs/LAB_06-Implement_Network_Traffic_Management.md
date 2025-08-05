@@ -25,7 +25,7 @@ The architecture workflow shows that  First, in Task 1, virtual machines are dep
 
 ## Architecture Diagram 
 
-  ![](./media/lab6archi.png)
+![](./media/lab6archi.png)
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
