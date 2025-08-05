@@ -373,7 +373,7 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 + [Secure and isolate access to Azure resources by using network security groups and service endpoints](https://learn.microsoft.com/training/modules/secure-and-isolate-with-nsg-and-service-endpoints/). Network security groups and service endpoints help you secure your virtual machines and Azure services from unauthorized network access.
 + [Host your domain on Azure DNS](https://learn.microsoft.com/training/modules/host-domain-azure-dns/). Create a DNS zone for your domain name. Create DNS records to map the domain to an IP address. Test that the domain name resolves to your web server.
 
-You have successfully completed this lab. Click Next from the bottom right corner to move to next lab and embark on your Lab journey!
+You have successfully completed this lab. Click **Next** from the bottom right corner to move to next lab and embark on your Lab journey!
 
 ![Start Your Azure Journey](../media/num.png)
 
