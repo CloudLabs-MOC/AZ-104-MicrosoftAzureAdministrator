@@ -260,4 +260,9 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + You can manually or automatically scale a web app to handle additional demand.
 + A wide variety of diagnostics and testing tools are available.
 
-### You have successfully completed the lab
+You have successfully completed this lab. Click Next from the bottom right corner to move to next lab and embark on your Lab journey!
+
+![Start Your Azure Journey](../media/num.png)
+
+### Happy learning !!
+
