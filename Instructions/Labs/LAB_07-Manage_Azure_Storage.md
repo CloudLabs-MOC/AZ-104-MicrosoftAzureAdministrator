@@ -24,7 +24,7 @@ This architecture shows the configuration of Azure storage services within the r
 
 ## Architecture diagram
 
-  ![Diagram of the tasks.](./media/az104-lab07-architecture.png)
+  ![Diagram of the tasks.](./media/lab7archi.png)
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
