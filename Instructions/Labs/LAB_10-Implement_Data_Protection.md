@@ -403,7 +403,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + A Recovery Services vault stores your backup data and minimizes management overhead.
 
 
-You have successfully completed this lab. Click Next from the bottom right corner to move to next lab and embark on your Lab journey!
+You have successfully completed this lab. Click **Next** from the bottom right corner to move to next lab and embark on your Lab journey!
 
 ![Start Your Azure Journey](../media/num.png)
 
