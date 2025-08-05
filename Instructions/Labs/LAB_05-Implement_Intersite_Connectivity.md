@@ -12,7 +12,7 @@ Your organization segments core IT apps and services (such as DNS and security s
 
 # Architecture
 
-This architecture demonstrates a secure and connected network setup across two virtual networks in Azure within the resource group. Task 1 deploys CoreServicesVM in the CoreServicesVNet, while Task 2 deploys ManufacturingVM in the ManufacturingVNet. Both networks are in the same region and are connected through Task 3 using Network Watcher for monitoring. Task 4 establishes VNet peering to enable direct communication between the VMs, and Task 5 allows CLI-based access and testing. Finally, Task 6 introduces a Perimeter subnet to securely expose services to the internet, protecting internal resources via controlled access.
+This architecture demonstrates a secure and connected network setup across two virtual networks in Azure within the resource group. Task 1 deploys CoreServicesVM in the CoreServicesVNet, while Task 2 deploys ManufacturingVM in the ManufacturingVNet. Both networks are in the same region and are connected through Task 3 using Network Watcher for monitoring. Task 4 establishes VNet peering to enable direct communication between the VMs, and Task 5 allows CLI-based access and testing. Finally, Task 6 introduces a subnet to securely expose services to the internet, protecting internal resources via controlled access.
 
 ## Architecture diagram
 
