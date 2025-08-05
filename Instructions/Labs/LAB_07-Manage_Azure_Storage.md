@@ -384,4 +384,9 @@ In this lab, you have completed:
 - Create and configure secure blob storage.
 - Create and configure secure Azure file storage.
 
-### You have successfully completed the lab
+You have successfully completed this lab. Click Next from the bottom right corner to move to next lab and embark on your Lab journey!
+
+![Start Your Azure Journey](../media/num.png)
+
+### Happy learning !!
+
