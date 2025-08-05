@@ -22,7 +22,7 @@ This diagram shows how Azure policies enforce and remediate resource tagging. In
 
 ## Architecture diagram
 
-   ![image](./media/lab2barchi.png)
+   ![image](./media/2barchi.png)
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
