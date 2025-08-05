@@ -12,7 +12,7 @@ Your organization has a web application that runs on a virtual machine in your o
 
 ## Architecture
 
-The architecture diagram illustrates a two-task workflow. Task 1 involves setting up a Container Apps Environment, identified as "az104-rg9," which hosts multiple container apps. A specific Container App within this environment is highlighted, indicating its role in the process. This setup is designed to manage and deploy containerized applications efficiently. Task 2 focuses on testing and verifying the deployed applications, represented by icons of a tablet and a smartphone, suggesting cross-device compatibility testing. The connection between Task 1 and Task 2 indicates a seamless transition from deployment to validation, ensuring the container apps are functional and reliable across different platforms.
+The architecture diagram illustrates a two-task workflow. Task 1 involves setting up a Container Apps Environment which hosts container apps. A specific Container App within this environment is highlighted, indicating its role in the process. This setup is designed to manage and deploy containerized applications efficiently. Task 2 focuses on testing and verifying the deployed applications, represented by icons of a tablet and a smartphone, suggesting cross-device compatibility testing. The connection between Task 1 and Task 2 indicates a seamless transition from deployment to validation, ensuring the container apps are functional and reliable across different platforms.
 
 ## Architecture diagram
 
@@ -109,7 +109,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Container Apps provides server configuration, container orchestration, and deployment details. 
 + Workloads on ACA are usually long-running processes like a Web App.
 
-You have successfully completed this lab. Click Next from the bottom right corner to move to next lab and embark on your Lab journey!
+You have successfully completed this lab. Click **Next** from the bottom right corner to move to next lab and embark on your Lab journey!
 
 ![Start Your Azure Journey](../media/num.png)
 
