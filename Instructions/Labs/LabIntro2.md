@@ -6,7 +6,7 @@ Welcome to your AZ-104: Microsoft Azure Administrator  workshop! We've prepared 
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/guide.pn)
+![Access Your VM and Lab Guide](./media/guide.pn)
 
 ### Virtual Machine & Lab Guide
  
@@ -22,7 +22,7 @@ To get a better understanding of your lab resources and credentials, navigate to
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](../media/updatedsplit.png)
+![Use the Split Window Feature](./media/updatedsplit.png)
 
 ## Utilizing the Zoom In/Out Feature
 
@@ -34,13 +34,13 @@ To adjust the zoom level for the environment page, click the A↕ : 100% icon lo
  
 Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../media/resourcetab.png)
+![Manage Your Virtual Machine](./media/resourcetab.png)
  
 ## Let's Get Started with Azure Portal
  
 1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
-    ![Launch Azure Portal](../media/portal.png)
+    ![Launch Azure Portal](./media/portal.png)
  
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
@@ -68,7 +68,7 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
        - Open the **Microsoft Authenticator** app, select **Add account**, then choose **Work or school account**.
    1. A **QR code** will be displayed on your computer screen.
 
-      ![](../media/qr.png)
+      ![](./media/qr.png)
 
    1. In the Authenticator app, select **Scan a QR code** and scan the code displayed on your screen.
    1. After scanning, click **Next** to proceed.
@@ -76,11 +76,11 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
 
 5. If prompted to stay signed in, you can click **No**.
 
-      ![](../media/signedinno.png)
+      ![](./media/signedinno.png)
  
 6. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
 
-      ![](../media/cancel.png)
+      ![](./media/cancel.png)
 
 ## Support Contact
  
