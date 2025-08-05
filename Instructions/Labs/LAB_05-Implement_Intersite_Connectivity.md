@@ -410,7 +410,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + System-defined routes are automatically created for each subnet in a virtual network. User-defined routes override or add to the default system routes. 
 + Azure Network Watcher provides a suite of tools to monitor, diagnose, and view metrics and logs for Azure IaaS resources.
 
-You have successfully completed this lab. Click Next from the bottom right corner to move to next lab and embark on your Lab journey!
+You have successfully completed this lab. Click **Next** from the bottom right corner to move to next lab and embark on your Lab journey!
 
 ![Start Your Azure Journey](../media/num.png)
 
