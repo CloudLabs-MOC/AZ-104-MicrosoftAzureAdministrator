@@ -20,7 +20,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Architecture 
 
-This architecture represents the deployment of a containerized application in Azure. In Task 1, a Container Instance is created within the resource group az104-rg9, enabling a quick and scalable environment to run container-based workloads. In Task 2, the deployed container is accessed through various devices to test and verify the application's behavior and performance, ensuring successful deployment and usability.
+This architecture represents the deployment of a containerized application in Azure. In Task 1, a Container Instance is created within the resource group, enabling a quick and scalable environment to run container-based workloads. In Task 2, the deployed container is accessed through various devices to test and verify the application's behavior and performance, ensuring successful deployment and usability.
 
 ## Architecture diagram
 
@@ -132,7 +132,7 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 
 + [Run container images in Azure Container Instances](https://learn.microsoft.com/training/modules/create-run-container-images-azure-container-instances/). Learn how Azure Container Instances can help you quickly deploy containers, how to set environment variables, and specify container restart policies.
 
-You have successfully completed this lab. Click Next from the bottom right corner to move to next lab and embark on your Lab journey!
+You have successfully completed this lab. Click **Next** from the bottom right corner to move to next lab and embark on your Lab journey!
 
 ![Start Your Azure Journey](../media/num.png)
 
