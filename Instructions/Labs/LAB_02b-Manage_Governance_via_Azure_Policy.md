@@ -18,7 +18,7 @@ There are several interactive lab simulations that you might find useful for thi
 
 ## Architecture
 
-This diagram shows how Azure policies enforce and remediate resource tagging. In Task 1, a Resource Group is assigned a tag with name Cost Center and value 000. In Task 2, an Azure policy requires that all resources have this tag. When a new Storage Account is created without the tag, the policy denies its creation. In contrast, Task 3 applies a remediation policy that automatically inherits the tag from the Resource Group if it's missing, so the Storage Account is allowed and the tag is added automatically. Finally, Task 4 secures the Resource Group, likely to prevent tag tampering or deletion.
+This diagram shows how Azure policies enforce and remediate resource tagging. In Task 1, a Resource Group is assigned a tag with name and value. In Task 2, an Azure policy requires that all resources to have this tag. When a new Storage Account is created without the tag, the policy denies its creation. In contrast, Task 3 applies a remediation policy that automatically inherits the tag from the Resource Group if it's missing, so the Storage Account is allowed and the tag is added automatically. Finally, Task 4 secures the Resource Group, likely to prevent tag tampering or deletion.
 
 ## Architecture diagram
 
