@@ -132,4 +132,9 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 
 + [Run container images in Azure Container Instances](https://learn.microsoft.com/training/modules/create-run-container-images-azure-container-instances/). Learn how Azure Container Instances can help you quickly deploy containers, how to set environment variables, and specify container restart policies.
 
-### You have successfully completed the lab
+You have successfully completed this lab. Click Next from the bottom right corner to move to next lab and embark on your Lab journey!
+
+![Start Your Azure Journey](../media/num.png)
+
+### Happy learning !!
+
