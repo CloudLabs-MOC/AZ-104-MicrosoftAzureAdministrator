@@ -243,7 +243,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
     >**Note**: You might experience delays with updates of the dynamic membership groups. To expedite the update, navigate to the group blade, display its **Dynamic membership rules** blade, **Edit** the rule listed in the **Rule syntax** textbox by adding whitespace at the end, and **Save** the change.
 
-1. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, then display its **Members** blade and verify that the list of group members.
+1. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, then display its **Members** blade and verify the list of group members.
 
 ### Task 3: Create a Microsoft Entra ID tenant
 
