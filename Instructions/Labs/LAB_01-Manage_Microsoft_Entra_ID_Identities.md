@@ -392,7 +392,7 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 + What are the steps in the Azure portal to bulk create users and groups?
 + Provide a comparison table of internal and external Microsoft Entra ID user accounts. 
 
-You have successfully completed this lab. Click Next from the bottom right corner to move to next lab and embark on your Lab journey!
+You have successfully completed this lab. Click **Next** from the bottom right corner to move to next lab and embark on your Lab journey!
 
 ![Start Your Azure Journey](../media/num.png)
 
