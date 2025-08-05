@@ -428,7 +428,7 @@ Congratulations on completing the lab. Here are the key points for this lab.
 + The Application Gateway Standard tier offers all the L7 functionality, including load balancing. The WAF tier adds a firewall to check for malicious traffic.
 + An Application Gateway can make routing decisions based on additional attributes of an HTTP request, for example, URI path or host headers.
 
-You have successfully completed this lab. Click Next from the bottom right corner to move to next lab and embark on your Lab journey!
+You have successfully completed this lab. Click **Next** from the bottom right corner to move to next lab and embark on your Lab journey!
 
 ![Start Your Azure Journey](../media/num.png)
 
