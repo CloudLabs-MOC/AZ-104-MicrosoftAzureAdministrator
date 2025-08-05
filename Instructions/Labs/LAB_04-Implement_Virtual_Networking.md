@@ -247,7 +247,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 
 1. In the Azure portal, search for and select **DNS zones**.
 
-      ![image](../media/dnszone.png)
+      ![image](./media/dnszone.png)
 
 1. Select **+ Create**.
 
