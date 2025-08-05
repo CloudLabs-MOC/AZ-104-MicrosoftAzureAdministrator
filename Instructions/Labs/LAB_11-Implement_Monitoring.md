@@ -341,4 +341,8 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + An alert is triggered if the conditions of the alert rule are met. Several actions (email, SMS, push, voice) can be triggered.
 + Action groups include individuals that should be notified of an alert.
 
-### You have successfully completed the lab
+You have successfully completed this lab. Click Next from the bottom right corner to move to next lab and embark on your Lab journey!
+
+![Start Your Azure Journey](../media/num.png)
+
+### Happy learning !!
