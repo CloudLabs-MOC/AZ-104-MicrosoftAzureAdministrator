@@ -292,7 +292,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + You can configure a resource lock on a subscription, resource group, or resource. The lock can protect a resource from accidental user deletions and modifications. The lock overrides any user permissions.
 + Azure Policy is pa re-deployment security practice. RBAC and resource locks are post-deployment security practices.
   
-You have successfully completed this lab. Click Next from the bottom right corner to move to next lab and embark on your Lab journey!
+You have successfully completed this lab. Click **Next** from the bottom right corner to move to next lab and embark on your Lab journey!
 
 ![Start Your Azure Journey](../media/num.png)
 
