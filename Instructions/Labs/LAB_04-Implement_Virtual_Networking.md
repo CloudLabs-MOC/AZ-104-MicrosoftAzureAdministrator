@@ -16,7 +16,7 @@ The ManufacturingVnet virtual network contains systems for the operations of the
 
 ## Architecture 
 
-This architecture shows a network setup within the Azure resource group az104-rg4 involving two virtual networks for different domains. Task 1 sets up the CoreServicesVnet for contoso.com, which contains subnets for shared services and databases. Task 2 configures the ManufacturingVnet for private.contoso.com, which includes two sensor subnets. Task 3 establishes a secure peering connection between the two virtual networks to enable communication while maintaining network isolation. Finally, Task 4 ensures both virtual networks are associated with their respective DNS domains, enabling name resolution across the connected environments. This setup supports secure and scalable cross-domain communication.
+This architecture shows a network setup within the Azure resource group involving two virtual networks for different domains. Task 1 sets up the CoreServicesVnet for contoso.com, which contains subnets for shared services and databases. Task 2 configures the ManufacturingVnet, which includes two sensor subnets. Task 3 establishes a secure peering connection between the two virtual networks to enable communication while maintaining network isolation. Finally, Task 4 ensures both virtual networks are associated with their respective DNS domains, enabling name resolution across the connected environments. This setup supports secure and scalable cross-domain communication.
 
 ## Architecture diagram
 
