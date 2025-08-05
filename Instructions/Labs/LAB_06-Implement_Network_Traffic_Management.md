@@ -21,7 +21,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Architecture 
 
-The architecture workflow shows that  First, in Task 1, virtual machines are deployed using an ARM template to automate and manage resources within a virtual network. In Task 2, an Azure Load Balancer is set up to evenly distribute incoming traffic across the virtual machines using a frontend IP and backend pool. Finally, in Task 3, an Azure Application Gateway is created to handle web traffic using advanced routing rules like URL-based routing. This setup ensures that the application is highly available, scalable, and can efficiently handle user requests from the internet.
+The architecture workflow shows that  First, in Task 1, virtual machines are deployed using an ARM template to automate and manage resources within a virtual network. In Task 2, an Azure Load Balancer is set up to evenly distribute incoming traffic across the virtual machines using a frontend IP and backend pool. Finally, in Task 3, an Azure Application Gateway is created to handle web traffic using advanced routing rules like URL based routing. This setup ensures that the application is highly available, scalable, and can efficiently handle user requests from the internet.
 
 ## Architecture Diagram 
 
