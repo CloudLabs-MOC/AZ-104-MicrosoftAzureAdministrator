@@ -4,6 +4,8 @@
 
 This lab focuses on users and groups as the foundation of an identity solution. You'll work on provisioning users and groups for a pre-production lab environment, incorporating automated group memberships based on job titles to streamline management.
 
+## Estimated timing: 30 minutes
+
 ## Interactive lab simulation
 
 This lab uses an interactive lab simulation. The simulation lets you click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
@@ -235,13 +237,13 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
     ![](../Labs/media/lab1-image17.png)
    
-1. Back on the **Groups - All groups** blade, click the entry representing the **IT Cloud Administrators** group and, select **Members** under **Manage** from left pane. Verify that the **az104-01a-aaduser1** appears in the list of group members.
+1. Back on the **Groups - All groups** blade, click the entry representing the **IT Cloud Administrators** group and, select **Members** under **Manage** from left pane. Verify the **az104-01a-aaduser1** appears in the list of group members.
 
      ![image](../media/az104-mod3-image39.png)
 
     >**Note**: You might experience delays with updates of the dynamic membership groups. To expedite the update, navigate to the group blade, display its **Dynamic membership rules** blade, **Edit** the rule listed in the **Rule syntax** textbox by adding whitespace at the end, and **Save** the change.
 
-1. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, then display its **Members** blade. Verify that the **az104-01a-aaduser2** appears in the list of group members.
+1. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, then display its **Members** blade and verify that the **az104-01a-aaduser2** appears in the list of group members.
 
 ### Task 3: Create a Microsoft Entra ID tenant
 
@@ -390,4 +392,8 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 + What are the steps in the Azure portal to bulk create users and groups?
 + Provide a comparison table of internal and external Microsoft Entra ID user accounts. 
 
-### You have successfully completed the lab
+You have successfully completed this lab. Click **Next** from the bottom right corner to move to next lab and embark on your Lab journey!
+
+![Start Your Azure Journey](../media/num.png)
+
+### Happy learning !!

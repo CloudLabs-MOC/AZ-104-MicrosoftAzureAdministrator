@@ -16,7 +16,7 @@ The ManufacturingVnet virtual network contains systems for the operations of the
 
 ## Architecture 
 
-This architecture shows a network setup within the Azure resource group az104-rg4 involving two virtual networks for different domains. Task 1 sets up the CoreServicesVnet for contoso.com, which contains subnets for shared services and databases. Task 2 configures the ManufacturingVnet for private.contoso.com, which includes two sensor subnets. Task 3 establishes a secure peering connection between the two virtual networks to enable communication while maintaining network isolation. Finally, Task 4 ensures both virtual networks are associated with their respective DNS domains, enabling name resolution across the connected environments. This setup supports secure and scalable cross-domain communication.
+This architecture shows a network setup within the Azure resource group involving two virtual networks for different domains. Task 1 sets up the CoreServicesVnet for contoso.com, which contains subnets for shared services and databases. Task 2 configures the ManufacturingVnet, which includes two sensor subnets. Task 3 establishes a secure peering connection between the two virtual networks to enable communication while maintaining network isolation. Finally, Task 4 ensures both virtual networks are associated with their respective DNS domains, enabling name resolution across the connected environments. This setup supports secure and scalable cross-domain communication.
 
 ## Architecture diagram
 
@@ -373,4 +373,9 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 + [Secure and isolate access to Azure resources by using network security groups and service endpoints](https://learn.microsoft.com/training/modules/secure-and-isolate-with-nsg-and-service-endpoints/). Network security groups and service endpoints help you secure your virtual machines and Azure services from unauthorized network access.
 + [Host your domain on Azure DNS](https://learn.microsoft.com/training/modules/host-domain-azure-dns/). Create a DNS zone for your domain name. Create DNS records to map the domain to an IP address. Test that the domain name resolves to your web server.
 
-### You have successfully completed the lab
+You have successfully completed this lab. Click **Next** from the bottom right corner to move to next lab and embark on your Lab journey!
+
+![Start Your Azure Journey](../media/num.png)
+
+### Happy learning !!
+

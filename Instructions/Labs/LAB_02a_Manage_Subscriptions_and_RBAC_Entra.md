@@ -1,4 +1,4 @@
-# Lab 02: Manage Subscriptions, RBAC, and Governance
+# Lab 02a: Manage Subscriptions, RBAC, and Governance
 
 ## Lab Overview
 
@@ -18,7 +18,7 @@ There are some interactive lab simulations that you might find useful for this t
 
 ## Architecture 
 
-This diagram outlines the role assignment process for managing access in an Azure environment. In Task 1, permissions are configured at the management group level (az104-mg1). Then, in Task 2, a built-in role called Virtual Machine Contributor is assigned, granting VM management capabilities. Simultaneously, Task 3 assigns a custom role named Custom Support Request, tailored for specific support needs. Both roles are assigned to the Help Desk Group, consolidating their permissions. Finally, in Task 4, this group can monitor actions through the Activity Log, ensuring visibility into system operations and role-based activity. This setup ensures secure and traceable role delegation.
+This diagram outlines the role assignment process for managing access in an Azure environment. In Task 1, permissions are configured at the management group level (az104-02-mg1). Then, in Task 2, a built-in role called Virtual Machine Contributor is assigned, granting VM management capabilities. Simultaneously, Task 3 assigns a custom role named Custom Support Request, tailored for specific support needs. Both roles are assigned to the Help Desk Group, consolidating their permissions. Finally, in Task 4, this group can monitor actions through the Activity Log, ensuring visibility into system operations and role-based activity. This setup ensures secure and traceable role delegation.
 
 ## Architecture diagram
 
@@ -338,4 +338,9 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 + Roles are defined in a JSON formatted file and include *Actions*, *NotActions*, and *AssignableScopes*.
 + You can use the Activity Log to monitor role assignments.
 
-### You have successfully completed the lab
+You have successfully completed this lab. Click **Next** from the bottom right corner to move to next lab and embark on your Lab journey!
+
+![Start Your Azure Journey](../media/num.png)
+
+### Happy learning !!
+

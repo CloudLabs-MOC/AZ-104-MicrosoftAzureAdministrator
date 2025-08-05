@@ -17,7 +17,16 @@ There are interactive lab simulations that you might find useful for this topic.
 + [Create and configure an Azure load balancer](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20an%20Azure%20load%20balancer). Create a virtual network, backend servers, load balancer, and then test the load balancer.
 + [Deploy Azure Application Gateway](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20Azure%20Application%20Gateway). Create an application gateway, create virtual machines, create the backend pool, and test the gateway.
 + [Implement traffic management](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2010). Implement a complete hub and spoke network including virtual machines, virtual networks, peering, load balancer, and application gateway.
-  
+
+
+## Architecture 
+
+The architecture workflow shows that  First, in Task 1, virtual machines are deployed using an ARM template to automate and manage resources within a virtual network. In Task 2, an Azure Load Balancer is set up to evenly distribute incoming traffic across the virtual machines using a frontend IP and backend pool. Finally, in Task 3, an Azure Application Gateway is created to handle web traffic using advanced routing rules like URL based routing. This setup ensures that the application is highly available, scalable, and can efficiently handle user requests from the internet.
+
+## Architecture Diagram 
+
+![](./media/lab6archi.png)
+
 ## Lab objectives
 In this lab, you will complete the following tasks:
 + Task 1: Use a template to provision an infrastructure.
@@ -419,4 +428,9 @@ Congratulations on completing the lab. Here are the key points for this lab.
 + The Application Gateway Standard tier offers all the L7 functionality, including load balancing. The WAF tier adds a firewall to check for malicious traffic.
 + An Application Gateway can make routing decisions based on additional attributes of an HTTP request, for example, URI path or host headers.
 
-### You have successfully completed the lab
+You have successfully completed this lab. Click **Next** from the bottom right corner to move to next lab and embark on your Lab journey!
+
+![Start Your Azure Journey](../media/num.png)
+
+### Happy learning !!
+

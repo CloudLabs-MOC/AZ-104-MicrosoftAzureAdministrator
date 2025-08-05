@@ -1,4 +1,4 @@
-# Lab 02: Manage Governance via Azure Policy
+# Lab 02b: Manage Governance via Azure Policy
 
 ## Lab Overview
 
@@ -18,7 +18,7 @@ There are several interactive lab simulations that you might find useful for thi
 
 ## Architecture
 
-This diagram shows how Azure policies enforce and remediate resource tagging. In Task 1, a Resource Group is assigned a tag with name Cost Center and value 000. In Task 2, an Azure policy requires that all resources have this tag. When a new Storage Account is created without the tag, the policy denies its creation. In contrast, Task 3 applies a remediation policy that automatically inherits the tag from the Resource Group if it's missing, so the Storage Account is allowed and the tag is added automatically. Finally, Task 4 secures the Resource Group, likely to prevent tag tampering or deletion.
+This diagram shows how Azure policies enforce and remediate resource tagging. In Task 1, a Resource Group is assigned a tag with name and value. In Task 2, an Azure policy requires that all resources to have this tag. When a new Storage Account is created without the tag, the policy denies its creation. In contrast, Task 3 applies a remediation policy that automatically inherits the tag from the Resource Group if it's missing, so the Storage Account is allowed and the tag is added automatically. Finally, Task 4 secures the Resource Group, likely to prevent tag tampering or deletion.
 
 ## Architecture diagram
 
@@ -292,4 +292,9 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + You can configure a resource lock on a subscription, resource group, or resource. The lock can protect a resource from accidental user deletions and modifications. The lock overrides any user permissions.
 + Azure Policy is pa re-deployment security practice. RBAC and resource locks are post-deployment security practices.
   
-### You have successfully completed the lab
+You have successfully completed this lab. Click **Next** from the bottom right corner to move to next lab and embark on your Lab journey!
+
+![Start Your Azure Journey](../media/num.png)
+
+### Happy learning !!
+

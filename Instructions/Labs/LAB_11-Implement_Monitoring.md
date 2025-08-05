@@ -12,7 +12,7 @@ Your organization has migrated their infrastructure to Azure. It is important th
 
 ## Architecture
 
-The architecture diagram outlines a workflow within the az104-rg11 resource group. Task 1 manages the virtual machine az104-11-vm0.Task 2 sets an alert for deleting the virtual machine. Task 3 triggers an action to send an email notification. Task 4 activates the alert trigger. Task 6 involves log queries for monitoring. Task 5 adds a processing rule to manage the workflow. This setup ensures automated monitoring, alerting, and notification for virtual machine management, enhancing operational efficiency and responsiveness.
+The architecture diagram outlines a workflow within the resource group. Task 1 manages the virtual machine az104-11-vm0.Task 2 sets an alert for deleting the virtual machine. Task 3 triggers an action to send an email notification. Task 4 activates the alert trigger. Task 6 involves log queries for monitoring. Task 5 adds a processing rule to manage the workflow. This setup ensures automated monitoring, alerting, and notification for virtual machine management, enhancing operational efficiency and responsiveness.
 
 ## Architecture diagram
 
@@ -341,4 +341,8 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + An alert is triggered if the conditions of the alert rule are met. Several actions (email, SMS, push, voice) can be triggered.
 + Action groups include individuals that should be notified of an alert.
 
-### You have successfully completed the lab
+You have successfully completed this lab. Click **Next** from the bottom right corner to move to next lab and embark on your Lab journey!
+
+![Start Your Azure Journey](../media/num.png)
+
+### Happy learning !!

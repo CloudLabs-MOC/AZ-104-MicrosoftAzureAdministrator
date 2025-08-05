@@ -20,11 +20,11 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Architecture 
 
-This architecture shows the configuration of Azure storage services within the resource group az104-07-rg7. In Task 1, a Storage account is created, serving as the central point for managing data services. From this storage account, two services are configured: Task 2 sets up a Blob container, which is ideal for storing unstructured data like documents or images, and Task 3 configures a File share, which allows file-level access over SMB protocol. This setup provides flexible storage options for various types of workloads, supporting both object-based and file-based data storage within a single Azure resource group.
+This architecture shows the configuration of Azure storage services within the resource group. In Task 1, a Storage account is created, serving as the central point for managing data services. From this storage account, two services are configured: Task 2 sets up a Blob container, which is ideal for storing unstructured data like documents or images, and Task 3 configures a File share, which allows file level access. This setup provides flexible storage options for various types of workloads, supporting both object based and file-based data storage within a single Azure resource group.
 
 ## Architecture diagram
 
-  ![Diagram of the tasks.](./media/az104-lab07-architecture.png)
+  ![Diagram of the tasks.](./media/lab7archi.png)
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -384,4 +384,9 @@ In this lab, you have completed:
 - Create and configure secure blob storage.
 - Create and configure secure Azure file storage.
 
-### You have successfully completed the lab
+You have successfully completed this lab. Click **Next** from the bottom right corner to move to next lab and embark on your Lab journey!
+
+![Start Your Azure Journey](../media/num.png)
+
+### Happy learning !!
+

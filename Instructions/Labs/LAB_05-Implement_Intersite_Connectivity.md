@@ -12,8 +12,8 @@ Your organization segments core IT apps and services (such as DNS and security s
 
 # Architecture
 
-This architecture demonstrates a secure and connected network setup across two virtual networks in Azure within the az104-rg5 resource group. Task 1 deploys CoreServicesVM in the CoreServicesVNet, while Task 2 deploys ManufacturingVM in the ManufacturingVNet. Both networks are in the East US region and are connected through Task 3 using Network Watcher for monitoring. Task 4 establishes VNet peering to enable direct communication between the VMs, and Task 5 allows CLI-based access and testing. Finally, Task 6 introduces a Perimeter subnet to securely expose services to the internet, protecting internal resources via controlled access.
-1
+This architecture demonstrates a secure and connected network setup across two virtual networks in Azure within the resource group. Task 1 deploys CoreServicesVM in the CoreServicesVNet, while Task 2 deploys ManufacturingVM in the ManufacturingVNet. Both networks are in the same region and are connected through Task 3 using Network Watcher for monitoring. Task 4 establishes VNet peering to enable direct communication between the VMs, and Task 5 allows CLI-based access and testing. Finally, Task 6 introduces a subnet to securely expose services to the internet, protecting internal resources via controlled access.
+
 ## Architecture diagram
 
   ![Image](./media/lab5archi.png)
@@ -410,4 +410,9 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + System-defined routes are automatically created for each subnet in a virtual network. User-defined routes override or add to the default system routes. 
 + Azure Network Watcher provides a suite of tools to monitor, diagnose, and view metrics and logs for Azure IaaS resources.
 
-### You have successfully completed the lab
+You have successfully completed this lab. Click **Next** from the bottom right corner to move to next lab and embark on your Lab journey!
+
+![Start Your Azure Journey](../media/num.png)
+
+### Happy learning !!
+
