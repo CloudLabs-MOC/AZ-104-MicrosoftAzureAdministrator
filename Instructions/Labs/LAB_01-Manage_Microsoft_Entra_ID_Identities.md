@@ -270,7 +270,7 @@ In this task, you will create a new Microsoft Entra ID tenant, which serves as a
 
 1. In the Azure portal search and select **Microsoft Entra ID**.
     
-1. Select **Manage tenants** to display the blade of the newly created Entra ID tenant and select **settings (1)** button in the Azure portal toolbar and, click on **Switch (2)**.
+1. Select **Manage tenants** to display the blade of the newly created Entra ID tenant and select the newly created tenant **Contoso Lab**, and click on **Switch**.
 
      ![](../Labs/media/az-12.png)
 
