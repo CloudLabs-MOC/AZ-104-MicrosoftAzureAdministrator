@@ -61,7 +61,7 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
 
     ![image](../media/az104-mod3-image5.png)
 
-1. Use File Explorer to extract the content of the downloaded file into the **Downloads** folder open the downloaded file and extra on your computer. Notice there are two JSON files (template and parameters). 
+1. Use File Explorer to extract the content of the downloaded file into the **Downloads** folder by right clicking on the **Downloaded file(1)** and select **Extract All... (2)** and select **Extract**. Notice there are two JSON files (template and parameters).
     
      ![image](../media/az104-mod3-image6.png)
 
