@@ -1,4 +1,4 @@
-# Lab 02: Manage Governance via Azure Policy
+# Lab 02b: Manage Governance via Azure Policy
 
 ## Lab Overview
 
