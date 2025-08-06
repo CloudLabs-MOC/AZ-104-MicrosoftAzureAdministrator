@@ -91,14 +91,13 @@ In this task, you will create and configure an Azure Storage account.
 
 1. Review the **Overview** blade and the additional configurations that can be changed. These are global settings for the storage account. Notice the storage account can be used for Blob containers, File shares, Queues, and Tables.
 
-1. In the **Security + Networking** section, select **Networking (1)**. Notice **public network access is disabled**.
+1. In the **Security + Networking** section, select **Networking** and notice **public network access is Disabled (1)** click on **Manage (2)**.
 
-    ![image](./media/az104-7.png)
+    ![image](./media/managestr.png)
 
-    + Change the **public access level** to **Enabled from all network (2)**.
-    + Be sure to **Save (3)** your changes. 
+    + Change the Public network access to **Enable(1)** and select **Enabled from all networks (2)** and click on **Save (3)** to save your changes. 
 
-      ![image](./media/az104-6.png)    
+        ![image](./media/strenable.png)    
 
 1. In the **Data management** section, view the **Redundancy** blade. Notice the information about your primary data center locations.
 
