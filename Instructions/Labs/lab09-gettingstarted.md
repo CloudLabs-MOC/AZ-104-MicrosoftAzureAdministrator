@@ -2,7 +2,7 @@
 
 Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
 
-# Lab 09 - Implement Web Apps, Container Instances and Container Apps
+# Lab - Implement Web Apps, Container Instances and Container Apps
 
 ### Overall Estimated Duration: 100 minutes
 
