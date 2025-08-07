@@ -1,4 +1,4 @@
-# Lab 11 - Implement Monitoring
+# Lab - Implement Monitoring
 
 ## Lab Overview
 
