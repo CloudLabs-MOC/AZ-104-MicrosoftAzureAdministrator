@@ -2,7 +2,7 @@
 
 Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
 
-# Lab 06 - Implement Traffic Management
+# Lab - Implement Traffic Management
 
 ### Overall Estimated Duration: 60 minutes
 
