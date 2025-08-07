@@ -2,7 +2,7 @@
 
 Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
 
-# Lab 08 - Manage Virtual Machines
+# Lab - Manage Virtual Machines
 
 ### Overall Estimated Duration: 50 minutes
 
