@@ -1,4 +1,4 @@
-# Lab 08 - Manage Virtual Machines
+# Lab - Manage Virtual Machines
 
 ## Lab Overview
 
