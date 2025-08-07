@@ -1,4 +1,4 @@
-# Lab 03a: Manage Azure resources by using the Azure Portal 
+# Lab 2b: Manage Azure resources by using the Azure Portal 
 
 ## Lab Overview
 
