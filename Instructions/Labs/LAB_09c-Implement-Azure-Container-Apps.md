@@ -1,4 +1,4 @@
-# Lab 09c - Implement Azure Container Apps
+# Lab 9c - Implement Azure Container Apps
 
 ## Lab Overview
 
