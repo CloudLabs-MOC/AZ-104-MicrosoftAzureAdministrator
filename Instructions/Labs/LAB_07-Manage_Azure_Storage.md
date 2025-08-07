@@ -1,4 +1,4 @@
-# Lab 07 - Manage Azure Storage
+# Lab - Manage Azure Storage
 
 ## Lab introduction
 
