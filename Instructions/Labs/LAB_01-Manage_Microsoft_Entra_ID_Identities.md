@@ -1,4 +1,4 @@
-# Lab 01 - Manage Microsoft Entra ID Identities
+# Lab - Manage Microsoft Entra ID Identities
 
 ## Lab Overview
 
