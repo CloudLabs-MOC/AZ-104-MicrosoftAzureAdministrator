@@ -1,4 +1,4 @@
-# Lab 10 - Implement Data Protection
+# Lab - Implement Data Protection
 
 ## Lab Overview
 
