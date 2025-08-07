@@ -1,4 +1,4 @@
-# Lab 03 - Manage Azure resources by Using ARM Templates
+# Lab 01 - Manage Azure resources by Using ARM Templates
 
 ## Lab Overview
  
