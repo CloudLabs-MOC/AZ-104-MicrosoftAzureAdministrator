@@ -63,11 +63,11 @@ In this task, you will create and organize management groups to streamline Azure
 
       > **Note:** If you get a message stating that the management group with this name already exists, you can cancel the creation of the management group and proceed further.
    
- 1. On the **az104-02-mg1** blade, from the left navigation pane click **Subscriptions** and  click **+ Add**.
+ 1. On the **az104-02-mg1** blade, from the left navigation pane click **Subscriptions(1)** and  click **Add Subscription (2)**.
    
-     ![image](./media/l2-image9.png)
+     ![image](./media/xxx1.png)
    
-      >**Note:** If the subscription group is already present under the Management group you can proceed with the next task.
+      >**Note:** If the subscription group is already present under the Management group, you can proceed with the next task.
 
 1. On the **Add subscription** blade, in the **Subscription** drop-down list, select the subscription you are using in this lab and click **Save**.
    
