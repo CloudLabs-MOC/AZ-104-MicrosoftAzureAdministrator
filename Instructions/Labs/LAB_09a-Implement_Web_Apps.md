@@ -75,8 +75,6 @@ In this task, you will create a staging deployment slot in Azure Web Apps, which
 
 1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section in the left navigation pane of the web app blade, click **Deployment slots**.
 
-    >**Note**: The web app, at this point, has a single deployment slot labeled **PRODUCTION**.
-
 1. Click **+ Add slot**, and add a new slot with the following settings then click on **Add**. 
 
     | Setting | Value |
@@ -163,6 +161,8 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 1. Select **Save**.
 
    ![image](./media/l9-image15.png)
+
+   >**Note**: Please disregard any scale-out errors and proceed with the subsequent steps.
    
 1. Select **Diagnose and solve problems** (left pane) and in the **Load Test your App** box, select **Create Load Test**.
 
@@ -181,11 +181,15 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
 1. From the **Overview**  of Azure load testing blade, under **Add HTTP requests**, select **Create**.
 
-    ![image](./media/l9-image18.png)
+    ![image](./media/az104d5.png)
 
-1. On the **Test plan** tab, click **Add request**. In the **URL field**, paste in your **Default domain** URL we had copied in task 2 step number 1. Ensure this is properly formatted and begins with **https://** then click **Add**.
+1. On the **Test plan (1)** tab, click **Add request (2)**. In the **URL field**, paste in your **Default domain (3)** URL we had copied in task 2 step number 1. Ensure this is properly formatted and begins with **https://** then click **Add (4)**.
+
+    ![image](./media/az104d6.png)
 
 1. Select **Review + create** and **Create**.
+
+    ![image](./media/az104d7.png)
 
     >**Note:** It may take a couple of minutes to create the test. 
 
