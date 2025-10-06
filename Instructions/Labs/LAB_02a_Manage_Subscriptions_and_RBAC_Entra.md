@@ -2,7 +2,7 @@
 
 ## Lab Overview
 
-In this lab, you will explore role-based access control (RBAC) to manage permissions and scopes, enabling precise control over actions that identities can perform. You will also simplify subscription management by organizing all Azure subscriptions under a management group and configuring permissions to allow virtual machine management and support request submissions.
+In this lab, you will explore Role-Based Access Control (RBAC) and Azure Management Groups to implement structured governance across multiple subscriptions. You’ll start by organizing subscriptions under a management group, then assign built-in and custom roles to control access with precision. By the end of the lab, you’ll also learn how to monitor and audit these role assignments using the Azure Activity Log, ensuring transparency and accountability in your environment.
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -121,7 +121,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. Select **+ Add**, from the drop-down menu, select **Add custom role**.
 
-   ![image](./media/10-lab2-10.png) 
+   ![image](./media/10lab2-10.png) 
 
 1. On the Basics tab specify the following configuration and select **Next (5)**. 
 
@@ -176,11 +176,10 @@ In this task, you will review the Azure activity log to check for any actions in
 ### Review
 In this lab, you have completed:
 
-- Implemented management groups to organize your Azure subscriptions, allowing centralized governance and better control over policies and access management across your environment.
-- Created a custom RBAC role to define specific permissions, ensuring that users can only access the resources they need, enhancing security and compliance.
-- Assigned RBAC roles to users based on their job responsibilities, allowing them to perform necessary tasks without overstepping access boundaries.
-- Designed and deployed a custom RBAC role to meet your organization's unique security requirements, ensuring that the right level of access is granted to the right users.
-- Used the Activity Log to monitor role assignments and track changes to ensure that access control policies are being followed and that no unauthorized role modifications occur.
+- Implemented management groups to structure and organize Azure subscriptions, enabling centralized governance and consistent policy enforcement.
+- Reviewed and assigned built-in Azure roles to delegate specific permissions while following best practices for group-based role assignments.
+- Created a custom RBAC role to tailor permissions according to organizational needs, applying the principle of least privilege for enhanced security.
+- Monitored role assignments using the Activity Log to audit access changes and ensure transparency and compliance within your Azure environment.
 
 ## Extend your learning with Copilot
 

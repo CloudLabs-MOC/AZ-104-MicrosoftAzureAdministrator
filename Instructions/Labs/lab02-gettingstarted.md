@@ -5,20 +5,20 @@ Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a
 
 # Lab - Managing Subscriptions, RBAC, and Governance
 
-### Overall Estimated Duration: 100 minutes
+### Overall Estimated Duration: 100 Minutes
 
 ## Overview
 
-In this hands-on lab, you will implement Azure governance and role-based access control (RBAC). You will manage access by creating management groups, assigning built-in roles, and creating custom roles to restrict permissions, ensuring users can perform specific tasks like submitting support requests without accessing critical resources. You will also apply resource tags and enforce their usage with Azure Policy, while updating non-compliant resources and configuring resource locks to prevent accidental deletions or modifications. Additionally, you’ll monitor role assignments using Azure's Activity Log and clean up resources to optimize costs. The lab will help you effectively manage access, enforce governance, and secure resources in Azure.
+In this hands-on lab, you will implement Azure governance and role-based access control (RBAC) to securely manage and organize resources. You’ll create management groups, assign built-in and custom roles, and apply Azure Policies with tags to enforce compliance and consistency. You’ll also configure resource locks to prevent accidental deletions or modifications and use the Azure Activity Log to monitor role changes. By the end of this lab, you’ll have a complete governance framework that enhances security, control, and operational efficiency across Azure.
 
 ## Objective
 
 By the end of this lab, you will have learned to manage Azure resources using RBAC, enforce governance with resource tagging and locks, and remediate non-compliant resources for optimized management and security.
 
-- **Implement and Manage Role-Based Access Control (RBAC)**: Create management groups and assign built-in or custom roles to users, ensuring they have the necessary permissions for their tasks, such as submitting support requests, while restricting access to critical resources.
-- **Monitor Access and Ensure Security**: Use Azure Activity Logs to track role assignments and user actions, providing visibility and accountability for access management.
-- **Enforce Governance and Tagging Compliance**: Apply and enforce resource tagging through Azure Policy to organize and categorize resources. Remediate non-compliant resources automatically to ensure alignment with organizational standards.
-- **Protect Resources and Optimize Costs**: Set up resource locks to prevent accidental modifications or deletions and clean up unused resources to avoid unnecessary charges, maintaining both security and cost efficiency in your Azure environment.
+- **Implement and Manage Role-Based Access Control (RBAC):** Organize subscriptions with management groups, assign built-in roles, and create custom roles to ensure users can perform necessary tasks while maintaining least-privilege access.
+- **Monitor Access and Ensure Security:** Use Azure Activity Logs to track role assignments and user actions, providing visibility and accountability for access management.
+- **Enforce Governance and Tagging Compliance:** Apply and enforce resource tagging through Azure Policy to organize and categorize resources. Remediate non-compliant resources automatically to ensure alignment with organizational standards.
+- **Protect Resources and Optimize Costs:** Set up resource locks to prevent accidental modifications or deletions and clean up unused resources to avoid unnecessary charges, maintaining both security and cost efficiency in your Azure environment.
 
 ## Pre-requisites
 
@@ -28,23 +28,26 @@ Basic understanding of Azure concepts, and familiarity with RBAC, resource taggi
 
 ## Exercise 1: Manage Subscriptions and RBAC
 
-1. Create Management Groups and Assign Built-in Roles: Set up management groups in Azure, then assign built-in roles like Virtual Machine Contributor to appropriate users, enabling specific access without over-privileging.
+1. Create Management Groups and Assign Built-in Roles: Create and configure management groups to organize Azure subscriptions, enabling centralized governance and consistent access control across your environment.
 
-2. Create a Custom RBAC Role: Develop a custom role to restrict permissions further, ensuring users can only perform certain actions, like submitting support requests, while excluding access to critical resources.
+2. Review and Assign Built-in Roles:
+Explore Azure’s built-in roles and assign the Virtual Machine Contributor role to a helpdesk group, granting limited permissions for managing virtual machines.
 
-3. Assign Roles to Users: Assign both built-in and custom RBAC roles to users, ensuring they can only perform allowed actions within the scope defined by the roles.
+3. Create a Custom RBAC Role: Develop a custom role by cloning and modifying the Support Request Contributor role to remove unnecessary permissions, following the principle of least privilege.
+
+4. Assign Roles to Users: Assign both built-in and custom RBAC roles to users, ensuring they can only perform allowed actions within the scope defined by the roles.
 
 ## Architecture diagram
 
-   ![image](./media/gs2a.png)
+   ![image](./media/lab2-arch.png)
 
 ## Explanation of Components
 
-1. **Microsoft Entra ID**: Microsoft Entra ID (formerly Azure Active Directory) is a cloud-based identity and access management service from Microsoft. It helps organizations manage user identities, control access to resources, and ensure secure authentication across various cloud-based and on-premises applications.
+1. **Microsoft Entra ID:** Microsoft Entra ID (formerly Azure Active Directory) is a cloud-based identity and access management service from Microsoft. It helps organizations manage user identities, control access to resources, and ensure secure authentication across various cloud-based and on-premises applications.
 
-2. **Management Groups**: Management Groups are a way to organize and manage your Azure subscriptions at scale. They allow you to group multiple subscriptions together for easier management of policies, role-based access control (RBAC), and compliance across your organization.
+2. **Management Groups:** Management Groups are a way to organize and manage your Azure subscriptions at scale. They allow you to group multiple subscriptions together for easier management of policies, role-based access control (RBAC), and compliance across your organization.
 
-3. **Custom RBAC**: Role-Based Access Control refers to the ability to create tailored roles with specific permissions to meet the unique needs of your organization. Unlike built-in roles that come with predefined permissions, custom RBAC roles allow you to define exactly what actions a user or group can perform on Azure resources. 
+3. **Custom RBAC:** Role-Based Access Control refers to the ability to create tailored roles with specific permissions to meet the unique needs of your organization. Unlike built-in roles that come with predefined permissions, custom RBAC roles allow you to define exactly what actions a user or group can perform on Azure resources. 
 
 ## Exercise 2: Manage Governance via Azure Policy
 
@@ -60,11 +63,11 @@ Basic understanding of Azure concepts, and familiarity with RBAC, resource taggi
 
 ## Explanation of Components
 
-1.  **Azure Tags**: Tags can also be enforced using Azure Policy to ensure compliance with organizational standards.Tags are key-value pairs that add metadata to Azure resources, enabling better organization and reporting.
+1.  **Azure Tags:** Tags can also be enforced using Azure Policy to ensure compliance with organizational standards.Tags are key-value pairs that add metadata to Azure resources, enabling better organization and reporting.
 
-2.  **Azure Policy**: Azure Policy helps enforce rules and compliance at scale. It defines governance conditions and actions to be taken if the conditions are not met.Policies also include built-in definitions, such as Require a tag and its value or Inherit a tag from the resource group if missing, ensuring governance consistency across resources.
+2.  **Azure Policy:** Azure Policy helps enforce rules and compliance at scale. It defines governance conditions and actions to be taken if the conditions are not met.Policies also include built-in definitions, such as Require a tag and its value or Inherit a tag from the resource group if missing, ensuring governance consistency across resources.
 
-3.  **Resource Locks**: Resource locks prevent accidental modifications or deletions of resources.Locks are configurable at different levels, such as subscriptions, resource groups, or individual resources, ensuring critical resources remain secure.
+3.  **Resource Locks:** Resource locks prevent accidental modifications or deletions of resources.Locks are configurable at different levels, such as subscriptions, resource groups, or individual resources, ensuring critical resources remain secure.
 
 # Getting Started with the Lab
  
@@ -72,9 +75,9 @@ Welcome to your AZ-104: Microsoft Azure Administrator  workshop! We've prepared 
  
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/sg1.png)
+![Access Your VM and Lab Guide](../media/3-10-g1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -84,25 +87,25 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/sg2.png)
+![Explore Lab Resources](../media/3-10-g2.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](../media/sg3.png)
+![Use the Split Window Feature](../media/3-10-g3.png)
  
 ## Utilizing the Zoom In/Out Feature
 
 To adjust the zoom level for the environment page, click the A↕ : 100% icon located next to the timer in the lab environment.
 
-![Use the Split Window Feature](./media/sg4.png)
+![Use the Split Window Feature](./media/2-10-g4.png)
 
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../media/sg5.png)
+![Manage Your Virtual Machine](./media/2-10-g5.png)
 
 ## **Lab Duration Extension**
 
@@ -120,7 +123,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 ## Let's Get Started with Azure Portal
  
-1. On your virtual machine, click on the Azure Portal icon as shown below:
+1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
     ![Launch Azure Portal](../Labs/Images/azure.png)
  
@@ -128,13 +131,13 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-      ![](../Labs/Images/image7.png)
+      ![](../Labs/media/2-10-g6.png)
  
 3. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-      ![](../Labs/Images/image8.png)
+      ![](../Labs/media/2-10-g7.png)
 
 1. If you see the pop-up **Action Required**, click **Ask Later**.
    
@@ -165,19 +168,18 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
 
-1. Click **Next** from the bottom right corner to embark on your Lab journey!
- 
-    ![Start Your Azure Journey](../media/num.png)
 
 ## Support Contact
 
-1. The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
    Learner Support Contacts:
 
-   - Email Support: labs-support@spektrasystems.com
+   - Email Support: cloudlabs-support@spektrasystems.com
    - Live Chat Support: https://cloudlabs.ai/labs-support
 
-1. Now, click on Next from the lower right corner to move on to the next page.
+Now, click on Next from the lower right corner to move on to the next page.
+
+![Start Your Azure Journey](../media/num.png)
    
 ## Happy Learning!!
