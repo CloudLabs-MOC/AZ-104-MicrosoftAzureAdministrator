@@ -34,14 +34,14 @@ In this task, you will learn how to create and assign a tag to an Azure resource
 
    ![image](./media/l2-image45.png)
 
-1. On the resource group blade, click **Tags** and create a tag with the following settings and click on **Apply** to save your change:
+1. On the resource group blade, click **Tags (1)** and create a tag with the following settings **(2)** and click on **Apply (3)** to save your change:
 
     | Setting | Value |
     | --- | --- |
     | Name | **Role** |
     | Value | **Infra** |
 
-   ![image](./media/l2-image27.png)
+   ![image](./media/3-10-l2-48.png)
    
 ### Task 2: Enforce tagging via an Azure policy
 

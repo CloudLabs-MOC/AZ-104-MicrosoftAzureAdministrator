@@ -61,11 +61,11 @@ In this task, you will create new user accounts in Microsoft Entra ID and config
 
     | Setting | Value |
     | --- | --- |
-    | Job title  | **Cloud Administrator (1)** |
+    | Job title  | **IT Lab Administrator (1)** |
     | Department | **IT (2)** |
     | Usage location | **United States (3)** |
     
-      ![](../Labs/media/2-10-l1-8.png)
+      ![](../Labs/media/10-lab1-1.png)
      
       ![](../Labs/media/2-10-l1-9.png)
     
@@ -77,9 +77,9 @@ In this task, you will create new user accounts in Microsoft Entra ID and config
 
    ![image](../Labs/media/lab1-4.png)
 
-1. Navigate back to the **Users - All users** blade, and then click **+ New user (1)** then select **+ Create new user (2)**.
+1. Navigate back to the **Users - All users** blade, and then click **+ New user (1)** then select **+ Invite external user (2)**.
 
-     ![](../Labs/media/2-10-l1-6.png)
+     ![](../Labs/media/10-lab1-2.png)
 
 1. Create a new user on the **Basics** tab with the following settings (leave others with their defaults) and select **Next: properties (6) >**.
 
@@ -157,9 +157,9 @@ In this task, you create a group account. Group accounts can include user accoun
 
 1. Select the new group and review the **Members** and **Owners** information.
 
-     ![image](../Labs/media/lab1-14.png)
+     ![image](../Labs/media/lab1-15.png)
 
-     ![image](../Labs/media/lab1-14.png)
+     ![image](../Labs/media/lab1-16.png)
 
 >**Note:** You may be managing a large number of groups. Does your organization have a plan for creating groups and adding members?
 
