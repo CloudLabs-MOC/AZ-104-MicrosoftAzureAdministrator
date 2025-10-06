@@ -4,20 +4,18 @@ Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a
 
 # Lab - Manage Microsoft Entra ID Identities
 
-### Overall Estimated Duration: 50 minutes
+### Overall Estimated Duration: 30 Minutes
 
 ## Overview
 
-In this hands-on lab, you'll gain practical experience in managing identity and access within a cloud environment using Microsoft Entra ID, a key component of Azure's security and identity management features. You will learn how to create and configure Entra ID users, set up groups with both assigned and dynamic membership, and manage a Microsoft Entra ID tenant. Additionally, you’ll gain expertise in inviting and managing guest users, enabling secure collaboration with external parties. By the end of this lab, you'll be proficient in the essential tasks of provisioning and managing users, groups, and guest access in Microsoft Entra ID, equipping you with the skills to efficiently manage identity and access in your organization’s Azure environment.
+In this hands-on lab, you will gain practical experience in managing identities within Microsoft Entra ID, the core identity and access management service in Azure. You’ll learn how to create and configure both standard and guest users, set essential properties such as job title, department, and usage location, and organize access through security groups with assigned membership. By the end of this lab, you’ll understand how Microsoft Entra ID enables secure user management and structured access control in a cloud environment.
 
 ## Objective
 
-By the end of this lab, you will be able to manage and configure Microsoft Entra ID users, groups with assigned and dynamic membership, tenants, and guest users.
+By the end of this lab, you will be able to manage and configure Microsoft Entra ID users, guest users, and groups with assigned membership.
 
-1. **Create and configure Entra ID users**: You will learn the process of creating and configuring Microsoft Entra ID (formerly Azure Active Directory) users in the Azure portal. This includes setting up user profiles, configuring essential properties like the usage location, assigning roles to users, and ensuring that users have appropriate permissions within the Entra ID environment.
-2. **Create Entra ID groups with assigned and dynamic membership**: You will be able to create and configure Entra ID (Azure Active Directory) groups with both assigned and dynamic membership. This involves setting up groups that automatically include members based on specific attributes (dynamic membership) and groups where members are manually added (assigned membership).
-3. **Create a Microsoft Entra ID tenant**: You will get to know the process of creating a new Microsoft Entra ID (formerly Azure Active Directory) tenant. This involves setting up a separate directory environment that can be used to manage users, groups, and resources independently from other tenants.
-4. **Manage Entra ID guest users**: You will manage guest users in Microsoft Entra ID by inviting external users to access resources within your Azure subscription.
+1. **Create and configure Entra ID users:** You will learn how to create and configure Microsoft Entra ID user accounts in the Azure portal, including both standard and guest users. You will define key properties such as job title, d
+2. **Create Entra ID groups with assigned membership:**: Create and configure security groups in Microsoft Entra ID using assigned membership to manually manage owners and members for organizing access and permissions.
 
 ## Pre-requisites
 
@@ -27,28 +25,19 @@ Fundamental knowledge in managing identity and access within cloud environment u
 
 In this hands-on lab, the architecture flow includes several essential components.
 
-1. Creating and Configuring Entra ID Users: Understanding how to create and manage user accounts within Microsoft Entra ID, including setting properties like job title, department, and usage location. The user will also learn how to assign roles and permissions to control access to Azure resources.
+1. Creating and Configuring Entra ID Users: You will create both a standard user and an invited guest user in Microsoft Entra ID. Each user is configured with essential properties such as job title, department, and usage location to define identity attributes.
 
-1. Creating Groups with Assigned and Dynamic Membership: Learning how to create security groups within Entra ID, including the difference between assigned membership (manually adding members) and dynamic membership (automatically adding members based on specific criteria). This includes setting up dynamic membership rules that automate the group population based on user attributes like job title.
-
-1. Creating a Microsoft Entra ID Tenant: Gaining experience in setting up a new Entra ID tenant, which is essentially a dedicated instance of Azure Active Directory for managing users, groups, and resources. This task also teaches about the initial setup and configuration of a new tenant.
-
-1. Inviting and Managing Entra ID Guest Users: Learning how to securely collaborate with external users by inviting them as guest users to your Entra ID tenant. This includes granting them access to specific resources by adding them to relevant groups and understanding how to manage their permissions.
+1. Creating Groups with Assigned Membership: You will create a security group named IT Lab Administrators and manually assign members (both the standard and guest users) to it. This group centralizes access and simplifies management within the directory.
 
 ## Architecture Diagram
 
-   ![image](../media/lab1.png)
+   ![image](../Labs/media/lab1-arch.png)
 
 ## Explanation of Components
 
-1. **Microsoft Entra ID**: Microsoft Entra ID (formerly Azure Active Directory) is a cloud-based identity and access management service from Microsoft. It helps organizations manage user identities, control access to resources, and ensure secure authentication across various cloud-based and on-premises applications.
+1. **Microsoft Entra ID**: Microsoft Entra ID (formerly Azure Active Directory) is Microsoft’s cloud-based identity and access management service. It allows organizations to securely create, manage, and authenticate user identities, ensuring controlled access to cloud resources and applications.
 
-2. **Entra ID groups**: Entra ID groups, part of Microsoft Entra ID, are used to manage and organize users in an organization by grouping them together. These groups help simplify the management of user permissions and access to resources. There are two main types of Entra ID groups:
-   - Assigned Membership Groups: Users are manually added or removed from these groups by an administrator. This type of group is useful for static sets of users who need specific access rights.
-   - Dynamic Membership Groups: Membership in these groups is determined automatically based on rules or attributes, such as job title or department. For example, a dynamic group can be configured to automatically include all users with the job title 
-    "Cloud Administrator."
-
-3. **Microsoft Entra ID tenant**: A Microsoft Entra ID tenant is a dedicated, trusted instance of Microsoft Entra ID that an organization receives when they sign up for a Microsoft cloud service such as Azure, Microsoft 365, or Dynamics 365. The tenant represents the organization in the Microsoft cloud environment and serves as the top-level container for all users, groups, and resources within that organization.
+2. **Entra ID groups**: Entra ID groups are used to organize users and simplify access management within Microsoft Entra ID. In this lab, you will work with Assigned Membership Groups, where users are manually added or removed by an administrator. This approach is ideal for managing static user sets such as departmental teams or lab administrators.
 
 # Getting Started with the Lab
  
@@ -56,9 +45,9 @@ Welcome to your AZ-104: Microsoft Azure Administrator  workshop! We've prepared 
  
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/sg1.png)
+![Access Your VM and Lab Guide](../Labs/media/2-10-g1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -68,25 +57,25 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/sg2.png)
+![](../Labs/media/2-10-g2.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](../media/sg3.png)
+![](../Labs/media/2-10-g3.png)
  
 ## Utilizing the Zoom In/Out Feature
 
 To adjust the zoom level for the environment page, click the A↕ : 100% icon located next to the timer in the lab environment.
 
-![Use the Split Window Feature](./media/sg4.png)
+![](../Labs/media/2-10-g4.png)
 
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../media/sg5.png)
+![](../Labs/media/2-10-g5.png)
 
 ## **Lab Duration Extension**
 
@@ -104,7 +93,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 ## Let's Get Started with Azure Portal
  
-1. On your virtual machine, click on the Azure Portal icon as shown below:
+1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
     ![Launch Azure Portal](../Labs/Images/azure.png)
  
@@ -112,13 +101,13 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-      ![](../Labs/Images/image7.png)
+      ![](../Labs/media/2-10-g6.png)
  
 3. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-      ![](../Labs/Images/image8.png)
+      ![](../Labs/media/2-10-g7.png)
 
 1. If you see the pop-up **Action Required**, click **Ask Later**.
    
@@ -148,19 +137,18 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
 
-1. Click **Next** from the bottom right corner to embark on your Lab journey!
- 
-    ![Start Your Azure Journey](../media/num.png)
-
 ## Support Contact
 
-1. The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
    Learner Support Contacts:
 
-   - Email Support: labs-support@spektrasystems.com
+   - Email Support: cloudlabs-support@spektrasystems.com
    - Live Chat Support: https://cloudlabs.ai/labs-support
 
-1. Now, click on Next from the lower right corner to move on to the next page.
+Now, click on Next from the lower right corner to move on to the next page.
    
+   ![Start Your Azure Journey](../media/num.png)
+
 ## Happy Learning!!
+

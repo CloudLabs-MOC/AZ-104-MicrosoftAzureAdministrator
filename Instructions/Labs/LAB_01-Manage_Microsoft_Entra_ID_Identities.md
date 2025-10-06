@@ -2,7 +2,7 @@
 
 ## Lab Overview
 
-This lab focuses on users and groups as the foundation of an identity solution. You'll work on provisioning users and groups for a pre-production lab environment, incorporating automated group memberships based on job titles to streamline management.
+In this lab, you will explore identity management in Microsoft Entra ID by creating and configuring both standard and guest user accounts. You will assign essential attributes such as job title, department, and usage location to define user properties. You’ll also create and manage security groups to organize access and permissions. By completing this lab, you’ll understand how Entra ID forms the foundation of secure and efficient identity and access management in the cloud.
 
 ## Interactive lab simulation
 
@@ -15,346 +15,177 @@ This lab uses an interactive lab simulation. The simulation lets you to click th
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-+ Task 1: Create and configure Entra ID users
-+ Task 2: Create Entra ID groups with assigned and dynamic membership
-+ Task 3: Create a Microsoft Entra ID tenant
-+ Task 4: Manage Entra ID guest users
++ Task 1: Create and configure user accounts.
++ Task 2: Create groups and add members.
 
 ## Exercise 1: Microsoft Entra ID Identities
 
-In this exercise, you will learn how to create and manage Microsoft Entra ID identities. You will explore the process of provisioning users, assigning roles, and configuring essential properties for managing access to cloud resources. This exercise will help you understand the foundational concepts of identity management within the Microsoft Entra ID ecosystem.
+In this exercise, you will create and configure user accounts in Microsoft Entra ID, including both standard and guest users. You’ll define key attributes such as job title, department, and usage location to establish the foundation for identity management.
 
-### Task 1: Create and configure Entra ID users
+### Task 1: Create and configure user accounts.
 
-In this task, you will set up and customize Microsoft Entra ID users by creating user accounts and configuring their properties to align with the organization's identity management requirements.
+In this task, you will create new user accounts in Microsoft Entra ID and configure essential user details to meet organizational requirements.
 
-1. In the Azure portal, search for Microsoft Entra ID (1) and select **Microsoft Entra ID (2)**.
+1. In the Azure portal, search for **Microsoft Entra ID (1)** and select **Microsoft Entra ID (2)**.
 
-    ![](../Labs/media/lab1-image1.png)
+    ![](../Labs/media/3-10-l2-1.png)
 
-1. On the **Microsoft Entra ID** blade, scroll down to the **Manage** section, click **User settings**, and review available configuration options.
+1. Select the **Overview** blade and then the **Manage tenants** tab. 
 
-   ![](../Labs/media/lab1-image2.png)
+    ![](../Labs/media/lab1-1.png)
 
-1. On the same page of **Microsoft Entra ID** blade, under the **Manage** section, click **Users**.
+    >**Did you know?** A tenant is a specific instance of Microsoft Entra ID containing accounts and groups. Depending on your situation, you can create more tenants and **Switch** between them. 
+1. Return to the **Entra ID** page by pressing back in the browser or selecting the option in the breadcrumb menu.
 
-    ![](../Labs/media/lab1-image3.png)
+1. As you have time, explore other options such as **Licenses** and **Password reset**.
 
-1. Click on your user account **ODL_User <inject key="DeploymentID"></inject>** to display its **Profile** settings. 
+1. On **Users - All users** blade, and then click **+ New user (1)** then select **+ Create new user (2)**.
 
-     ![](../Labs/media/lab1-image4.png)
-
-1. Click **Edit properties**. 
-
-     ![](../Labs/media/lab1-image5.png)
-   
-1. Click **Settings** tab and make sure that **Usage location** set to **United States**, if not select  **Usage location** to **United States** and click **Save** to apply the change.
-
-     ![](../Labs/media/lab1-image6.png)
-
-    >**Note**: This is necessary in order to assign a Microsoft Entra ID Premium P2 license to your user account later in this lab.
-  
-1. Navigate back to the **Users - All users** blade, and then click **+ New user (1)** then select **+ Create new user (2)**.
-
-     ![](../Labs/Images/newuser.png)
+     ![](../Labs/media/2-10-l1-6.png)
 
 1. Create a new user on the **Basics (1)** tab with the following settings (leave others with their defaults) and select **Next: properties (6) >**.
 
     | Setting | Value |
     | --- | --- |
-    | User principal name | **az104-01a-aaduser1 (2)**  |
-    | Display Name | **az104-01a-aaduser1 (3)** |
+    | User principal name | **`az104-user1` (2)**  |
+    | Display Name | **`az104-user1` (3)** |
     | Auto-generate password | unchecked **(4)** |
     | Password | **Provide a secure password (5)** |
     | Account enabled | **Checked (7)** |
     
-      >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
+      >**Note:** **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
     
-      ![image](../media/az104-mod3-image30.png)
+      ![image](../Labs/media/lab1-2.png)
     
  1. On  the **Properties** tab specify the following settings (leave others with their defaults):  
 
     | Setting | Value |
     | --- | --- |
-    | Job title  | **Cloud Administrator** |
-    | Department | **IT** |
-    | Usage location | **United States** |
+    | Job title  | **Cloud Administrator (1)** |
+    | Department | **IT (2)** |
+    | Usage location | **United States (3)** |
     
-      ![](../Labs/media/lab1-image8.png)
+      ![](../Labs/media/2-10-l1-8.png)
      
-      ![](../Labs/media/lab1-image9.png)
+      ![](../Labs/media/2-10-l1-9.png)
     
-1. Click on **Review + create** and then **Create**.
+1. Click on **Review + create (4)** and then **Create**.
 
-1. In the list of users, click the newly created user account to display its blade.
+    ![image](../Labs/media/lab1-3.png)
 
-   ![](../Labs/media/lab1-image10.png)
+1. Refresh the page and confirm your new user was created. 
 
-1. From the left navigation pane, click **Assigned roles**.
+   ![image](../Labs/media/lab1-4.png)
 
-     ![image](../media/az104-mod3-image31.png)
+1. Navigate back to the **Users - All users** blade, and then click **+ New user (1)** then select **+ Create new user (2)**.
 
-1.  Then click **+ Add assignment** button and search and select **User administrator** role and click **Add** to assign role to **az104-01a-aaduser1**.
+     ![](../Labs/media/2-10-l1-6.png)
 
-    >**Note**: You also have the option of assigning Entra ID roles when provisioning a new user.
-
-     ![image](../media/az104-mod3-image32.png)
-     
-1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password to a secure password of your choosing. 
-
-    >**Note**: Rather than typing the user name (including the domain name), you can paste the content of Clipboard.
-   
-1. In the **InPrivate** browser window, in the Azure portal, search for and select **Microsoft Entra ID**.
-      
-    >**Note**: While this user account can access the Azure Active Directory tenant, it does not have any access to Azure resources. This is expected since such access would need to be granted explicitly by using Azure Role-Based Access Control. 
-
-1. In the **InPrivate** browser window, on the Entra ID blade, scroll down to the **Manage** section, click **User settings**, note that you do not have permission to modify any configuration options, and sign out of the user account **az104-01a-aaduser1** and close the InPrivate window.
-
-1. In the Azure portal, search for and select **Microsoft Entra ID**, in the **Manage** section, click **Users**, then click **+ New user** then select **+ Create new user**.
-
-     ![](../Labs/Images/newuser.png)
-
-1. Create a new user on the **Basics** tab with the following settings (leave others with their defaults) and select **Next: properties>**.
+1. Create a new user on the **Basics** tab with the following settings (leave others with their defaults) and select **Next: properties (6) >**.
 
     | Setting | Value |
     | --- | --- |
-    | User principal name | **az104-01a-aaduser2** |
-    | Display Name | **az104-01a-aaduser2** |
-    | Auto-generate password | unchecked |
-    | Password | **Provide a secure password** |
-    | Account enabled | **Checked** |
-    
-     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
-    
- 1. On **Properties** tab specify the following settings (leave others with their defaults):
-    
+    | Email | your email address **(1)** |
+    | Display name | your name **(2)**|
+    | Send invite message | **check the box (3)** |
+    | Message | `Welcome to Azure and our group project` **(4)** |
+
+    ![image](../Labs/media/lab1-5.png)
+
+1. Move to the **Properties** tab. Complete the basic information, including these fields. 
+
     | Setting | Value |
     | --- | --- |
-    | Job title | **System Administrator** |
-    | Department | **IT** |
-    | Usage location | **United States** |
-    
-1. Click on **Review + create** and then **Create**.
+    | Job title  | `IT Lab Administrator` **(1)** |
+    | Department  | `IT` **(2)** |
+    | Usage location (Properties tab) | **United States (3)** |
 
-    >**Note**: If the users are already created then you can skip this task and continue further. 
+     ![image](../Labs/media/lab1-6.png)
 
-### Task 2: Create Entra ID groups with assigned and dynamic membership
+     ![image](../Labs/media/lab1-7.png)
 
-In this task, you will create Azure Active Directory groups with assigned and dynamic membership. Assigned groups require manually adding members, while dynamic groups automatically update memberships based on attributes like job titles or departments. This approach ensures efficient and automated group management.
+1. Select **Review + invite (4)**, and then **Invite**.
 
-1. Back in the Azure portal where you are signed in with your **user account**, navigate back to the **Overview** blade of the Entra ID tenant and, in the **Manage** section, click **Licenses**.
+     ![image](../Labs/media/lab1-8.png)
 
-      ![image](../media/az104-mod3-image35.png) 
+1. **Refresh** the page and confirm the invited user was created. You should receive the invitation email shortly. 
 
-1. Under **Manage** section click on **All products**. Notice the **Microsoft Entra ID P2** is listed and assigned to the odl user.
+    ![image](../Labs/media/lab1-9.png)
 
-      ![image](../media/az104-mod3-image34.png)
+    >**Note:** It is unlikely you will be creating user accounts individually. Do you know how your organization plans to create and manage user accounts?
 
-   >**Note**: Microsoft Entra ID P2 are required in order to implement dynamic groups.
-    
-    >**Note**: From here you can purchase a license, manage the licenses you have, and assign licenses to users and groups. Select **Licensed features** to see what is available.
-    
-    >**Note**: Please review the document to enhance your understanding of Microsoft Entra ID P2. You can find it at: https://learn.microsoft.com/en-us/entra/fundamentals/licensing
-    
-1. In the Azure portal, navigate back to the Entra ID tenant blade and click **Groups**.
+### ## Task 2: Create groups and add members
 
-    ![](../Labs/Images/grp.png)        
+In this task, you create a group account. Group accounts can include user accounts or devices. These are two basic ways members are assigned to groups: Statically and Dynamically. Static groups require administrators to add and remove members manually. Dynamic groups update automatically based on the properties of a user account or device. For example, job title.
+        
+1. In the Azure portal, navigate back to the Entra ID tenant blade and under **manage (1)** click **Groups (2)**.
 
-1. Use the **+ New group** button to create a new group with the following settings:
+    ![](../Labs/media/2-10-l1-18.png)           
+1. Take a minute to familiarize yourself with the group settings in the left pane.
+
+   + **Expiration** lets you configure a group lifetime in days. After that time the group must be renewed by the owner.
+   + **Naming policy** lets you configure blocked words and add a prefix or suffix to group names.
+
+1. In the **All groups** blade, select **+ New group** and create a new group.     
 
     | Setting | Value |
     | --- | --- |
     | Group type | **Security (1)** |
-    | Group name | **IT Cloud Administrators (2)** |
-    | Group description | **Contoso IT cloud administrators (3)** |
-    | Membership type | **Dynamic User (4)** |
+    | Group name | **IT Lab Administrators (2)** |
+    | Group description | **Administrators that manage the IT lab (3)** |
+    | Membership type | **Assigned (4)** |
    
-     >**Note**: If the **Membership type** drop-down list is grayed out, wait a few minutes and refresh the browser page.
+     ![image](../Labs/media/lab1-10.png)
 
-1. Click **Add dynamic query**.
+     >**Note**: An Entra ID Premium P1 or P2 license is required for dynamic membership. If other **Membership types** are available, the options will show up in the drop-down. 
 
-    ![](../Labs/Images/grp1.png)  
+1. Select **No owners selected (5)**.
 
-1. On the **Configure Rules** tab of the **Dynamic membership rules** blade, create a new rule with the following setting by clicking on **+ Add expression** and **Save**.
+1. In the **Add owners** page, search for and **select (7)** yourself (shown in the top right corner) as the owner. Notice you can have more than one owner. 
 
-    | Setting | Value |
-    | --- | --- |
-    | Property | **jobTitle** |
-    | Operator | **Equals** |
-    | Value | **Cloud Administrator** |
+    ![image](../Labs/media/lab1-11.png)
 
-   ![image](../media/az104-mod3-image36.png) 
+1. Select **No members selected (8)**.
+
+1. In the **Add members** pane, search and **select** the **az104-user1** and the **guest user** **(9)** you invited, Add both of the users to the group, click on **Select (10)**,
+
+    ![image](../Labs/media/lab1-12.png)
    
-1. Back on the **New Group** blade, click **Create**.
+1. **Refresh** the page and ensure your group was created.
 
-    ![image](../media/az104-mod3-image38.png)
+     ![image](../Labs/media/lab1-13.png)
 
-1. Back on the **Groups - All groups** blade of the Entra ID tenant, click the **+ New group** button and create a new group with the following settings:
+1. Select the new group and review the **Members** and **Owners** information.
 
-    | Setting | Value |
-    | --- | --- |
-    | Group type | **Security** |
-    | Group name | **IT System Administrators** |
-    | Group description | **Contoso IT system administrators** |
-    | Membership type | **Dynamic User** |
+     ![image](../Labs/media/lab1-14.png)
 
-1. Click **Add dynamic query**.
+     ![image](../Labs/media/lab1-14.png)
 
-1. On the **Configure Rules** tab of the **Dynamic membership rules** blade, create a new rule with the following setting by clicking on **+ Add expression** and **Save**.
+>**Note:** You may be managing a large number of groups. Does your organization have a plan for creating groups and adding members?
 
-    | Setting | Value |
-    | --- | --- |
-    | Property | **jobTitle** |
-    | Operator | **Equals** |
-    | Value | **System Administrator** |
-
-1. Back on the **New Group** blade, click **Create**.
-
-1. Back on the **Groups - All groups** blade of the Entra ID tenant, click the **+ New group** button, and create a new group with the following settings:
-
-    | Setting | Value |
-    | --- | --- |
-    | Group type | **Security** |
-    | Group name | **IT Lab Administrators** |
-    | Group description | **Contoso IT Lab administrators** |
-    | Membership type | **Assigned** |
-
-1. Click **No members selected**. From the **Add members** blade, under **Groups** tab search and select the **IT Cloud Administrators** and **IT System Administrators** groups and click on **Select**, back on the **New Group** blade, click **Create**.
-
-    ![](../Labs/media/lab1-image17.png)
-   
-1. Back on the **Groups - All groups** blade, click the entry representing the **IT Cloud Administrators** group and, select **Members** blade. Verify that the **az104-01a-aaduser1** appears in the list of group members.
-
-     ![image](../media/az104-mod3-image39.png)
-
-    >**Note**: You might experience delays with updates of the dynamic membership groups. To expedite the update, navigate to the group blade, display its **Dynamic membership rules** blade, **Edit** the rule listed in the **Rule syntax** textbox by adding whitespace at the end, and **Save** the change.
-
-1. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, then display its **Members** blade. Verify that the **az104-01a-aaduser2** appears in the list of group members.
-
-### Task 3: Create an Microsoft Entra ID tenant
-
-In this task, you will create a new Microsoft Entra ID tenant, which serves as a dedicated instance of Microsoft Entra ID for managing your organization's identity and access needs. 
-
-1. In the Azure portal in the main browser window, search for and select **Microsoft Entra ID**.
-   
-1. Click **Manage tenant**, and then on the next screen, click **+ Create**, and specify the following setting:
-   
-    | Setting | Value |
-    | --- | --- |
-    | Select a tenant type | **Microsoft Entra ID** |    
-    
-1. Click **Next: Configuration** then Click **Review + create (4)**
-
-    | Setting | Value |
-    | --- | --- |
-    | Organization name | **Contoso Lab (1)** |
-    | Initial domain name | contosoorg<inject key="DeploymentID"></inject> **(2)** | 
-    | Country/Region | **United States (3)** |
-    
-    ![](../Labs/Images/crttenant2.png)   
-   
-   > **Note**: The **Initial domain name** should not be a legitimate name that potentially matches your organization or another. The green checkmark in the **Initial domain name** text box will indicate that the domain name you typed in is valid and unique.
-
-1. On **Review + create (4)** page Click **Create**, enter the captcha and click **Submit**.
-
-   ![](../Labs/Images/catche.png)   
-
-    >**Note**: After clicking on Submit, please wait for 2 minutes before proceeding to the next step. You may not receive any notifications during this time then after some time procced with next step.
-
-    >**Note**: There is a known issue with the Captcha verification in the lab environment. If you receive the error **Creation failed. Too many requests, please try later**, do the following:<br>
-    >- Try the creation a few times.<br>
-    >- Check the **Manage tenant** section to ensure the tenant wasn't created in the background. <br>
-    >- Open a new **InPrivate** window and use the Azure Portal and try to create the tenant from there.<br>
-    >- Use the **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)** to view the steps. <br>
-    >- You can try this task later, but creating a tenant isn't required in other labs. 
-
-1. In the Azure portal search and select **Microsoft Entra ID**.
-    
-1. Select **Manage tenants** to display the blade of the newly created Entra ID tenant and select the newly created tenant **Contoso Lab**, and click on **Switch**.
-
-     ![](../Labs/media/az-12.png)
-
-### Task 4: Manage Entra ID, guest users.
-
-In this task, you will create Entra ID guest users, allowing external users to access resources within your organization's Azure environment. You will configure the necessary permissions and roles to grant these guest users secure access to specific resources in an Azure subscription, enabling collaboration while maintaining control over the environment's security.
-
-1. In the Azure portal displaying the Contoso Lab Entra ID tenant, in the **Manage** section, click **Users**, and then click **+ New user** then select **Create new user**.
-
-1. Create a new user on the **Basics** tab with the following settings (leave others with their defaults) and select **Next: properties>**.
-
-    | Setting | Value |
-    | --- | --- |
-    | User principal name | **az104-01b-aaduser1** |
-    |  Display Name | **az104-01b-aaduser1** |
-    |  Auto-generate password | uncheck |
-    |  Password | **Provide a secure password** |
-    | Account enabled | **Checked** |
-       
-    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
-
- 1. on **Properties** tab specify the following settings (leave others with their defaults).
-
-    | Setting | Value |
-    | --- | --- |
-    | Job title | **System Administrator** |
-    | Department | **IT** |
-
-1. Click on **Review + create** and then **Create**.       
-1. Click on the newly created profile.
-
-    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
-
-1.  Search and select Entra ID page.
-1. Click **Manage tenants**.
-1. Check the box next to the first tenant , then select **Switch**.
-
-    ![](../Labs/media/lab1-image19.png)
-
-1. Open **Microsoft Entra ID**, from the left navigation pane, under **Manage** select **Users** blade, click **+ New user** then select **Invite external user**.
-
-    ![](../Labs/Images/exuserinv.png)  
-    
-1. Create a new user on **Basics** tab with the following settings (leave others with their defaults) and select **Next: properties>**.
-
-    | Setting | Value |
-    | --- | --- |
-    | Email address | the User Principal Name you copied earlier in this task |
-    | Display Name | **az104-01b-aaduser1** |
-    
-
-      ![](../Labs/Images/exuser.png)  
-    
- 1. On the **Properties** tab specify the following settings (leave others with their defaults).    
-   
-    | Setting | Value |
-    | --- | --- | 
-    | Job title | **Lab Administrator** |
-    | Department | **IT** |
-    | Usage location | **United States** |
-
-1. Click **Review + Invite** and then **Invite**. 
-
-1. Back on the **Users - All users** blade, click the entry representing the newly created guest user account.
-
-1. On the **az104-01b-aaduser1 - Profile** blade, click **Groups**.
-
-1. Click **+ Add membership** and add the guest user account to the **IT Lab Administrators** group.
-
-   <validation step="f05516fb-26d1-48f6-a20f-e2f9c0616ec2" />
-   
-  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
 
 ### Review
 
 In this lab, you have completed the following tasks:
 
-- Created and configured Entra ID users, including setting up user accounts and configuring essential properties for identity management.
-- Created Entra ID groups with both assigned and dynamic membership, configuring assigned groups for manual membership and dynamic groups for automatic membership based on user attributes.
-- Created a Microsoft Entra ID (AD) tenant, setting up a dedicated instance for managing your organization's identity and access in Azure.
-- Managed Entra ID guest users, allowing external users to access specific resources in an Azure subscription by assigning them appropriate roles and permissions.
+- Created and configured Microsoft Entra ID user accounts, including both standard and guest users, and set essential properties such as job title, department, and usage location.
+- Created a security group, assigned ownership, and added members to organize access and manage identities efficiently within the Entra ID tenant.
+
+## Extend your learning with Copilot
+
+Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
++ What are the Azure PowerShell and CLI commands to create a security group called IT Admins? Provide the official command reference page.  
++ Provide a step-by-step strategy for managing users and groups in Microsoft Entra ID.
++ What are the steps in the Azure portal to bulk create users and groups?
++ Provide a comparison table of internal and external Microsoft Entra ID user accounts. 
+
+
+## Learn more with self-paced training
+
++ [Understand Microsoft Entra ID](https://learn.microsoft.com/training/modules/understand-azure-active-directory/). Compare Microsoft Entra ID to Active Directory DS, learn about Microsoft Entra ID P1 and P2, and explore Microsoft Entra Domain Services for managing domain-joined devices and apps in the cloud.
++ [Create Azure users and groups in Microsoft Entra ID](https://learn.microsoft.com//training/modules/create-users-and-groups-in-azure-active-directory/). Create users in Microsoft Entra ID. Understand different types of groups. Create a group and add members. Manage business-to-business guest accounts.
++ [Allow users to reset their password with Microsoft Entra self-service password reset](https://learn.microsoft.com/training/modules/allow-users-reset-their-password/). Evaluate self-service password reset to allow users in your organization to reset their passwords or unlock their accounts. Set up, configure, and test self-service password reset.
+
 
 ## Key takeaways
 
@@ -364,20 +195,5 @@ Congratulations on completing the lab. Here are some main takeways for this lab:
 + Microsoft Entra ID has user and guest accounts. Each account has a level of access specific to the scope of work expected to be done.
 + Groups combine together related users or devices. There are two types of groups including Security and Microsoft 365.
 + Group membership can be statically or dynamically assigned.
-
-
-## Learn more with self-paced training
-
-+ [Understand Microsoft Entra ID](https://learn.microsoft.com/training/modules/understand-azure-active-directory/). Compare Microsoft Entra ID to Active Directory DS, learn about Microsoft Entra ID P1 and P2, and explore Microsoft Entra Domain Services for managing domain-joined devices and apps in the cloud.
-+ [Create Azure users and groups in Microsoft Entra ID](https://learn.microsoft.com//training/modules/create-users-and-groups-in-azure-active-directory/). Create users in Microsoft Entra ID. Understand different types of groups. Create a group and add members. Manage business-to-business guest accounts.
-+ [Allow users to reset their password with Microsoft Entra self-service password reset](https://learn.microsoft.com/training/modules/allow-users-reset-their-password/). Evaluate self-service password reset to allow users in your organization to reset their passwords or unlock their accounts. Set up, configure, and test self-service password reset.
-
-## Extend your learning with Copilot
-
-Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
-+ What are the Azure PowerShell and CLI commands to create a security group called IT Admins? Provide the official command reference page.  
-+ Provide a step-by-step strategy for managing users and groups in Microsoft Entra ID.
-+ What are the steps in the Azure portal to bulk create users and groups?
-+ Provide a comparison table of internal and external Microsoft Entra ID user accounts. 
 
 ### You have successfully completed the lab
