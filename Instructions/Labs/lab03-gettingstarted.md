@@ -5,7 +5,7 @@ Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a
 
 # Lab - Manage Azure resources by Using ARM Templates
 
-### Overall Estimated Duration: 100 minutes
+### Overall Estimated Duration: 100 Minutes
 
 ## Overview
 
@@ -31,13 +31,13 @@ By the end of this lab you will learn the following key concepts:
 
 In this hands-on lab, the architecture flow includes several essential components.
 
-1. **Creating and Managing Resources with ARM Templates**: Create and deploy resources using Azure Resource Manager (ARM) templates and explore how templates simplify resource deployment and management.
+1. **Creating and Managing Resources with ARM Templates:** Create and deploy resources using Azure Resource Manager (ARM) templates and explore how templates simplify resource deployment and management.
 
-2. **Editing and Redeploying Templates**: Edit existing ARM templates to modify resource configurations and redeploy them, ensuring easy resource management and repeatability.
+2. **Editing and Redeploying Templates:** Edit existing ARM templates to modify resource configurations and redeploy them, ensuring easy resource management and repeatability.
 
-3. **Deploying Resources via Cloud Shell and PowerShell**: Configure Azure Cloud Shell and use Azure PowerShell to deploy ARM templates, giving you hands-on experience with scripting and automation.
+3. **Deploying Resources via Cloud Shell and PowerShell:** Configure Azure Cloud Shell and use Azure PowerShell to deploy ARM templates, giving you hands-on experience with scripting and automation.
 
-4. **Exploring Azure Bicep for Resource Deployment**: Explore Azure Bicep, a declarative language used to define and deploy Azure resources, providing a more streamlined alternative to ARM templates.
+4. **Exploring Azure Bicep for Resource Deployment:** Explore Azure Bicep, a declarative language used to define and deploy Azure resources, providing a more streamlined alternative to ARM templates.
 
 
 ## Architecture diagram
@@ -46,13 +46,13 @@ In this hands-on lab, the architecture flow includes several essential component
 
 ## Explanation of Components
 
-1. **Azure Resource Manager (ARM) Templates**: ARM templates are JSON files used to define the structure of your resources in Azure. They allow for the declarative deployment and management of resources in a repeatable manner.
+1. **Azure Resource Manager (ARM) Templates:** ARM templates are JSON files used to define the structure of your resources in Azure. They allow for the declarative deployment and management of resources in a repeatable manner.
 
-2. **Cloud Shell**: Azure Cloud Shell is an integrated, browser-accessible command-line interface (CLI) that allows you to manage your Azure resources directly from the portal, offering both Bash and PowerShell environments.
+2. **Cloud Shell:** Azure Cloud Shell is an integrated, browser-accessible command-line interface (CLI) that allows you to manage your Azure resources directly from the portal, offering both Bash and PowerShell environments.
 
-3. **Azure PowerShell**: Azure PowerShell is a set of cmdlets used for managing Azure resources through scripts. In this lab, it’s used to deploy ARM templates, making resource management more efficient and automated.
+3. **Azure PowerShell:** Azure PowerShell is a set of cmdlets used for managing Azure resources through scripts. In this lab, it’s used to deploy ARM templates, making resource management more efficient and automated.
 
-4. **Azure Bicep**: Azure Bicep is a domain-specific language that simplifies the authoring of Azure ARM templates. It provides a more concise syntax while maintaining full compatibility with ARM templates for resource deployment.
+4. **Azure Bicep:** Azure Bicep is a domain-specific language that simplifies the authoring of Azure ARM templates. It provides a more concise syntax while maintaining full compatibility with ARM templates for resource deployment.
 
 # Getting Started with the Lab
  
@@ -60,9 +60,9 @@ Welcome to your AZ-104: Microsoft Azure Administrator  workshop! We've prepared 
  
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/sg1.png)
+![Access Your VM and Lab Guide](../media/7-10-lab3-1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -72,25 +72,25 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/sg2.png)
+![Explore Lab Resources](../media/7-10-lab3-2.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](../media/sg3.png)
+![Use the Split Window Feature](../media/7-10-lab3-3.png)
  
 ## Utilizing the Zoom In/Out Feature
 
 To adjust the zoom level for the environment page, click the A↕ : 100% icon located next to the timer in the lab environment.
 
-![Use the Split Window Feature](./media/sg4.png)
+![Use the Split Window Feature](./media/2-10-g4.png)
 
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../media/sg5.png)
+![Manage Your Virtual Machine](../media/2-10-g5.png)
 
 ## **Lab Duration Extension**
 
@@ -116,13 +116,13 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-      ![](../Labs/Images/image7.png)
+      ![](../media/7-10-lab3-4.png)
  
 3. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-      ![](../Labs/Images/image8.png)
+      ![](../media/7-10-lab3-5.png)
 
 1. If you see the pop-up **Action Required**, click **Ask Later**.
    
@@ -152,19 +152,16 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
 
-1. Click **Next** from the bottom right corner to embark on your Lab journey!
- 
-    ![Start Your Azure Journey](../media/num.png)
-
 ## Support Contact
 
-1. The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
    Learner Support Contacts:
 
-   - Email Support: labs-support@spektrasystems.com
+   - Email Support: cloudlabs-support@spektrasystems.com
    - Live Chat Support: https://cloudlabs.ai/labs-support
 
-1. Now, click on Next from the lower right corner to move on to the next page.
+Now, click on Next from the lower right corner to move on to the next page.
    
+   ![Start Your Azure Journey](../media/num.png)
 ## Happy Learning!!
