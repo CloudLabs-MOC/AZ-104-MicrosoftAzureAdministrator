@@ -160,7 +160,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
    >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
 
-1. On the **You have no storage mounted** screen select **Mount Storage Account (1)**, select the storage account subscription from drop down and click on **Apply (2)**
+1. On the **You have no storage mounted** screen select **Mount Storage Account (1)**, select the storage account **subscription (2)**from drop down and click on **Apply (3)**
 
      ![image](../media/7-10-lab3-26.png)
 

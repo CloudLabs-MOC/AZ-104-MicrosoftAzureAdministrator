@@ -4,7 +4,7 @@ Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a
 
 # Lab - Implement Virtual Networking
 
-### Overall Estimated Duration: 60 minutes
+### Overall Estimated Duration: 60 Minutes
 
 ## Overview
 
@@ -14,13 +14,13 @@ In this lab, you will explore Azure's virtual networking capabilities by creatin
 
 By the end of this lab you will learn the following:
 
-1. **Create Virtual Networks**: Learn how to set up virtual networks (VNets), the backbone of Azure's networking infrastructure, to facilitate communication between resources securely and efficiently.
+1. **Create Virtual Networks:** Learn how to set up virtual networks (VNets), the backbone of Azure's networking infrastructure, to facilitate communication between resources securely and efficiently.
 
-2. **Establish secure communication**: Implement ASGs and NSGs to control traffic flow to and from Azure resources, enhancing security and network management.
+2. **Establish secure communication:** Implement ASGs and NSGs to control traffic flow to and from Azure resources, enhancing security and network management.
 
-3. **Configure Public and Private DNS Zones**: Set up public DNS zones to resolve domain names accessible on the internet and private DNS zones for internal name resolution within the virtual network.
+3. **Configure Public and Private DNS Zones:** Set up public DNS zones to resolve domain names accessible on the internet and private DNS zones for internal name resolution within the virtual network.
 
-4. **Apply Security Best Practices**: You will apply foundational security principles like network segmentation, traffic filtering, and secure name resolution.
+4. **Apply Security Best Practices:** You will apply foundational security principles like network segmentation, traffic filtering, and secure name resolution.
 
 ## Pre-requisites
 
@@ -44,13 +44,13 @@ In this hands-on lab, the architecture flow includes several essential component
 
 ## Explanation of Components
 
-1. **Virtual Networks (VNets)**: A VNet is a logically isolated network within Azure that allows resources like Virtual Machines (VMs) and Application Gateways to securely communicate with each other, the internet, and on-premises networks.
+1. **Virtual Networks (VNets):** A VNet is a logically isolated network within Azure that allows resources like Virtual Machines (VMs) and Application Gateways to securely communicate with each other, the internet, and on-premises networks.
 
-2. **Network Security Groups (NSGs)**: NSGs are used to define and enforce security rules for controlling inbound and outbound network traffic to Azure resources. These rules are based on parameters such as IP addresses, ports, and protocols.
+2. **Network Security Groups (NSGs):** NSGs are used to define and enforce security rules for controlling inbound and outbound network traffic to Azure resources. These rules are based on parameters such as IP addresses, ports, and protocols.
 
-3. **Application Security Groups (ASGs)**: ASGs allow you to group resources with similar security requirements and apply NSG rules to these groups rather than individual resources. This simplifies security management, especially in large deployments.
+3. **Application Security Groups (ASGs):** ASGs allow you to group resources with similar security requirements and apply NSG rules to these groups rather than individual resources. This simplifies security management, especially in large deployments.
 
-4. **Public and Private DNS Zones**: Public DNS Zones are used to resolve names for resources exposed to the internet.Private DNS Zones are used to resolve names for internal resources within an Azure VNet.
+4. **Public and Private DNS Zones:** Public DNS Zones are used to resolve names for resources exposed to the internet.Private DNS Zones are used to resolve names for internal resources within an Azure VNet.
 
 # Getting Started with the Lab
  
@@ -58,9 +58,9 @@ Welcome to your AZ-104: Microsoft Azure Administrator  workshop! We've prepared 
  
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/sg1.png)
+![Access Your VM and Lab Guide](../media/7-10-lab4-1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -70,25 +70,25 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/sg2.png)
+![Explore Lab Resources](../media/7-10-lab3-2.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](../media/sg3.png)
+![Use the Split Window Feature](../media/7-10-lab3-3.png)
  
 ## Utilizing the Zoom In/Out Feature
 
 To adjust the zoom level for the environment page, click the A↕ : 100% icon located next to the timer in the lab environment.
 
-![Use the Split Window Feature](./media/sg4.png)
+![Use the Split Window Feature](./media/2-10-g4.png)
 
 ## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../media/sg5.png)
+![Manage Your Virtual Machine](../media/2-10-g5.png)
 
 ## **Lab Duration Extension**
 
@@ -114,13 +114,13 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-      ![](../Labs/Images/image7.png)
+      ![](../media/7-10-lab3-4.png)
  
 3. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-      ![](../Labs/Images/image8.png)
+      ![](../media/7-10-lab3-5.png)
 
 1. If you see the pop-up **Action Required**, click **Ask Later**.
    
@@ -150,19 +150,17 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
 
-1. Click **Next** from the bottom right corner to embark on your Lab journey!
- 
-    ![Start Your Azure Journey](../media/num.png)
-
 ## Support Contact
 
-1. The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
    Learner Support Contacts:
 
-   - Email Support: labs-support@spektrasystems.com
+   - Email Support: cloudlabs-support@spektrasystems.com
    - Live Chat Support: https://cloudlabs.ai/labs-support
 
-1. Now, click on Next from the lower right corner to move on to the next page.
+Now, click on Next from the lower right corner to move on to the next page.
    
+   ![Start Your Azure Journey](../media/num.png)
+
 ## Happy Learning!!

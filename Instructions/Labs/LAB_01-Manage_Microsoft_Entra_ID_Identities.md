@@ -4,14 +4,6 @@
 
 In this lab, you will explore identity management in Microsoft Entra ID by creating and configuring both standard and guest user accounts. You will assign essential attributes such as job title, department, and usage location to define user properties. You’ll also create and manage security groups to organize access and permissions. By completing this lab, you’ll understand how Entra ID forms the foundation of secure and efficient identity and access management in the cloud.
 
-## Interactive lab simulation
-
-This lab uses an interactive lab simulation. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
-
->**Note:** This simulation is being updated. Microsoft Entra ID is the new name for Azure Active Directory (Azure AD). 
-
-+ [Manage Entra ID Identities](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201). Create and configure users and assign to groups. Create an Azure tenant and manage guest accounts. 
-
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
