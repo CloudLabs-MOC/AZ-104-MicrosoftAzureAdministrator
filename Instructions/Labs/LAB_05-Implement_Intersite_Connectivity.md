@@ -32,7 +32,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
      ![image](../media/7-10-lab3-26.png)
 
-1. On mount storage account page, select **I want to create a storage account**. click on Next.
+1. On mount storage account page, select **I want to create a storage account (1)**. click on **Next (2)**.
 
     ![image](../media/7-10-lab3-27.png)
 
@@ -201,7 +201,7 @@ In this task, you will configure local and global peering between the virtual ne
 
      ![image](../media/10-10-lab5-17.png)
 
-1. Add a peering with the following settings (leave others with their default values) and click **Add (9)**:
+1. Add a peering with the following settings (leave others with their default values) and click **Add (8)**:
 
     | Setting | Value|
     | --- | --- |
@@ -246,7 +246,7 @@ In this task, you will configure local and global peering between the virtual ne
 
     ![image](../media/10-10-lab5-19.png)
 
-1. Add a peering with the following settings (leave others with their default values) and click **Add**:
+1. Add a peering with the following settings (leave others with their default values) and click **Add (8)**:
 
     | Setting | Value|
     | --- | --- |

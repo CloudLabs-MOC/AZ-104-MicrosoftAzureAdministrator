@@ -26,7 +26,7 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. Select **+ Create** on the **Network foundation | Virtual networks** page.
 
-     ![image](../media/7-10-lab4-4.png)
+     ![image](../media/7-10-lab4-3.png)
 
 1. Complete the **Basics** tab with the following details:  
 

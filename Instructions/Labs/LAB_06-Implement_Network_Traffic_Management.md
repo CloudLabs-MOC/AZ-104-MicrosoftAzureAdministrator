@@ -74,7 +74,7 @@ In this task, you will use a template to deploy one virtual network, one network
 
 In this task, you will implement an Azure Load Balancer in front of the two Azure virtual machines in the hub virtual network
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Load balancer (1)**, and then select **Load balancers (2)** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Load balancers (1)**, and then select **Load balancers (2)** under services.
 
    ![image](../media/10-10-lab6-9.png)
 

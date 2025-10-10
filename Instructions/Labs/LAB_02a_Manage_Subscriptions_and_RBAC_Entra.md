@@ -96,7 +96,7 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 1. On the **Members** tab, select **+ Select members (1)**.
 
-1. Search for and select the **helpdesk (2)**group and click on **Select (3)**. 
+1. Search for and select the **helpdesk (2)** group and click on **Select (3)**. 
 
      ![image](./media/10-lab2-7.png) 
 

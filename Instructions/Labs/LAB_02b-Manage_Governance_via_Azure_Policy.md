@@ -19,7 +19,7 @@ In this exercise, you will learn to manage governance via Azure Policy that invo
 
 In this task, you will learn how to create and assign a tag to an Azure resource group through the Azure portal. Tags in Azure are key-value pairs that help in organizing and categorizing resources for better management and reporting.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search and select **Resource group** under services. Select **Resource group AZ-104T02** from the list.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search **Resource groups (1)** and select **Resource groups (2)** under services. Select **Resource group AZ-104T02** from the list.
 
    ![image](./media/l2-image45.png)
 
@@ -239,23 +239,23 @@ In this task, you will configure and test a resource lock to safeguard critical 
     | Lock name | `rg-lock` **(4)** |
     | Lock type | **Delete (5)** (notice the selection for read-only) |
     
-    ![image](./media/3-10-l2-72.png)
+     ![image](./media/3-10-l2-72.png)
 
 1. Navigate to the resource group **Overview** blade, and select **Delete resource group**.
 
-   ![image](./media/3-10-l2-73.png)
+     ![image](./media/3-10-l2-73.png)
 
 1. In the **Enter resource group name to confirm deletion** textbox provide the resource group name, `AZ-104T02` **(1)**. Notice you can copy and paste the resource group name and click on **Delete (2)** twice. 
 
-   ![image](./media/3-10-l2-74.png)
+     ![image](./media/3-10-l2-74.png)
    
 1. You should receive a notification denying the deletion. 
 
-    ![image](./media/l2-image64.png)
+     ![image](./media/l2-image64.png)
 
 1. From the **AZ-104T02** resource group **Overview** blade, under **Settings** section select **Locks (1)** and Select Locks and proceed to click **Delete (2)** to remove the existing **rg-lock** locks.
 
-   ![image](./media/3-10-l2-75.png)
+    ![image](./media/3-10-l2-75.png)
 
 ### Review
 
