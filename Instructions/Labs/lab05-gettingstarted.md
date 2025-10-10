@@ -90,7 +90,7 @@ To adjust the zoom level for the environment page, click the A↕ : 100% icon lo
  
 Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../media/sg5.png)
+![Manage Your Virtual Machine](../media/2-10-g5.png)
 
 ## **Lab Duration Extension**
 
