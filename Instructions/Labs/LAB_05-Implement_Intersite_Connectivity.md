@@ -20,49 +20,73 @@ In this lab, you will complete the following tasks:
 
 In this task, you will deploy three virtual machines, each into a separate virtual network, with two of them in the same Azure region and the third one in another Azure region.
    
-1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+1. In the Azure portal, open the **Azure Cloud Shell (1)** by clicking on the icon in the top right of the Azure Portal.
 
     ![Image](./Images/cloudshell.png)
 
-1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
+1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell (2)**. 
+
+     ![image](../media/7-10-lab3-25.png)
 
     >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
 
-1. On the **Getting Started** screen select **Mount Storage Account**, select the storage account subscription from drop down and click on **Apply**
+1. In the **Getting started** window, select **Mount storage account (1)**, choose the **subscription (2)** from the dropdown, and click **Apply (3)** to continue.
+
+     ![image](../media/7-10-lab3-26.png)
 
 1. On mount storage account page, select **I want to create a storage account**. click on Next.
 
-1. Provide the below details to create the storage account and click on **Create**.
+    ![image](../media/7-10-lab3-27.png)
+
+1. Provide the below details to create the storage account and click on **Create (6)**.
 
     
     | Settings | Values |
     |  -- | -- |
-    | Resource Group | **az104-05-rg0-<inject key="DeploymentID" enableCopy="false" />** |
-    | Storage account (Create new) | **str<inject key="DeploymentID" enableCopy="false" />** |
-    | Region | **<inject key="Region" enableCopy="false" />** |
-    | File share (Create new) | **none** |
+    | Subscription | Accept default **(1)**|
+    | Resource Group | **az104-05-rg0-<inject key="DeploymentID" enableCopy="false" /> (2)** |
+    | Region | **<inject key="Region" enableCopy="false" /> (3)** |
+    | Storage account (Create new) | **str<inject key="DeploymentID" enableCopy="false" /> (4)** |
+    | File share (Create new) | **none (5)** |
+
+     ![image](../media/10-10-lab5-2.png)
 
      >**Note:** As you work with the Cloud Shell a storage account and file share is required. 
 
-1. In the toolbar of the Cloud Shell pane, click on the **Manage files** dropdown, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-parameters.json** into the Cloud Shell home directory.
+1. In the **Cloud Shell** toolbar, click the **Manage files (1)** drop-down and select **Upload (2)**.
 
-    ![Image](./Images/az10498.png)
+      ![image](../media/7-10-lab3-42.png)
 
-1.  From the Cloud Shell pane, run the below command to set up the regions for your deployment. Replace **Azure_region_1** with the name of the first Azure region where you want to deploy your virtual machines, and **Azure_region_2** with a different Azure region for the third virtual machine. **For example**, you can use **$location1 = 'eastus'** and **$location2 = 'westus'**. The first two virtual networks and two virtual machines will be deployed in $location1, while the third virtual network and the third virtual machine will be deployed in $location2 within the same resource group. 
+1. In the **Open** dialog box, browse to the path **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05 (1)**, select **azuredeploydisk.bicep (2)**, and click **Open (3)** to upload the file.
 
-   ```powershell
+    ![image](../media/10-10-lab5-3.png)
+
+    ![image](../media/10-10-lab5-4.png)
+
+    >**NOte:** upload the the template and parameters file. You will need to upload each file separately one after the another.
+
+1. Verify your files are available in the Cloud Shell storage. 
+
+    ```powershell
+    dir
+    ```
+    ![image](../media/10-10-lab5-5.png)
+
+1. From the Cloud Shell pane, run the below command to set up the regions for your deployment. Replace **Azure_region_1** with the name of the first Azure region where you want to deploy your virtual machines, and **Azure_region_2** with a different Azure region for the third virtual machine. **For example**, you can use **$location1 = 'eastus'** and **$location2 = 'westus'**. The first two virtual networks and two virtual machines will be deployed in $location1, while the third virtual network and the third virtual machine will be deployed in $location2 within the same resource group. 
+
+    ```powershell
    $location1 = 'Azure_region_1'
 
    $location2 = 'Azure_region_2'
 
    $rgName = 'az104-05-rg0-Deployment-id'
-   ```
+    ```
 
-   >**Note**: In order to identify Azure regions, from the PowerShell session in Cloud Shell, run **(Get-AzLocation).Location** command.
+    >**Note:** In order to identify Azure regions, from the PowerShell session in Cloud Shell, run **(Get-AzLocation).Location** command.
 
-   >**Important**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
+    >**Important:** Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
    
-   >**Note**: If you get a prompt stating **Provided resource group already exists. Are you sure you want to update it?** type N .
+    >**Note:** If you get a prompt stating **Provided resource group already exists. Are you sure you want to update it?** type N .
 
 1. From the Cloud Shell pane, run the following to create the three virtual networks and deploy virtual machines into them by using the template and parameter files you uploaded:
 
@@ -75,9 +99,11 @@ In this task, you will deploy three virtual machines, each into a separate virtu
       -location2 $location2
    ```
 
-    >**Important**: You will be prompted to provide an admin password. Enter your own Password or give **Pa55w.rd1234**.
+    ![image](../media/10-10-lab5-6.png)
+
+    >**Important:** You will be prompted to provide an admin password. Enter your own Password or give **Pa55w.rd1234**.
     
-    >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 2 minutes.
+    >**Note:** Wait for the deployment to complete before proceeding to the next step. This should take about 2 minutes.
 
 1. Close the Cloud Shell pane.
 
@@ -85,74 +111,81 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 In this task, you verify that resources in peered virtual networks can communicate with each other. Network Watcher will be used to test the connection. Before continuing, ensure both virtual machines have been deployed and are running. 
 
-1. From the Azure portal, search for and select **Network Watcher**.
+1. In Search resources, services, and docs (G+/) box at the top of the portal, enter **Network Watcher (1)**, and then select **Network Watcher (2)** from the results.
 
-1. From Network Watcher, in the Network diagnostic tools menu in the left navigation pane, select **Connection troubleshoot**.
+     ![image](../media/10-10-lab5-7.png)
 
-1. Use the following information to complete the fields on the **Connection troubleshoot** page and select **Run diagnostic tests** (8).
+1. In **Network Watcher**, expand **Network diagnostic tools (1)** from the left navigation pane, and select **Connection troubleshoot (2)**.
+
+     ![image](../media/10-10-lab5-8.png)
+
+1. Use the following information to complete the fields on the **Connection troubleshoot** page and select **Run diagnostic tests (9)**.
 
     | Field | Value | 
     | --- | --- |
-    | Source type           | **Virtual machine** (1)  |
-    | Virtual machine       | **az104-05-vm0**  (2) | 
-    | Destination type      | **Virtual machine** (3)  |
-    | Virtual machine       | **az104-05-vm1**  (4) | 
-    | Preferred IP Version  | **Both**  (5)            | 
-    | Protocol              | **TCP**    (6)           |
-    | Destination port      | `3389`     (7)           |  
-    | Source port           | *Blank*         |
-    | Diagnostic tests      | *Defaults*      |
+    | Source type           | **Virtual machine (1)**  |
+    | Virtual machine       | **az104-05-vm0 (2)** | 
+    | Destination type      | **Virtual machine (3)**  |
+    | Virtual machine       | **az104-05-vm1 (4)** | 
+    | Preferred IP Version  | **Both  (5)**            | 
+    | Protocol              | **TCP  (6)**           |
+    | Destination port      | `3389`     **(7)**           |  
+    | Source port           | *Blank*        |
+    | Diagnostic tests      | *Defaults*  **(8)**     |
 
-    ![Azure Portal showing Connection Troubleshoot settings.](./Images/az-104-2.png)
+     ![image](../media/10-10-lab5-9.png)
 
-    >**Note**: It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected.. 
+    >**Note:** It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected.. 
 
 1. Notice the Connectivity test shows UnReachable. This makes sense because the virtual machines are in different virtual networks.
+
+      ![image](../media/10-10-lab5-10.png)
 
 ### Task 3: Configure local and global virtual network peering
 
 In this task, you will configure local and global peering between the virtual networks you deployed in the previous tasks.
 
-1. In the Azure portal, search for and select **Virtual networks**.
+1. In the Azure portal search bar, type **Virtual networks (1)** and select **Virtual networks (2)** from the search results.
 
-    ![Image](./Images/selectvnet.png)
+    ![image](../media/10-10-lab5-11.png)
 
 1. Review the virtual networks you created in the previous task and verify that the first two are located in the same Azure region and the third one in a different Azure region.
 
-    >**Note**: The template you used for the deployment of the three virtual networks ensures that the IP address ranges of the three virtual networks do not overlap.
+     ![image](../media/10-10-lab5-12.png)
+
+    >**Note:** The template you used for the deployment of the three virtual networks ensures that the IP address ranges of the three virtual networks do not overlap.
 
 1. In the list of virtual networks, click **az104-05-vnet0**.
      
-      ![Image](./Images/vnet0.png)
-      
-1. On the **az104-05-vnet0** virtual network blade, in the **Settings** section, click **Peerings (1)** and then click **+ Add (2)**.
+      ![image](../media/10-10-lab5-16.png)
+       
+1. On the **az104-05-vnet0** virtual network blade, in the **Settings (1)** section, click **Peerings (2)** and then click **+ Add (3)**.
 
-     ![Image](./Images/addpeering.png)
+     ![image](../media/10-10-lab5-13.png)
 
-1. Add a peering with the following settings (leave others with their default values) and click **Add**:
+1. Add a peering with the following settings (leave others with their default values) and click **Add (8)**:
 
     | Setting | Value|
     | --- | --- |
-    | Remote virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet0** (1) |
-    | Virtual network deployment model | **Resource manager** (2)|
-    | I know my resource ID | unselected (3)|
-    | Subscription | the name of the Azure subscription you are using in this lab (4) |
-    | Virtual network | **az104-05-vnet1** (5)|
-    | Remote virtual network peering settings | **Ensure only the first three boxes are checked** (6) |
-    | Local Peering link name | **az104-05-vnet0_to_az104-05-vnet1** (7)|
-    | Local virtual network peering settings | **Ensure only the first three boxes are checked** (8)|
+    | Remote virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet0 (1)** |
+    | I know my resource ID | unselected **(2)**|
+    | Subscription | the name of the Azure subscription you are using in this lab **(3)** |
+    | Virtual network | **az104-05-vnet1 (4)**|
+    | Remote virtual network peering settings | **Ensure only the first three boxes are checked (5)** |
+    | Local Peering link name | **az104-05-vnet0_to_az104-05-vnet1 (6)**|
+    | Local virtual network peering settings | **Ensure only the first three boxes are checked (7)**|
    
-   ![Image](./Images/az-104-3.png)
+    ![image](../media/10-10-lab5-14.png) 
 
-   ![Image](./Images/az-104-6.png)
+    ![image](../media/10-10-lab5-15.png)
     
-      >**Note**: You can ignore the warning stating that the vnet does not have a routing gateway.
+      >**Note:** You can ignore the warning stating that the vnet does not have a routing gateway.
 
-      >**Note**: This step establishes two local peerings - one from az104-05-vnet0 to az104-05-vnet1 and the other from az104-05-vnet1 to az104-05-vnet0.
+      >**Note:** This step establishes two local peerings - one from az104-05-vnet0 to az104-05-vnet1 and the other from az104-05-vnet1 to az104-05-vnet0.
 
-      >**Note**: In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
+      >**Note:** In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
 
-      >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
+      >**Note:** Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
   
     ```powershell
        $rgName = 'az104-05-rg0-Deployment-id'
@@ -168,26 +201,31 @@ In this task, you will configure local and global peering between the virtual ne
 
 1. On the **az104-05-vnet0** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
-1. Add a peering with the following settings (leave others with their default values) and click **Add**:
+     ![image](../media/10-10-lab5-17.png)
+
+1. Add a peering with the following settings (leave others with their default values) and click **Add (9)**:
 
     | Setting | Value|
     | --- | --- |
-    | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet0** (1) |
-    | Virtual network deployment model | **Resource manager** (2)|
-    | I know my resource ID | unselected (3)|
-    | Subscription | the name of the Azure subscription you are using in this lab (4) |
-    | Virtual network | **az104-05-vnet2** (5)|
-    | Remote virtual network peering settings | **Ensure only the first three boxes are checked** (6) |
-    | Local Peering link name | **az104-05-vnet0_to_az104-05-vnet2** (7)|
-    | Local virtual network peering settings | **Ensure only the first three boxes are checked** (8)|
+    | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet0 (1)** |
+    | I know my resource ID | unselected **(2)**|
+    | Subscription | the name of the Azure subscription you are using in this lab **(3)** |
+    | Virtual network | **az104-05-vnet2 (4)**|
+    | Remote virtual network peering settings | **Ensure only the first three boxes are checked (5)** |
+    | Local Peering link name | **az104-05-vnet0_to_az104-05-vnet2 (6)**|
+    | Local virtual network peering settings | **Ensure only the first three boxes are checked (7)**|
 
-    >**Note**: You can ignore the warning stating that the vnet does not have a routing gateway.
+    ![image](../media/10-10-lab5-19.1.png)
+
+    ![image](../media/10-10-lab5-19.2.png)
+
+    >**Note:** You can ignore the warning stating that the vnet does not have a routing gateway.
  
-    >**Note**: This step establishes two global peerings - one from az104-05-vnet0 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet0.
+    >**Note:** This step establishes two global peerings - one from az104-05-vnet0 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet0.
 
-    >**Note**: In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
+    >**Note:** In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
 
-    >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
+    >**Note:** Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
    
     
    ```powershell
@@ -204,28 +242,35 @@ In this task, you will configure local and global peering between the virtual ne
 
 1. Navigate back to the **Virtual networks** blade and, in the list of virtual networks, click **az104-05-vnet1**.
 
-1. On the **az104-05-vnet1** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
+     ![image](../media/10-10-lab5-18.png)
+
+1. On the **az104-05-vnet1** virtual network blade, in the **Settings (1)** section, click **Peerings (2)** and then click **+ Add (3)**.
+
+    ![image](../media/10-10-lab5-19.png)
 
 1. Add a peering with the following settings (leave others with their default values) and click **Add**:
 
     | Setting | Value|
     | --- | --- |
-    | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet1** (1) |
-    | Virtual network deployment model | **Resource manager** (2)|
-    | I know my resource ID | unselected (3)|
-    | Subscription | the name of the Azure subscription you are using in this lab (4) |
-    | Virtual network | **az104-05-vnet2** (5)|
-    | Remote virtual network peering settings | **Ensure only the first three boxes are checked** (6) |
-    | Local Peering link name | **az104-05-vnet1_to_az104-05-vnet2** (7)|
-    | Local virtual network peering settings | **Ensure only the first three boxes are checked** (8)|
+    | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet1 (1)** |
+    | I know my resource ID | unselected **(2)**|
+    | Subscription | the name of the Azure subscription you are using in this lab **(3)** |
+    | Virtual network | **az104-05-vnet2 (4)**|
+    | Remote virtual network peering settings | **Ensure only the first three boxes are checked (5)** |
+    | Local Peering link name | **az104-05-vnet1_to_az104-05-vnet2 (6)**|
+    | Local virtual network peering settings | **Ensure only the first three boxes are checked (7)**|
 
-    >**Note**: You can ignore the warning stating that the vnet does not have a routing gateway.
+    ![image](../media/10-10-lab5-20.png)
+
+    ![image](../media/10-10-lab5-21.png)
+
+    >**Note:** You can ignore the warning stating that the vnet does not have a routing gateway.
  
-    >**Note**: This step establishes two global peerings - one from az104-05-vnet1 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet1.
+    >**Note:** This step establishes two global peerings - one from az104-05-vnet1 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet1.
 
-    >**Note**: In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
+    >**Note:** In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
 
-    >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
+    >**Note:** Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
     
 
    ```powershell
@@ -243,7 +288,7 @@ In this task, you will configure local and global peering between the virtual ne
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
    
    <validation step="7df6e281-5a25-416d-8ad3-7e0c8a9218d9" />
    
@@ -256,77 +301,91 @@ In this task, you will configure local and global peering between the virtual ne
 
 In this task, you will test connectivity between virtual machines on the three virtual networks that you connected via local and global peering in the previous task.
 
-1. In the Azure portal, search for and select **Virtual machines**.
+1. In the Azure portal search bar, type **Virtual machines (1)** and select **Virtual machines (2)** from the search results.
 
      ![Image](./Images/vm.png)
 
-2. In the list of virtual machines, click **az104-05-vm0**.
+1. In the **Compute infrastructure | Virtual machines** blade, select the virtual machine **az104-05-vm0** from the list to open its overview page.
 
-      ![Image](./Images/vm0.png)
+      ![image](../media/10-10-lab5-22.png)
 
-3. On the **az104-05-vm0** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
+1. On the **az104-05-vm0** blade, select **Connect (1)** from the top menu, then choose **Connect (2)** again from the dropdown.  
 
-      ![Image](./Images/connect.png)
+      ![image](../media/10-10-lab5-23.png)
+
+1. On the **Native RDP** page, click **Download RDP file** and open it. When prompted with a security warning, select **Connect** to initiate the Remote Desktop session.  
+
+     ![image](../media/10-10-lab5-24.png)
       
-      ![Image](./Images/downloadfile.png)
-      
-      ![Image](./Images/rdp.png)
+     ![image](../media/10-10-lab5-25.png)
 
-    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store,e and on Linux computers, you can use an open-source RDP client software.
+     >**Note:** This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store,e and on Linux computers, you can use an open-source RDP client software.
 
-    >**Note**: You can ignore any warning prompts when connecting to the target virtual machines and select Keep.
+     >**Note:** You can ignore any warning prompts when connecting to the target virtual machines and select Keep.
 
-4. When prompted, sign in by using the **Student** username and the password **Pa55w.rd1234**.
+1. When prompted, sign in by using the **Student** username and the password **Pa55w.rd1234**.
 
-   >**Note**: You can click on **Yes** in the pop-up that appears.
+   >**Note:** You can click on **Yes** in the pop-up that appears.
    
-   >**Note**: If you get a prompt related to network discovery, click on Yes
+   >**Note:** If you get a prompt related to network discovery, click on Yes
 
-6. Within the Remote Desktop session to **az104-05-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)** and slect Run as Administrator option.
+1. Within the Remote Desktop session to **az104-05-vm0**, click the **Start (1)** button, right-click **Windows PowerShell (2)**, select **More (3)**, and then choose **Run as administrator (4)**.
 
-     ![Image](./Images/Virtual%20Networking%20Ex1-t5-p10.png)
+     ![image](../media/10-10-lab5-25.1.png)
    
-7. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm1** (which has the private IP address of **10.51.0.4**) over TCP port 3389:
+1. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm1** (which has the private IP address of **10.51.0.4**) over TCP port 3389:
 
    ```powershell
    Test-NetConnection -ComputerName 10.51.0.4 -Port 3389 -InformationLevel 'Detailed'
    ```
 
-    >**Note**: The test uses TCP 3389 since this port is allowed by default by the operating system firewall.
+    ![image](../media/10-10-lab5-26.png)
 
-8. Examine the output of the command and verify that the connection was successful.
+    >**Note:** The test uses TCP 3389 since this port is allowed by default by the operating system firewall.
 
-9. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**):
+1. Examine the output of the command and verify that the connection was successful.
+
+1. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**):
 
    ```powershell
    Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
    ```
 
-10. Switch back to the Azure portal on your lab computer and navigate back to the blade of the **Virtual machine**.
+    ![image](../media/10-10-lab5-27.png)
 
-11. In the list of virtual machines, click **az104-05-vm1**.
+1. Switch back to the Azure portal on your lab computer and navigate back to the blade of the **Virtual machine**.
 
-    ![Image](./Images/vm1.png)
+1. In the list of virtual machines, click **az104-05-vm1**.
 
-12. On the **az104-05-vm1** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
+    ![image](../media/10-10-lab5-28.1.png)
 
-    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store, and on Linux computers, you can use an open source RDP client software.
+1. On the **az104-05-vm1** blade, select **Connect (1)** from the top menu, then choose **Connect (2)** again from the dropdown.  
 
-    >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
+    ![image](../media/10-10-lab5-28.png)
 
-13. When prompted, sign in by using the **Student** username and the password **Pa55w.rd1234**.
+1. On the **Native RDP** page, click **Download RDP file** and open it. When prompted with a security warning, select **Connect** to initiate the Remote Desktop session. 
 
-14. Within the Remote Desktop session to **az104-05-vm1**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
+    >**Note:** This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store, and on Linux computers, you can use an open source RDP client software.
 
-15. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**) over TCP port 3389:
+    >**Note:** You can ignore any warning prompts when connecting to the target virtual machines.
+
+1. When prompted, sign in by using the **Student** username and the password **Pa55w.rd1234**.
+
+1. Within the Remote Desktop session to **az104-05-vm0**, click the **Start (1)** button, right-click **Windows PowerShell (2)**, select **More (3)**, and then choose **Run as administrator (4)**.
+
+     ![image](../media/10-10-lab5-25.1.png)
+
+1. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**) over TCP port 3389:
 
     ```powershell
     Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
     ```
 
-    >**Note**: The test uses TCP 3389 since this port is allowed by default by the operating system firewall.
+    >**Note:** The test uses TCP 3389 since this port is allowed by default by the operating system firewall.
 
-16. Examine the output of the command and verify that the connection was successful.
+1. Examine the output of the command and verify that the connection was successful.
+
+     ![image](../media/10-10-lab5-29.png)
 
 
 ## Task 5: Create a custom route 
@@ -335,46 +394,68 @@ In this task, you want to control network traffic between the perimeter subnet a
 
 1. Back in the Azure portal, navigate to Virtual networks resource and select the **az104-05-vnet0** from the list of virtual networks.
 
-1. Select **Subnets** and then click on **+ Subnet** and click on **Add**
+1. On the **az104-05-vnet0** page, under **Settings (1)**, select **Subnets (2)**, then click **+ Subnet (3)** to add a new subnet.
+
+     ![image](../media/10-10-lab5-30.png)
+
+1. In the **Add a subnet** pane, enter the following details and click **Add (3)** to create the subnet.
 
     | Setting | Value | 
     | --- | --- |
-    | Name | `perimeter` |
-    | Starting address  | `10.50.1.0/24`  |
+    | Name | `perimeter` **(1)** |
+    | Starting address  | `10.50.1.0/24` **(2)** |
 
-   
-1. In the Azure portal, search for and select **Route tables** resource, and then select **Review + Create** and subsequently click on **Create**. 
+    ![image](../media/10-10-lab5-31.png)
+
+1. In the Azure portal search bar, type **Route tables (1)** and select **Route tables (2)** from the search results.
+
+     ![image](../media/10-10-lab5-32.png)
+
+1. On the **Create Route table** page, provide the following details and click **Review + create (6)** to proceed and subsequently click on **Create**. 
 
     | Setting | Value | 
     | --- | --- |
-    | Subscription | Default Subscription |
-    | Resource group | **az104-05-rg0--<inject key="DeploymentID" enableCopy="false" />**  |
-    | Region | **East US** |
-    | Name | **az104-05-vm0** |
-    | Propagate gateway routes | **No** |
+    | Subscription | Default Subscription **(1)** |
+    | Resource group | **az104-05-rg0--<inject key="DeploymentID" enableCopy="false" /> (2)**  |
+    | Region | **East US (3)** |
+    | Name | **az104-05-vm0 (4)** |
+    | Propagate gateway routes | **No (5)** |
+
+     ![image](../media/10-10-lab5-33.png)
 
 1. After the route table deploys, select **Go to resource**.
 
-1. From the left navigation pane, under **Settings** select **Routes** and then **+ Add**. Create a route from the future NVA to the CoreServices virtual network. 
+    ![image](../media/10-10-lab5-34.png)
+
+1. From the left navigation pane, under **Settings (1)** select **Routes (2)** and then **+ Add (3)**. Create a route from the future NVA to the CoreServices virtual network. 
+
+    ![image](../media/10-10-lab5-35.png)
 
     | Setting | Value | 
     | --- | --- |
-    | Route name | `PerimetertoCore` |
-    | Destination type | **IP Addresses** |
-    | Destination IP addresses | `10.50.0.0/22` (core services virtual network) |
-    | Next hop type | **Virtual appliance** (notice your other choices) |
-    | Next hop address | `10.50.1.7` (future NVA) |
+    | Route name | `PerimetertoCore` **(1)**|
+    | Destination type | **IP Addresses (2)** |
+    | Destination IP addresses | `10.50.0.0/22` (core services virtual network) **(3)** |
+    | Next hop type | **Virtual appliance** (notice your other choices) **(4)** |
+    | Next hop address | `10.50.1.7` (future NVA) **(5)** |
 
-1. Select **+ Add** when the route is completed. The last thing to do is associate the route with the subnet.
+    ![image](../media/10-10-lab5-36.png)
 
-1. Select **Subnets** from the left navigation pane and then  click on **+ Associate**. Complete the configuration.
+1. Select **Add (6)** when the route is completed. The last thing to do is associate the route with the subnet.
+
+1. Select **Subnets (1)** from the left navigation pane and then  click on **+ Associate (2)**. Complete the configuration.
+
+    ![image](../media/10-10-lab5-37.png)
 
     | Setting | Value | 
     | --- | --- |
-    | Virtual network | **az104-05-vnet0** |
-    | Subnet | **subnet0** |    
+    | Virtual network | **az104-05-vnet0 (1)** |
+    | Subnet | **subnet0 (2)** |  
+    | Click | **Add (3)** |  
 
-     >**Note**: You have created a user-defined route to direct traffic from the DMZ to the new NVA.  
+    ![image](../media/10-10-lab5-38.png)
+
+     >**Note:** You have created a user-defined route to direct traffic from the DMZ to the new NVA.  
 
 ### Review
 
