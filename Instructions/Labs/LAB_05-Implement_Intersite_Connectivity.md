@@ -22,8 +22,6 @@ In this task, you will deploy three virtual machines, each into a separate virtu
    
 1. In the Azure portal, open the **Azure Cloud Shell (1)** by clicking on the icon in the top right of the Azure Portal.
 
-    ![Image](./Images/cloudshell.png)
-
 1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell (2)**. 
 
      ![image](../media/7-10-lab3-25.png)

@@ -4,7 +4,7 @@ Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a
 
 # Lab - Implement Traffic Management
 
-### Overall Estimated Duration: 60 minutes
+### Overall Estimated Duration: 60 Minutes
 
 ## Overview
 
@@ -41,15 +41,15 @@ In this hands-on lab, the architecture flow includes several essential component
 
 ## Architecture diagram
 
-![Diagram of the lab tasks.](./media/az104-lab06-lb-architecture.png)
+![Diagram of the lab tasks.](./media/lab6-arch.png)
 
 ## Explanation of Components
 
 1. **Azure Virtual Networks (VNets):** A Virtual Network (VNet) is the fundamental building block for your private network in Azure. It allows you to securely connect Azure resources such as virtual machines (VMs), apps, and databases.
 
-2. **Azure Load Balancer**: The Azure Load Balancer distributes incoming network traffic across multiple virtual machines or other resources, ensuring no single resource becomes overloaded.
+2. **Azure Load Balancer:** The Azure Load Balancer distributes incoming network traffic across multiple virtual machines or other resources, ensuring no single resource becomes overloaded.
 
-3. **Azure Virtual Machines (VMs)**: Virtual machines are scalable compute resources that run in Azure. They can be configured with various operating systems, sizes, and configurations depending on your needs.
+3. **Azure Virtual Machines (VMs):** Virtual machines are scalable compute resources that run in Azure. They can be configured with various operating systems, sizes, and configurations depending on your needs.
 
 # Getting Started with the Lab
  
@@ -57,9 +57,9 @@ Welcome to your AZ-104: Microsoft Azure Administrator  workshop! We've prepared 
  
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and Guide will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/sg1.png)
+![Access Your VM and Lab Guide](../media/10-10-lab6-1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -69,23 +69,23 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/sg2.png)
+![Explore Lab Resources](../media/7-10-lab3-2.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](../media/sg3.png)
+![Use the Split Window Feature](../media/7-10-lab3-3.png)
  
 ## Utilizing the Zoom In/Out Feature
 
 To adjust the zoom level for the environment page, click the A↕ : 100% icon located next to the timer in the lab environment.
 
-![Use the Split Window Feature](./media/sg4.png)
+![Use the Split Window Feature](./media/2-10-g4.png)
 
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
 ![Manage Your Virtual Machine](../media/sg5.png)
 
@@ -113,13 +113,13 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-      ![](../Labs/Images/image7.png)
+      ![](../media/7-10-lab3-4.png)
  
 3. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-      ![](../Labs/Images/image8.png)
+      ![](../media/7-10-lab3-5.png)
 
 1. If you see the pop-up **Action Required**, click **Ask Later**.
    
@@ -149,20 +149,18 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
 
-1. Click **Next** from the bottom right corner to embark on your Lab journey!
- 
-    ![Start Your Azure Journey](../media/num.png)
-
 ## Support Contact
 
-1. The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
    Learner Support Contacts:
 
-   - Email Support: labs-support@spektrasystems.com
+   - Email Support: cloudlabs-support@spektrasystems.com
    - Live Chat Support: https://cloudlabs.ai/labs-support
 
-1. Now, click on Next from the lower right corner to move on to the next page.
+Now, click on Next from the lower right corner to move on to the next page.
    
+![Start Your Azure Journey](../media/num.png)
+
 ## Happy Learning!!
 
