@@ -26,7 +26,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
       ![Image](./Images/vm.png)
 
-1. On the **Compute infrastructure | virtual machines** blade, click **+ Create**, and then select in the drop-down **+ Azure virtual machine**. Notice your other choices.
+1. On the **Compute infrastructure | Virtual machines** blade, click **+ Create (1)**, and then select in the drop-down **Virtual machine**. Notice your other choices.
 
     ![image](../media/13-10-lab8-2.png)
 
@@ -97,7 +97,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 1. Click **Next: Advanced > (2)**, take the defaults, then click **Review + Create**.
 
-     ![image](../media/13-10-lab8-19.png)
+     ![image](../media/13-10-lab8-10.png)
 
 1. After the validation, click **Create**.
 
@@ -160,13 +160,13 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. Navigate back to the **az104-vm1** virtual machine and select **Disks (1)**.
 
-1. In the **Data disk** section, select **Attach existing disks (2)**. and in the **Disk name (3)** drop-down, select **VM1-DISK1 (4)**.
+1. In the **Data disk** section, select **Attach existing disks (2)**. and in the **Disk name** drop-down, select **VM1-DISK1 (3)**.
 
     ![image](../media/13-10-lab8-15.png)
 
 1. Verify the disk is now **Standard SSD**.
 
-1. Select **Apply** to save your changes. 
+1. Select **Apply (4)** to save your changes. 
 
     >**Note:** You have now created a virtual machine, scaled the SKU and the data disk size. In the next task we use Virtual Machine Scale Sets to automate the scaling process.
 
@@ -182,7 +182,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
      ![image](../media/13-10-lab8-16.png)
 
-1. On the **Compute infrastructure | Virtual machine scale sets (VMSS)** blade, click **+ Create**.
+1. On the **Compute infrastructure | Virtual Machine Scale Sets (VMSS)** blade, click **+ Create**.
 
     ![image](../media/13-10-lab8-17.png)
 
@@ -205,11 +205,11 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Password | **Provide a secure password (13)**  |
     | Already have a Windows Server license? | **Unchecked (14)** |
 
-    >**Note:** For the list of Azure regions which support deployment of Windows virtual machines to availability zones, refer to [What are Availability Zones in Azure?](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
-
-    ![image](../media/13-10-lab8-18.png)
+    ![image](../media/13-10-lab8-18-new.png)
 
     ![image](../media/13-10-lab8-19.png)
+
+    >**Note:** For the list of Azure regions which support deployment of Windows virtual machines to availability zones, refer to [What are Availability Zones in Azure?](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
 
 1. On the **Spot (15)** tab, accept the defaults and select **Next: Disks >**.
 
@@ -289,7 +289,9 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | --- | --- |
     | Load balancer name | `vmss-lb` **(1)** |
 
-    >**Note:** Pause for a minute and review what you done. At this point, you have configured the virtual machine scale set with disks and networking. In the network configuration you have created a network security group and allowed HTTP. You have also created a load balancer with a public IP address.
+     ![image](../media/13-10-lab8-30.png)
+
+     >**Note:** Pause for a minute and review what you done. At this point, you have configured the virtual machine scale set with disks and networking. In the network configuration you have created a network security group and allowed HTTP. You have also created a load balancer with a public IP address.
 
 1. On the **Management** tab, specify the following settings (leave others with their default values):
 
@@ -370,13 +372,13 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
 
 1. Let's create a rule that decreases the number of VM instances in a scale set. The number of instances should decrease when the average CPU load drops below 30% over a 10-minute period. When the rule triggers, the number of VM instances is decreased by 20%.
 
-1. Select **Add a rule**, adjust the settings, then select **Add**.
+1. Select **Add a rule**, adjust the settings, then select **Add (5)**.
 
     | Setting | Value |
     | --- | --- |
     | Operator | **Less than (1)** |
     | Threshold | **30 (2)** |
-    | Operation | **decrease percentage by (review your other choices) **(3)** |
+    | Operation | **Decrease percentage by (review your other choices) (3)** |
     | Percentage | **20 (4)** |
 
 1. Click on **Add (5)** to save the rule.
@@ -431,6 +433,8 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
     | Storage account name | **str<inject key="DeploymentID" enableCopy="false" /> (4)** |
     | File share  | **none (5)** |
 
+     ![image](../media/13-10-lab8-41.png)
+
 1. Run the following command to create a virtual machine. When prompted, provide a username and password for the VM. While you wait check out the [New-AzVM](https://learn.microsoft.com/powershell/module/az.compute/new-azvm?view=azps-11.1.0) command reference for all the parameters associated with creating a virtual machine.
 
     ```powershell
@@ -456,7 +460,7 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
     -Status
     ```
 
-     ![image](../media/13-10-lab8-3.png)
+     ![image](../media/13-10-lab8-43.png)
 
 1. Verify your new virtual machine is listed and the **Status** is **Running**.
 
@@ -488,7 +492,7 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
     az vm create --name myCLIVM --resource-group az104-08-rg01 --image Win2019Datacenter --admin-username localadmin --generate-ssh-keys
     ```
 
-     ![image](../media/13-10-lab8-47.png)
+     ![image](../media/13-10-lab8-47-new.png)
 
      >**Note:** Give Admin password as  **Password.1!!** and Password will be not visible
    
