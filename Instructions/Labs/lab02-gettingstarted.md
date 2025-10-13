@@ -137,7 +137,7 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-      ![](../Labs/media/2-10-g7.png)
+      ![](../media/7-10-lab3-5.png)
 
 1. If you see the pop-up **Action Required**, click **Ask Later**.
    
