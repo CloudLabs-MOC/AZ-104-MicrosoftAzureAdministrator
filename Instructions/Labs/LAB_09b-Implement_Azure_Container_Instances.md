@@ -2,15 +2,7 @@
 
 ## Lab Overview
 
-This lab focuses on deploying and managing Docker containers using Azure Container Instances (ACI). In this lab, you will learn how to deploy a Docker image onto Azure Container Instances, which offers a simple and efficient way to run containers without needing to manage the underlying infrastructure.
-
-## Interactive lab simulations
-
-There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
-
-+ [Deploy Azure Container Instances](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%203). Create, configure, and deploy a Docker container with Azure Container Instances.
-  
-+ [Implement Azure Container Instances](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014).  Deploy a Docker image using Azure Container Instances. 
+This lab focuses on deploying and managing Docker containers using Azure Container Instances (ACI). In this lab, you will learn how to deploy a Docker image onto Azure Container Instances, which offers a simple and efficient way to run containers without needing to manage the underlying infrastructure. 
 
 ## Lab objectives
 
@@ -23,42 +15,50 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create a new Azure Container Instance (ACI) for hosting a web application. Azure Container Instances allow you to run containers in the cloud without the need to manage the underlying virtual machines or infrastructure.
 
-1. In the Azure portal, search for locate **Container instances**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Container instances (1)**, and then select **Container instances (2)** under services.
 
-    ![image](./media/l9-image22.png)
+    ![image](../media/14-10-lab9-32.png)
    
 1. On the **Container instances** blade, click **+ Create**.
 
-1. On the **Basics** tab of the **Create container instance** blade, specify the following settings (leave others with their default values) and Click **Next: Networking >**
+      ![image](../media/14-10-lab9-33.png)
+
+1. On the **Basics** tab of the **Create container instance** blade, specify the following settings (leave others with their default values) and Click **Next: Networking > (7)**
 
     | Setting | Value |
     | ---- | ---- |
-    | Subscription | Leave it as default |
-    | Resource group | Select **az104-09b-rg1** |
-    | Container name | **az104-9b-c1** |
-    | Region | **<inject key="Region" enableCopy="false" />** |
-    | Image Source | **Quickstart images** |
-    | Image | **mcr.microsoft.com/azuredocs/aci-helloworld:latest (Linux)** |
+    | Subscription | Leave it as default **(1)** |
+    | Resource group | Select **az104-09b-rg1 (2)** |
+    | Container name | **az104-9b-c1 (3)** |
+    | Region | **<inject key="Region" enableCopy="false" /> (4)** |
+    | Image Source | **Quickstart images (5)** |
+    | Image | **mcr.microsoft.com/azuredocs/aci-helloworld:latest (Linux) (6)** |
 
-    ![image](./media/az-104z1.png)
+     ![image](../media/14-10-lab9-34.png)
 
-1. On the **Networking** tab of the **Create container instance** blade, specify the following settings (leave others with their default values) and  click on **Next: Monitoring >**:
+1. On the **Networking** tab of the **Create container instance** blade, specify the following settings (leave others with their default values) and  click on **Next: Monitoring > (2)**
 
     | Setting | Value |
     | --- | --- |
-    | DNS name label | any valid, globally unique DNS hostname |
+    | DNS name label | any valid, globally unique DNS hostname **(1)**  |
 
-    ![image](./media/az-104z2.png)
+     ![image](../media/14-10-lab9-35.png)
 
-    >**Note**: Your container will be publicly reachable at dns-name-label.region.azurecontainer.io. If you receive a **DNS name label not available** error message, specify a different value.
+     >**Note:** Your container will be publicly reachable at dns-name-label.region.azurecontainer.io. If you receive a **DNS name label not available** error message, specify a different value.
 
-1. Uncheck **Enable container instance logs**. 
+1. Uncheck **Enable container instance logs (1)**. 
 
-1. Click **Next: Advanced** review the settings on the Advanced tab of the Create container instance blade without making any changes, click **Review + Create**, ensure that the validation passed and click **Create**.
+      ![image](../media/14-10-lab9-36.png)
 
-    >**Note**: Wait for the deployment to complete. This should take about 3 minutes.
+1. Click **Next: Advanced (2)** review the settings on the Advanced tab of the Create container instance blade without making any changes, click **Review + Create**, ensure that the validation passed and click **Create**.
 
-    >**Note**: While you wait, you may be interested in viewing the [code behind the sample application](https://github.com/Azure-Samples/aci-helloworld). To view it, browse the \\app folder.
+     ![image](../media/14-10-lab9-37.png)
+
+     ![image](../media/14-10-lab9-38.png)
+
+     >**Note:** Wait for the deployment to complete. This should take about 3 minutes.
+
+     >**Note:** While you wait, you may be interested in viewing the [code behind the sample application](https://github.com/Azure-Samples/aci-helloworld). To view it, browse the \\app folder.
 
 ### Task 2: Review the functionality of the Azure Container Instance
 
@@ -66,28 +66,30 @@ In this task, you will review the deployment of the Azure Container Instance (AC
 
 1. On the deployment blade, click the **Go to resource** link.
 
+      ![image](../media/14-10-lab9-39.png)
+
 1. On the **Overview** blade of the container instance, verify that **Status** is reported as **Running**.
 
-   ![image](./media/l9-image25.png)
+    ![image](../media/14-10-lab9-40.png)
 
 1. Copy the value of the container instance **FQDN**, open a new browser tab, and navigate to the corresponding URL.
 
-    ![image](./media/l9-image27.png)
+    ![image](../media/14-10-lab9-40.1.png)
 
 1. Verify that the **Welcome to Azure Container Instance** page is displayed.
 
-    ![image](./media/l9-image26.png)
+    ![image](../media/14-10-lab9-41.png)
 
-1. Close the new browser tab, back in the Azure portal, in the **Settings** section of the container instance blade, click **Containers**, and then click **Logs**.
+1. Close the new browser tab, back in the Azure portal, in the **Settings** section of the container instance blade, click **Containers (1)**, and then click **Logs (2)**.
 
-    ![image](./media/l9-image28.png)
+    ![image](../media/14-10-lab9-42.png)
 
 1. Verify that you see the log entries representing the HTTP GET request generated by displaying the application in the browser.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
    
    <validation step="bc3f7679-1e22-449c-b128-1561d970a81d" />
 

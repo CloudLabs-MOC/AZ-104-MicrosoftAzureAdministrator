@@ -17,29 +17,37 @@ In this exercise, you will explore the process of creating and deploying contain
 
 Azure Container Apps take the concept of a managed Kubernetes cluster a step further and manages the cluster environment as well as provides other managed services on top of the cluster. Unlike an Azure Kubernetes cluster, where you must still manage the cluster, an Azure Container Apps instance removes some of the complexity to setting up a Kubernetes cluster.
 
-1. From the Azure portal, search for and select **Container Apps**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Container apps (1)**, and then select **Container apps (2)** under services.
 
-   ![image](./media/l9-image29.png)
+     ![image](../media/14-10-lab9-43.png)
    
-1. From **Container Apps**, select **+ Create**.
+1. **Container instances** blade, click **+ Create (1)**, from drop-down menu, select **Container App (2)**. Notice the other choices.
 
-1. Use the following information to fill out the details on the **Basics** tab and click on **Next: Container >**
+     ![image](../media/14-10-lab9-44.png)
+
+1. Use the following information to fill out the details on the **Basics** tab and click on **Next: Container > (8)**
 
     | Setting | Action |
     |---|---|
-    | Subscription | Select your Azure subscription |
-    | Resource group | az104-09c-rg1 |
-    | Container app name |  az-104-9c-ca |
-    | Region    | **<inject key="Region" enableCopy="false" />** |
-    | Container Apps Environment |  Select **Create new** > Environment name to **my-environment** > **Create** |
-   
-1. On the **Container** tab, ensure that **Use quickstart image** (1) is enabled and that the quickstart image is set to **Simple hello world container** (2). Select the **Review + create** (3). 
+    | Subscription | Select your Azure subscription **(1)** |
+    | Resource group | az104-09c-rg1 **(2)** |
+    | Container app name |  az-104-9c-ca **(3)**|
+    | Region    | **<inject key="Region" enableCopy="false" /> (4)** |
+    | Container Apps Environment |  Select **Create new (5)** > Environment name to **my-environment (6)** > **Create (7)** |
 
-   ![image](./media/az-104z3.png)
+    ![image](../media/14-10-lab9-46.png)
+
+    ![image](../media/14-10-lab9-45.png)
+   
+1. On the **Container** tab, ensure that **Use quickstart image (1)** is enabled and that the quickstart image is set to **Simple hello world container (2)**. Select the **Review + create (3)**. 
+
+    ![image](../media/14-10-lab9-47.png)
 
 1. Select **Create**.
 
-    >**Note:** Wait for the container app to deploy. This will take a couple of minutes. 
+    ![image](../media/14-10-lab9-48.png)
+
+     >**Note:** Wait for the container app to deploy. This will take a couple of minutes. 
  
 ## Task 2: Test and verify deployment of the Azure Container App
 
@@ -47,18 +55,20 @@ By default, the Azure container app that you create will accept traffic on port 
 
 1. Select **Go to resource** to view your new container app.
 
-1. Select the link next to *Application URL* to view your application.
+     ![image](../media/14-10-lab9-49.png)
 
-   ![image](./media/l9-image30.png)
+1. Select the link next to **Application URL** to view your application.
+
+    ![image](../media/14-10-lab9-50.png)
 
 1. Verify you receive the **Your Azure Container Apps app is live** message.
    
-   ![image](./media/lab09-new-6.png)
+    ![image](../media/14-10-lab9-51.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
 
    <validation step="a44b06f7-b794-410a-8f4a-149c92269c02" />
 

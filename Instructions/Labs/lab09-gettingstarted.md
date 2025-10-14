@@ -4,7 +4,7 @@ Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a
 
 # Lab - Implement Web Apps, Container Instances and Container Apps
 
-### Overall Estimated Duration: 100 minutes
+### Overall Estimated Duration: 100 Minutes
 
 ## Overview
 
@@ -30,11 +30,11 @@ The following are the objectives of the lab:
 
 ## Exercise 1: Implement Web Apps
 
-1. **Azure Web Apps**: Learn how to deploy, configure, and manage web applications on Azure using the Azure App Service platform, which simplifies the hosting of web apps without needing to manage underlying infrastructure.
+1. **Azure Web Apps:** Learn how to deploy, configure, and manage web applications on Azure using the Azure App Service platform, which simplifies the hosting of web apps without needing to manage underlying infrastructure.
 
-2. **PHP Runtime Stack**: Understand how to configure and deploy applications using the PHP runtime stack on Azure Web Apps, which is commonly used for dynamic websites.
+2. **PHP Runtime Stack:** Understand how to configure and deploy applications using the PHP runtime stack on Azure Web Apps, which is commonly used for dynamic websites.
 
-3. **Deployment Slots**: Gain hands-on experience with deployment slots, which allow you to deploy web applications in staging environments before pushing them to production, helping to support continuous integration (CI) and continuous delivery (CD) practices.
+3. **Deployment Slots:** Gain hands-on experience with deployment slots, which allow you to deploy web applications in staging environments before pushing them to production, helping to support continuous integration (CI) and continuous delivery (CD) practices.
 
 ## Architecture diagram
 
@@ -42,19 +42,19 @@ The following are the objectives of the lab:
 
 ## Explanation of Components
 
-1. **Azure Web Apps (App Service)**: This is the primary service used in the lab. It enables you to deploy web applications in the Azure cloud without having to manage the underlying infrastructure.
+1. **Azure Web Apps (App Service):** This is the primary service used in the lab. It enables you to deploy web applications in the Azure cloud without having to manage the underlying infrastructure.
 
-2. **Deployment Slots**: Deployment slots are a key feature of Azure Web Apps that allow you to deploy and test your application in different environments.
+2. **Deployment Slots:** Deployment slots are a key feature of Azure Web Apps that allow you to deploy and test your application in different environments.
 
-3. **Autoscaling**: Azure Web Apps can be configured to automatically scale up or scale down based on traffic demand.
+3. **Autoscaling:** Azure Web Apps can be configured to automatically scale up or scale down based on traffic demand.
 
 ## Exercise 2: Implement Azure Container Instances
 
-1. **Deploying Docker Containers on Azure**: In this lab, you learn how to deploy a Docker container using Azure Container Instances (ACI), which is a serverless container service.
+1. **Deploying Docker Containers on Azure:** In this lab, you learn how to deploy a Docker container using Azure Container Instances (ACI), which is a serverless container service.
 
-2. **Container Instance Management**: The lab covers how to configure and manage Azure Container Instances.
+2. **Container Instance Management:** The lab covers how to configure and manage Azure Container Instances.
 
-3. **Container Instance Monitoring and Functionality Review**: After deploying the container, you'll verify the deployment by checking the status of the container instance and ensuring that it is running properly.
+3. **Container Instance Monitoring and Functionality Review:** After deploying the container, you'll verify the deployment by checking the status of the container instance and ensuring that it is running properly.
 
 ## Architecture diagram
 
@@ -62,21 +62,21 @@ The following are the objectives of the lab:
 
 ## Explanation of Components
 
-1. **Azure Container Instances (ACI)**: This is the primary service used in the lab to deploy Docker containers. ACI allows you to run containers without having to manage the underlying virtual machines or infrastructure.
+1. **Azure Container Instances (ACI):**  This is the primary service used in the lab to deploy Docker containers. ACI allows you to run containers without having to manage the underlying virtual machines or infrastructure.
 
-2. **Docker Image**: A container image is used as the basis for the Azure Container Instance deployment.
+2. **Docker Image:** A container image is used as the basis for the Azure Container Instance deployment.
 
-3. **Networking and DNS Configuration**: When deploying the container, networking settings are configured, including assigning a unique DNS name label.
+3. **Networking and DNS Configuration:** When deploying the container, networking settings are configured, including assigning a unique DNS name label.
 
-4. **Logs**: Once the container is deployed, logs are generated to track the behavior and requests of the application.
+4. **Logs:** Once the container is deployed, logs are generated to track the behavior and requests of the application.
 
 ## Exercise 3: Implement Azure Container Apps
 
-1. **Creating and Configuring an Azure Container App**: This involves specifying the Azure subscription, resource group, and container app name. You also create a new environment for the app, which provides the necessary infrastructure and services to run the containers.
+1. **Creating and Configuring an Azure Container App:** This involves specifying the Azure subscription, resource group, and container app name. You also create a new environment for the app, which provides the necessary infrastructure and services to run the containers.
 
-2. **Deploying a Sample Container Image**: After setting up the environment, you deploy a simple container image (a "Hello World" application) to the Azure Container App.
+2. **Deploying a Sample Container Image:** After setting up the environment, you deploy a simple container image (a "Hello World" application) to the Azure Container App.
 
-3. **Verifying the Deployment**: Once the container app is deployed, you test and verify its functionality by accessing the application through a URL provided by Azure.
+3. **Verifying the Deployment:** Once the container app is deployed, you test and verify its functionality by accessing the application through a URL provided by Azure.
 
 ## Architecture diagram
 
@@ -84,11 +84,11 @@ The following are the objectives of the lab:
 
 ## Explanation of Components
 
-1. **Azure Container Apps (ACA)**: This is a serverless platform designed to run containerized applications without managing infrastructure.
+1. **Azure Container Apps (ACA):** This is a serverless platform designed to run containerized applications without managing infrastructure.
 
-2. **Azure Container Apps Environment**: This is the environment that provides the necessary resources and configurations to run Azure Container Apps.
+2. **Azure Container Apps Environment:** This is the environment that provides the necessary resources and configurations to run Azure Container Apps.
 
-3. **Quickstart Image (Simple Hello World Container)**: This is a sample Docker image used to deploy a simple application for testing purposes. 
+3. **Quickstart Image (Simple Hello World Container):** This is a sample Docker image used to deploy a simple application for testing purposes. 
 
 # Getting Started with the Lab
  
@@ -96,9 +96,9 @@ Welcome to your AZ-104: Microsoft Azure Administrator  workshop! We've prepared 
  
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/sg1.png)
+![Access Your VM and Lab Guide](../media/14-10-lab9-1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -108,25 +108,25 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/sg2.png)
+![Explore Lab Resources](../media/7-10-lab3-2.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](../media/sg3.png)
+![Use the Split Window Feature](../media/7-10-lab3-3.png)
  
 ## Utilizing the Zoom In/Out Feature
 
 To adjust the zoom level for the environment page, click the A↕ : 100% icon located next to the timer in the lab environment.
 
-![Use the Split Window Feature](./media/sg4.png)
+![](./media/2-10-g4.png)
 
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../media/sg5.png)
+![Manage Your Virtual Machine](../media/2-10-g5.png)
 
 ## **Lab Duration Extension**
 
@@ -152,13 +152,13 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-      ![](../Labs/Images/image7.png)
+       ![](../media/7-10-lab3-4.png)
  
 3. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-      ![](../Labs/Images/image8.png)
+       ![](../media/7-10-lab3-5.png)
 
 1. If you see the pop-up **Action Required**, click **Ask Later**.
    
@@ -188,19 +188,17 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
 
-1. Click **Next** from the bottom right corner to embark on your Lab journey!
- 
-    ![Start Your Azure Journey](../media/num.png)
-
 ## Support Contact
 
-1. The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
    Learner Support Contacts:
 
-   - Email Support: labs-support@spektrasystems.com
+   - Email Support: cloudlabs-support@spektrasystems.com
    - Live Chat Support: https://cloudlabs.ai/labs-support
 
-1. Now, click on Next from the lower right corner to move on to the next page.
+Now, click on Next from the lower right corner to move on to the next page.
+
+ ![Start Your Azure Journey](../media/num.png)
    
 ## Happy Learning!!
