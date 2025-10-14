@@ -4,7 +4,7 @@ Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a
 
 # Lab - Implement Monitoring
 
-### Overall Estimated Duration: 45 minutes
+### Overall Estimated Duration: 45 Minutes
 
 ## Overview
 
@@ -14,13 +14,13 @@ In this lab, you explore Azure's monitoring capabilities to gain insights into t
 
 In this lab, you will explore various Azure Monitor capabilities to enhance the visibility, monitoring, and management of Azure resources, particularly virtual machines.
 
-1. **Provision Infrastructure Using Templates**: Learn to deploy and configure virtual machines and associated resources using custom Azure Resource Manager templates for monitoring purposes.
+1. **Provision Infrastructure Using Templates:** Learn to deploy and configure virtual machines and associated resources using custom Azure Resource Manager templates for monitoring purposes.
 
-2. **Implement Alerting Mechanisms**: Configure and validate Azure Monitor alerts to detect critical resource events, such as virtual machine deletions, ensuring timely issue identification.
+2. **Implement Alerting Mechanisms:** Configure and validate Azure Monitor alerts to detect critical resource events, such as virtual machine deletions, ensuring timely issue identification.
 
-3. **Set Up Notifications and Processing Rules**: Create action groups to notify stakeholders via email or other channels and implement alert processing rules to manage alert behavior during specific scenarios like maintenance periods.
+3. **Set Up Notifications and Processing Rules:** Create action groups to notify stakeholders via email or other channels and implement alert processing rules to manage alert behavior during specific scenarios like maintenance periods.
 
-4. **Analyze Resource Metrics and Logs**: Use Azure Monitor log queries to gather insights into resource performance, including virtual machine utilization and activity trends, for better decision-making.
+4. **Analyze Resource Metrics and Logs:** Use Azure Monitor log queries to gather insights into resource performance, including virtual machine utilization and activity trends, for better decision-making.
 
 ## Pre-requisites
 
@@ -28,13 +28,13 @@ Basic knowledge of Azure Monitor and its functionalities for monitoring and aler
 
 ## Architecture  
 
-1. **Infrastructure Provisioning Using Templates**: You will use custom templates to deploy infrastructure resources such as virtual machines and networks in Azure, simplifying the process of replicating and scaling resources.
+1. **Infrastructure Provisioning Using Templates:** You will use custom templates to deploy infrastructure resources such as virtual machines and networks in Azure, simplifying the process of replicating and scaling resources.
 
-2. **Azure Monitor and VM Insights**: Azure Monitor is a central platform for monitoring the performance and health of Azure resources. You will configure VM Insights to gather detailed metrics and logs from virtual machines for monitoring purposes.
+2. **Azure Monitor and VM Insights:** Azure Monitor is a central platform for monitoring the performance and health of Azure resources. You will configure VM Insights to gather detailed metrics and logs from virtual machines for monitoring purposes.
 
-3. **Alerts and Action Groups**: You will create and configure alerts in Azure to monitor specific events (e.g., deletion of a virtual machine). Action groups are used to trigger notifications (email, SMS, etc.) when these alerts are activated.
+3. **Alerts and Action Groups:** You will create and configure alerts in Azure to monitor specific events (e.g., deletion of a virtual machine). Action groups are used to trigger notifications (email, SMS, etc.) when these alerts are activated.
 
-4. **Log Queries and Data Analysis**: Azure Monitor enables querying collected log data using Kusto Query Language (KQL). In this lab, you will create custom queries to analyze virtual machine metrics such as CPU usage, providing insights into system performance.
+4. **Log Queries and Data Analysis:** Azure Monitor enables querying collected log data using Kusto Query Language (KQL). In this lab, you will create custom queries to analyze virtual machine metrics such as CPU usage, providing insights into system performance.
 
 ## Architecture diagram
 
@@ -42,13 +42,13 @@ Basic knowledge of Azure Monitor and its functionalities for monitoring and aler
 
 ## Explanation of Components
 
-1. **Custom Template for Infrastructure Provisioning**:  A custom template in Azure is a pre-defined configuration written in JSON format that automates the creation and deployment of Azure resources, such as virtual machines, networks, and storage. 
+1. **Custom Template for Infrastructure Provisioning:**  A custom template in Azure is a pre-defined configuration written in JSON format that automates the creation and deployment of Azure resources, such as virtual machines, networks, and storage. 
 
-2. **Azure Monitor and VM Insights**: Azure Monitor is a comprehensive monitoring service in Azure that helps track the performance and health of resources
+2. **Azure Monitor and VM Insights:** Azure Monitor is a comprehensive monitoring service in Azure that helps track the performance and health of resources
 
-3. **Alert Creation and Configuration**: Azure alerts are automated notifications triggered based on specific conditions or thresholds defined within the Azure environment.
+3. **Alert Creation and Configuration:** Azure alerts are automated notifications triggered based on specific conditions or thresholds defined within the Azure environment.
 
-4. **Log Query and Data Analysis**: Azure Monitor’s log query feature allows users to query and analyze log data generated by Azure resources.
+4. **Log Query and Data Analysis:** Azure Monitor’s log query feature allows users to query and analyze log data generated by Azure resources.
 
 # Getting Started with the Lab
  
@@ -56,9 +56,9 @@ Welcome to your AZ-104: Microsoft Azure Administrator  workshop! We've prepared 
  
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/sg1.png)
+![Access Your VM and Lab Guide](../media/14-10-lab11-1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -68,25 +68,25 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/sg2.png)
+![Explore Lab Resources](../media/7-10-lab3-2.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](../media/sg3.png)
+![Use the Split Window Feature](../media/7-10-lab3-3.png)
  
 ## Utilizing the Zoom In/Out Feature
 
 To adjust the zoom level for the environment page, click the A↕ : 100% icon located next to the timer in the lab environment.
 
-![Use the Split Window Feature](./media/sg4.png)
+![](./media/2-10-g4.png)
 
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../media/sg5.png)
+![Manage Your Virtual Machine](../media/2-10-g5.png)
 
 ## **Lab Duration Extension**
 
@@ -112,13 +112,13 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-      ![](../Labs/Images/image7.png)
+      ![](../media/7-10-lab3-4.png)
  
 3. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-      ![](../Labs/Images/image8.png)
+      ![](../media/7-10-lab3-5.png)
 
 1. If you see the pop-up **Action Required**, click **Ask Later**.
    
@@ -148,19 +148,16 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
 
-1. Click **Next** from the bottom right corner to embark on your Lab journey!
- 
-    ![Start Your Azure Journey](../media/num.png)
-
 ## Support Contact
 
-1. The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
    Learner Support Contacts:
 
-   - Email Support: labs-support@spektrasystems.com
+   - Email Support: cloudlabs-support@spektrasystems.com
    - Live Chat Support: https://cloudlabs.ai/labs-support
 
-1. Now, click on Next from the lower right corner to move on to the next page.
-   
+Now, click on Next from the lower right corner to move on to the next page.
+    
+![Start Your Azure Journey](../media/num.png)
 ## Happy Learning!!
