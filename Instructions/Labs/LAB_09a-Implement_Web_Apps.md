@@ -41,15 +41,27 @@ In this task, you will create an Azure Web App, which is a platform-as-a-service
     | Runtime stack | **PHP 8.2 (5)** |
     | Operating system | **Linux (6)** |
     | Region | **<inject key="Region" enableCopy="false"/> (7)** |
-    | Pricing plans | **Premium V3 P1V3 (195 minimum ACU/vCPU, 8 GB memory, 2 vCPU) v (8)** |
 
     ![image](../media/14-10-lab9-4.png)
 
-    ![image](../media/14-10-lab9-5n.png)
-   
-1. Click **Review + create (9)**. On the **Review + create** tab of the **Create Web App** blade, ensure that the validation passed and click **Create**.
+    | Setting | Value |
+    | --- | ---|
+    | Pricing plans | Click on **Explore  pricing plan (8)** |   
 
-     ![image](../media/14-10-lab9-6.png)
+    ![image](./media/acs1.png)
+
+     - Select **Premium V4 P1V4 (1)**
+ and **Select (2)** 
+
+       ![image](./media/acs2.png)
+
+     - Click **Review + create**.
+
+       ![image](./media/acs3.png)     
+   
+1. On the **Review + create** tab of the **Create Web App** blade, ensure that the validation passed and click **Create**.
+
+     ![image](./media/acs4.png)
 
      >**Note:** Wait until the web app is created before you proceed to the next task. This should take about a minute.
 
