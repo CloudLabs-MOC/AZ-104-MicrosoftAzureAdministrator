@@ -48,7 +48,7 @@ In this task, you will create an Azure Web App, which is a platform-as-a-service
     | --- | ---|
     | Pricing plans | Click on **Explore  pricing plan (8)** |   
 
-    ![image](./media/acs1.png)
+    ![image](./media/acs-4.png)
 
      - Select **Premium V4 P1V4 (1)**
  and **Select (2)** 
@@ -57,7 +57,7 @@ In this task, you will create an Azure Web App, which is a platform-as-a-service
 
      - Click **Review + create**.
 
-       ![image](./media/acs3.png)     
+       ![image](./media/acs-2.png)     
    
 1. On the **Review + create** tab of the **Create Web App** blade, ensure that the validation passed and click **Create**.
 
