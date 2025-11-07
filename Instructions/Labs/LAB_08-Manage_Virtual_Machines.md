@@ -49,7 +49,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Availability zone | **Zone 1, 2** (read the note about using virtual machine scale sets)   |
     | Security type | **Standard (6)** |
 
-     ![image](../media/13-10-lab8-4.1.png)
+     ![image](./media/mv4.png)
 
     - Image: Select **See all images** to choose `Windows Server 2019 Datacenter - Gen2`
 
@@ -63,7 +63,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
       ![image](./media/mv3.png)   
 
-      ![image](../media/13-10-lab8-4.1.png)        
+      ![image](./media/mv5.png)        
 
     | Setting | Value |
     | --- | --- |
