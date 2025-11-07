@@ -55,7 +55,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
       ![image](./media/mv1.png)
 
-    - Select **Windows server** dropdown
+    - Select **Windows Server** dropdown
 
       ![image](./media/mv2.png)    
 
