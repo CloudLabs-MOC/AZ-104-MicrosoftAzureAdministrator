@@ -48,15 +48,31 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Availability options | **Availability zone (5)**|
     | Availability zone | **Zone 1, 2** (read the note about using virtual machine scale sets)   |
     | Security type | **Standard (6)** |
-    | Image | **Windows Server 2019 Datacenter - Gen2  (7)**|
+
+     ![image](../media/13-10-lab8-4.1.png)
+
+    - Image: Select **See all images** to choose `Windows Server 2019 Datacenter - Gen2`
+
+      ![image](./media/mv1.png)
+
+    - Select **Windows server** dropdown
+
+      ![image](./media/mv2.png)    
+
+    - Select **Windows Server 2019 Datacenter - Gen2**  
+
+      ![image](./media/mv3.png)   
+
+      ![image](../media/13-10-lab8-4.1.png)        
+
+    | Setting | Value |
+    | --- | --- |
     | Run Azure Spot discount | **Unchecked (8)**|
     | Size | **Standard D2s v3 (9)**|
     | Username | **Student (10)** |
     | Password | **Password.1!! (11)** |
     | Public inbound ports | **None (12)** |
     | Would you like to use an existing Windows Server license? | **Unchecked  (13)**|
-
-     ![image](../media/13-10-lab8-4.1.png)
 
      ![image](../media/13-10-lab8-5.png)
 
