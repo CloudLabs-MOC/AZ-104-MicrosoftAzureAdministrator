@@ -66,6 +66,8 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 1. In the Azure portal, navigate back to the Entra ID tenant blade and click **Groups**.
 
+    ![image](../Labs/media/10lab2-4n.png)
+
 1. Use the **+ New group** button to create a new group with the following settings and click **Create (4)**.
 
     | Setting | Value |
@@ -152,7 +154,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. On the **Assignable scopes** tab, ensure your management group is listed **(1)**, then click **Next (2)**.
 
-     ![image](./media/10-lab2-13.png) 
+      ![image](../Labs/media/10lab2-13n.png) 
 
 1. Review the JSON for the *Actions*, *NotActions*, and *AssignableScopes* that are customized in the role.
 

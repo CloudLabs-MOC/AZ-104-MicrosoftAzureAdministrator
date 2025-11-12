@@ -90,6 +90,12 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
  
 ![Manage Your Virtual Machine](../media/2-10-g5.png)
 
+## Track Your Progress
+
+Click on the **Progress** tab to track your progress in the lab. The percentage increases as you complete each validation and reaches 100% when all validations are successfully completed.    
+
+![](../Labs/media/validation.png)
+
 ## **Lab Duration Extension**
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
@@ -161,6 +167,6 @@ The CloudLabs support team is available 24/7, 365 days a year, via email and liv
 
 Now, click on Next from the lower right corner to move on to the next page.
    
-   ![Start Your Azure Journey](../media/num.png)
+   ![Start Your Azure Journey](../Labs/media/next-1.png)
 
 ## Happy Learning!!

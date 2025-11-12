@@ -27,6 +27,7 @@ In this task, you will create new user accounts in Microsoft Entra ID and config
     ![](../Labs/media/lab1-1.png)
 
     >**Did you know?** A tenant is a specific instance of Microsoft Entra ID containing accounts and groups. Depending on your situation, you can create more tenants and **Switch** between them. 
+
 1. Return to the **Entra ID** page by pressing back in the browser or selecting the option in the breadcrumb menu.
 
 1. As you have time, explore other options such as **Licenses** and **Password reset**.
@@ -106,13 +107,14 @@ In this task, you will create new user accounts in Microsoft Entra ID and config
 
     >**Note:** It is unlikely you will be creating user accounts individually. Do you know how your organization plans to create and manage user accounts?
 
-### ## Task 2: Create groups and add members
+### Task 2: Create groups and add members
 
 In this task, you create a group account. Group accounts can include user accounts or devices. These are two basic ways members are assigned to groups: Statically and Dynamically. Static groups require administrators to add and remove members manually. Dynamic groups update automatically based on the properties of a user account or device. For example, job title.
         
 1. In the Azure portal, navigate back to the Entra ID tenant blade and under **manage (1)** click **Groups (2)**.
 
     ![](../Labs/media/2-10-l1-18.png)           
+
 1. Take a minute to familiarize yourself with the group settings in the left pane.
 
    + **Expiration** lets you configure a group lifetime in days. After that time the group must be renewed by the owner.
@@ -143,9 +145,13 @@ In this task, you create a group account. Group accounts can include user accoun
 
     ![image](../Labs/media/lab1-12.png)
    
-1. **Refresh** the page and ensure your group was created.
+1. Select **Create** to deploy the group.
 
      ![image](../Labs/media/lab1-13.png)
+
+1. **Refresh** the page and ensure your group was created.
+
+     ![image](../Labs/media/lab1-13n.png)
 
 1. Select the new group and review the **Members** and **Owners** information.
 

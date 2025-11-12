@@ -225,7 +225,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 1. After creating your inbound NSG rule, select **Outbound security rules (1)** from the left navigation pane. 
 
-1. Notice the **AllowInternetOutboundRule** rule. Also notice the rule cannot be deleted and the priority is 65001.
+1. Notice the **AllowInternetOutbound** rule. Also notice the rule cannot be deleted and the priority is 65001.
 
     ![image](../media/7-10-lab4-27.png)
 

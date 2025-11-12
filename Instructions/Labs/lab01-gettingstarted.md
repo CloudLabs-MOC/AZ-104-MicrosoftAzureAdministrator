@@ -15,7 +15,7 @@ In this hands-on lab, you will gain practical experience in managing identities 
 By the end of this lab, you will be able to manage and configure Microsoft Entra ID users, guest users, and groups with assigned membership.
 
 1. **Create and configure Entra ID users:** You will learn how to create and configure Microsoft Entra ID user accounts in the Azure portal, including both standard and guest users. You will define key properties such as job title, d
-2. **Create Entra ID groups with assigned membership:**: Create and configure security groups in Microsoft Entra ID using assigned membership to manually manage owners and members for organizing access and permissions.
+2. **Create Entra ID groups with assigned membership:** Create and configure security groups in Microsoft Entra ID using assigned membership to manually manage owners and members for organizing access and permissions.
 
 ## Pre-requisites
 
@@ -35,9 +35,9 @@ In this hands-on lab, the architecture flow includes several essential component
 
 ## Explanation of Components
 
-1. **Microsoft Entra ID**: Microsoft Entra ID (formerly Azure Active Directory) is Microsoft’s cloud-based identity and access management service. It allows organizations to securely create, manage, and authenticate user identities, ensuring controlled access to cloud resources and applications.
+1. **Microsoft Entra ID:** Microsoft Entra ID (formerly Azure Active Directory) is Microsoft’s cloud-based identity and access management service. It allows organizations to securely create, manage, and authenticate user identities, ensuring controlled access to cloud resources and applications.
 
-2. **Entra ID groups**: Entra ID groups are used to organize users and simplify access management within Microsoft Entra ID. In this lab, you will work with Assigned Membership Groups, where users are manually added or removed by an administrator. This approach is ideal for managing static user sets such as departmental teams or lab administrators.
+2. **Entra ID groups:** Entra ID groups are used to organize users and simplify access management within Microsoft Entra ID. In this lab, you will work with Assigned Membership Groups, where users are manually added or removed by an administrator. This approach is ideal for managing static user sets such as departmental teams or lab administrators.
 
 # Getting Started with the Lab
  
@@ -148,7 +148,7 @@ The CloudLabs support team is available 24/7, 365 days a year, via email and liv
 
 Now, click on Next from the lower right corner to move on to the next page.
    
-   ![Start Your Azure Journey](../media/num.png)
+   ![Start Your Azure Journey](../Labs/media/next-1.png)
 
 ## Happy Learning!!
 

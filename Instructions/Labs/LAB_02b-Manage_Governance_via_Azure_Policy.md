@@ -90,7 +90,7 @@ In this task, you will explore how to enforce governance policies by assigning t
 
 1. Click **Review + create (2)** and then click **Create**.
 
-    ![image](./media/3-10-l2-56.png)
+    ![image](../Labs/media/3-10-l2-56n.png)
 
     >**Note:** Now you will verify that the new policy assignment is in effect by attempting to create another Azure Storage account in the resource group without explicitly adding the required tag. 
     
@@ -116,7 +116,7 @@ In this task, you will explore how to enforce governance policies by assigning t
 
 1. Verify whether the error message states that the resource deployment was disallowed by the policy by clicking **Previous** tags tab and select **Policy details** link to review the details.
 
-   ![image](./media/6-10-lab2-7.png)
+   ![image](../Labs/media/6-10-lab2-7n.png)
 
     >**Note:** You can find more details about the error, including the name of the role definition **Require Role tag with Infra value**. The deployment failed because the storage account you attempted to create did not have a tag named **Role** with its value set to **Infra**.
 
@@ -142,14 +142,16 @@ In this task, you will focus on identifying and remediating non-compliant resour
 
 1. On the **Inherit a tag from the resource group if missing** built-in policy definition blade, click **Assign Policy**.
 
-     ![image](./media/3-10-l2-61.png)
+     ![image](../Labs/media/3-10-l2-62n.png)
 
-1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values and choose **Select (3)**:
+1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button (...) **(1)** and selecting the following values and choose **Select (4)**:
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | the name of the Azure subscription you are using in this lab **(1)**|
-    | Resource Group | AZ-104T02 **(2)**|
+    | Subscription | the name of the Azure subscription you are using in this lab **(2)**|
+    | Resource Group | AZ-104T02 **(3)**|
+
+      ![image](../Labs/media/l2-image37n.png)
 
 1. To specify the **Policy definition**, click the ellipsis button **(1)** and then search for and select **Inherit a tag from the resource group if missing (2)** then click on **Add (3)** if not selected in the definition.
 
@@ -169,7 +171,7 @@ In this task, you will focus on identifying and remediating non-compliant resour
 
     ![image](./media/3-10-l2-64.png)
 
-1. Click **Next** and set **Parameters** to the following values:
+1. Set **Parameters** to the following values:
 
     | Setting | Value |
     | --- | --- |
@@ -234,12 +236,12 @@ In this task, you will configure and test a resource lock to safeguard critical 
 
 1. Select **+ Add (3)** and complete the resource lock information. When finished select **Ok (6)**. 
 
-    | Setting | Value |
-    | --- | --- |
-    | Lock name | `rg-lock` **(4)** |
-    | Lock type | **Delete (5)** (notice the selection for read-only) |
+     | Setting | Value |
+     | --- | --- |
+     | Lock name | `rg-lock` **(4)** |
+     | Lock type | **Delete (5)** (notice the selection for read-only) |
     
-     ![image](./media/3-10-l2-72.png)
+      ![image](./media/3-10-l2-72.png)
 
 1. Navigate to the resource group **Overview** blade, and select **Delete resource group**.
 
