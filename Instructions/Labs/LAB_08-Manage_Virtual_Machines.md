@@ -117,7 +117,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 1. After the validation, click **Create**.
 
-     ![image](../media/13-10-lab8-11.png)
+     ![](../media/createvm.png)
 
     >**Note:** Notice as the virtual machine deploys the NIC, disk, and public IP address (if configured) are independently created and managed resources.
 
@@ -141,7 +141,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. On the **az104-vm1** virtual machine, in the **Availability + scale (1)** blade, select **Size (2)**.Set the virtual machine size to **DS1_v2 (3)** and click **Resize (4)**. When prompted, confirm the change.
 
-     ![image](../media/13-10-lab8-13.png)
+     ![image](../media/resize.png)
 
      >**Note:** Choose another size if **Standard DS1_v2** is not available. Resizing is also known as vertical , up or down.
 
@@ -221,7 +221,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Password | **Provide a secure password (13)**  |
     | Already have a Windows Server license? | **Unchecked (14)** |
 
-    ![image](../media/13-10-lab8-18-new.png)
+    ![image](../media/up13-10-lab8-18-new.png)
 
     ![image](../media/13-10-lab8-19.png)
 
@@ -229,7 +229,11 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 1. On the **Spot (15)** tab, accept the defaults and select **Next: Disks >**.
 
+      ![image](../media/spotdflt.png)      
+
 1. On the **Disks** tab, accept the default values and click **Next : Networking >**.
+
+      ![image](../media/diskdflt.png)
 
 1. On the **Networking** page, click the **Edit virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values).
 
@@ -239,7 +243,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Address range | `10.82.0.0/20` (delete the existing address range) **(2)** |
     | Under subnets click on **Edit (3)** |
 
-    ![image](../media/13-10-lab8-20.png) 
+    ![image](../media/up13-10-lab8-20.png) 
 
 1. Provide the below details and click on **Save** twice **(3)** 
 
@@ -250,7 +254,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     
      ![image](../media/13-10-lab8-21.png)
 
-     ![image](../media/13-10-lab8-22.png)
+     ![image](../media/up13-10-lab8-22.png)
 
 1. In the **Networking** tab, click the **Edit network interface** icon to the right of the network interface entry.
 
@@ -327,7 +331,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 1. On the **Review + create** tab, ensure that the validation passed and click **Create**.
 
-     ![image](../media/13-10-lab8-33.png)
+     ![image](../media/createvmss.png)
 
      >**Note:** Wait for the virtual machine scale set deployment to complete. This should take approximately 5 minutes. While you wait review the [documentation](https://learn.microsoft.com/azure/virtual-machine-scale-sets/overview).
 
