@@ -39,7 +39,7 @@ In this task, you will create and configure an Azure Storage account.
     | Performance | **Standard (5)** |
     | Redundancy | **Geo-redundant storage (GRS) (6)** |
 
-     ![image](../media/10-10-lab7-4-new.png)
+     ![image](../media/up10-10-lab7-4-new.png)
 
 1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create a storage account** blade, review the available options, accept the defaults, and click **Next**.
 
@@ -55,7 +55,7 @@ In this task, you will create and configure an Azure Storage account.
 
 1. Wait for the validation process to complete. Then click on **Create**.
 
-     ![image](../media/10-10-lab7-7.png)
+     ![image](../media/up10-10-lab7-7.png)
 
     >**Note:** Wait for the Storage account to be created. This should take about 2 minutes.
 
@@ -65,11 +65,11 @@ In this task, you will create and configure an Azure Storage account.
 
 1. On the Storage account blade, in the **Data management (1)** section, click **Redundancy (2)** and note the secondary location **(3)**. 
 
-    ![image](../media/10-10-lab7-9.png)
+    ![image](../media/up10-10-lab7-9.png)
 
 1. In the same blade **Redundancy (1)** drop-down list select **Locally redundant storage (LRS) (2)** and **Save (3)** the change. 
 
-    ![image](../media/10-10-lab7-10.png)
+    ![image](../media/up10-10-lab7-10.png)
 
 1. In the same blade note that, at this point, the Storage account has the **primary location**.
 
@@ -150,7 +150,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. Click **Upload (1)** within the **Upload blob** pane, click on **Browse for files (2)**.
 
-     ![image](../media/10-10-lab7-21.png)
+     ![image](../media/up10-10-lab7-21.png)
 
 1. Browse to `C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\07` **(1)**, select **LICENSE (2)** on your lab computer and click **Open (3)**.
 
@@ -177,14 +177,14 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. On the **licenses/LICENSE (1)** blade, review the available options including **Download, Delete, Change tier, and Acquire lease (2)**.
 
-    ![image](../media/10-10-lab7-24.png)
+    ![image](../media/up10-10-lab7-24.png)
 
      > **Note:** You have the option to download the blob, change its access tier (it is currently set to **Hot**), and acquire a lease, which would change its lease status to **Locked** (it is currently set to **Unlocked**) and protect the blob from being modified or deleted, as well as assign custom metadata (by specifying an arbitrary key and value pairs). You also have the ability to **Edit** the file directly within the Azure portal interface, without downloading it first. You can also create snapshots, as well as generate a SAS token (you will explore this option in the next task).
      
 
 1. On the **licenses/LICENSE (1)** blade, on the **Overview** tab, click the **Copy to clipboard (2)** button next to the **URL** entry.
 
-     ![image](../media/10-10-lab7-26.png)
+     ![image](../media/up10-10-lab7-26.png)
 
 1. Open another browser window by using **InPrivate mode** by clicking the **ellipsis** **(1)** in the top-right corner of the lab VM's browser window and selecting the **New InPrivate Window (2)** option.
 
@@ -192,7 +192,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. Navigate to the URL you copied in the previous step.
 
-     ![image](../media/10-10-lab7-25.png)
+     ![image](../media/up10-10-lab7-25.png)
 
 1. You should be presented with an XML-formatted message stating **ResourceNotFound** or **PublicAccessNotPermitted**.
 
@@ -200,7 +200,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and switch to the **Generate SAS** tab.
 
-     ![image](../media/10-10-lab7-27.png)
+     ![image](../media/up10-10-lab7-27.png)
 
 ### Configure limited access to the blob storage
 
@@ -276,11 +276,11 @@ In this task, you will create and configure Azure Files shares.
 
 1. Select **File shares (2)** and verify your **az104-07-share (3)** directory is present.
 
-     ![image](../media/10-10-lab7-35.png)
+     ![image](../media/up10-10-lab7-35.png)
 
 1. Select your **az104-07-share** directory, notice you can **+ Add directory** on the top navigation pane in the file share window. This lets you create a folder structure. Provide name **az104-07-folder (1)** and click on **OK (2)**
    
-     ![image](../media/10-10-lab7-36.png)
+     ![image](../media/up10-10-lab7-36.png)
 
      ![image](../media/10-10-lab7-37.png)
 
@@ -358,7 +358,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. On the **Add networks** page, select the appropriate **Subscription (1)**, choose **vnet1 (2)** under **Virtual networks**, select the **default (3)** subnet, and then click **Add (4)** to proceed.
 
-     ![image](../media/10-10-lab7-43.png)
+     ![image](../media/up10-10-lab7-43.png)
 
 1. Be sure to **Save** your changes.
 
