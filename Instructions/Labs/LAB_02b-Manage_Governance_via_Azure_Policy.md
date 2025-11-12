@@ -234,26 +234,26 @@ In this task, you will configure and test a resource lock to safeguard critical 
    
 1. In the **Settings (1)** blade, select **Locks (2)**.
 
-1. Select **+ Add (3)** and complete the resource lock information. When finished select **Ok (6)**. 
-
-     | Setting | Value |
-     | --- | --- |
-     | Lock name | `rg-lock` **(4)** |
-     | Lock type | **Delete (5)** (notice the selection for read-only) |
+1. Select **+ Add (3)** and complete the resource lock information. When finished select **Ok (6)**.
+   
+    | Setting | Value |
+    | --- | --- |
+    | Lock name | `rg-lock` **(4)** |
+    | Lock type | **Delete (5)** (notice the selection for read-only) |
     
-      ![image](./media/3-10-l2-72.png)
+    ![image](./media/3-10-l2-72.png)
 
 1. Navigate to the resource group **Overview** blade, and select **Delete resource group**.
 
-     ![image](./media/3-10-l2-73.png)
+    ![image](./media/3-10-l2-73.png)
 
 1. In the **Enter resource group name to confirm deletion** textbox provide the resource group name, `AZ-104T02` **(1)**. Notice you can copy and paste the resource group name and click on **Delete (2)** twice. 
 
-     ![image](./media/3-10-l2-74.png)
+    ![image](./media/3-10-l2-74.png)
    
 1. You should receive a notification denying the deletion. 
 
-     ![image](./media/l2-image64.png)
+    ![image](./media/l2-image64.png)
 
 1. From the **AZ-104T02** resource group **Overview** blade, under **Settings** section select **Locks (1)** and Select Locks and proceed to click **Delete (2)** to remove the existing **rg-lock** locks.
 
