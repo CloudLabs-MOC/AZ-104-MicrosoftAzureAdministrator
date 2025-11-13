@@ -45,7 +45,7 @@ Azure Container Apps take the concept of a managed Kubernetes cluster a step fur
 
 1. Select **Create**.
 
-    ![image](../media/14-10-lab9-48.png)
+    ![image](../media/up14-10-lab9-48.png)
 
      >**Note:** Wait for the container app to deploy. This will take a couple of minutes. 
  
@@ -59,11 +59,11 @@ By default, the Azure container app that you create will accept traffic on port 
 
 1. Select the link next to **Application URL** to view your application.
 
-    ![image](../media/14-10-lab9-50.png)
+    ![image](../media/up14-10-lab9-50.png)
 
 1. Verify you receive the **Your Azure Container Apps app is live** message.
    
-    ![image](../media/14-10-lab9-51.png)
+    ![image](../media/up14-10-lab9-51.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -97,6 +97,3 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Workloads on ACA are usually long-running processes like a Web App.
 
 ### You have successfully completed the lab
-
-
-     
