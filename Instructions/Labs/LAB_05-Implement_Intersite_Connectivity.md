@@ -53,15 +53,17 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 1. In the **Cloud Shell** toolbar, click the **Manage files (1)** drop-down and select **Upload (2)**.
 
-      ![image](../media/7-10-lab3-42.png)
+      ![image](../media/pshelluplod.png)
 
-1. In the **Open** dialog box, browse to the path **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05 (1)**, select **azuredeploydisk.bicep (2)**, and click **Open (3)** to upload the file.
+1. In the **Open** dialog box, browse to the path **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05 (1)**, select **az104-05-vnetvm-loop-template (2)**, and click **Open (3)** to upload the file.
 
     ![image](../media/10-10-lab5-3.png)
 
-    ![image](../media/10-10-lab5-4.png)
+   >**Note:** Upload the the template and parameters file. You will need to upload each file separately one after the another.
 
-    >**NOte:** upload the the template and parameters file. You will need to upload each file separately one after the another.
+1. In the **Open** dialog box, browse to the path **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05 (1)**, select **az104-05-vnetvm-loop-parameters (2)**, and click **Open (3)** to upload the file.
+
+    ![image](../media/10-10-lab5-4.png)
 
 1. Verify your files are available in the Cloud Shell storage. 
 
@@ -109,7 +111,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 In this task, you verify that resources in peered virtual networks can communicate with each other. Network Watcher will be used to test the connection. Before continuing, ensure both virtual machines have been deployed and are running. 
 
-1. In Search resources, services, and docs (G+/) box at the top of the portal, enter **Network Watcher (1)**, and then select **Network Watcher (2)** from the results.
+1. In **Search resources, services, and docs (G+/)** box at the top of the portal, enter **Network Watcher (1)**, and then select **Network Watcher (2)** from the results.
 
      ![image](../media/10-10-lab5-7.png)
 
@@ -213,7 +215,7 @@ In this task, you will configure local and global peering between the virtual ne
     | Local Peering link name | **az104-05-vnet0_to_az104-05-vnet2 (6)**|
     | Local virtual network peering settings | **Ensure only the first three boxes are checked (7)**|
 
-    ![image](../media/10-10-lab5-19.1.png)
+    ![image](../media/up10-10-lab5-19.1.png)
 
     ![image](../media/10-10-lab5-19.2.png)
 
@@ -258,7 +260,7 @@ In this task, you will configure local and global peering between the virtual ne
     | Local Peering link name | **az104-05-vnet1_to_az104-05-vnet2 (6)**|
     | Local virtual network peering settings | **Ensure only the first three boxes are checked (7)**|
 
-    ![image](../media/10-10-lab5-20.png)
+    ![image](../media/up10-10-lab5-20.png)
 
     ![image](../media/10-10-lab5-21.png)
 
@@ -439,7 +441,7 @@ In this task, you want to control network traffic between the perimeter subnet a
 
     ![image](../media/10-10-lab5-36.png)
 
-1. Select **Add (6)** when the route is completed. The last thing to do is associate the route with the subnet.
+1. Select **Add (6)**. When the route is completed the last thing to do is associate the route with the subnet.
 
 1. Select **Subnets (1)** from the left navigation pane and then  click on **+ Associate (2)**. Complete the configuration.
 
