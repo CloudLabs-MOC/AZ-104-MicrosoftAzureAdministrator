@@ -41,7 +41,7 @@ In this hands-on lab, the architecture flow includes several essential component
 
 ## Architecture diagram
 
-![Diagram of the lab tasks.](./media/lab6-arch.png)
+![Diagram of the lab tasks](../media/lab6-arch.png)
 
 ## Explanation of Components
 
