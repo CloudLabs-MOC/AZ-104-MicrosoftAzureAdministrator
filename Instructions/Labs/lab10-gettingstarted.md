@@ -88,7 +88,13 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
  
 ![Manage Your Virtual Machine](../media/2-10-g5.png)
 
-## **Lab Duration Extension**
+## Track Your Progress
+
+Click on the **Progress** tab to track your progress in the lab. The percentage increases as you complete each validation and reaches 100% when all validations are successfully completed.    
+
+![](../Labs/media/validation.png)
+
+## Lab Duration Extension
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
 

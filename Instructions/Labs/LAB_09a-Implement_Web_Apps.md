@@ -61,7 +61,7 @@ In this task, you will create an Azure Web App, which is a platform-as-a-service
    
 1. On the **Review + create** tab of the **Create Web App** blade, ensure that the validation passed and click **Create**.
 
-     ![image](./media/acs4.png)
+     ![image](../media/upacs4.png)
 
      >**Note:** Wait until the web app is created before you proceed to the next task. This should take about a minute.
 
@@ -94,7 +94,7 @@ In this task, you will create a staging deployment slot in Azure Web Apps, which
 
     ![image](../media/14-10-lab9-9.png)
 
-    ![image](../media/14-10-lab9-10.png)
+    ![image](../media/up14-10-lab9-10.png)
 
 1. Once you see **Successfully created slot 'staging'** click on **Close**.
      
@@ -152,7 +152,7 @@ In this task, you will swap the staging slot with the production slot.
 
 1. On the **Swap** blade, review the default settings and click **Start Swap (3)**.
 
-    ![image](../media/14-10-lab9-17.png)
+    ![image](../media/up14-10-lab9-17.png)
 
     >**Note:** Kindly Wait till Swap successfully complete.
 

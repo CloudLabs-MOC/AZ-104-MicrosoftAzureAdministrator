@@ -65,7 +65,7 @@ In this task, you will deploy two virtual machines that will serve as test envir
     | Region        | **<inject key="Region" enableCopy="false"/> (3)**    |
     | Admin Password      | **Password.11! (4)** |
 
-     ![image](../media/14-10-lab10-8.png)
+     ![image](../media/up14-10-lab10-8.png)
 
 1. On the **Review + create** tab, review the deployment details and then select **Create**.
 
@@ -120,11 +120,13 @@ In this task, you will create a Recovery Services vault, an essential component 
 
      >**Note:** This setting can be configured only if there are no existing backup items.
 
-1. Back on the **az104-10-rsv1 - Properties** blade, click the **Update** link under **Security Settings > Soft Delete and security settings** label.
+1. Back on the **az104-10-rsv1 - Properties** blade, click the **Update** link under **Security Settings > Soft Delete Settings** label.
 
-    ![image](../media/14-10-lab10-17.png)
+    ![image](../media/softdelt.png)
 
-1. On the **Security Settings** blade, note that **Soft Delete (For workload running in Azure)** is **Enabled**. Notice the **soft delete retention period** is **14** days. 
+1. On the **Soft delete Settings** blade, note that the **soft delete retention period** is **14** days. 
+
+    ![image](../media/retn.png)
 
 1. Return to the Recovery Services vault blade, select the **Overview** blade.
 
@@ -229,7 +231,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Storage account name  | **storage<inject key="DeploymentID" enableCopy="false"/> (3)**   |
     | Region                | **<inject key="Region" enableCopy="false"/> (4)**  |
 
-     ![image](../media/14-10-lab10-32.png)
+     ![image](../media/up14-10-lab10-32.png)
 
 1. On **Data Protection** tab, uncheck the **Enable soft delete for blobs (1)** check box then and select **Review + Create (2)**.
 
@@ -263,7 +265,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. In the **Destination details**, place a checkmark next to **Archive to a storage account (1)**. In the Storage account drop-down field, select the storage account **(2)**  that you deployed earlier in this task.
 
-     ![image](../media/14-10-lab10-38.png)
+     ![image](../media/up14-10-lab10-38.png)
 
 1. Select **Save**.
 
@@ -303,13 +305,13 @@ In this task, you will enable replication for a virtual machine to ensure busine
     | Vault Name | **az104-10-rsv2 (3)**  |
     | Region | **West US 3 (4)** |
 
-     ![image](../media/14-10-lab10-41.png)
+     ![image](../media/up14-10-lab10-41.png)
 
      >**Note:** Make sure that you specify a **different** region than the virtual machine.
 
 1. On the **Review + create** tab, review the deployment details, select **Create**.
 
-     ![image](../media/14-10-lab10-42.png)
+     ![image](../media/up14-10-lab10-42.png)
 
      >**Note:** Wait for the deployment to complete. The deployment should take a couple of minutes. 
 
@@ -319,7 +321,7 @@ In this task, you will enable replication for a virtual machine to ensure busine
 
 1. On the **Compute infrastructure | Virtual machines** page, click the **az104-10-vm0** virtual machine.
 
-     ![image](../media/14-10-lab10-43.png)
+     ![image](../media/up14-10-lab10-43.png)
 
 1. From the left navigation pane,in the **Backup + disaster recovery (1)** blade, select **Disaster recovery (2)**. 
 
@@ -327,7 +329,7 @@ In this task, you will enable replication for a virtual machine to ensure busine
 
 1. Move to the **Advanced settings (4)** tab. Resource selections have been made for you. It is important to review them. 
 
-     ![image](../media/14-10-lab10-45.1.png)
+     ![image](../media/up14-10-lab10-45.1.png)
 
 1. Verify your subscription, vm resource group, virtual network, and availability (take the default) settings.
 

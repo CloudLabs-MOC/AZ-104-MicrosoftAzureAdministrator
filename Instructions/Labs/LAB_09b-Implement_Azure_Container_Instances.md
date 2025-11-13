@@ -70,11 +70,11 @@ In this task, you will review the deployment of the Azure Container Instance (AC
 
 1. On the **Overview** blade of the container instance, verify that **Status** is reported as **Running**.
 
-    ![image](../media/14-10-lab9-40.png)
+    ![image](../media/up14-10-lab9-40.png)
 
 1. Copy the value of the container instance **FQDN**, open a new browser tab, and navigate to the corresponding URL.
 
-    ![image](../media/14-10-lab9-40.1.png)
+    ![image](../media/up14-10-lab9-40.1.png)
 
 1. Verify that the **Welcome to Azure Container Instance** page is displayed.
 
