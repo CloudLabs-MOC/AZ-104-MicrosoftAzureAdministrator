@@ -234,7 +234,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     > **Note:** This subnet will be used by the Azure Application Gateway instances, which you will deploy later in this task. The Application Gateway requires a dedicated subnet of /27 or larger size.
 
-1. In the Azure portal, search and select **Application Gateways (1)** and, on the **Application gateways (2)** blade.
+1. In the Azure portal, search **Application Gateways (1)** and click on the **Application gateways (2)**.
 
     ![image](../media/10-10-lab6-29.png)
 
@@ -258,7 +258,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Virtual network | **az104-06-vnet1 (10)** |
     | Subnet | **subnet-appgw (11)** |
 
-     ![image](../media/10-10-lab6-31.png)
+     ![image](../media/up10-10-lab6-31.png)
 
 1. On **Frontends** tab, specify the following settings (leave others with their default values):
 
@@ -283,8 +283,8 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | --- | --- |
     | Name | **az104-06-appgw5-be1 (2)** |
     | Add backend pool without targets | **No (3)** |
-    | Target Type |  Virtual machine and choose **az104-06-nic1 (10.60.1.4) (4)** as Target |
-    | Target Type |  Virtual machine and choose **az104-06-nic2 (10.60.2.4) (5)** as Target |
+    | Target Type |  **Virtual machine** and choose **az104-06-nic1 (10.60.1.4) (4)** as Target |
+    | Target Type |  **Virtual machine** and choose **az104-06-nic2 (10.60.2.4) (5)** as Target |
 
      ![image](../media/10-10-lab6-37.png)
 
@@ -296,7 +296,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | --- | --- |
     | Name | `az104-imagebe` **(2)** |
     | Add backend pool without targets | **No (3)** |
-    | Target Type | Virtual machine and choose **az104-06-nic1 (10.60.1.4) (4)** as Target|
+    | Target Type | **Virtual machine** and choose **az104-06-nic1 (10.60.1.4) (4)** as Target|
 
      ![image](../media/10-10-lab6-38.png)
 
@@ -306,7 +306,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | --- | --- |
     | Name | `az104-videobe` **(2)** |
     | Add backend pool without targets | **No (3)** |
-    | Target Type | Virtual machine and choose **az104-06-nic2 (10.60.2.4) (4)** as Target|
+    | Target Type | **Virtual machine** and choose **az104-06-nic2 (10.60.2.4) (4)** as Target|
    
      ![image](../media/10-10-lab6-39.png)
 
@@ -401,6 +401,8 @@ In this task, you will implement an Azure Application Gateway in front of the tw
      ![image](../media/10-10-lab6-53.png) 
 
 1. On the **az104-06-appgw5** Application Gateway blade, note the value of the **Frontend public IP address**.
+
+     ![image](../media/appfrntip.png)
 
 1. Start another browser window and test this URL - `<frontend ip address>/image/` and verify you are directed to the image server (vm1).
 
