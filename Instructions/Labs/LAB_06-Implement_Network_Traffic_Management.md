@@ -267,9 +267,9 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Frontend IP address type | **Public (1)** |
     | Public IP address | Select **Add new (2)** |
     
-    ![image](../media/10-10-lab6-36.png)
+    ![image](./media/azz1.png)
 
-1. On **Add a Public IP**, Specify the following settings(leave others with their default values) and click **Next: Backends > (5)**  
+1. On **Add a Public IP**, Specify the following settings(leave others with their default values) and click **Next: Backends >**  
 
     | Setting | Value |
     | --- | --- |
