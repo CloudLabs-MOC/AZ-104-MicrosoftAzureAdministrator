@@ -188,7 +188,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
       ![image](../media/7-10-lab3-31.png)
 
-      ![image](../media/7-10-lab3-16.png)
+      ![image](../media/lab3-02-3.png)
 
 1. Verify your files are available in the Cloud Shell storage. 
 
