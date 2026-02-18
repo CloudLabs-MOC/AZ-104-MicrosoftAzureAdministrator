@@ -38,7 +38,7 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
     | Region | **<inject key="Region" enableCopy="false" /> (4)**|
     | Availability zone | **No infrastructure redundancy required (5)** | 
     | Source type | **None (6)**|
-    | Size | Click on **chnage size (7)** link |
+    | Size | Click on **change size (7)** link |
     | Select a disk size  | Under **Storage type** select **Standard HDD (8)** then select **32 GIB (9)** and click on **OK (10)**. |
     -------------------------------------------------------------------------------------------------------------------------------------
     ![image](../media/7-10-lab3-8.png)
@@ -63,17 +63,15 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
 
 1. Take a minute to review the **Template** and **Parameters** files.
 
-1. Click **Download** and save the templates to the local drive. This creates a compressed zipped file. 
+1. From the **Template** section, click **Download** and save the template to the local drive. Then switch to the **Parameters** section and do the same. 
 
-    ![image](../media/7-10-lab3-14.png)
+    ![image](../media/lab3-02-1.png)
 
-1. Use File Explorer to extract the content of the downloaded file into the **Downloads** folder by right clicking on the **Downloaded file(1)** and select **Extract All... (2)** and select **Extract**. Notice there are two JSON files (template and parameters).
-    
-     ![image](../media/7-10-lab3-13.1.png)
+1. In File Explorer open the **Downloads** folder on LabVM. Notice there are two JSON files (template and parameters). 
 
-     ![image](../media/7-10-lab3-13.2.png)
+     ![image](../media/lab3-02-2.png)
 
-    >**Did you know?**  You can export an entire resource group or just specific resources within that resource group.
+     >**Did you know?**  You can export an entire resource group or just specific resources within that resource group.
 
 ## Task 2: Edit an Azure Resource Manager template and then redeploy the template
 
@@ -93,13 +91,13 @@ In this task, you will utilize the previously downloaded Azure Resource Manager 
 
     ![image](../media/7-10-lab3-15.png)
 
-1.  In the **Open** dialog box, navigate to **Downloads (1)** and select the **ExportedTemplate** folder, select the **template (2)** file and click **Open (3)**.
+1.  In the **Open** dialog box, navigate to **Downloads (1)** and select the **template (2)** file and click **Open (3)**.
 
-    ![image](../media/7-10-lab3-16.png)
+    ![image](../media/lab3-02-3.png)
 
 1. Within the editor pane, make these changes.
 
-    -  Change **disks_az104_disk1_name** to `disk_name` (two places to change line number 5 and 15)
+    -  Change **disks_az104_03b_disk1_name** to `disk_name` (two places to change line number 5 and 15)
 
        ![image](../media/7-10-lab3-17.png)
     
@@ -117,7 +115,7 @@ In this task, you will utilize the previously downloaded Azure Resource Manager 
 
 1. Make this change so it matches the template file.
 
-    Change **disks_az104_disk1_name** to **disk_name** (one place to change)
+    Change **disks_az104_03b_disk1_name** to **disk_name** (one place to change)
 
      ![image](../media/7-10-lab3-21.png)
 
@@ -134,7 +132,7 @@ In this task, you will utilize the previously downloaded Azure Resource Manager 
 
 1. Select **Review + Create (5)** and then select **Create**.
 
-    ![image](../media/7-10-lab3-22.png)
+    ![image](../media/lab3-02-6.png)
 
 1. Select **Go to resource**. Verify **az104-03b-disk2** was created.
 
@@ -186,7 +184,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
      ![image](../media/7-10-lab3-30.png)
 
-1. Select the **Upload/Download (1)** files icon (top bar) and then select **Upload (2)** and upload the the template and parameters file from the downloads directory. You will need to upload each file separately one after the another..
+1. Select the **Upload/Download (1)** files icon (top bar) and then select **Upload (2)** and upload the **template** and **parameters** file from the downloads directory. You will need to upload each file separately one after the another..
 
       ![image](../media/7-10-lab3-31.png)
 
@@ -266,10 +264,10 @@ In this task, you will deploy an Azure Resource Manager (ARM) template using the
 1. Confirm the disk was created.
 
      ```sh
-     az disk list --output table
+     az disk list --resource-group az104-03b-rg1-<inject key="DeploymentID" enableCopy="false"/> --output table
      ```
 
-    ![image](../media/7-10-lab3-41.png)
+    ![image](../media/lab3-02-4.png)
 
 ## Task 5: Deploy a resource by using Azure Bicep
 
@@ -314,10 +312,10 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 1. Confirm the disk was created.
 
     ```sh
-    az disk list --output table
+    az disk list --resource-group az104-03b-rg1-<inject key="DeploymentID" enableCopy="false"/> --output table
     ```
 
-    ![image](../media/7-10-lab3-47.png)
+    ![image](../media/lab3-02-5.png)
 
    <validation step="95c0111f-ab42-4cdd-a5ca-abd36982cc45" />
  
