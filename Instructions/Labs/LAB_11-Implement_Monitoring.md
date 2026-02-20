@@ -133,9 +133,9 @@ In this task, you will configure an action group that sends an email notificatio
 
      >**Did you know?** You can add up to five action groups to an alert rule. Action groups are executed concurrently, in no specific order. Multiple alert rules can use the same action group.
 
-1. On the **Actions** tab, select **Use action groups (1)**, then click **Create action group (2)**.  
+1. On the **Actions** tab, click **+ Create action group**.  
 
-    ![image](../media/up14-10-lab11-20.png)
+    ![image](../media/lab11-e1t2p1.png)
 
 1. On the **Basics** tab, enter the following values for each setting.
 
@@ -212,7 +212,9 @@ In this task, you will manually trigger the alert by performing an action that m
 
     ![image](../media/14-10-lab11-30.png)
 
-    >**Note:** When prompted with a confirmation notification, click **Delete** again to finalize the removal of the virtual machine.  
+    >**Note:** When prompted with a confirmation notification, click **Delete** again to finalize the removal of the virtual machine.
+
+    ![image](../media/lab11-e1t4p1.png)  
 
 1. In the title bar, select the **Notifications** icon and wait until **vm0** is successfully deleted.
 
@@ -289,7 +291,11 @@ Enter these settings for the scheduling of the alert processing rule:
 
 In this task, you will utilize Azure Monitor to query and analyze the data collected from the virtual machine. Azure Monitor provides a comprehensive set of tools that enable you to view logs and metrics associated with the VM's performance and health.
 
+>**Note:** Log data may take a few minutes to appear after enabling monitoring. If your query returns no results or does not run successfully, that is okay. The primary goal of this task is to understand how to access Azure Monitor, select the correct scope, and execute both built-in and custom KQL queries.
+
 1. In the Azure portal, search for and select `Monitor` blade, click **Logs (1)** from the left navigation pane.
+
+    ![image](../media/lab11-e1t6p1(1).png)
 
 1. If necessary close the splash screen. 
 
@@ -297,17 +303,17 @@ In this task, you will utilize Azure Monitor to query and analyze the data colle
 
     ![image](../media/14-10-lab11-41.png)
 
-1. Select  **Queries (2)** tab, select **Virtual machines (3)**. Review the queries that are available. Double-click the **Count heartbeats (4)** query and select **Run**.
+1. Select  **Queries (1)** tab, search for `Count heartbeats` **(2)** and then under **Virtual machines**, select **Count heartbeats (3)**.
 
-    ![image](../media/14-10-lab11-42.png)
+    ![image](../media/lab11-e1t6p2.png)
 
-1. You should receive a heartbeat count for when the virtual machine was running.
+1. You should receive a heartbeat count **(1)** for when the virtual machine was running.
 
-    ![image](../media/14-10-lab11-44.png)
+    ![image](../media/lab11-e1t6p3.png)
 
-1. Review the query. This query uses the *heartbeat* table. 
+1. Review the query by clicking on the **User Query (2)**. This query uses the *heartbeat* table. 
 
-1. Replace the query with this one **(1)**, and then click **Run (2)**. Review the resulting chart. 
+1. Replace the query with this one **(1)**, and then click **Run (2)**. Review the resulting chart **(3)**.
 
    ```
     InsightsMetrics
@@ -316,11 +322,7 @@ In this task, you will utilize Azure Monitor to query and analyze the data colle
     | summarize avg(Val) by bin(TimeGenerated, 5m), Computer //split up by computer
     | render timechart
    ```
-    ![image](../media/14-10-lab11-45.1.png)
-
-     >**Did you know?:** If you want to practice with other queries, there is a [Log Analytics Demo Environment](https://learn.microsoft.com/azure/azure-monitor/logs/log-analytics-tutorial#open-log-analytics).
-    
-     >**Did you know?:** Once you find a query you like, you can create an alert from it. 
+    ![image](../media/lab11-e1t6p5.png)
 
 ### Review
 
