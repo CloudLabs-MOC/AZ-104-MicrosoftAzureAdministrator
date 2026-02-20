@@ -37,7 +37,7 @@ The organization plans a large amount of growth for core services. In this task,
     | Name               | **az104-04-vnet1 (3)**|
     | Region             |  **<inject key="Region" enableCopy="false" /> (4)** |
 
-     ![image](../media/7-10-lab4-4.png)
+     ![image](../media/7-10-lab4-4n.png)
 
 1. Click **Next (5)** and subsequently click on **Next** again to move to the **IP Addresses** tab.
 
@@ -71,7 +71,7 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. Verify your configuration passed validation, and then select **Create**.
 
-     ![image](../media/7-10-lab4-9.png)
+     ![image](../media/7-10-lab4-9n.png)
 
 1. Wait for the virtual network to deploy and then select **Go to resource**.
 
@@ -170,7 +170,7 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Name | **myNSGSecure (3)** |
     | Region | **<inject key="Region" enableCopy="false" /> (4)**  |
 
-     ![image](../media/7-10-lab4-20.png)
+     ![image](../media/7-10-lab4-20n.png)
 
 1. Click **Review + create (5)** and then after the validation click **Create**.
 
@@ -344,7 +344,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
     | Name | `private.contoso.com` **(3)** (adjust if you have to rename) |
     | Region | **<inject key="Region" enableCopy="false" />** |
 
-     ![image](../media/7-10-lab4-41.png)
+     ![image](../media/7-10-lab4-41n.png)
 
 1. Select **Review create (4)** and then **Create**.
    
