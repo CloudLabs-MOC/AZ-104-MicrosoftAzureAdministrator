@@ -1,4 +1,4 @@
-# Lab - Manage Azure resources by Using ARM Templates
+# Lab - Manage Azure resources by using Azure Resource Manager Templates
 
 ## Lab Overview
  
