@@ -182,7 +182,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
     | Storage account (Create new) | **str<inject key="DeploymentID" enableCopy="false" /> (4)** |
     | File share (Create new) | **none (5)** |
 
-    ![image](../media/7-10-lab3-28.png)
+    ![image](../Labs/media/r22.png)
 
 1. In the Cloud Shell toolbar, open the **Settings (1)** menu and choose **Go to Classic version (2)** from the drop-down.
 
