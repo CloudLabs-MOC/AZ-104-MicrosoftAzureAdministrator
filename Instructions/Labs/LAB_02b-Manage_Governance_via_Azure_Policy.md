@@ -11,10 +11,6 @@ In this lab, you will complete the following tasks:
 + Task 3: Apply tagging via an Azure Policy.
 + Task 4: Configure and test resource locks. 
 
-## Exercise 2: Manage Governance via Azure_Policy
-
-In this exercise, you will learn to manage governance via Azure Policy that involves defining and enforcing rules that govern the resources in your Azure environment to ensure compliance with organizational standards.
-
 ### Task 1: Assign tags via the Azure portal
 
 In this task, you will learn how to create and assign a tag to an Azure resource group through the Azure portal. Tags in Azure are key-value pairs that help in organizing and categorizing resources for better management and reporting.
