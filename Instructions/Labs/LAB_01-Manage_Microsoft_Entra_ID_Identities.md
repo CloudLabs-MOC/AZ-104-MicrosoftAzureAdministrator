@@ -4,7 +4,7 @@
 
 In this lab, you will explore identity management in Microsoft Entra ID by creating and configuring both standard and guest user accounts. You will assign essential attributes such as job title, department, and usage location to define user properties. You’ll also create and manage security groups to organize access and permissions. By completing this lab, you’ll understand how Entra ID forms the foundation of secure and efficient identity and access management in the cloud.
 
-## Lab objectives
+## Lab Objectives
 In this lab, you will complete the following tasks:
 
 + Task 1: Create and configure user accounts.
