@@ -10,10 +10,6 @@ In this lab, you will complete the following tasks:
 + Task 1: Create and configure user accounts.
 + Task 2: Create groups and add members.
 
-## Exercise 1: Microsoft Entra ID Identities
-
-In this exercise, you will create and configure user accounts in Microsoft Entra ID, including both standard and guest users. You’ll define key attributes such as job title, department, and usage location to establish the foundation for identity management.
-
 ### Task 1: Create and configure user accounts.
 
 In this task, you will create new user accounts in Microsoft Entra ID and configure essential user details to meet organizational requirements.
@@ -31,6 +27,10 @@ In this task, you will create new user accounts in Microsoft Entra ID and config
 1. Return to the **Entra ID** page by pressing back in the browser or selecting the option in the breadcrumb menu.
 
 1. As you have time, explore other options such as **Licenses** and **Password reset**.
+
+1. Expand **Manage (1)** and select **Users (2)**.
+
+     ![](../Labs/media/za2.png)
 
 1. On **Users - All users** blade, and then click **+ New user (1)** then select **+ Create new user (2)**.
 
@@ -109,9 +109,9 @@ In this task, you will create new user accounts in Microsoft Entra ID and config
 
 ### Task 2: Create groups and add members
 
-In this task, you create a group account. Group accounts can include user accounts or devices. These are two basic ways members are assigned to groups: Statically and Dynamically. Static groups require administrators to add and remove members manually. Dynamic groups update automatically based on the properties of a user account or device. For example, job title.
+In this task, you will create a group account. Group accounts can include user accounts or devices. These are two basic ways members are assigned to groups: Statically and Dynamically. Static groups require administrators to add and remove members manually. Dynamic groups update automatically based on the properties of a user account or device. For example, job title.
         
-1. In the Azure portal, navigate back to the Entra ID tenant blade and under **manage (1)** click **Groups (2)**.
+1. In the Azure portal, navigate back to the **Entra ID tenant** blade and under **manage (1)** click **Groups (2)**.
 
     ![](../Labs/media/2-10-l1-18.png)           
 
@@ -133,25 +133,25 @@ In this task, you create a group account. Group accounts can include user accoun
 
      >**Note**: An Entra ID Premium P1 or P2 license is required for dynamic membership. If other **Membership types** are available, the options will show up in the drop-down. 
 
-1. Select **No owners selected (5)**.
+    - Select **No owners selected (5)**.
 
-1. In the **Add owners** page, search for and **select (7)** yourself (shown in the top right corner) as the owner. Notice you can have more than one owner. 
+    - In the **Add owners** page, search for **<inject key="AzureAdUserEmail"></inject>** and select **<inject key="AzureAdUserEmail"></inject> (7)** (shown in the top right corner) as the owner. Notice you can have more than one owner. 
 
-    ![image](../Labs/media/lab1-11.png)
+      ![image](../Labs/media/lab1-11.png)
 
-1. Select **No members selected (8)**.
+    - Select **No members selected (8)**.
 
-1. In the **Add members** pane, search and **select** the **az104-user1** and the **guest user** **(9)** you invited, Add both of the users to the group, click on **Select (10)**,
+    - In the **Add members** pane, search and **select** the **az104-user1 (9)** and the **guest user** **(10)** you invited, Add both of the users to the group, click on **Select (11)**,
 
-    ![image](../Labs/media/lab1-12.png)
+      ![](../Labs/media/za-3.png)
    
-1. Select **Create** to deploy the group.
+    - Select **Create** to deploy the group.
 
-     ![image](../Labs/media/lab1-13.png)
+      ![image](../Labs/media/lab1-13.png)
 
-1. **Refresh** the page and ensure your group was created.
+1. Select **All groups (1)** and then **Refresh** the page and ensure your group was created **(2)**.
 
-     ![image](../Labs/media/lab1-13n.png)
+     ![image](../Labs/media/za4.png)
 
 1. Select the new group and review the **Members** and **Owners** information.
 
