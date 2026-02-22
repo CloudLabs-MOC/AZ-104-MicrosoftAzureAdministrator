@@ -25,7 +25,7 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
 
     ![image](../media/7-10-lab3-7.png)
 
-1. On the **Create a managed disk** page, configure the disk and then select **Review + create**. 
+1. On the **Create a managed disk** page, configure the disk with the following details: 
     
     | Setting | Value |
     | --- | --- |
@@ -36,15 +36,18 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
     | Availability zone | **No infrastructure redundancy required (5)** | 
     | Source type | **None (6)**|
     | Size | Click on **change size (7)** link |
-    | Select a disk size  | Under **Storage type** select **Standard HDD (8)** then select **32 GIB (9)** and click on **OK (10)**. |
     -------------------------------------------------------------------------------------------------------------------------------------
     ![image](../Labs/media/r17.png)
 
-    ![image](../media/7-10-lab3-9.png)
+    - Select a disk size: Under **Storage type** select **Standard HDD (8)** then select **32 GIB (9)** and click on **OK (10)**. |
 
-    ![image](../Labs/media/r18.png)
+      ![image](../media/7-10-lab3-9.png)
 
-   >**Note:** We are creating a simple managed disk so you can practice with templates. Azure managed disks are block-level storage volumes that are managed by Azure.
+    - Then select **Review + create**.
+
+      ![image](../Labs/media/r18.png)
+
+       >**Note:** We are creating a simple managed disk so you can practice with templates. Azure managed disks are block-level storage volumes that are managed by Azure.
 
 1. Click **Create**.
 
@@ -185,9 +188,11 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
      ![image](../media/7-10-lab3-30.png)
 
-1. Select the **Upload/Download (1)** files icon (top bar) and then select **Upload (2)** and upload the **template** and **parameters** file from the downloads directory. You will need to upload each file separately one after the another..
+1. Select the **Upload/Download (1)** files icon (top bar) and then select **Upload (2)**.
 
       ![image](../media/7-10-lab3-31.png)
+
+ 1. Upload the **template** and **parameters** file from the downloads directory. `You will need to upload each file separately one after the another..`.      
 
       ![image](../media/lab3-02-3.png)
 
