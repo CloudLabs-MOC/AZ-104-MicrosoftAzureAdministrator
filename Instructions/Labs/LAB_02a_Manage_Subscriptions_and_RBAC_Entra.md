@@ -171,9 +171,13 @@ In this task, you will review the Azure activity log to check for any actions in
 
 1. In the Azure portal, navigate back to the Management group and and select **az104-02-mg1**. The activity log provides insight into subscription-level events. 
 
-1. Select **Activity Log**  from the left navigation pane and click on **Quick Insights** from the list that appears and select **Role assignment**. The activity log can be filtered for specific operations and review the activites for role assignments.  
+1. Select **Activity Log (1)**  from the left navigation pane and click on **Quick Insights (2)** from the list that appears and select **Role assignment (3)**.
 
-    ![image](./media/10-lab2-14.png) 
+    ![image](./media/za6.png) 
+
+1. The activity log can be filtered for specific operations and review the activites for role assignments.  
+
+    ![image](./media/za7.png) 
 
 ### Review
 In this lab, you have completed:
