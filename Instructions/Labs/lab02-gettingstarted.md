@@ -51,11 +51,11 @@ Explore Azure’s built-in roles and assign the Virtual Machine Contributor role
 
 ## Exercise 2: Manage Governance via Azure Policy
 
-1. Tagging and Policy Enforcement: Create and assign tags to resources for better metadata management and reporting and enforce mandatory tagging on new resources using Azure Policy to ensure compliance.
+1. **Tagging and Policy Enforcement:** Create and assign tags to resources for better metadata management and reporting and enforce mandatory tagging on new resources using Azure Policy to ensure compliance.
 
-2. Resource Compliance and Remediation: Use Azure Policy to apply and inherit tags for existing resources and remediate non-compliance.
+2. **Resource Compliance and Remediation:** Use Azure Policy to apply and inherit tags for existing resources and remediate non-compliance.
 
-3. Resource Locks for Protection:Configure resource locks to prevent accidental deletions or modifications and test the effectiveness of locks and their ability to override user permissions.
+3. **Resource Locks for Protection:** Configure resource locks to prevent accidental deletions or modifications and test the effectiveness of locks and their ability to override user permissions.
 
 ## Architecture diagram
 
