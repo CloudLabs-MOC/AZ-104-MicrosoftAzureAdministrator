@@ -215,7 +215,7 @@ In this task, you will focus on identifying and remediating non-compliant resour
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab **(1)** |
-    | Resource Group | AZ-104T02 **(2)**|
+    | Resource Group | **AZ-104T02** **(2)**|
     | Storage account name |  **storage<inject key="DeploymentID" enableCopy="false"/> (3)** |
     | Redundancy |  **Locally-redundant storage (LRS) (4)** |
 
@@ -223,7 +223,7 @@ In this task, you will focus on identifying and remediating non-compliant resour
    
 1. Verify that this time the validation passed and click **Create**.
 
-     ![image](./media/3-10-l2-69.png)
+     ![image](./media/r16.png)
 
    >**Note:** If the validation fails, kindly wait for some time as it might take some time for the policy to take effect for the validation to pass through. **Sometimes it might around 5 and 25 minutes for the policy to take effect.**
 
