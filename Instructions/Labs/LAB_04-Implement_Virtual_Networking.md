@@ -4,17 +4,13 @@
 
 This lab focuses on applying security best practices while demonstrating advanced Azure networking concepts.You'll create virtual networks and subnets in Azure to establish a secure, scalable networking environment. You'll implement Application Security Groups (ASGs) and Network Security Groups (NSGs) to manage and enforce access controls, and configure both public and private DNS zones for effective name resolution. 
 
-## Lab objectives
+## Lab Objectives
 
 In this lab, you will complete the following tasks:
 - Task 1: Create a virtual network with subnets using the portal.
 - Task 2: Create a virtual network and subnets using a template.
 - Task 3: Create and configure communication between an Application Security Group and a Network Security Group.
 - Task 4: Configure public and private Azure DNS zones
-
-## Exercise 1: Create and configure a virtual network
-
-In this exercise, you will create and configure a virtual network to enable secure communication and resource connectivity within Azure.
 
 ### Task 1: Create a virtual network with subnets using the portal
 
@@ -99,20 +95,28 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
     ![image](../media/7-10-lab4-12.png)
 
-1. Select **Build your own template in the editor** and then **Load file** in the top navigation pane.
+1. Select **Build your own template in the editor**.
 
     ![image](../media/7-10-lab4-13.png)
 
+1. Then **Load file** in the top navigation pane.    
+
     ![image](../media/7-10-lab3-15.png)
 
-1. In the **Open** dialog box, navigate to `C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\04` **(1)**, select the `az-104-04template` **(2)** file, and click **Open (3)** then select **Save**.. 
+1. In the **Open** dialog box, navigate to `C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\04` **(1)**, select the `az-104-04template` **(2)** file, and click **Open (3)**.
 
      ![image](../media/7-10-lab4-14.png)
 
-1. Click on the **Edit Parameters** section and click on **Load File** to upload the **az-104-04parameters.json** file and subsequently, click on **Save**
+1. Then select **Save**.  
+
+1. Click on the **Edit Parameters** section. 
 
     ![image](../media/7-10-lab3-20.png)
 
+1. Click on **Load File**.
+
+1. Then upload the **az-104-04parameters.json** file and subsequently, click on **Save**
+    
 1. In the **Basics** tab, select **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" /> (1)** resource group.
     
     ![image](../media/7-10-lab4-15.png)
@@ -161,7 +165,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
      ![image](../media/7-10-lab4-19.1.png)
 
-1. Select **+ Create** and provide information on the **Basics** tab. 
+1. Select **+ Create** and provide information on the **Basics** tab and then click **Review + create (5)**.
 
     | Setting | Value |
     | -- | -- |
@@ -172,7 +176,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
      ![image](../media/7-10-lab4-20n.png)
 
-1. Click **Review + create (5)** and then after the validation click **Create**.
+1. Then after the validation click **Create**.
 
      ![image](../media/7-10-lab4-21.png)
 
@@ -184,14 +188,14 @@ In this task, we create an Application Security Group and a Network Security Gro
 
     ![image](../media/7-10-lab4-23.png)
 
+1. On the **Associate Subnet**, provide the following details and then **OK (3)**    
+
     | Setting | Value |
     | -- | -- |
     | Virtual network | **az104-04-vnet1 (1)** |
     | Subnet | **SharedServicesSubnet (2)** |
 
-     ![image](../media/7-10-lab4-24.png)
-
-1. Click **OK (3)** to save the association.
+    ![image](../media/7-10-lab4-24.png)
 
 ### Configure an inbound security rule to allow ASG traffic
 
@@ -315,8 +319,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 
      ![image](../media/7-10-lab4-38.png)
 
-1. On command prompt, run the following command:
-   In the below code, replace [DID] with **<inject key="DeploymentID" enableCopy="false" />** and [name server name] with the **name server name** you copied in the previous step.
+1. On command prompt, run the following command: In the below code, replace `[DID]` with **<inject key="DeploymentID" enableCopy="false" />** and `[name server name]` with the **name server name** you copied in the previous step.
  
     ```sh
    nslookup www.contoso[DID].com [name server name]
