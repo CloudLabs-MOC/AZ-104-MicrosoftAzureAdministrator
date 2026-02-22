@@ -5,7 +5,7 @@ Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a
 
 # Lab - Managing Subscriptions, RBAC, and Governance
 
-### Overall Estimated Duration: 90 Minutes
+### Overall Estimated Duration: 120 Minutes
 
 ## Overview
 

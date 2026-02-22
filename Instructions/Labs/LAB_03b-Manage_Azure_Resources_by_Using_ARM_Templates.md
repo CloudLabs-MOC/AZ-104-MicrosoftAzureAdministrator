@@ -12,9 +12,6 @@
 -  Task 4: Deploy a template with the CLI. 
 -  Task 5: Deploy a resource by using Azure Bicep.
 
-## Excercise 1: Manage Azure resources by Using ARM Templates
-
-In this exercise,you will learn to  manage Azure resources using ARM templates which involves defining and deploying infrastructure as code, automating resource provisioning and configuration. 
 
 ### Task 1: Create an Azure Resource Manager template
 

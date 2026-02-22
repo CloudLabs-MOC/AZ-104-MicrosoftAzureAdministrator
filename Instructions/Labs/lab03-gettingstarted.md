@@ -5,23 +5,27 @@ Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a
 
 # Lab - Manage Azure resources by using Azure Resource Manager Templates
 
-### Overall Estimated Duration: 100 Minutes
+### Overall Estimated Duration: 60 Minutes
 
 ## Overview
 
 In this lab, you will learn to manage Azure resources using Azure Resource Manager (ARM) templates, enabling efficient and repeatable deployments. You will start by creating a managed disk via the Azure portal and exporting the deployment as a reusable template. Next, you will edit the template to redeploy resources, showcasing its flexibility for iterative deployments. You will configure the Azure Cloud Shell to deploy templates using Azure PowerShell and the CLI, demonstrating command-line automation for resource management. Finally, you will work with Azure Bicep to deploy resources, leveraging its declarative syntax for simplified infrastructure management.
 
-## Objective
+## Objectives
 
 By the end of this lab you will learn the following key concepts:
 
-1. **Create and Export ARM Templates**: Understand how to create and export Azure Resource Manager templates from existing deployed resources for reuse.
+By the end of this lab you will learn the following key concepts:
 
-2. **Edit and Redeploy Templates**: Learn to modify ARM templates and redeploy them efficiently to manage resources effectively.
+1. **Create and Export ARM Templates:** Learn how to create Azure resources in the portal and export them as Azure Resource Manager (ARM) templates for reuse and automation.
 
-3. **Configure Cloud Shell for Deployment**: Set up Azure Cloud Shell to deploy templates using PowerShell and CLI commands for streamlined management.
+1. **Edit and Redeploy ARM Templates:** Understand how to modify template parameters and resource definitions, then redeploy them to consistently provision new resources.
 
-4. **Explore Azure Bicep**: Gain experience in using Azure Bicep to define and deploy resources with a declarative approach.
+1. **Deploy Templates Using Azure PowerShell:** Configure Azure Cloud Shell and use Azure PowerShell commands to deploy ARM templates at the resource group scope.
+
+1. **Deploy Templates Using Azure CLI:** Use Azure CLI commands in Cloud Shell to automate and manage ARM template deployments efficiently.
+
+1. **Deploy Resources with Azure Bicep:** Gain hands-on experience with Azure Bicep to define and deploy Azure resources using a modern, declarative Infrastructure-as-Code approach.
 
 ## Pre-requisites
 
@@ -108,9 +112,9 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
  
 ## Let's Get Started with Azure Portal
  
-1. On your virtual machine, click on the Azure Portal icon as shown below:
+1. On your Virtual machine, click on the **Azure Portal** icon as shown below:
  
-    ![Launch Azure Portal](../Labs/Images/azure.png)
+    ![Launch Azure Portal](../Labs/media/za1.png)
  
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
@@ -124,31 +128,7 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
  
       ![](../media/7-10-lab3-5.png)
 
-1. If you see the pop-up **Action Required**, click **Ask Later**.
-   
-     ![](../Labs/Images/asklater.png)
-
-## Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible
-
-1. At the **"More information required"** prompt, select **Next**.
-
-1. On the **"Keep your account secure"** page, select **Next** twice.
-
-1. **Note:** If you don’t have the Microsoft Authenticator app installed on your mobile device:
-
-   - Open **Google Play Store** (Android) or **App Store** (iOS).
-   - Search for **Microsoft Authenticator** and tap **Install**.
-   - Open the **Microsoft Authenticator** app, select **Add account**, then choose **Work or school account**.
-
-1. A **QR code** will be displayed on your computer screen.
-
-1. In the Authenticator app, select **Scan a QR code** and scan the code displayed on your screen.
-
-1. After scanning, click **Next** to proceed.
-
-1. On your phone, enter the number shown on your computer screen in the Authenticator app and select **Next**.
-       
-1. If prompted to stay signed in, you can click "No."
+1. If prompted to stay signed in, you can click **No.**
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
 
