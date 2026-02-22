@@ -130,7 +130,7 @@ In this task, you will explore how to enforce governance policies by assigning t
 
    ![image](../Labs/media/r9.png)
 
-    >**Note:** You can find more details about the error, including the name of the role definition **Cost Center tag tag and its value**. The deployment failed because the storage account you attempted to create did not have a tag named **Cost Center** with its value set to **000**.
+    >**Note:** By clicking the Raw Error tab, you can find more details about the error, including the name of the role definition **Require a tag and its value on resources**. The deployment failed because the storage account you attempted to create did not have a tag named **Cost Center** with its value set to **Default**.
 
 ### Task 3: Apply tagging via an Azure policy
 
@@ -140,9 +140,9 @@ In this task, you will focus on identifying and remediating non-compliant resour
 
    ![image](./media/3-10-l2-49.png)
 
-1. In the list of assignments, right click the ellipsis icon in the row representing the **Require Role tag with Infra value (1)** policy assignment and use the **Delete assignment (2)** menu item to delete the assignment and then select **Yes**.
+1. Select **Assignments (1)**. In the list of assignments, right click the ellipsis icon in the row representing the **Require Cost Center tag and its value on resources (2)** policy assignment and use the **Delete assignment (3)** menu item to delete the assignment and then select **Yes**, if prompted.
 
-   ![image](./media/3-10-l2-60.png)
+   ![image](./media/r10.png)
 
 1. In the **Authoring** section, click **Definitions (1)**. Take a moment to browse through the list of built-in policy definitions that are available for you to use. List all built-in policies that involve the use of tags by selecting the **Tags (3)** entry (and de-selecting all other entries) in the **Category (2)** drop-down list and click on **Apply (4)**.
 
@@ -161,7 +161,7 @@ In this task, you will focus on identifying and remediating non-compliant resour
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab **(2)**|
-    | Resource Group | AZ-104T02 **(3)**|
+    | Resource Group | **AZ-104T02** **(3)**|
 
       ![image](../Labs/media/l2-image37n.png)
 
@@ -171,27 +171,27 @@ In this task, you will focus on identifying and remediating non-compliant resour
 
     ![image](./media/l2-image38.png)
 
-   >**Note:** You can ignore the above step if the policy definition has appeared automatically.
+   >**Note:** **You can ignore the above step if the policy definition has appeared automatically.**
 
 1. Configure the remaining **Basics** properties of the assignment by specifying the following settings (leave others with their defaults) and click on **Next (4)**.
 
     | Setting | Value |
     | --- | --- |
-    | Assignment name | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing (1)**|
-    | Description | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing (2)**|
+    | Assignment name | **Inherit the Cost Center tag and its value 000 from the resource group if missing (1)**|
+    | Description | **Inherit the Cost Center tag and its value 000 from the resource group if missing (2)**|
     | Policy enforcement | Enabled **(3)** |
 
-    ![image](./media/3-10-l2-64.png)
+    ![image](./media/r11.png)
 
-1. Set **Parameters** to the following values:
+1. Set **Parameters** to the following values and then click **Next (2)**:
 
     | Setting | Value |
     | --- | --- |
-    | Tag Name | **Role (1)** |
+    | Tag Name | **Cost Center (1)** |
 
-    ![image](./media/3-10-l2-65.png)
+    ![image](./media/r12.png)
    
-1. Click **Next (2)** and, on the **Remediation** tab, configure the following settings (leave others with their defaults) and click **Review + Create (3)**.
+1. 0n the **Remediation** tab, configure the following settings (leave others with their defaults) and click **Review + Create (3)**.
 
     | Setting | Value |
     | --- | --- |
@@ -200,13 +200,13 @@ In this task, you will focus on identifying and remediating non-compliant resour
 
     >**Note:** This policy definition includes the **Modify** effect.
 
-    ![image](./media/3-10-l2-66.png)
+    ![image](./media/r13.png)
   
 1. Click  **Create**.
 
     >**Note:** To verify that the new policy assignment is in effect, you will create another Azure Storage account in the same resource group without explicitly adding the required tag. 
     
-    >**Note:** It might take between 5 and 15 minutes for the policy to take effect.
+    >**Note:** **It might take between 5 and 25 minutes for the policy to take effect.**
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search and select **Storage accounts** under services and then click **+ Create**. 
 
@@ -225,11 +225,11 @@ In this task, you will focus on identifying and remediating non-compliant resour
 
      ![image](./media/3-10-l2-69.png)
 
-   >**Note:** If the validation fails, kindly wait for some time as it might take some time for the policy to take effect for the validation to pass through.
+   >**Note:** If the validation fails, kindly wait for some time as it might take some time for the policy to take effect for the validation to pass through. **Sometimes it might around 5 and 25 minutes for the policy to take effect.**
 
-1. Once the new storage account is provisioned, click **Go to resource** button and, on the **Overview** blade of the newly created storage account, note that the tag **Role** with the value **Infra** has been automatically assigned to the resource.
+1. Once the new storage account is provisioned, click **Go to resource** button and, on the **Overview** blade of the newly created storage account, note that the tag **Role** with the value **Cost Center** has been automatically assigned to the resource.
 
-   ![image](./media/3-10-l2-70.png)
+   ![image](./media/r14.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 >
@@ -251,10 +251,10 @@ In this task, you will configure and test a resource lock to safeguard critical 
    
 1. Select **+ Add (3)** and complete the resource lock information. When finished, select **Ok (6)**. 
 
-   | Setting | Value |
-   | --- | --- |
-   | Lock name | `rg-lock` **(4)** |
-   | Lock type | **Delete (5)** (notice the selection for read-only) |
+    | Setting | Value |
+    | --- | --- |
+    | Lock name | `rg-lock` **(4)** |
+    | Lock type | **Delete (5)** (notice the selection for read-only) |
 
     ![image](./media/3-10-l2-72.png)
    
