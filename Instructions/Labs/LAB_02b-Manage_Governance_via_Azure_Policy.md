@@ -19,18 +19,22 @@ In this exercise, you will learn to manage governance via Azure Policy that invo
 
 In this task, you will learn how to create and assign a tag to an Azure resource group through the Azure portal. Tags in Azure are key-value pairs that help in organizing and categorizing resources for better management and reporting.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search **Resource groups (1)** and select **Resource groups (2)** under services. Select **Resource group AZ-104T02** from the list.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search **Resource groups (1)** and select **Resource groups (2)** under services. 
 
    ![image](./media/l2-image45.png)
 
-1. On the resource group blade, click **Tags (1)** and create a tag with the following settings **(2)** and click on **Apply (3)** to save your change:
+1. Select **Resource group AZ-104T02** from the list.
+
+   ![image](./media/r1.png)
+
+1. On the resource group blade, click **Tags (1)** and create a tag with the following settings and click on **Apply (4)** to save your change:
 
     | Setting | Value |
     | --- | --- |
-    | Name | **Role** |
-    | Value | **Infra** |
+    | Name | **Cost Center (2)** |
+    | Value | **`000`** **(3)** |
 
-   ![image](./media/3-10-l2-48.png)
+   ![image](./media/r2.png)
    
 ### Task 2: Enforce tagging via an Azure policy
 
@@ -44,7 +48,7 @@ In this task, you will explore how to enforce governance policies by assigning t
 
    ![image](./media/3-10-l2-50.png)
 
-1. In search bar enter **require (1)** and click the entry representing the **Require a tag and its value on resources (2)** built-in policy and review its definition.
+1. In search bar enter **Require (1)** and click the entry representing the **Require a tag and its value on resources (2)** built-in policy and review its definition.
 
     ![image](./media/6-10-lab2-2.png)
    
@@ -67,38 +71,46 @@ In this task, you will explore how to enforce governance policies by assigning t
 
     | Setting | Value |
     | --- | --- |
-    | Assignment name | **Require Role tag with Infra value (1)**|
-    | Description | **Require Role tag with Infra value for all resources in the Cloud Shell resource group (2)**|
+    | Assignment name | **Require Cost Center tag and its value on resources (1)**|
+    | Description | **Require Cost Center tag and its value on all resources in the resource group (2)**|
     | Policy enforcement | Enabled **(3)**|
 
-    ![image](./media/3-10-l2-54.png)
+    ![image](./media/r3.png)
    
     >**Note:** The **Assignment name** is automatically populated with the policy name you selected, but you can change it. You can also add an optional **Description**. **Assigned by** is automatically populated based on the user name creating the assignment. 
 
-1. Set **Parameters** to the following values:
+1. Set **Parameters** to the following values and then click **Next (3)**:
 
     | Setting | Value |
     | --- | --- |
-    | Tag Name | **Role (1)** |
-    | Tag Value | **Infra (2)** |
+    | Tag Name | **Cost Center (1)** |
+    | Tag Value | **`000`** **(2)** |
 
-   ![image](./media/3-10-l2-55.png)
+    ![image](./media/r4.png)
    
-1. Click **Next (3)** and review the **Remediation** tab. Leave the **Create a Managed Identity (1)** checkbox unchecked. 
+1. Review the **Remediation (1)** tab, click on **Next (2)**.
+
+    ![image](./media/r5.png)
+
+1. On the **Managed identity** tab, leave the **Create a Managed Identity (1)** checkbox unchecked and then click **Review + create (2)**.
+
+    ![image](./media/r6.png)
 
     >**Note:** This setting can be used when the policy or initiative includes the **deployIfNotExists** or **Modify** effect.
 
-1. Click **Review + create (2)** and then click **Create**.
+1. Then click **Create**.
 
-    ![image](../Labs/media/3-10-l2-56n.png)
+    ![image](../Labs/media/r7.png)
 
     >**Note:** Now you will verify that the new policy assignment is in effect by attempting to create another Azure Storage account in the resource group without explicitly adding the required tag. 
     
-    >**Note:** It might take between 5 and 15 minutes for the policy to take effect.
+    >**Note:** It might take between `5` and `15` minutes for the policy to take effect.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search **Storage accounts (1)** and select **Storage accounts (2)** under services and then click **+ Create**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search **Storage accounts (1)** and select **Storage accounts (2)** under services.
 
     ![image](./media/3-10-l2-57.png)
+
+1. Then click **+ Create**.    
 
     ![image](./media/3-10-l2-58.png)
 
@@ -108,7 +120,7 @@ In this task, you will explore how to enforce governance policies by assigning t
     | --- | --- |
     | Storage account name | storage<inject key="DeploymentID" enableCopy="false"/>  **(1)**|
 
-     ![image](./media/3-10-l2-59.png)
+     ![image](./media/r8.png)
 
 1. Once you create the deployment, you should see the **Validation failed. Required information is missing or not valid** message.
 
@@ -116,9 +128,9 @@ In this task, you will explore how to enforce governance policies by assigning t
 
 1. Verify whether the error message states that the resource deployment was disallowed by the policy by clicking **Previous** tags tab and select **Policy details** link to review the details.
 
-   ![image](../Labs/media/6-10-lab2-7n.png)
+   ![image](../Labs/media/r9.png)
 
-    >**Note:** You can find more details about the error, including the name of the role definition **Require Role tag with Infra value**. The deployment failed because the storage account you attempted to create did not have a tag named **Role** with its value set to **Infra**.
+    >**Note:** You can find more details about the error, including the name of the role definition **Cost Center tag tag and its value**. The deployment failed because the storage account you attempted to create did not have a tag named **Cost Center** with its value set to **000**.
 
 ### Task 3: Apply tagging via an Azure policy
 
