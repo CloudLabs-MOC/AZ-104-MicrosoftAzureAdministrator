@@ -26,7 +26,7 @@ Basic understanding of Azure concepts, and familiarity with RBAC, resource taggi
 
 ## Architecture
 
-## Exercise 1: Manage Subscriptions and RBAC
+## Lab 1a: Manage Subscriptions and RBAC
 
 1. Create Management Groups and Assign Built-in Roles: Create and configure management groups to organize Azure subscriptions, enabling centralized governance and consistent access control across your environment.
 
@@ -49,7 +49,7 @@ Explore Azure’s built-in roles and assign the Virtual Machine Contributor role
 
 3. **Custom RBAC:** Role-Based Access Control refers to the ability to create tailored roles with specific permissions to meet the unique needs of your organization. Unlike built-in roles that come with predefined permissions, custom RBAC roles allow you to define exactly what actions a user or group can perform on Azure resources. 
 
-## Exercise 2: Manage Governance via Azure Policy
+## Lab 1b: Manage Governance via Azure Policy
 
 1. **Tagging and Policy Enforcement:** Create and assign tags to resources for better metadata management and reporting and enforce mandatory tagging on new resources using Azure Policy to ensure compliance.
 
