@@ -38,17 +38,17 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
     | Size | Click on **change size (7)** link |
     | Select a disk size  | Under **Storage type** select **Standard HDD (8)** then select **32 GIB (9)** and click on **OK (10)**. |
     -------------------------------------------------------------------------------------------------------------------------------------
-    ![image](../media/7-10-lab3-8.png)
+    ![image](../Labs/media/r17.png)
 
     ![image](../media/7-10-lab3-9.png)
 
-    ![image](../media/7-10-lab3-10.png)
+    ![image](../Labs/media/r18.png)
 
    >**Note:** We are creating a simple managed disk so you can practice with templates. Azure managed disks are block-level storage volumes that are managed by Azure.
 
 1. Click **Create**.
 
-    ![image](../media/7-10-lab3-11.png)
+    ![image](../Labs/media/r20.png)
 
 1. Monitor the notifications (upper right) and after the deployment select **Go to resource**. 
 
@@ -60,9 +60,11 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
 
 1. Take a minute to review the **Template** and **Parameters** files.
 
-1. From the **Template** section, click **Download** and save the template to the local drive. Then switch to the **Parameters** section and do the same. 
+1. From the **Template** section, click **Download** and save the template to the local drive.  
 
     ![image](../media/lab3-02-1.png)
+
+1. Then switch to the **Parameters** section and do the same.    
 
 1. In File Explorer open the **Downloads** folder on LabVM. Notice there are two JSON files (template and parameters). 
 
@@ -90,23 +92,25 @@ In this task, you will utilize the previously downloaded Azure Resource Manager 
 
 1.  In the **Open** dialog box, navigate to **Downloads (1)** and select the **template (2)** file and click **Open (3)**.
 
-    ![image](../media/lab3-02-3.png)
+    ![image](../Labs/media/r19.png)
 
 1. Within the editor pane, make these changes.
 
-    -  Change **disks_az104_03b_disk1_name** to `disk_name` (two places to change line number 5 and 15)
+    -  Change **disks_az104_03b_disk1_name** to `disk_name` (two places to change line number `5` and `15`)
 
        ![image](../media/7-10-lab3-17.png)
     
     - Change **az104-03b-disk1** to **az104-03b-disk2 (1)** (one place to change line number 6)
 
+    - Click on **Save (2)** your changes.
+
       ![image](../media/7-10-lab3-19.png)
 
-1. **Save (2)** your changes.
-
-1. Don't forget the parameters file. Select **Edit parameters**, click **Load file** and upload the **parameters.json**. 
+1. Don't forget the parameters file. Select **Edit parameters**.
 
     ![image](../media/7-10-lab3-20.png)
+
+1. Click **Load file** and upload the **parameters.json**.     
 
     ![image](../media/7-10-lab3-21.png)
 
