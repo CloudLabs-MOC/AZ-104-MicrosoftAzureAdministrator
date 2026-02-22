@@ -4,7 +4,7 @@
  
  In this hands-on lab, you will learn to manage Azure resources using ARM templates, automating resource deployment and management. You'll explore editing, redeploying templates, and deploying resources using Azure PowerShell, CLI, and Bicep. 
  
-## Lab objectives
+## Lab Objectives
 
 -  Task 1: Create an Azure Resource Manager template.
 -  Task 2: Edit an Azure Resource Manager template and redeploy the template.
