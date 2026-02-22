@@ -12,9 +12,6 @@ In this lab, you will complete the following tasks:
 + Task 3: Create a custom RBAC role.
 + Task 4: Monitor role assignments with the Activity Log.
 
-## Exercise 1: Manage Subscriptions and RBAC
-
-In this exercise you will learn how to organize Azure subscriptions effectively and implement Role-Based Access Control (RBAC) to manage permissions and actions securely.
 
 ### Task 1: Implement Management Groups
 
