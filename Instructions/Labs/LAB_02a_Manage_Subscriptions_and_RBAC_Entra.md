@@ -155,11 +155,13 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. Review the JSON for the *Actions*, *NotActions*, and *AssignableScopes* that are customized in the role.
 
-1. Select **Review + create**, and then select **Create**. Select **OK** when you see the pop up **You have successfully created the custom role "Custom Support Request". It may take the system a few minutes to display your role everywhere**. 
+1. Select **Review + create**, and then select **Create**.  
 
      ![image](./media/10-lab2-12.png) 
 
-    >**Note:** At this point, you have created a custom role and assigned it to the management group. 
+     - Select **OK** when you see the pop up **You have successfully created the custom role "Custom Support Request". It may take the system a few minutes to display your role everywhere**.
+
+1. At this point, you have created a custom role and assigned it to the management group. 
 
 
 ## Task 4: Monitor role assignments with the Activity Log
