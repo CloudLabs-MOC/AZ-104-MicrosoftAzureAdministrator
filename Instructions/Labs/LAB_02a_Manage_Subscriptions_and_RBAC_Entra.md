@@ -210,4 +210,4 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 + Roles are defined in a JSON formatted file and include *Actions*, *NotActions*, and *AssignableScopes*.
 + You can use the Activity Log to monitor role assignments.
 
-### You have successfully completed the lab
+### You have successfully completed the lab. Click on **Next** from the page navigation bar at the end of the lab guide page to proceed to the next page.
