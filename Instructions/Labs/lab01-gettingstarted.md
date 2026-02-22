@@ -25,9 +25,9 @@ Fundamental knowledge in managing identity and access within cloud environment u
 
 In this hands-on lab, the architecture flow includes several essential components.
 
-1. Creating and Configuring Entra ID Users: You will create both a standard user and an invited guest user in Microsoft Entra ID. Each user is configured with essential properties such as job title, department, and usage location to define identity attributes.
+1. **Creating and Configuring Entra ID Users:** You will create both a standard user and an invited guest user in Microsoft Entra ID. Each user is configured with essential properties such as job title, department, and usage location to define identity attributes.
 
-1. Creating Groups with Assigned Membership: You will create a security group named IT Lab Administrators and manually assign members (both the standard and guest users) to it. This group centralizes access and simplifies management within the directory.
+1. **Creating Groups with Assigned Membership:** You will create a security group named IT Lab Administrators and manually assign members (both the standard and guest users) to it. This group centralizes access and simplifies management within the directory.
 
 ## Architecture Diagram
 
@@ -57,13 +57,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![](../Labs/media/2-10-g2.png)
+![Explore Lab Resources](../Labs/media/za8.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![](../Labs/media/2-10-g3.png)
+![Explore Lab Resources](../Labs/media/za9.png)
  
 ## Utilizing the Zoom In/Out Feature
 

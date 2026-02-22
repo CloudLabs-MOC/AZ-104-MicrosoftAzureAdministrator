@@ -11,7 +11,7 @@ Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a
 
 In this hands-on lab, you will implement Azure governance and role-based access control (RBAC) to securely manage and organize resources. You’ll create management groups, assign built-in and custom roles, and apply Azure Policies with tags to enforce compliance and consistency. You’ll also configure resource locks to prevent accidental deletions or modifications and use the Azure Activity Log to monitor role changes. By the end of this lab, you’ll have a complete governance framework that enhances security, control, and operational efficiency across Azure.
 
-## Objective
+## Objectives
 
 By the end of this lab, you will have learned to manage Azure resources using RBAC, enforce governance with resource tagging and locks, and remediate non-compliant resources for optimized management and security.
 
@@ -87,13 +87,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/3-10-g2.png)
+![Explore Lab Resources](../Labs/media/za8.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](../media/3-10-g3.png)
+![Explore Lab Resources](../Labs/media/za9.png)
  
 ## Utilizing the Zoom In/Out Feature
 
