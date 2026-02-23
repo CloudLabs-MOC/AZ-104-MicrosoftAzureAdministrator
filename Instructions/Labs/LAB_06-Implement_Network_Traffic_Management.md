@@ -4,7 +4,7 @@
 
 In this lab, you will learn to configure and manage Azure resources, including Virtual Networks, Load Balancers, Virtual Machines, and Network Security Groups, to create a secure and scalable infrastructure.
   
-## Lab objectives
+## Lab Objectives
 In this lab, you will complete the following tasks:
 + Task 1: Use a template to provision an infrastructure.
 + Task 2: Configure an Azure Load Balancer.
@@ -90,7 +90,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Type | **Public (6)** |
     | Tier | **Regional (7)** |
     
-      ![image](../media/10-10-lab6-11.png)
+      ![image](../Labs/media/r24.png)
 
 1.  On the Frontend IP configuration tab click **+ Add frontend IP configuration (1)** , under **Add frontend IP configuration** window add the following settings and click on **Save**
  
@@ -258,7 +258,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Virtual network | **az104-06-vnet1 (10)** |
     | Subnet | **subnet-appgw (11)** |
 
-     ![image](../media/up10-10-lab6-31.png)
+     ![image](../Labs/media/r25.png)
 
 1. On **Frontends** tab, specify the following settings (leave others with their default values):
 
@@ -394,13 +394,13 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     ![image](../media/10-10-lab6-52.png)
 
-1. In the **Application Gateway** resource, in the **Monitoring (1)** sectionfrom the left navigation pane, select **Backend health (2)**.
+1. In the **Application Gateway** resource, in the **Monitoring (1)** section from the left navigation pane, select **Backend health (2)**.
 
 1. Ensure the servers in the backend pool display **Healthy**.
 
      ![image](../media/10-10-lab6-53.png) 
 
-1. On the **az104-06-appgw5** Application Gateway blade, note the value of the **Frontend public IP address**.
+1. On the **az104-06-appgw5** Application Gateway blade, select **Overview** and note the value of the **Frontend public IP address**.
 
      ![image](../media/appfrntip.png)
 
