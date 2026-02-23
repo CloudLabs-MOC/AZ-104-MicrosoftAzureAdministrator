@@ -10,10 +10,6 @@ In this lab, you will complete the following tasks:
 + Task 2: Configure an Azure Load Balancer.
 + Task 3: Configure an Azure Application Gateway.
 
-## Excercise 1: Implement Traffic Management
-
-In this exercise, you will configure and implement Azure Traffic Manager to manage traffic distribution across multiple Azure resources for high availability and performance.
-
 ## Task 1: Use a template to provision an infrastructure
 
 In this task, you will use a template to deploy one virtual network, one network security group, and two virtual machines.
@@ -157,7 +153,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     
     ![image](../media/10-10-lab6-19.png)
 
-1. Click **create new (1)** under **Health probe**, on the **Add load balancing rules** blade.
+1. Click **create new (1)** under **Health probe**, on the **Add load balancing rules** and then **Save (6)**:
 
     Add a health probe with the following settings:
 
@@ -170,21 +166,25 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
     ![image](../media/10-10-lab6-20.png)
 
-1. Click **Save (6)** and back on the **Add load balancing rules** blade, click **Save**.
+1. Back on the **Add load balancing rules** blade, click **Save**.
 
      ![image](../media/10-10-lab6-21.png)
 
-1. Click **Next: Outbound rules >**, followed by **Next: Tags >**, followed by **Next: Review + create >**. Let validation occur, and then click **Create** to submit your deployment.
+1. Click **Next: Outbound rules >**, followed by **Next: Tags >**, followed by **Next: Review + create >**. 
 
     ![image](../media/10-10-lab6-22.png)
+
+1. Then click **Create** to submit your deployment.    
 
     ![image](../media/10-10-lab6-23.png)
 
     > **Note:** Wait for the Azure load balancer to be provisioned. This should take about 2 minutes.
 
-1. Wait for the load balancing rule to be created, click **Go to resource** and on the **az104-06-lb4** load balancers blade, in the **Settings (1)** section, click **Frontend IP configuration (2)** and note the value of the **Public IP address**.
+1. Wait for the load balancing rule to be created, click **Go to resource**.
 
      ![image](../media/10-10-lab6-24.png)
+
+1. On the **az104-06-lb4** load balancers blade, in the **Settings (1)** section, click **Frontend IP configuration (2)** and note the value of the **Public IP address**.     
 
      ![image](../media/10-10-lab6-25.png)
 
