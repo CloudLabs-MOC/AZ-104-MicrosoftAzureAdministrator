@@ -79,9 +79,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
     ```
 
     >**Note:** In order to identify Azure regions, from the PowerShell session in Cloud Shell, run **(Get-AzLocation).Location** command.
-
-    >**Important:** Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
-   
+  
     >**Note:** If you get a prompt stating **Provided resource group already exists. Are you sure you want to update it?** type N .
 
 1. From the Cloud Shell pane, run the following to create the three virtual networks and deploy virtual machines into them by using the template and parameter files you uploaded:
@@ -180,11 +178,9 @@ In this task, you will configure local and global peering between the virtual ne
       >**Note:** This step establishes two local peerings - one from az104-05-vnet0 to az104-05-vnet1 and the other from az104-05-vnet1 to az104-05-vnet0.
 
       >**Note:** In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
-
-      >**Note:** Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
-  
+ 
     ```powershell
-       $rgName = 'az104-05-rg0-Deployment-id'
+       $rgName = 'az104-05-rg0-<inject key="DeploymentID" enableCopy="false"/>'
     
        $vnet0 = Get-AzVirtualNetwork -Name 'az104-05-vnet0' -ResourceGroupName $rgname
     
@@ -220,12 +216,9 @@ In this task, you will configure local and global peering between the virtual ne
     >**Note:** This step establishes two global peerings - one from az104-05-vnet0 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet0.
 
     >**Note:** In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
-
-    >**Note:** Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
    
-    
    ```powershell
-   $rgName = 'az104-05-rg0-Deployment-id'
+   $rgName = 'az104-05-rg0-<inject key="DeploymentID" enableCopy="false"/>'
 
    $vnet0 = Get-AzVirtualNetwork -Name 'az104-05-vnet0' -ResourceGroupName $rgname
 
@@ -266,11 +259,8 @@ In this task, you will configure local and global peering between the virtual ne
 
     >**Note:** In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
 
-    >**Note:** Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
-    
-
    ```powershell
-   $rgName = 'az104-05-rg0-Deployment-id'
+   $rgName = 'az104-05-rg0-<inject key="DeploymentID" enableCopy="false"/>'
 
    $vnet1 = Get-AzVirtualNetwork -Name 'az104-05-vnet1' -ResourceGroupName $rgname
 
