@@ -4,7 +4,7 @@
  
  In this lab, you will set up and configure a virtual network, create subnets to organize resources, and implement network security through Network Security Groups (NSGs). 
 
-## Lab objectives
+## Lab Objectives
 In this lab, you will complete the following tasks:
 + Task 1: Provision the lab environment.
 + Task 2: Use Network Watcher to test the connection between virtual machines.
@@ -12,10 +12,6 @@ In this lab, you will complete the following tasks:
 + Task 4: Test intersite connectivity.
 + Task 5: Create a custom route.
  
-## Exercise 1: Configure local and global virtual network peering
-
-   Configure local and global virtual network peering to enable secure communication between Azure VNets, both within the same region (local) and across different regions (global).
-
 ### Task 1: Provision the lab environment
 
 In this task, you will deploy three virtual machines, each into a separate virtual network, with two of them in the same Azure region and the third one in another Azure region.
@@ -59,7 +55,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
     ![image](../media/10-10-lab5-3.png)
 
-   >**Note:** Upload the the template and parameters file. You will need to upload each file separately one after the another.
+1. Upload the the **template** and **parameters** file. You will need to upload each file separately one after the another.
 
 1. In the **Open** dialog box, browse to the path **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05 (1)**, select **az104-05-vnetvm-loop-parameters (2)**, and click **Open (3)** to upload the file.
 
@@ -79,7 +75,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
    $location2 = 'Azure_region_2'
 
-   $rgName = 'az104-05-rg0-Deployment-id'
+   $rgName = 'az104-05-rg0-<inject key="DeploymentID" enableCopy="false"/>'
     ```
 
     >**Note:** In order to identify Azure regions, from the PowerShell session in Cloud Shell, run **(Get-AzLocation).Location** command.
