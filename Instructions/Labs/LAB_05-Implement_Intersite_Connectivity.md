@@ -289,7 +289,7 @@ In this task, you will test connectivity between virtual machines on the three v
 
 1. In the Azure portal search bar, type **Virtual machines (1)** and select **Virtual machines (2)** from the search results.
 
-     ![Image](./Images/vm.png)
+     ![Image](./media/r26.png)
 
 1. In the **Compute infrastructure | Virtual machines** blade, select the virtual machine **az104-05-vm0** from the list to open its overview page.
 
@@ -299,9 +299,15 @@ In this task, you will test connectivity between virtual machines on the three v
 
       ![image](../media/10-10-lab5-23.png)
 
-1. On the **Native RDP** page, click **Download RDP file** and open it. When prompted with a security warning, select **Connect** to initiate the Remote Desktop session.  
+1. On the **Native RDP** page, click **Download RDP file** and open it. 
 
      ![image](../media/10-10-lab5-24.png)
+
+1. Select **Keep** for the prompted pop up from top right corner.
+
+1. Select **Open file** to open the RDP file.
+
+1. When prompted with a security warning, select **Connect** to initiate the Remote Desktop session.       
       
      ![image](../media/10-10-lab5-25.png)
 
@@ -309,15 +315,15 @@ In this task, you will test connectivity between virtual machines on the three v
 
      >**Note:** You can ignore any warning prompts when connecting to the target virtual machines and select Keep.
 
-1. When prompted, sign in by using the **Student** username and the password **Pa55w.rd1234**.
+1. When prompted, sign in by using the **Student** as username and provid the Password as **Pa55w.rd1234**.
 
-   >**Note:** You can click on **Yes** in the pop-up that appears.
+1. You can click on **Yes** in the pop-up that appears.
    
    >**Note:** If you get a prompt related to network discovery, click on Yes
 
-1. Within the Remote Desktop session to **az104-05-vm0**, click the **Start (1)** button, right-click **Windows PowerShell (2)**, select **More (3)**, and then choose **Run as administrator (4)**.
+1. Within the Remote Desktop session to **az104-05-vm0**, right click on the **Start (1)** button and then select **Windows PowerShell (Admin) (2)**.
 
-     ![image](../media/10-10-lab5-25.1.png)
+     ![image](../Labs/media/r23.png)
    
 1. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm1** (which has the private IP address of **10.51.0.4**) over TCP port 3389:
 
@@ -349,17 +355,23 @@ In this task, you will test connectivity between virtual machines on the three v
 
     ![image](../media/10-10-lab5-28.png)
 
-1. On the **Native RDP** page, click **Download RDP file** and open it. When prompted with a security warning, select **Connect** to initiate the Remote Desktop session. 
+1. On the **Native RDP** page, click **Download RDP file** and open it.
+
+1. Select **Keep** for the prompted pop up from top right corner.
+
+1. Select **Open file** to open the RDP file.
+
+1. When prompted with a security warning, select **Connect** to initiate the Remote Desktop session. 
 
     >**Note:** This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store, and on Linux computers, you can use an open source RDP client software.
 
     >**Note:** You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in by using the **Student** username and the password **Pa55w.rd1234**.
+1. When prompted, sign in by using the **Student** username and provide the password as **Pa55w.rd1234**.
 
-1. Within the Remote Desktop session to **az104-05-vm0**, click the **Start (1)** button, right-click **Windows PowerShell (2)**, select **More (3)**, and then choose **Run as administrator (4)**.
+1. Within the Remote Desktop session to **az104-05-vm0**, right click on the **Start (1)** button and then select **Windows PowerShell (Admin) (2)**.
 
-     ![image](../media/10-10-lab5-25.1.png)
+     ![image](../Labs/media/r23.png)
 
 1. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**) over TCP port 3389:
 
