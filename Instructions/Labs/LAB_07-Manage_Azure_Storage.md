@@ -5,6 +5,7 @@
 Your organization is currently storing data in on-premises data stores. Most of these files are not accessed frequently. You would like to minimize the cost of storage by placing infrequently accessed files in lower-priced storage tiers. You also plan to explore different protection mechanisms that Azure Storage offers, including network access, authentication, authorization, and replication. Finally, you want to determine to what extent Azure Files is suitable for hosting your on-premises file shares.
 
 ## Lab Objectives
+
 In this lab, you will complete the following tasks:
 + Task 1: Create and configure a storage account. 
 + Task 2: Create and configure secure blob storage.
@@ -364,6 +365,13 @@ In this task, you will create and configure Azure Files shares.
     >**Note:** You should receive a message *not authorized to perform this operation*. You are not connecting from the virtual network. It may take a couple of minutes for this to take effect.
 
      ![image](../media/10-10-lab7-45.png)
+
+### Review
+
+In this lab, you have completed:
+- Created and configured a storage account. 
+- Created and configured secure blob storage.
+- Created and configured secure Azure file storage.     
    
 ## Key takeaways
 
@@ -380,11 +388,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + [Optimize your cost with Azure Blob Storage](https://learn.microsoft.com/training/modules/optimize-your-cost-azure-blob-storage/). Learn how to optimize your cost with Azure Blob Storage.
 + [Control access to Azure Storage with shared access signatures](https://learn.microsoft.com/training/modules/control-access-to-azure-storage-with-sas/). Grant access to data stored in your Azure Storage accounts securely by using shared access signatures.
 
-### Review
-In this lab, you have completed:
-- Create and configure a storage account. 
-- Create and configure secure blob storage.
-- Create and configure secure Azure file storage.
+
 
 
 ### You have successfully completed the lab
