@@ -4,17 +4,16 @@
 
 In this lab, you learn about backup and recovery of Azure virtual machines. You learn to create a Recovery Service vault and a backup policy for Azure virtual machines. You learn about disaster recovery with Azure Site Recovery. 
 
-## Lab objectives
+## Lab Objectives
+
 In this lab, you will complete the following tasks:
+
 + Task 1: Use a template to provision an infrastructure.
 + Task 2: Create and configure a Recovery Services vault.
 + Task 3: Configure Azure virtual machine-level backup.
 + Task 4: Monitor Azure Backup.
 + Task 5: Enable virtual machine replication.  
 
-## Excercise 1: Backup virtual machines
-
-In this exercise, you will  learn how to configure and perform backups for Azure virtual machines using the Recovery Services Vault.
 
 ### Task 1: Provision the lab environment
 
@@ -176,19 +175,21 @@ In this task, you will implement Azure virtual-machine level backup to ensure da
     | Timezone | the name of your local time zone |
     | Retain instant recovery snapshot(s) for | **2** Days(s) **(4)** |
 
-1. Click **OK (5)** to create the policy.
+     - Click **OK (5)** to create the policy.
 
-   ![image](../media/14-10-lab10-21.png)
+       ![image](../media/14-10-lab10-21.png)
   
 1. In the **Virtual Machines** section, select **Add (1)**.
 
-1. On the **Select virtual machines** blade, select **az-104-10-vm0 (2)**, click **OK (3)**, and, back on the **Backup** blade, click **Enable backup**.
+     - On the **Select virtual machines** blade, select **az-104-10-vm0 (2)**, click **OK (3)**.
 
-     ![image](../media/14-10-lab10-23.png)
+       ![image](../media/14-10-lab10-23.png)
      
-     ![image](../media/14-10-lab10-24.png)
+     - Back on the **Backup** blade, click **Enable backup**.
+
+       ![image](../media/14-10-lab10-24.png)
   
-     >**Note:** Wait for the backup to be enabled. This should take about 2 minutes.
+        >**Note:** Wait for the backup to be enabled. This should take about 2 minutes.
 
 1. Once deployment finish click on **Go to Resouces**.
    
@@ -202,9 +203,11 @@ In this task, you will implement Azure virtual-machine level backup to ensure da
 
      ![image](../media/14-10-lab10-27.png)
 
-1. On the **az104-10-vm0** Backup Item blade, click **Backup now**, accept the default value in the **Retain backup Till** drop-down list, and click **OK**.
+1. On the **az104-10-vm0** Backup Item blade, click **Backup now**.
 
      ![image](../media/14-10-lab10-28.png)
+
+1. Accept the default value in the **Retain backup Till** drop-down list, and click **OK**.     
 
      ![image](../media/14-10-lab10-29.png)
 
@@ -220,7 +223,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. On the Storage accounts page, select **+ Create**.
 
-     ![image](../media/14-10-lab10-31.png)
+     ![image](../media/r49.png)
 
 1. Use the following information to define the storage account, click **Next (5)** and navigate to **Data protection** tab.
 
@@ -313,11 +316,11 @@ In this task, you will enable replication for a virtual machine to ensure busine
 
      ![image](../media/up14-10-lab10-42.png)
 
-     >**Note:** Wait for the deployment to complete. The deployment should take a couple of minutes. 
+1. Wait for the deployment to complete. The deployment should take a couple of minutes. 
 
 1. In the Azure portal, search for **Virtual Machine (1)** and select the **Virtual Machine (2)** resource.
 
-     ![Image](./Images/vm.png)
+     ![Image](./media/r36.png)
 
 1. On the **Compute infrastructure | Virtual machines** page, click the **az104-10-vm0** virtual machine.
 
@@ -325,15 +328,15 @@ In this task, you will enable replication for a virtual machine to ensure busine
 
 1. From the left navigation pane,in the **Backup + disaster recovery (1)** blade, select **Disaster recovery (2)**. 
 
-1. On the **Basics** tab, notice the **Target region (3)**.
+     - On the **Basics** tab, notice the **Target region (3)**.
 
-1. Move to the **Advanced settings (4)** tab. Resource selections have been made for you. It is important to review them. 
+     - Move to the **Advanced settings (4)** tab. Resource selections have been made for you. It is important to review them. 
 
-     ![image](../media/up14-10-lab10-45.1.png)
+       ![image](../media/up14-10-lab10-45.1.png)
 
 1. Verify your subscription, vm resource group, virtual network, and availability (take the default) settings.
 
-1. In **Storage settings** select **Show details**.Make sure the following details are given: 
+1. In **Storage settings** select **Show details** and then provide the following details: 
 
     | Setting | Value |
     | ---- | ---- |
@@ -352,13 +355,15 @@ In this task, you will enable replication for a virtual machine to ensure busine
 
     ![image](../media/14-10-lab10-49.png)
    
-1. Select **Review + Start replication** and then **Start replication**.
+1. Select **Review + Start replication**.
 
      ![image](../media/14-10-lab10-50.png)
 
+1. Then **Start replication**.     
+
      ![image](../media/14-10-lab10-51.png)
 
-     >**Note:** Enabling replication will take a 15-20 minutes. Watch the notification messages in the upper right of the portal. While you wait, consider reviewing the self-paced training links at the end of this page.
+     >**Note:** `Enabling replication will take a 15-20 minutes. Watch the notification messages in the upper right of the portal. While you wait, consider reviewing the self-paced training links at the end of this page`.
     
 1. Once the replication is complete, search for and locate your Recovery Services Vault, **az104-10-rsv2**. You may need to **Refresh** the page. 
 
@@ -366,13 +371,13 @@ In this task, you will enable replication for a virtual machine to ensure busine
 
 1. From the left navigation pane, in the **Protected items (1)** section, select **Replicated items (2)**.
 
-1. Check that the virtual machine is showing as healthy for the replication health. Note that the status will show the synchronization (starting at 0%) status and ultimately show **Protected** after the initial synchronization completes.
-
     ![image](../media/14-10-lab10-53.png)
+
+1. Check that the virtual machine is showing as healthy for the replication health. Note that the status will show the synchronization (starting at 0%) status and ultimately show **Protected** after the initial synchronization completes.
 
     ![image](../media/14-10-lab10-54-new.png)
 
-1. Select the virtual machine to view more details.
+1. Select the Virtual machine to view more details.
    
 >**Did you know?** It is a good practice to [test the failover of a protected VM](https://learn.microsoft.com/azure/site-recovery/tutorial-dr-drill-azure#run-a-test-failover-for-a-single-vm).
 
