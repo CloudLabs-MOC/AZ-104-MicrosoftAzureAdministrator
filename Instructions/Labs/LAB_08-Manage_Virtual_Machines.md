@@ -14,9 +14,6 @@ In this lab, you will complete the following tasks:
 + Task 5: Create a virtual machine using Azure PowerShell (optional 1).
 + Task 6: Create a virtual machine using the CLI (optional 2).
 
-## Exercise 1: Manage Virtual Machines
-
-In this exercise, you will manage Virtual Machines in Azure to deploy, configure, and maintain scalable and secure cloud-based infrastructure.
 
 ### Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal 
 
