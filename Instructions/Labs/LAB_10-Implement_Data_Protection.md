@@ -225,7 +225,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
      ![image](../media/r49.png)
 
-1. Use the following information to define the storage account, click **Next (5)** and navigate to **Data protection** tab.
+1. Use the following information to define the storage account, click **Next (5)**.
 
     | Settings | Value |
     | --- | --- | 
@@ -235,6 +235,10 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Region                | **<inject key="Region" enableCopy="false"/> (4)**  |
 
      ![image](../media/up14-10-lab10-32.png)
+
+1. Select **Data protection** tab.     
+
+     ![image](../media/r50.png)
 
 1. On **Data Protection** tab, uncheck the **Enable soft delete for blobs (1)** check box then and select **Review + Create (2)**.
 
