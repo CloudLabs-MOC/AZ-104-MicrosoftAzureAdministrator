@@ -373,11 +373,11 @@ In this task, you will enable replication for a virtual machine to ensure busine
 
      ![image](../media/14-10-lab10-52.png)
 
-1. From the left navigation pane, in the **Protected items (1)** section, select **Replicated items (2)**.
+1. From the left navigation pane, in the **Protected items (1)** section, select **Replicated items (2)**. Check that the virtual machine is showing as **healthy** for the replication health.
 
     ![image](../media/14-10-lab10-53.png)
 
-1. Check that the virtual machine is showing as healthy for the replication health. Note that the status will show the synchronization (starting at 0%) status and ultimately show **Protected** after the initial synchronization completes.
+1. Note that the status will show the synchronization (starting at 0%) status and ultimately show **Protected** after the `initial synchronization completes`.
 
     ![image](../media/14-10-lab10-54-new.png)
 
