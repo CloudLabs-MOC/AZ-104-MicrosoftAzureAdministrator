@@ -4,7 +4,7 @@
 
 This lab focuses on deploying scalable and high-availability applications in Azure using Virtual Machines (VMs) and Virtual Machine Scale Sets (VMSS).
 
-## Lab objectives
+## Lab Objectives
 In this lab, you will complete the following tasks:
 
 + Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal.
@@ -154,6 +154,10 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
     |  Click **Apply (5)** |
 
      ![](../Labs/Images/l8i5.png)
+
+1. Wait for the virtual machine update to complete before proceeding. `It may take around 5-10 mins, please wait.`
+     
+     ![](../Labs/media/r30.png)     
 
 1. After the disk has been created, click **Detach** (if necessary, scroll to the right to view the detach icon), and then click **Apply**.
 
