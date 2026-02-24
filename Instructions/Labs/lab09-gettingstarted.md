@@ -108,13 +108,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/7-10-lab3-2.png)
+![Use the Split Window Feature](../Labs/media/za8.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](../media/7-10-lab3-3.png)
+![Use the Split Window Feature](../Labs/media/za9.png)
  
 ## Utilizing the Zoom In/Out Feature
 
@@ -152,7 +152,7 @@ Click on the **Progress** tab to track your progress in the lab. The percentage 
  
 1. On your virtual machine, click on the Azure Portal icon as shown below:
  
-    ![Launch Azure Portal](../Labs/Images/azure.png)
+    ![Launch Azure Portal](../Labs/media/za1.png)
  
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
