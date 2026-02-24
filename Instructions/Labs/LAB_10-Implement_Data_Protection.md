@@ -8,14 +8,14 @@ In this lab, you learn about backup and recovery of Azure virtual machines. You 
 
 In this lab, you will complete the following tasks:
 
-+ Task 1: Use a template to provision an infrastructure.
-+ Task 2: Create and configure a Recovery Services vault.
-+ Task 3: Configure Azure virtual machine-level backup.
-+ Task 4: Monitor Azure Backup.
-+ Task 5: Enable virtual machine replication.  
++ Task 1: Use a template to provision an infrastructure
++ Task 2: Create and configure a Recovery Services vault
++ Task 3: Configure Azure virtual machine-level backup
++ Task 4: Monitor Azure Backup
++ Task 5: Enable virtual machine replication  
 
 
-### Task 1: Provision the lab environment
+### Task 1: Use a template to provision an infrastructure
 
 In this task, you will deploy two virtual machines that will serve as test environments to explore and evaluate various backup scenarios.
 
@@ -72,7 +72,7 @@ In this task, you will deploy two virtual machines that will serve as test envir
 
      >**Note:** Wait for the template to deploy, then select **Go to resource**. You should have one virtual machine in one virtual network. 
 
-### Task 2: Create a Recovery Services vault
+### Task 2: Create and configure a Recovery Services vault
 
 In this task, you will create a Recovery Services vault, an essential component for managing and safeguarding your backup and disaster recovery needs.
 
@@ -138,7 +138,7 @@ In this task, you will create a Recovery Services vault, an essential component 
 
 <validation step="4a350ebe-5f23-43de-a6f0-6794d3d9e7cd" />
 
-### Task 3: Implement Azure virtual machine-level backup
+### Task 3: Configure Azure virtual machine-level backup
 
 In this task, you will implement Azure virtual-machine level backup to ensure data protection and recovery for your virtual machines.
 
