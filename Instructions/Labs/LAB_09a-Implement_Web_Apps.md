@@ -4,7 +4,7 @@
 
 In this lab, you will learn to create and configure Azure Web Apps to host websites, including setting the runtime stack and application settings. 
 
-## Lab objectives
+## Lab Objectives
 
 In this lab, you will complete the following tasks:
 
@@ -50,18 +50,18 @@ In this task, you will create an Azure Web App, which is a platform-as-a-service
 
     ![image](./media/acs-4.png)
 
-     - Select **Premium V4 P1V4 (1)**
+     - Select **Premium V3 P1V3 (1)**
  and **Select (2)** 
 
-       ![image](./media/acs2.png)
+       ![image](./media/r39.png)
 
      - Click **Review + create**.
 
-       ![image](./media/acs-2.png)     
+       ![image](./media/r41.png)     
    
 1. On the **Review + create** tab of the **Create Web App** blade, ensure that the validation passed and click **Create**.
 
-     ![image](../media/upacs4.png)
+     ![image](../media/r42.png)
 
      >**Note:** Wait until the web app is created before you proceed to the next task. This should take about a minute.
 
@@ -81,7 +81,9 @@ In this task, you will create a staging deployment slot in Azure Web Apps, which
 
     >**Note:** While navigating to the link if you get an error,kindly try refreshing the browser window.
  
-    >**Note:** Please copy the URL and save it in Notepad. You may need this link for Task 5.
+    >**Note:** **Please copy the URL and save it in Notepad**. You may need this link for Task 5.
+
+     ![image](../media/r-44.png)    
 
 1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section in the left navigation pane of the web app blade, click **Deployment slots (1)**.
 
@@ -146,7 +148,7 @@ In this task, you will configure Web App deployment settings. Deployment setting
 
 In this task, you will swap the staging slot with the production slot.
 
-1. Navigate to the **App Service**, then proceed to select the web app you previously created, directing you to the blade showcasing the production slot of the web application.
+1. Navigate back to the **Azure Portal**.
 
 1. In the **Deployment** section, click **Deployment slots (1)** and then, click **Swap (2)** toolbar icon.
 
@@ -157,6 +159,8 @@ In this task, you will swap the staging slot with the production slot.
     >**Note:** Kindly Wait till Swap successfully complete.
 
 1. Once you get **Successfully completed swap between slot 'staging' and slot 'production'** click on **Close**.
+
+    ![image](../media/r46.png)
    
 1. Click **Overview** on the production slot blade of the web app and then click the **URL** link to display the web site home page in a new browser tab.
 
@@ -174,15 +178,15 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
     >**Note:** Ensure you are working on the production slot not the staging slot.  
 
-1. From the **Scaling** section, select **Automatic (3)**. Notice the **Rules Based** option. Rules based scaling can be configured for different app metrics. 
+     - From the **Scaling** section, select **Automatic (3)**. Notice the **Rules Based** option. Rules based scaling can be configured for different app metrics. 
 
-1. In the **Maximum burst** field, select **2 (4)**.
+     - In the **Maximum burst** field, select **2 (4)**.
 
-1. Select **Save (5)**.
+     - Select **Save (5)**.
 
-    ![image](../media/14-10-lab9-20.png)
+       ![image](../media/14-10-lab9-20.png)
 
-    >**Note:** Please disregard any scale-out errors and proceed with the subsequent steps.
+        >**Note:** Please disregard any scale-out errors and proceed with the subsequent steps.
    
 1. Select **Diagnose and solve problems (1)** (left pane) and in the **Load Test your App** box, select **Create Load Test (2)**.
 
@@ -225,7 +229,17 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
     >**Note:** It may take a couple of minutes to create the test. 
 
-1. Review the test results including **Virtual users**, **Response time**, and **Requests/sec**.
+1. Select **Go to resources**.
+
+1. Select **Test (1)** and then the name of the test **(2)**.
+
+    ![image](../media/r47.png)
+
+1. Select the Test run.
+
+    ![image](../media/r48.png)
+
+1. It may take a couple of minutes to process. Once it is done, review the test results including **Virtual users**, **Response time**, and **Requests/sec**.
 
      ![image](../media/14-10-lab9-29.png)
 
