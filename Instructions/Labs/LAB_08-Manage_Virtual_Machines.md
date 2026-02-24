@@ -480,11 +480,16 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
     -Image 'Win2019Datacenter' `
     -Zone '1' `
     -Size 'Standard_D2s_v3' ` 
+    -Credential (Get-Credential)
     ```
 
     ![image](../media/13-10-lab8-42.png)
 
     >**Note:** When prompted, please provide a Username as **Student** and Password to create the new VM.
+
+1. Wait for the command to complete.
+
+    ![image](../media/r51.png)
 
 1. Once the command completes, use **Get-AzVM** to list the virtual machines in your resource group.
 
@@ -532,7 +537,9 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
 
      ![image](../media/13-10-lab8-47-new.png)
 
-     >**Note:** Give Admin password as  **Password.1!!** and Password will be not visible
+     >**Note:** Give Admin password as  **Password.1!!** and press `Enter` in the keyboard and Password will be not visible.
+
+1. Wait for the command to complete.     
    
 1. Once the command completes, use **az vm show** to verify your machine was created.
 
