@@ -385,9 +385,11 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
     | Cool down (minutes) | **5 (6)** |
     | Percentage | **50 (7)** |
 
-    ![image](../media/13-10-lab8-37.1.png)
+    - Click on **Add (8)** to save the rule.
 
-1. Click on **Add (8)** to save the rule.
+      ![image](../media/13-10-lab8-37.1.png)
+
+
 
 ### Scale in rule
 
