@@ -432,6 +432,8 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
 
 1. On the **vmss1** page, select **Instances**. This is where you would monitor the number of virtual machine instances.
 
+    ![image](../Labs/media/r34.png)
+
     >**Note:** If you are interested in using Azure PowerShell for virtual machine creation, try Task 5. If you are interested in using the CLI to create virtual machines, try Task 6.
 
 ## Task 5: Create a virtual machine using Azure PowerShell (option 1)
