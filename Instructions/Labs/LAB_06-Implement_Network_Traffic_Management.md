@@ -388,7 +388,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
      ![image](../media/10-10-lab6-51.png)
 
-     > **Note:** Wait for the Application Gateway instance to be created. This might take about 8 minutes.
+     > **Note:** Wait for the Application Gateway instance to be created. This might take about `10-15 minutes`.
 
 1. In the Azure portal, search and select **Application Gateways** and, on the **Load balancing and content delivery | Application gateway** blade, click **az104-06-appgw5**.
 
