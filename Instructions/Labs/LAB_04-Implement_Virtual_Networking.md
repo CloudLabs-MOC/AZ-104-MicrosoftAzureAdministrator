@@ -1,6 +1,6 @@
 # Lab - Implement Virtual Networking
 
-## Lab overview
+## Lab Overview
 
 This lab focuses on applying security best practices while demonstrating advanced Azure networking concepts.You'll create virtual networks and subnets in Azure to establish a secure, scalable networking environment. You'll implement Application Security Groups (ASGs) and Network Security Groups (NSGs) to manage and enforce access controls, and configure both public and private DNS zones for effective name resolution. 
 
