@@ -4,7 +4,7 @@ Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a
 
 # Lab - Implement Traffic Management
 
-### Overall Estimated Duration: 90 Minutes
+### Overall Estimated Duration: 75 Minutes
 
 ## Overview
 
