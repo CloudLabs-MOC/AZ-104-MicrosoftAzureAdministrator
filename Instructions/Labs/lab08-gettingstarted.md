@@ -4,7 +4,7 @@ Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a
 
 # Lab - Manage Virtual Machines
 
-### Overall Estimated Duration: 50 Minutes
+### Overall Estimated Duration: 75 Minutes
 
 ## Overview
 
