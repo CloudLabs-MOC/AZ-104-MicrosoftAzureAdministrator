@@ -4,7 +4,7 @@
 
 In this lab, you will learn how to implement and deploy Azure Container Apps (ACA), a serverless platform designed for running containerized applications with minimal infrastructure management. ACA abstracts the complexities of setting up and managing the underlying Kubernetes clusters, allowing you to focus purely on deploying and running containers in the cloud.
 
-## Lab objectives
+## Lab Objectives
 
 - Task 1: Create and configure an Azure Container App and environment.
 - Task 2: Test and verify deployment of the Azure Container App.
