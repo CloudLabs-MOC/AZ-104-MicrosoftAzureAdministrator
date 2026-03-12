@@ -1,8 +1,6 @@
 
 # AZ-104: Microsoft Azure Administrator Workshop
 
-Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
-
 # Getting Started with the Lab
  
 Welcome to your AZ-104: Microsoft Azure Administrator  workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience:
