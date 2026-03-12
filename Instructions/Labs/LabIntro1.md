@@ -49,7 +49,7 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
 
 2. Click **OK** to extend your lab duration.
  
-   ![Manage Your Virtual Machine](../Labs/Images/gext2.png)
+    ![Manage Your Virtual Machine](../Labs/Images/gext2.png)
 
 3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
  
@@ -61,19 +61,19 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
  
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
       ![](../Labs/media/2-10-g6.png)
  
 3. Next, provide your password:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
       ![](../media/7-10-lab3-5.png)
-      
-1. If prompted to **Stay signed in**, you can click **No**.
  
-1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
+4. If prompted to **Stay signed in**, you can click **No**.
+ 
+5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
 
 ## Support Contact
 

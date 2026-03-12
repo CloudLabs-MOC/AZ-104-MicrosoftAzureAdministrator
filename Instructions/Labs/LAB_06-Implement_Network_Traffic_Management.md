@@ -89,8 +89,8 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | SKU | **Standard (5)** |
     | Type | **Public (6)** |
     | Tier | **Regional (7)** |
-    
-      ![image](../Labs/media/r24.png)
+
+    ![image](../Labs/media/r24.png)
 
 1.  On the Frontend IP configuration tab click **+ Add frontend IP configuration (1)** , under **Add frontend IP configuration** window add the following settings and click on **Save**
  
@@ -125,8 +125,8 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Name | **az104-06-lb4-be1 (1)** |
     | Virtual network | **az104-06-vnet1 (2)** |
     | Backend Pool Configuration | **NIC (3)** |
-    
-    ![image](../media/10-10-lab6-16.png)
+
+     ![image](../media/10-10-lab6-16.png)
 
 1. Click **+ Add (4)**, under **IP Configurations** on the **Add backend pool** blade, select all the virtual machines **(5)** on the **Add IP configurations to backend pool** window and click on **Add (6)** and then click **Save** to save the IP configurations to the backend pool.
 
