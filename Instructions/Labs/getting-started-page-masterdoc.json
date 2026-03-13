@@ -1,0 +1,12 @@
+[
+  {
+    "Name": "AZ-104:DEMOVM",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/refs/heads/OCT-2025/Instructions/Labs/common-getting-started-page.md",
+        "Order": 1
+      }
+    ]
+  }
+]
