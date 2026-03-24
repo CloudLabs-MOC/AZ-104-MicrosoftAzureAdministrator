@@ -12,7 +12,6 @@
 -  Task 4: Deploy a template with the CLI. 
 -  Task 5: Deploy a resource by using Azure Bicep.
 
-
 ### Task 1: Create an Azure Resource Manager template
 
 In this task, we will create a managed disk in the Azure portal. Managed disks are storage designed to be used with virtual machines. Once the disk is deployed you will export a template that you can use in other deployments.
@@ -95,7 +94,7 @@ In this task, you will utilize the previously downloaded Azure Resource Manager 
 
 1.  In the **Open** dialog box, navigate to **Downloads (1)** and select the **template (2)** file and click **Open (3)**.
 
-    ![image](../Labs/media/r19.png)
+    ![image](../media/lab3a-p2t2p1.png)
 
 1. Within the editor pane, make these changes.
 
@@ -226,10 +225,10 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 1. Confirm the disk was created.
 
    ```powershell
-   Get-AzDisk | ft
+   Get-AzDisk | ft Name,ResourceGroupName,Location,DiskSizeGb,ProvisioningState
    ```
 
-   ![image](../media/7-10-lab3-35.png)
+   ![image](../media/lab3a-p2t2p2.png)
 
 ## Task 4: Deploy a template with the CLI 
 
