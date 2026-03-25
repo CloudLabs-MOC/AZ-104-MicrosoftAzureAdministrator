@@ -13,9 +13,13 @@ In this lab, you will complete the following tasks:
 
 ## Task 1:  Create a core services virtual machine and virtual network
 
-1. Search for and select `Virtual Machines`.
+1. From the Azure Portal, search for **Virtual Machines (1)** and select **Virtual Machines (2)**.
 
-1. From the virtual machines page, select **Create** then select **Virtual machine**.
+    ![image](./media/h1.png)
+
+1. From the virtual machines page, select **Create (1)** then select **Virtual machine (2)**.
+
+    ![image](./media/h2.png)
 
 1. On the Basics tab, use the following information to complete the form, and then select **Next : Disks >**. For any setting not specified, leave the default value.
  
