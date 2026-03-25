@@ -470,7 +470,7 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
 
      ![image](../media/13-10-lab8-41.png)
 
-1. Run the following command to create a virtual machine. When prompted, provide a username and password for the VM. While you wait check out the [New-AzVM](https://learn.microsoft.com/powershell/module/az.compute/new-azvm?view=azps-11.1.0) command reference for all the parameters associated with creating a virtual machine.
+1. Run the following command to create a virtual machine. When prompted, provide a username and password to create the local administrator account on the VM. While you wait check out the [New-AzVM](https://learn.microsoft.com/powershell/module/az.compute/new-azvm?view=azps-11.1.0) command reference for all the parameters associated with creating a virtual machine.
 
     ```powershell
     New-AzVm `
@@ -529,7 +529,7 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
 
     ![image](../Labs/media/r38.png)
 
-1. Run the following command to create a virtual machine. When prompted, provide a username and password for the VM. While you wait check out the [az vm create](https://learn.microsoft.com/cli/azure/vm?view=azure-cli-latest#az-vm-create) command reference for all the parameters associated with creating a virtual machine.
+1. Run the following command to create a virtual machine. While you wait check out the [az vm create](https://learn.microsoft.com/cli/azure/vm?view=azure-cli-latest#az-vm-create) command reference for all the parameters associated with creating a virtual machine.
 
     ```sh
     az vm create --name myCLIVM --resource-group az104-08-rg01 --image Win2019Datacenter --admin-username localadmin --generate-ssh-keys
