@@ -21,7 +21,7 @@ In this lab, you will complete the following tasks:
 
     ![image](./media/h2.png)
 
-1. On the Basics tab, use the following information to complete the form, and then select **Next : Disks >**. For any setting not specified, leave the default value.
+1. On the Basics tab, use the following information to complete the form, and then select **Next : Disks > (13)**. For any setting not specified, leave the default value.
  
     | Setting | Value | 
     | --- | --- |
@@ -35,27 +35,36 @@ In this lab, you will complete the following tasks:
     | Size | **Standard_D2s_v3 (8)** |
     | Username | `azureuser` **(9)** | 
     | Password | **Pa55w.rd1234 (10)** |
-    | Confirm Password | **Pa55w.rd1234 (10)** |    
-    | Public inbound ports | **None (11)** |
+    | Confirm Password | **Pa55w.rd1234 (11)** |    
+    | Public inbound ports | **None (12)** |
+
+    ![image](./media/h3.png)
+    ![image](./media/h4.png)        
 
 1. On the **Disks** tab take the defaults and then select **Next : Networking >**.
 
 1. On the **Networking** tab, for Virtual network, select **Create new**.
 
-1. Use the following information to configure the virtual network, and then select **OK**. If necessary, remove or replace the existing information.
+    ![image](./media/h5.png) 
+
+1. Use the following information to configure the virtual network, and then select **OK (5)**. If necessary, remove or replace the existing information.
 
     | Setting | Value | 
     | --- | --- |
-    | Name | `CoreServicesVnet` (Create or edit) |
-    | Address range | `10.0.0.0/16`  |
-    | Subnet Name | `Core` | 
-    | Subnet address range | `10.0.0.0/24` |
+    | Name | `CoreServicesVnet` (Create or edit) **(1)** |
+    | Address range | `10.0.0.0/16` **(2)** |
+    | Subnet Name | `Core` **(3)** (Edit the **Default**) | 
+    | Subnet address range | `10.0.0.0/24` **(4)** |
 
-1. Select the **Monitoring** tab. For Boot diagnostics, select **Disable**.
+    ![image](./media/h8.png)     
 
-1. Select **Review + create**, and then select **Create**.
+1. Select the **Monitoring (1)** tab. For Boot diagnostics, select **Disable (2)** and then select **Review + create (3)**.
 
-1. You do not need to wait for the resources to be created. Continue on to the next task.
+    ![image](./media/h7.png) 
+
+1. Then select **Create**.
+
+1. **You do not need to wait for the resources to be created. Continue on to the next task.**
 
     >**Note:** Did you notice in this task you created the virtual network as you created the virtual machine? You could also create the virtual network infrastructure then add the virtual machines. 
 
@@ -63,39 +72,55 @@ In this lab, you will complete the following tasks:
 
 In this task, you create a manufacturing services virtual network with a virtual machine. 
 
-1. From the Azure portal, search for and navigate to **Virtual Machines**.
+1. From the Azure Portal, search for **Virtual Machines (1)** and select **Virtual Machines (2)**.
 
-1. From the virtual machines page, select **Create** then select **Virtual machine**.
+    ![image](./media/h1.png)
 
-1. On the Basics tab, use the following information to complete the form, and then select **Next : Disks >**. For any setting not specified, leave the default value.
+1. From the virtual machines page, select **Create (1)** then select **Virtual machine (2)**.
+
+    ![image](./media/h2.png)
+
+1. On the Basics tab, use the following information to complete the form, and then select **Next : Disks > (13)**. For any setting not specified, leave the default value.
  
     | Setting | Value | 
     | --- | --- |
-    | Subscription |  *your subscription* |
-    | Resource group |  `az104-rg5` |
-    | Virtual machine name |    `ManufacturingVM` |
-    | Region | **(US) East US** |
-    | Security type | **Standard** |
-    | Availability options | No infrastructure redundancy required |
-    | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2** |
-    | Size | **Standard_D2s_v3** | 
-    | Username | `localadmin` | 
-    | Password | **Provide a complex password** |
-    | Public inbound ports | **None** |
+    | Subscription |  **Leave the default Subscription (1)** |
+    | Resource group |  **az104-05-rg0-<inject key="DeploymentID" enableCopy="false" /> (2)** |
+    | Virtual machine name |    **ManufacturingVM<inject key="DeploymentID" enableCopy="false" /> (3)** |
+    | Region | **<inject key="DeploymentID" enableCopy="false" /> (4)** |
+    | Availability options | **No infrastructure redundancy required (5)** |
+    | Security type | **Standard (6)** |
+    | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2 (7)** (notice your other choices) |
+    | Size | **Standard_D2s_v3 (8)** |
+    | Username | `azureuser` **(9)** | 
+    | Password | **Pa55w.rd1234 (10)** |
+    | Confirm Password | **Pa55w.rd1234 (11)** |    
+    | Public inbound ports | **None (12)** |
+
+    ![image](./media/h9.png)
+    ![image](./media/h4.png) 
 
 1. On the **Disks** tab take the defaults and then select **Next : Networking >**.
 
 1. On the Networking tab, for Virtual network, select **Create new**.
 
-1. Use the following information to configure the virtual network, and then select **OK**.  If necessary, remove or replace the existing address range.
+    ![image](./media/h10.png)
+
+1. Use the following information to configure the virtual network, and then select **OK (5)**.  If necessary, remove or replace the existing address range.
 
     | Setting | Value | 
     | --- | --- |
-    | Name | `ManufacturingVnet` |
-    | Address range | `172.16.0.0/16`  |
-    | Subnet Name | `Manufacturing` |
-    | Subnet address range | `172.16.0.0/24` |
+    | Name | `ManufacturingVnet` **(1)** |
+    | Address range | `172.16.0.0/16` **(2)** |
+    | Subnet Name | `Manufacturing` **(3)** |
+    | Subnet address range | `172.16.0.0/24` **(4)** |
 
-1. Select the **Monitoring** tab. For Boot Diagnostics, select **Disable**.
+    ![image](./media/h11.png)    
 
-1. Select **Review + create**, and then select **Create**.
+1. Select the **Monitoring** tab. For Boot Diagnostics, select **Disable** and then elect **Review + create**.
+
+    ![image](./media/h7.png) 
+
+1. Then select **Create**.
+
+1. Wait for the resources to be created, it may take some time to create.
