@@ -253,4 +253,83 @@ In this task, you retest the connection between the virtual machines in differen
     ![image](./media/h31.png)
 
 
+## Task 6: Create a custom route 
+
+In this task, you want to control network traffic between the perimeter subnet and the internal core services subnet. A virtual network appliance will be installed in the perimeter subnet and all traffic should be routed there. 
+
+1. In the Azure portal, search for **Virtual network (1)** and then select **Virtual network (2)**.
+
+    ![image](./media/h17.png)
+
+1. Select the `CoreServicesVnet` virtual network.
+
+    ![image](./media/h18.png)
+
+1. Under **Settings (1)**, select **Subnets (2)** and then **+ Subnet (3)**.
+
+    ![image](./media/h32.png)
+
+1. Be sure to select **Add (4)** to save your changes. 
+
+    | Setting | Value | 
+    | --- | --- |
+    | Name | `perimeter` **(1)** |
+    | Starting address | `10.0.1.0` **(2)** |
+    | Size | `24` **(3)** |    
+
+    ![image](./media/h33.png)
+   
+1. In the Azure portal, search for **Route tables (1)** and select `Route tables` **(2)**.
+
+    ![image](./media/h34.png)
+
+1. Select **+ Create**.
+
+1. Enter the following details, select **Review + create (6)**:
+
+    | Setting | Value | 
+    | --- | --- |
+    | Subscription | your subscription |
+    | Resource group **(1)** | **az104-05-rg0-<inject key="DeploymentID" enableCopy="false" /> (2)**  |
+    | Region | **<inject key="DeploymentID" enableCopy="false" /> (3)** |
+    | Name | **rt-CoreServices<inject key="DeploymentID" enableCopy="false" /> (4)** |
+    | Propagate gateway routes | **No (5)** |
+
+    ![image](./media/h35.png)    
+
+1. Then select **Create**.     
+
+1. After the route table deploys, select **Go to resources**.
+
+    ![image](./media/h36.png) 
+   
+1. Select **Routes (1)** and then **+ Add (2)**.
+
+    ![image](./media/h37.png) 
+
+1. Create a route from a future Network Virtual Appliance (NVA) to the CoreServices virtual network. 
+
+    | Setting | Value | 
+    | --- | --- |
+    | Route name | `PerimetertoCore` **(1)** |
+    | Destination type | **IP Addresses (2)** |
+    | Destination IP addresses | `10.0.0.0/16` **(3)** (core services virtual network) |
+    | Next hop type | **Virtual appliance (4)** (notice your other choices) |
+    | Next hop address | `10.0.1.7` **(5)** (future NVA) |
+
+    - Select **Add (6)**
+
+    ![image](./media/h38.png) 
+
+1. The last thing to do is associate the route with the subnet. Select **Subnets (1)** and then **+ Associate (2)**. Complete the configuration.
+
+    | Setting | Value | 
+    | --- | --- |
+    | Virtual network | **CoreServicesVnet (az104-05-rg0-<inject key="DeploymentID" enableCopy="false" />) (3)** |
+    | Subnet | **Core (4)** |  
     
+    - Select **OK (5)**
+
+      ![image](./media/h39.png)       
+
+       >**Note**: You have created a user defined route to direct traffic from the DMZ to the new NVA.  
