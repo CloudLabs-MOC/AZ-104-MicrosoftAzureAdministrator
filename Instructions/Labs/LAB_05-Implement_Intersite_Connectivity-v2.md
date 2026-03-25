@@ -158,7 +158,7 @@ In this task, you verify that resources in peered virtual networks can communica
 
     - Select **Run diagnostic tests (10)**
 
-    ![Azure Portal showing Connection Troubleshoot settings.](./media/h15.png)
+      ![Azure Portal showing Connection Troubleshoot settings.](./media/h15.png)
 
 1. It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected.
 
