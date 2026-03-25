@@ -124,3 +124,44 @@ In this task, you create a manufacturing services virtual network with a virtual
 1. Then select **Create**.
 
 1. Wait for the resources to be created, it may take some time to create.
+
+1. Once the resource is created, navigate to **Virtual Machines** and ensure that both virtual machines are successfully created and in the` Running` state.
+
+    ![image](./media/h12.png)
+
+## Task 3: Use Network Watcher to test the connection between virtual machines 
+
+
+In this task, you verify that resources in peered virtual networks can communicate with each other. Network Watcher will be used to test the connection. Before continuing, ensure both virtual machines have been deployed and are running. 
+
+1. From the Azure portal, search for **Network Watcher (1)** and select `Network Watcher` **(2)**.
+
+    ![image](./media/h13.png)
+
+1. From Network Watcher, in the **Network diagnostic tools (1)** menu, select **Connection troubleshoot (2)**.
+
+    ![image](./media/h14.png)
+
+1. Use the following information to complete the fields on the **Connection troubleshoot** page.
+
+    | Field | Value | 
+    | --- | --- |
+    | Source type           | **Virtual machine**   |
+    | Virtual machine       | **CoreServicesVM**    | 
+    | Destination type      | **Select a virtual machine**   |
+    | Virtual machine       | **ManufacturingVM**   | 
+    | Preferred IP Version  | **Both**              | 
+    | Protocol              | **TCP**               |
+    | Destination port      | `3389`                |  
+    | Source port           | *Blank*         |
+    | Diagnostic tests      | *Defaults*      |
+
+    ![Azure Portal showing Connection Troubleshoot settings.](../media/az104-lab05-connection-troubleshoot.png)
+
+1. Select **Run diagnostic tests**.
+
+    >**Note**: It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected. Notice the **Connectivity test** shows **Unreachable**. This makes sense because the virtual machines are in different virtual networks. 
+
+     
+
+
