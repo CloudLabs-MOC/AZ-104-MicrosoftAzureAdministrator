@@ -167,5 +167,48 @@ In this task, you verify that resources in peered virtual networks can communica
     ![image](./media/h16.png)
 
      
+## Task 4: Configure virtual network peerings between virtual networks
 
+In this task, you create a virtual network peering to enable communications between resources in the virtual networks. 
+
+1. In the Azure portal, search for **Virtual network (1)** and then select **Virtual network (2)**.
+
+    ![image](./media/h17.png)
+
+1. Select the `CoreServicesVnet` virtual network.
+
+    ![image](./media/h18.png)
+
+1. In CoreServicesVnet, under **Settings**, select **Peerings**.
+
+1. On CoreServicesVnet, under Peerings, select **+ Add**.
+
+    ![image](./media/h19.png)
+
+1. Add the following details, if not specified, take the default and then click **Add (8)**: 
+
+    | **Parameter**                                    | **Value**                             |
+    | --------------------------------------------- | ------------------------------------- |
+    | Peering link name                             | `ManufacturingVnet-to-CoreServicesVnet` **(1)** |
+    | Virtual network    | **ManufacturingVnet (az104-05-rg0-<inject key="DeploymentID" enableCopy="false" />) (2)**  |
+    | Allow 'ManufacturingVnet' to access 'CoreServicesVnet'  | **selected (default) (3)** |
+    | Allow 'ManufacturingVnet' to receive forwarded traffic from 'CoreServicesVnet' | **selected (4)**  |    
+    | Peering link name                             | `CoreServicesVnet-to-ManufacturingVnet` **(5)** |
+    | Allow 'CoreServicesVnet' to access 'ManufacturingVnet'            | **selected (default) (6)** |
+    | Allow 'CoreServicesVnet' to receive forwarded traffic from 'ManufacturingVnet' | **selected (7)** |
+
+    ![image](./media/h20.png)
+    ![image](./media/h21.png)        
+
+1. In CoreServicesVnet, under Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed. Refresh the page to ensure the **Peering status** is **Connected**.
+
+    ![image](./media/h22.png)
+
+1. Switch to the **ManufacturingVnet**.
+
+    ![image](./media/h23.png)
+
+1. Select **Peerings** under Settings. Verify **ManufacturingVnet-to-CoreServicesVnet** peering is listed. Ensure the **Peering status** is **Connected**. You may need to **Refresh** the page. 
+
+    ![image](./media/h24.png)
 
