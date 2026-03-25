@@ -290,7 +290,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 
      ![image](../media/7-10-lab4-32.png)
 
-1. On the **Overview** blade  select **Recordsets** and notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step. 
+1. On the **Overview** blade  select **Recordsets** and notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step for the nslookup command below.
 
      ![image](../media/7-10-lab4-33-new.png)
 
