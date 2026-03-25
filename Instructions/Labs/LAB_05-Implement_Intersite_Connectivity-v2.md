@@ -1,8 +1,12 @@
 # Lab 05: Implement Intersite Connectivity
 
-## Lab Objectives
-In this lab, you will complete the following tasks:
+## Lab Overview
 
+In this lab you explore communication between virtual networks. You implement virtual network peering and test connections. You will also create a custom route. 
+
+## Lab Objectives
+
+In this lab, you will complete the following tasks:
 
 + Task 1:  Create a core services virtual machine and virtual network
 + Task 2: Create a virtual machine in a different virtual network
