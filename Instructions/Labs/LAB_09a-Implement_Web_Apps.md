@@ -1,4 +1,4 @@
-# Lab : Implement Web Apps, Container Instances and Container Apps
+# Lab : Implement Web Apps
 
 ## Lab Overview
 
