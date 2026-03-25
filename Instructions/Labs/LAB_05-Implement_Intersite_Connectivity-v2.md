@@ -146,21 +146,25 @@ In this task, you verify that resources in peered virtual networks can communica
 
     | Field | Value | 
     | --- | --- |
-    | Source type           | **Virtual machine**   |
-    | Virtual machine       | **CoreServicesVM**    | 
-    | Destination type      | **Select a virtual machine**   |
-    | Virtual machine       | **ManufacturingVM**   | 
-    | Preferred IP Version  | **Both**              | 
-    | Protocol              | **TCP**               |
-    | Destination port      | `3389`                |  
-    | Source port           | *Blank*         |
-    | Diagnostic tests      | *Defaults*      |
+    | Source type           | **Virtual machine (1)**   |
+    | Virtual machine       | **CoreServicesVM<inject key="DeploymentID" enableCopy="false" /> (2)**    | 
+    | Destination type      | **Select a virtual machine (3)**   |
+    | Virtual machine       | **ManufacturingVM<inject key="DeploymentID" enableCopy="false" /> (4)**   | 
+    | Preferred IP Version  | **Both (5)**              | 
+    | Protocol              | **TCP (6)**               |
+    | Destination port      | `3389` **(7)**               |  
+    | Source port           | *Blank*   **(8)**      |
+    | Diagnostic tests      | *Defaults*  **(9)**    |
 
-    ![Azure Portal showing Connection Troubleshoot settings.](../media/az104-lab05-connection-troubleshoot.png)
+    - Select **Run diagnostic tests (10)**
 
-1. Select **Run diagnostic tests**.
+    ![Azure Portal showing Connection Troubleshoot settings.](./media/h15.png)
 
-    >**Note**: It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected. Notice the **Connectivity test** shows **Unreachable**. This makes sense because the virtual machines are in different virtual networks. 
+1. It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected.
+
+1. Notice the **Connectivity test** shows **Unreachable**. This makes sense because the virtual machines are in different virtual networks. 
+
+    ![image](./media/h16.png)
 
      
 
