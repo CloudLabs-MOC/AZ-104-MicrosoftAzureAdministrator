@@ -212,3 +212,45 @@ In this task, you create a virtual network peering to enable communications betw
 
     ![image](./media/h24.png)
 
+## Task 5: Use Azure PowerShell to test the connection between virtual machines
+
+In this task, you retest the connection between the virtual machines in different virtual networks. 
+
+### Verify the private IP address of the CoreServicesVM
+
+1. From the Azure portal, search for and select the **CoreServicesVM<inject key="DeploymentID" enableCopy="false" />** virtual machine.
+
+    ![image](./media/h25.png)
+
+1. On the **Overview** blade, in the **Networking** section, select **Network settings (1)** and then record the **Private IP address (2)** of the machine. You need this information to test the connection.
+
+    ![image](./media/h26.png)
+   
+     >**Did you know?** There are many ways to check connections. In this task, you use **Run command**. You could also continue to use Network Watcher. Or you could use a [Remote Desktop Connection](https://learn.microsoft.com/azure/virtual-machines/windows/connect-rdp#connect-to-the-virtual-machine) to the access the virtual machine. Once connected, use **test-connection**. As you have time, give RDP a try. 
+
+1. To Test the connection to the CoreServicesVM from the **ManufacturingVM**.Switch to the `ManufacturingVM` virtual machine.
+
+    ![image](./media/h27.png)
+
+1. In the **Operations (1)** blade, select the **Run command (2)** blade and select **RunPowerShellScript (3)**.
+
+    ![image](./media/h28.png)
+
+1. Run the **Test-NetConnection** command. Be sure to use the private IP address of the **CoreServicesVM**. Replace `<CoreServicesVM private IP address>` with the private IP address of the **CoreServicesVM** that you have copied in the previous step. 
+
+    ```Powershell
+    Test-NetConnection <CoreServicesVM private IP address> -port 3389
+    ```
+
+    ![image](./media/h29.png)
+
+1. It may take a couple of minutes for the script to time out. The top of the page shows an informational message **Script execution in progress...**.
+
+    ![image](./media/h30.png)
+   
+1. The test connection should succeed because peering has been configured. Your computer name and remote address in this graphic may be different. 
+   
+    ![image](./media/h31.png)
+
+
+    
