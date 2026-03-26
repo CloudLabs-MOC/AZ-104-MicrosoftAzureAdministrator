@@ -40,7 +40,7 @@ In this hands-on lab, the architecture flow includes several essential component
 
 ## Architecture diagram
 
- ![image](../media/lab05.png)
+ ![image](../media/g1.png)
 
 ## Explanation of Components
 
