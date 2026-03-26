@@ -72,7 +72,12 @@ In this task, you create a core services virtual network with a virtual machine.
 
 1. **You do not need to wait for the resources to be created. Continue on to the next task.**
 
-    >**Note:** Did you notice in this task you created the virtual network as you created the virtual machine? You could also create the virtual network infrastructure then add the virtual machines. 
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
+    
+    <validation step="09f1095d-1edd-426d-bc09-7561f935d043" />
 
 ## Task 2: Create a virtual machine in a different virtual network
 
@@ -135,8 +140,14 @@ In this task, you create a manufacturing services virtual network with a virtual
 
     ![image](./media/h12.png)
 
-## Task 3: Use Network Watcher to test the connection between virtual machines 
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
+    
+    <validation step="09364bbd-444c-448b-b0c5-6a64024f1644" />   
 
+## Task 3: Use Network Watcher to test the connection between virtual machines 
 
 In this task, you verify that resources in peered virtual networks can communicate with each other. Network Watcher will be used to test the connection. Before continuing, ensure both virtual machines have been deployed and are running. 
 
@@ -336,7 +347,14 @@ In this task, you want to control network traffic between the perimeter subnet a
 
       ![image](./media/h39.png)       
 
-       >**Note**: You have created a user defined route to direct traffic from the DMZ to the new NVA.  
+       >**Note**: You have created a user defined route to direct traffic from the DMZ to the new NVA.
+       
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
+    
+    <validation step="57cfeac0-1b62-4274-a476-f8fd8fa27802" />   
 
 
 ### Review
