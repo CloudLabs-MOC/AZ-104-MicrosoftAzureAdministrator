@@ -9,7 +9,7 @@ This lab focuses on deploying and managing Docker containers using Azure Contain
 In this lab, you will complete the following tasks:
 
 - Task 1: Deploy an Azure Container Instance using a Docker image
-- Task 2: Review the functionality of the Azure Container Instance
+- Task 2: Test and verify deployment of an Azure Container Instance
 
 ### Task 1: Deploy an Azure Container Instance using a Docker image
 
@@ -62,7 +62,7 @@ In this task, you will create a new Azure Container Instance (ACI) for hosting a
 
      >**Note:** While you wait, you may be interested in viewing the [code behind the sample application](https://github.com/Azure-Samples/aci-helloworld). To view it, browse the \\app folder.
 
-### Task 2: Review the functionality of the Azure Container Instance
+### Task 2: Test and verify deployment of an Azure Container Instance
 
 In this task, you will review the deployment of the Azure Container Instance (ACI) to ensure it is running correctly and accessible. 
 
