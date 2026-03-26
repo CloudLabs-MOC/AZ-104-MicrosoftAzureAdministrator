@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Module 05 - Implement Intersite Connectivity",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/refs/heads/OCT-2025/Instructions/Labs/lab05-gettingstarted.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/refs/heads/OCT-2025/Instructions/Labs/LAB_05-Implement_Intersite_Connectivity-v2.md",
+        "Order": 2
+      }
+    ]
+  }
+]
