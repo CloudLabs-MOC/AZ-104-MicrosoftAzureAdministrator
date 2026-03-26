@@ -32,7 +32,7 @@ In this task, you create a core services virtual network with a virtual machine.
     | Setting | Value | 
     | --- | --- |
     | Subscription |  **Leave the default Subscription (1)** |
-    | Resource group |  **az104-05-rg0-<inject key="DeploymentID" enableCopy="false" /> (2)** |
+    | Resource group |  **az104-05-rg0 (2)** |
     | Virtual machine name |    **CoreServicesVM<inject key="DeploymentID" enableCopy="false" /> (3)** |
     | Region | **<inject key="Region" enableCopy="false" /> (4)** |
     | Availability options | **No infrastructure redundancy required (5)** |
@@ -96,7 +96,7 @@ In this task, you create a manufacturing services virtual network with a virtual
     | Setting | Value | 
     | --- | --- |
     | Subscription |  **Leave the default Subscription (1)** |
-    | Resource group |  **az104-05-rg0-<inject key="DeploymentID" enableCopy="false" /> (2)** |
+    | Resource group |  **az104-05-rg0 (2)** |
     | Virtual machine name |    **ManufacturingVM<inject key="DeploymentID" enableCopy="false" /> (3)** |
     | Region | **<inject key="Region" enableCopy="false" /> (4)** |
     | Availability options | **No infrastructure redundancy required (5)** |
@@ -318,7 +318,7 @@ In this task, you want to control network traffic between the perimeter subnet a
     | Setting | Value | 
     | --- | --- |
     | Subscription | your subscription |
-    | Resource group **(1)** | **az104-05-rg0-<inject key="DeploymentID" enableCopy="false" /> (2)**  |
+    | Resource group **(1)** | **az104-05-rg0 (2)**  |
     | Name | **rt-CoreServices<inject key="DeploymentID" enableCopy="false" /> (3)** |
     | Propagate gateway routes | **No (4)** |    
     | Region | **<inject key="Region" enableCopy="false" /> (5)** |    
@@ -353,7 +353,7 @@ In this task, you want to control network traffic between the perimeter subnet a
 
     | Setting | Value | 
     | --- | --- |
-    | Virtual network | **CoreServicesVnet (az104-05-rg0-<inject key="DeploymentID" enableCopy="false" />) (3)** |
+    | Virtual network | **CoreServicesVnet (az104-05-rg0) (3)** |
     | Subnet | **Core (4)** |  
     
     - Select **OK (5)**
