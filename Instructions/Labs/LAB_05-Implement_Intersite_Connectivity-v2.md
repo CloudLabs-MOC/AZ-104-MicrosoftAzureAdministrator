@@ -34,7 +34,7 @@ In this task, you create a core services virtual network with a virtual machine.
     | Subscription |  **Leave the default Subscription (1)** |
     | Resource group |  **az104-05-rg0-<inject key="DeploymentID" enableCopy="false" /> (2)** |
     | Virtual machine name |    **CoreServicesVM<inject key="DeploymentID" enableCopy="false" /> (3)** |
-    | Region | **<inject key="DeploymentID" enableCopy="false" /> (4)** |
+    | Region | **<inject key="Region" enableCopy="false" /> (4)** |
     | Availability options | **No infrastructure redundancy required (5)** |
     | Security type | **Standard (6)** |
     | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2 (7)** (notice your other choices) |
@@ -98,7 +98,7 @@ In this task, you create a manufacturing services virtual network with a virtual
     | Subscription |  **Leave the default Subscription (1)** |
     | Resource group |  **az104-05-rg0-<inject key="DeploymentID" enableCopy="false" /> (2)** |
     | Virtual machine name |    **ManufacturingVM<inject key="DeploymentID" enableCopy="false" /> (3)** |
-    | Region | **<inject key="DeploymentID" enableCopy="false" /> (4)** |
+    | Region | **<inject key="Region" enableCopy="false" /> (4)** |
     | Availability options | **No infrastructure redundancy required (5)** |
     | Security type | **Standard (6)** |
     | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2 (7)** (notice your other choices) |
@@ -306,7 +306,7 @@ In this task, you want to control network traffic between the perimeter subnet a
     | --- | --- |
     | Subscription | your subscription |
     | Resource group **(1)** | **az104-05-rg0-<inject key="DeploymentID" enableCopy="false" /> (2)**  |
-    | Region | **<inject key="DeploymentID" enableCopy="false" /> (3)** |
+    | Region | **<inject key="Region" enableCopy="false" /> (3)** |
     | Name | **rt-CoreServices<inject key="DeploymentID" enableCopy="false" /> (4)** |
     | Propagate gateway routes | **No (5)** |
 
