@@ -77,7 +77,7 @@ In this task, you create a core services virtual network with a virtual machine.
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
     
-    <validation step="09f1095d-1edd-426d-bc09-7561f935d043" />
+    <validation step="036072fc-c65f-4541-904b-b8fc784cbf6d" />
 
 ## Task 2: Create a virtual machine in a different virtual network
 
@@ -154,7 +154,7 @@ In this task, you create a manufacturing services virtual network with a virtual
    >   cloudlabs-support@spektrasystems.com. We are available 
    >   24/7 to help.
 
-   <validation step="09364bbd-444c-448b-b0c5-6a64024f1644" />
+   <validation step="7bb8a3cd-a545-467f-999e-5772159c6325" />
 
 ## Task 3: Use Network Watcher to test the connection between virtual machines
 
@@ -367,7 +367,7 @@ In this task, you want to control network traffic between the perimeter subnet a
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
     
-    <validation step="57cfeac0-1b62-4274-a476-f8fd8fa27802" />   
+    <validation step="7694c531-6747-46b3-9766-d70a14eb3049" />   
 
 
 ### Review
