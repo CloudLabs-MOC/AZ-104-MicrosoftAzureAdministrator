@@ -17,6 +17,8 @@ In this lab, you will complete the following tasks:
 
 ## Task 1:  Create a core services virtual machine and virtual network
 
+In this task, you create a core services virtual network with a virtual machine.
+
 1. From the Azure Portal, search for **Virtual Machines (1)** and select **Virtual Machines (2)**.
 
     ![image](./media/h1.png)
@@ -220,8 +222,6 @@ In this task, you create a virtual network peering to enable communications betw
 
 In this task, you retest the connection between the virtual machines in different virtual networks. 
 
-### Verify the private IP address of the CoreServicesVM
-
 1. From the Azure portal, search for and select the **CoreServicesVM<inject key="DeploymentID" enableCopy="false" />** virtual machine.
 
     ![image](./media/h25.png)
@@ -337,3 +337,17 @@ In this task, you want to control network traffic between the perimeter subnet a
       ![image](./media/h39.png)       
 
        >**Note**: You have created a user defined route to direct traffic from the DMZ to the new NVA.  
+
+
+### Review
+
+In this lab, you have completed the following:
+
+- Created a core services virtual machine and virtual network
+- Created a virtual machine in a different virtual network
+- Used Network Watcher to test the connection between virtual machines
+- Configured virtual network peerings between different virtual networks
+- Used Azure PowerShell to test the connection between virtual machines
+- Created a custom route
+
+### You have successfully completed the lab
