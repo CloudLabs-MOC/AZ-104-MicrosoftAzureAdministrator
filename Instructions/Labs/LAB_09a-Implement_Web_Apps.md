@@ -9,7 +9,7 @@ In this lab, you will learn to create and configure Azure Web Apps to host websi
 In this lab, you will complete the following tasks:
 
 + Task 1: Create and configure an Azure web app.
-+ Task 2: Create and configure a deployment slot.
++ Task 2: Create and configure a deployment slot
 + Task 3: Configure web app deployment settings.
 + Task 4: Swap deployment slots.
 + Task 5: Configure and test autoscaling of the Azure web app.
@@ -71,7 +71,7 @@ In this task, you will create an Azure Web App, which is a platform-as-a-service
 
      ![image](../media/14-10-lab9-7.png)
 
-### Task 2: Create a staging deployment slot
+### Task 2: Create and configure a deployment slot
 
 In this task, you will create a staging deployment slot in Azure Web Apps, which allows you to test new versions of your web application in a production-like environment without affecting the live production app.
 
@@ -144,7 +144,7 @@ In this task, you will configure Web App deployment settings. Deployment setting
    
      >**Note:** The deployment may take a minute. Be sure to **Refresh** the application page.
 
-### Task 4: Swap the staging slots
+### Task 4: Swap deployment slots
 
 In this task, you will swap the staging slot with the production slot.
 
