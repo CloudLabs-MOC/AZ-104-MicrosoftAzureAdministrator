@@ -8,19 +8,22 @@ Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a
 
 ## Overview
 
-In this lab, you will simulate a network infrastructure for Contoso's data centers across Boston, New York, and Seattle. The goal is to implement intersite connectivity by provisioning virtual machines (VMs) in separate virtual networks (VNet), configuring local and global virtual network peering, and testing the connectivity between the VMs using tools like Network Watcher. You will complete various tasks including deploying the lab environment, using Network Watcher to test connections, and creating custom routes. The lab will involve both local peering within the same Azure region and global peering across different regions, ensuring end-to-end connectivity between the three sites. Additionally, you'll test intersite connectivity by using RDP to connect to the VMs and verify communication across the network.
+In this lab, you will simulate a network infrastructure by deploying virtual machines (VMs) across two separate virtual networks (VNets) representing different departments (Core Services and Manufacturing). The goal is to implement intersite connectivity by configuring virtual network peering between these VNets and validating communication between the VMs. You will provision the required infrastructure, use Network Watcher to test connectivity before and after peering, and verify successful communication using Azure PowerShell commands. Additionally, you will create a custom route using a route table to control traffic flow through a virtual appliance, demonstrating how to manage and direct network traffic within Azure. The lab focuses on enabling secure and efficient communication across isolated networks and understanding routing behavior in a cloud environment.
 
 ## Objective
 
 The following objectives outline the key steps to complete this lab exercise on configuring and testing network connectivity in Azure:
 
-1. **Provision a Lab Environment:** Set up three virtual machines in separate virtual networks, with two in the same Azure region and the third in a different region.
+1. **Provision the Lab Environment:** Create two virtual machines in separate virtual networks (Core Services and Manufacturing) within the same Azure region.
 
-2. **Test Connection Using Network Watcher:** Use Network Watcher to verify connectivity between virtual machines in peered networks.
+1. **Test Initial Connectivity Using Network Watcher:** Use Network Watcher to verify that communication between virtual machines fails before peering is configured.
+Configure Virtual Network Peering: Establish bidirectional peering between the two virtual networks to enable secure communication.
 
-3. **Configure Local and Global Virtual Network Peering:** Establish both local and global peering between the virtual networks to enable seamless communication
+1. **Validate Connectivity Using Azure Tools:** Test and confirm connectivity between virtual machines using Network Watcher and Azure PowerShell (Run Command).
 
-4. **Test Intersite Connectivity:** Validate the intersite connectivity by testing the communication between virtual machines across the peered networks.
+1. **Implement Custom Routing:** Create and associate a route table with a subnet to control traffic flow through a virtual appliance.
+
+1. **Understand Network Traffic Flow:** Analyze how peering and user-defined routes influence communication between network resources.
 
 ## Pre-requisites
 
