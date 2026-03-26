@@ -136,24 +136,37 @@ In this task, you create a manufacturing services virtual network with a virtual
 
 1. Wait for the resources to be created, it may take some time to create.
 
-1. Once the resource is created, navigate to **Virtual Machines** and ensure that both virtual machines are successfully created and in the` Running` state.
+1. Once the resource is created, navigate to **Virtual Machines** 
+   and ensure that both virtual machines are successfully created 
+   and in the **Running** state.
 
-    ![image](./media/h12.png)
+   ![image](./media/h12.png)
 
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
-    
-    <validation step="09364bbd-444c-448b-b0c5-6a64024f1644" />   
+   > **Congratulations** on completing the task! Now, it's time 
+   > to validate it. Here are the steps:
+   >
+   > - Hit the **Validate** button for the corresponding task. 
+   >   If you receive a success message, you can proceed to the 
+   >   next task.
+   > - If not, carefully read the error message and retry the 
+   >   step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at 
+   >   cloudlabs-support@spektrasystems.com. We are available 
+   >   24/7 to help.
 
-## Task 3: Use Network Watcher to test the connection between virtual machines 
+   <validation step="09364bbd-444c-448b-b0c5-6a64024f1644" />
 
-In this task, you verify that resources in peered virtual networks can communicate with each other. Network Watcher will be used to test the connection. Before continuing, ensure both virtual machines have been deployed and are running. 
+## Task 3: Use Network Watcher to test the connection between virtual machines
 
-1. From the Azure portal, search for **Network Watcher (1)** and select `Network Watcher` **(2)**.
+In this task, you verify that resources in peered virtual networks 
+can communicate with each other. Network Watcher will be used to 
+test the connection. Before continuing, ensure both virtual machines 
+have been deployed and are running.
 
-    ![image](./media/h13.png)
+1. From the Azure portal, search for **Network Watcher (1)** and 
+   select **Network Watcher (2)**.
+
+   ![image](./media/h13.png)
 
 1. From Network Watcher, in the **Network diagnostic tools (1)** menu, select **Connection troubleshoot (2)**.
 
