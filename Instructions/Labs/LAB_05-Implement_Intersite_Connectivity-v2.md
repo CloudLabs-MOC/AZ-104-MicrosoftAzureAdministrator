@@ -319,9 +319,9 @@ In this task, you want to control network traffic between the perimeter subnet a
     | --- | --- |
     | Subscription | your subscription |
     | Resource group **(1)** | **az104-05-rg0-<inject key="DeploymentID" enableCopy="false" /> (2)**  |
-    | Region | **<inject key="Region" enableCopy="false" /> (3)** |
-    | Name | **rt-CoreServices<inject key="DeploymentID" enableCopy="false" /> (4)** |
-    | Propagate gateway routes | **No (5)** |
+    | Name | **rt-CoreServices<inject key="DeploymentID" enableCopy="false" /> (3)** |
+    | Propagate gateway routes | **No (4)** |    
+    | Region | **<inject key="Region" enableCopy="false" /> (5)** |    
 
     ![image](./media/h35.png)    
 
