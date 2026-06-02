@@ -14,7 +14,7 @@ In this hands-on lab, you will gain practical experience in managing identities 
 
 By the end of this lab, you will be able to manage and configure Microsoft Entra ID users, guest users, and groups with assigned membership.
 
-1. **Create and configure Entra ID users:** You will learn how to create and configure Microsoft Entra ID user accounts in the Azure portal, including both standard and guest users. You will define key properties such as job title, d
+1. **Create and configure Entra ID users:** You will learn how to create and configure Microsoft Entra ID user accounts in the Azure portal, including both standard and guest users. 
 2. **Create Entra ID groups with assigned membership:** Create and configure security groups in Microsoft Entra ID using assigned membership to manually manage owners and members for organizing access and permissions.
 
 ## Pre-requisites

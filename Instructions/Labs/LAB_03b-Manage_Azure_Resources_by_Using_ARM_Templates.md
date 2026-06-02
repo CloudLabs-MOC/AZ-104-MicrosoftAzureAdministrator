@@ -66,7 +66,7 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
 
     ![image](../media/lab3-02-1.png)
 
-1. Then switch to the **Parameters** section and do the same.    
+1. Then switch to the **Parameters** section and do the same.
 
 1. In File Explorer open the **Downloads** folder on LabVM. Notice there are two JSON files (template and parameters). 
 
@@ -369,3 +369,6 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Bicep provides concise syntax, reliable type safety, and support for code reuse. Bicep offers a first-class authoring experience for your infrastructure-as-code solutions in Azure.
 
 ### You have successfully completed the lab
+
+
+[def]: ../media/r-107.png
