@@ -204,7 +204,13 @@ In this task, you will focus on identifying and remediating non-compliant resour
     
     >**Note:** **It might take between 5 and 25 minutes for the policy to take effect.**
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search and select **Storage accounts** under services and then click **+ Create**. 
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search and select **Storage accounts** under services.  
+
+    ![image](./media/3-10-l2-57.png)
+
+1. Click **+ Create**.
+
+    ![image](./media/3-10-l2-58.png)
 
 1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to, and specify the following settings (leave others with their defaults) and click **Review + create (5)**:
 

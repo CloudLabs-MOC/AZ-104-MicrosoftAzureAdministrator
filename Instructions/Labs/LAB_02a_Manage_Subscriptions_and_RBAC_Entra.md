@@ -99,7 +99,7 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
      ![image](./media/10-lab2-7.png) 
 
-1. Click **Review + assign** twice to create the role assignment.
+1. Click **Review + assign** to create the role assignment. Click on **Review + assign** again.
 
      ![image](./media/10-lab2-8.png) 
 
