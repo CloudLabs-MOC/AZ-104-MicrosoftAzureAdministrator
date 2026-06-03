@@ -16,11 +16,11 @@ In this task, you will use a template to deploy one virtual network, one network
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Deploy a custom template (1)**, and then select **Deploy a custom template (2)** under services.
 
-    ![image](../media/7-10-lab4-12.png)
+    ![image](./media/7-10-lab4-12.png)
 
 1. On the custom deployment page, select **Build you own template in the editor**.
 
-   ![image](../media/7-10-lab4-13.png)
+   ![image](./media/7-10-lab4-13.png)
    
 1. On the edit template page, select **Load file**.
 
@@ -34,9 +34,9 @@ In this task, you will use a template to deploy one virtual network, one network
 
    ![image](../media/10-10-lab6-5.png)
    
-1. Select **Edit parameters** > **load file** and locate and select **az104-06-vms-parameters.json (2)**, and click **Open (3)**.
+1. Select **Edit parameters** and **load file** and locate and select **az104-06-vms-parameters.json (2)**, and click **Open (3)**.
 
-   ![image](../media/10-10-lab6-4.png)
+   ![image](./media/10-10-lab6-4.png)
 
    ![](../Labs/media/l6-image7.png)
 
@@ -60,23 +60,23 @@ In this task, you will use a template to deploy one virtual network, one network
   
 1. Select **Create**.
 
-     ![image](../media/10-10-lab6-8.png)
+     ![image](./media/10-10-lab6-8.png)
 
     >**Note:** Wait for the deployment to complete before moving to the next task. The deployment should take approximately 5 minutes.
 
     >**Note:** Review the resources being deployed. There will be one virtual network with three subnets. Each subnet will have a virtual machine.
 
-### Task 2: Implement Azure Load Balancer
+### Task 2: Configure an Azure Load Balancer
 
 In this task, you will implement an Azure Load Balancer in front of the two Azure virtual machines in the hub virtual network
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Load balancers (1)**, and then select **Load balancers (2)** under services.
 
-   ![image](../media/10-10-lab6-9.png)
+   ![image](./media/10-10-lab6-9.png)
 
 1. On **Load balancing and content delivery | Load Balancer** blade, click on **+ Create (1)** and select **Standard Loadbalancer (2)**
 
-     ![image](../media/10-10-lab6-10.png)
+     ![image](./media/10-10-lab6-10.png)
 
 1. Create a load balancer with the following settings (leave others with their default values) and click **Next: Frontend IP configuration > (8)** 
 
@@ -90,7 +90,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Type | **Public (6)** |
     | Tier | **Regional (7)** |
 
-    ![image](../Labs/media/r24.png)
+    ![image](./media/r24.png)
 
 1.  On the Frontend IP configuration tab click **+ Add frontend IP configuration (1)** , under **Add frontend IP configuration** window add the following settings and click on **Save**
  
@@ -109,6 +109,8 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Availability zone | Choose **1 (2)** and click **Save (3)** |
 
      ![image](../media/10-10-lab6-13.png)
+
+     >**Note:** The Standard SKU provides a static IP address. Static IP addresses are assigned with the resource is created and released when the resource is deleted.  
 
 1. Back on **Add frontend IP configuration** click on **Save** and click on **Next : Backend pools>**
 
@@ -176,13 +178,13 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
 1. Then click **Create** to submit your deployment.    
 
-    ![image](../media/10-10-lab6-23.png)
+    ![image](./media/10-10-lab6-23.png)
 
     > **Note:** Wait for the Azure load balancer to be provisioned. This should take about 2 minutes.
 
 1. Wait for the load balancing rule to be created, click **Go to resource**.
 
-     ![image](../media/10-10-lab6-24.png)
+     ![image](./media/10-10-lab6-24.png)
 
 1. On the **az104-06-lb4** load balancers blade, in the **Settings (1)** section, click **Frontend IP configuration (2)** and note the value of the **Public IP address**.     
 
@@ -206,13 +208,13 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
 <validation step="05e14bc6-a387-4fb8-baa1-c4dbacc8ae56" />
 
-### Task 3: Implement Azure Application Gateway
+### Task 3: Configure an Azure Application Gateway
 
 In this task, you will implement an Azure Application Gateway in front of the two Azure virtual machines in the spoke virtual networks.
 
 1. In the Azure portal search bar, type **Virtual networks (1)** and select **Virtual networks (2)** from the search results.
 
-    ![image](../media/10-10-lab5-11.png)
+    ![image](./media/10-10-lab5-11.png)
 
 1. On the **Virtual networks** blade, in the list of virtual networks, click **az104-06-vnet1**.
 
@@ -328,7 +330,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Port | **80 (6)** |
     | Listener type | **Basic (7)** |
 
-    ![image](../media/10-10-lab6-42.png)
+    ![image](./media/10-10-lab6-42.png)
    
 1. Switch to the **Backend targets (1)** tab of the **Add a routing rule** blade and specify the following settings (leave others with their default values):
 
