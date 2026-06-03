@@ -56,6 +56,8 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. Select **+ Add a subnet**.
 
+1. Provide the following details and the **Add (4)**.
+
     | **Subnet**             | **Option**           | **Value**              |
     | ---------------------- | -------------------- | ---------------------- |
     |         |
