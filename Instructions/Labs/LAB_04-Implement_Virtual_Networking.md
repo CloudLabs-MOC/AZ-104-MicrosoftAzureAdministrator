@@ -24,7 +24,7 @@ The organization plans a large amount of growth for core services. In this task,
 
      ![image](../media/7-10-lab4-3.png)
 
-1. Complete the **Basics** tab with the following details:  
+1. Complete the **Basics** tab with the following details and then click **Next (5)**:
 
     |  **Option**         | **Value**            |
     | ------------------ | -------------------- |
@@ -35,14 +35,14 @@ The organization plans a large amount of growth for core services. In this task,
 
      ![image](../media/7-10-lab4-4n.png)
 
-1. Click **Next (5)** and subsequently click on **Next** again to move to the **IP Addresses** tab.
+1. Subsequently click on **Next** again to move to the **Addresses space** tab.
 
     | Setting | Value |
     | --- | --- |
     | IPv4 address space | Replace the prepopulated IPv4 address space with **10.20.0.0/16 (1)** (separate the entries) |
     | |delete the default subnet **(2)** |
 
-    ![image](../media/7-10-lab4-5.png)
+    ![image](../media/i8.png)
 
 1. Select **+ Add a subnet (1)**. Complete the name and address information for each subnet. Be sure to select **Add (5)** for each new subnet. 
 
@@ -55,7 +55,7 @@ The organization plans a large amount of growth for core services. In this task,
     |                        | Starting address	    | `10.20.20.0` **(2)**          |
     |			     | Size		    | `/24`	       **(3)**      |
 
-    ![image](../media/7-10-lab4-6.png)
+    ![image](../media/i6.png)
 
     ![image](../media/7-10-lab4-7.png)
 
