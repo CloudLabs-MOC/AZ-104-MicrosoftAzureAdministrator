@@ -220,7 +220,7 @@ In this task, you create a virtual network peering to enable communications betw
     | **Parameter**                                    | **Value**                             |
     | --------------------------------------------- | ------------------------------------- |
     | Peering link name                             | `ManufacturingVnet-to-CoreServicesVnet` **(1)** |
-    | Virtual network    | **ManufacturingVnet (az104-05-rg0-<inject key="DeploymentID" enableCopy="false" />) (2)**  |
+    | Virtual network    | **ManufacturingVnet (az104-05-rg0) (2)**  |
     | Allow 'ManufacturingVnet' to access 'CoreServicesVnet'  | **selected (default) (3)** |
     | Allow 'ManufacturingVnet' to receive forwarded traffic from 'CoreServicesVnet' | **selected (4)**  |    
     | Peering link name                             | `CoreServicesVnet-to-ManufacturingVnet` **(5)** |
@@ -354,11 +354,11 @@ In this task, you want to control network traffic between the perimeter subnet a
     | Setting | Value | 
     | --- | --- |
     | Virtual network | **CoreServicesVnet (az104-05-rg0) (3)** |
-    | Subnet | **Core (4)** |  
+    | Subnet | **Perimeter (4)** |  
     
     - Select **OK (5)**
 
-      ![image](./media/h39.png)       
+      ![image](./media/i9.png)       
 
        >**Note**: You have created a user defined route to direct traffic from the DMZ to the new NVA.
        
