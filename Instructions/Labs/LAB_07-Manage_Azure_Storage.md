@@ -16,11 +16,11 @@ In this task, you will create and configure an Azure Storage account.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage accounts (1)**, and then select **Storage accounts (2)** under services.
 
-    ![image](../media/10-10-lab7-2.png)
+    ![image](./media/10-10-lab7-2.png)
 
 1. In the **Storage center | Storage accounts (Blobs)** blade, select **+ Create** under the **Resources** tab to create a new storage account.
    
-     ![image](../media/10-10-lab7-3.png)
+     ![image](./media/10-10-lab7-3.png)
 
 1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values) then click on **Next (7)**:
 
@@ -32,16 +32,19 @@ In this task, you will create and configure an Azure Storage account.
     | Region | **<inject key="Region" enableCopy="false"/> (4)**  |
     | Performance | **Standard (5)** |
     | Redundancy | **Geo-redundant storage (GRS) (6)** |
+    | Make read access to data available in the event of regional unavailability. | **Check the box (7)**|
 
-     ![image](../media/up10-10-lab7-4-new.png)
+     ![image](./media/up10-10-lab7-4-new.png)
 
 1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create a storage account** blade, review the available options, accept the defaults, and click **Next**.
 
 1. On the **Networking** tab of the **Create a storage account** blade, review the available options and in the Public network access section, select **Disable (1)**. This will restrict inbound access while allowing outbound access. Click **Next (2)**
 
-     ![image](../media/10-10-lab7-5.png)
+     ![image](./media/10-10-lab7-5.png)
 
 1. On the **Data protection** tab of the **Create a storage account** blade, review the available options and accept the defaults then click on **Next**. 
+
+1. On the **Security** tab, review the available options and accept the defaults then click on **Next**. 
 
 1. Review the **Encryption** tab. Notice the additional security options. Accept the defaults. Click **Review + Create**.
 
@@ -55,7 +58,7 @@ In this task, you will create and configure an Azure Storage account.
 
 1. On the deployment blade, click **Go to resource** to display the Azure Storage account blade.
 
-     ![image](../media/10-10-lab7-8.png)
+     ![image](./media/10-10-lab7-8.png)
 
 1. On the Storage account blade, in the **Data management (1)** section, click **Redundancy (2)** and note the secondary location **(3)**. 
 
@@ -111,7 +114,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 ### Create a blob container and a time-based retention policy
 
-1. On the Storage account blade, in the **Data storage (1)** section, click **Containers (2)**. Click **+ Container (3)**.
+1. On the Storage account blade, in the **Data storage (1)** section, click **Containers (2)**. Click **+ Add Container (3)**.
 
      ![image](../media/10-10-lab7-17.png)
 
@@ -186,7 +189,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. Navigate to the URL you copied in the previous step.
 
-     ![image](../media/up10-10-lab7-25.png)
+     ![image](./media/up10-10-lab7-25.png)
 
 1. You should be presented with an XML-formatted message stating **ResourceNotFound** or **PublicAccessNotPermitted**.
 
@@ -194,7 +197,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and switch to the **Generate SAS** tab.
 
-     ![image](../media/up10-10-lab7-27.png)
+     ![image](./media/up10-10-lab7-27.png)
 
 ### Configure limited access to the blob storage
 
@@ -237,9 +240,9 @@ In this task, you will create a blob container and upload a blob into it.
 ### Task 3: Create and configure an Azure File storage
 In this task, you will create and configure Azure Files shares.
 
-1. In the Azure portal, navigate back to the blade of the storage account you created in the task 2 of this lab and, in the **Data storage** section, click **File shares (1)**. Click **+ File share (2)**.
+1. In the Azure portal, navigate back to the blade of the storage account you created in the task 2 of this lab and, in the **Data storage** section, click **Classic File shares (1)**. Click **+ Classic File share (2)**.
 
-     ![image](../media/10-10-lab7-30.png)
+     ![image](./media/10-10-lab7-30.png)
 
 1. Create a file share with the following settings then click on **Next:Backup> (3)**
 
@@ -256,13 +259,13 @@ In this task, you will create and configure Azure Files shares.
     | --- | --- |
     | Enable backup | **Uncheck (1)** |
 
-     ![image](../media/10-10-lab7-32.png)
+     ![image](./media/10-10-lab7-32.png)
 
-     ![image](../media/10-10-lab7-33.png)
+     ![image](./media/10-10-lab7-33.png)
 
 1. Click the newly created file share and note the information available on the **az104-07-share** blade.
 
-     ![image](../media/10-10-lab7-34.png)
+     ![image](./media/10-10-lab7-34.png)
 
 ### Explore Storage Browser and upload a file
 
@@ -270,11 +273,11 @@ In this task, you will create and configure Azure Files shares.
 
 1. Select **File shares (2)** and verify your **az104-07-share (3)** directory is present.
 
-     ![image](../media/up10-10-lab7-35.png)
+     ![image](./media/up10-10-lab7-35.png)
 
 1. Select your **az104-07-share** directory, notice you can **+ Add directory** on the top navigation pane in the file share window. This lets you create a folder structure. Provide name **az104-07-folder (1)** and click on **OK (2)**
    
-     ![image](../media/up10-10-lab7-36.png)
+     ![image](./media/up10-10-lab7-36.png)
 
      ![image](../media/10-10-lab7-37.png)
 
@@ -289,6 +292,8 @@ In this task, you will create and configure Azure Files shares.
 1. Navigate to File share and select **az104-07-share**.
 
 1. Select **Upload**. click on **Browse to a file**.
+
+     ![image](./media/az104-65.png)
 
 1. Navigate to **Downloads (1)**, select **az104-07-file.txt (2)** and then click on **Open(3)**.
 
@@ -308,30 +313,34 @@ In this task, you will create and configure Azure Files shares.
 
 ### Restrict network access to the storage account
 
-1. In the Azure portal, search for `Virtual Networks` **(1)** and select `Virtual Networks` **(2)** from the results.
+1. In the Azure portal, search for **Virtual Network (1)** and select **Virtual Networks (2)** from the results.
 
-     ![image](../media/7-10-lab4-2.png)
+     ![image](./media/7-10-lab4-2.png)
 
-1. Select **+ Create**. 
+1. Select **+ Create**.
+
+     ![image](./media/az104-40.png)
 
 1. On the **Create virtual network** page, provide the following details and then click on **Review + create (5)**.
 
     - Subscription: Leave the default one **(1)**
     - Select your resource group **az104-07-rg1 (2)**
-    - Provide the virtual network a **name**, `vnet1` **(3)**
+    - Provide the virtual network a name, **vnet1 (3)**
     - Region: Leave the default **(4)**
 
-      ![image](../media/10-10-lab7-38.png)
+      ![image](./media/10-10-lab7-38.png)
 
 1. Then **Create**.
 
+     ![image](./media/az104-41.png)
+
 1. Wait for the virtual network to deploy, and then select **Go to resource**.
 
-     ![image](../media/10-10-lab7-39.png)
+     ![image](./media/10-10-lab7-39.png)
 
 1. In the **Settings** section, select the **Service endpoints (1)** blade, click on **+ Add (2)**.
 
-     ![image](../media/10-10-lab7-40.png)
+     ![image](./media/10-10-lab7-40.png)
 
 1. On the **Add Service Endpoint**, add the following details and then click on **Add (3)**
 
