@@ -52,7 +52,6 @@ The organization plans a large amount of growth for core services. In this task,
     |                        | Starting address	    | `10.20.10.0` **(3)**          |
     |			     | Size		    | `/24`	    **(4)**         |
 
-
     ![image](../media/i6.png)
 
 1. Select **+ Add a subnet**.
