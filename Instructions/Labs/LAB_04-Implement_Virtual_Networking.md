@@ -16,7 +16,7 @@ In this lab, you will complete the following tasks:
 
 The organization plans a large amount of growth for core services. In this task, you create the virtual network and the associated subnets to accommodate the existing resources and planned growth. In this task, you will use the Azure portal. 
 
-1. In the Azure portal, search for `Virtual Networks` **(1)** and select `Virtual Networks` **(2)** from the results.
+1. In the Azure portal, search for **Virtual Networks (1)** and select **Virtual Networks (2)** from the results.
 
      ![image](../media/7-10-lab4-2.png)
 
