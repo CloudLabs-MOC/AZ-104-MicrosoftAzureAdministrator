@@ -22,7 +22,7 @@ In this task, you will create and configure an Azure Storage account.
    
      ![image](./media/10-10-lab7-3.png)
 
-1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values) then click on **Next (7)**:
+1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values) then click on **Next (8)**:
 
     | Setting | Value |
     | --- | --- |
@@ -36,7 +36,7 @@ In this task, you will create and configure an Azure Storage account.
 
      ![image](./media/up10-10-lab7-4-new.png)
 
-1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create a storage account** blade, review the available options, accept the defaults, and click **Next**.
+1. Click **Next: Advanced**, on the **Advanced** tab of the **Create a storage account** blade, review the available options, accept the defaults, and click **Next**.
 
 1. On the **Networking** tab of the **Create a storage account** blade, review the available options and in the Public network access section, select **Disable (1)**. This will restrict inbound access while allowing outbound access. Click **Next (2)**
 
@@ -127,7 +127,7 @@ In this task, you will create a blob container and upload a blob into it.
 
      ![image](../media/10-10-lab7-18.png)
 
-1. On your container, scroll to the **ellipsis (...) (1)** on the far right, select **Access Policy (2)**.
+1. On your container, scroll to the **Ellipsis (...) (1)** on the far right, select **Access Policy (2)**.
 
      ![image](../media/10-10-lab7-19.png)
 
