@@ -21,7 +21,7 @@ In this task, you will deploy two virtual machines that will serve as test envir
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Deploy a custom template (1)**, and then select **Deploy a custom template (2)** under services.
 
-    ![image](../media/7-10-lab4-12.png)
+    ![image](./media/7-10-lab4-12.png)
 
 1. On the custom deployment page, select **Build you own template in the editor**.
 
@@ -78,7 +78,7 @@ In this task, you will create a Recovery Services vault, an essential component 
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Recovery Services vaults (1)**, and then select **Recovery Services vaults (2)** under services.
 
-    ![image](../media/14-10-lab10-10.png)
+    ![image](./media/14-10-lab10-10.png)
 
 1. On the **Recovery Services vaults** page, select **+ Create** to start creating a new vault.
 
@@ -99,19 +99,19 @@ In this task, you will create a Recovery Services vault, an essential component 
      
 1. Ensure that the validation has passed, and click **Create**.
 
-     ![image](../media/14-10-lab10-13.png)
+     ![image](./media/14-10-lab10-13.png)
 
      >**Note:** Wait for the deployment to complete. The deployment should take less than 1 minute.
 
 1. When the deployment is completed, click **Go to Resource**.
 
-     ![image](../media/14-10-lab10-14.png)
+     ![image](./media/14-10-lab10-14.png)
 
 1. On the **az104-10-rsv1** Recovery Services vault blade, in the left navigation pane in the  **Settings (1)** section, click **Properties (2)**.
 
 1. On the **az104-10-rsv1 - Properties** blade, click the **Update (3)** link under **Backup Configuration** label.
 
-     ![image](../media/14-10-lab10-15.png)
+     ![image](./media/14-10-lab10-15.png)
 
 1. On the **Backup Configuration** blade, review the choices for **Storage replication type**. Leave the default setting of **Geo-redundant** in place and close the blade.
 
@@ -209,7 +209,7 @@ In this task, you will implement Azure virtual-machine level backup to ensure da
 
 1. Accept the default value in the **Retain backup Till** drop-down list, and click **OK**.     
 
-     ![image](../media/14-10-lab10-29.png)
+     ![image](./media/14-10-lab10-29.png)
 
      >**Note:** Do not wait for the backup to complete but instead proceed to the next task.
 
@@ -219,7 +219,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage accounts (1)**, and then select **Storage accounts (2)** under services.
 
-     ![image](../media/14-10-lab10-30.png)
+     ![image](./media/14-10-lab10-30.png)
 
 1. On the Storage accounts page, select **+ Create**.
 
@@ -252,7 +252,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. In the Azure portal, locate and select the **Recovery Services vault** that was created in the previous task.
 
-     ![image](../media/14-10-lab10-35.png)
+     ![image](./media/14-10-lab10-35.png)
 
 1. From the left navigation pane,select **Diagnostic Settings (2)** under **Monitoring (1)** and then select **+ Add diagnostic setting (3)**.
 
@@ -297,11 +297,11 @@ In this task, you will enable replication for a virtual machine to ensure busine
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Recovery Services vaults (1)**, and then select **Recovery Services vaults (2)** under services.
 
-     ![image](../media/14-10-lab10-10.png)
+     ![image](./media/14-10-lab10-10.png)
 
 1. On the **Recovery Services vaults** page, click on **+ Create** to start creating a new vault. 
 
-     ![image](../media/14-10-lab10-40.png)
+     ![image](./media/14-10-lab10-40.png)
 
 1. On the **Create Recovery Services vault** blade, specify the following settings and click **Review + create (5)**
 
@@ -312,7 +312,7 @@ In this task, you will enable replication for a virtual machine to ensure busine
     | Vault Name | **az104-10-rsv2 (3)**  |
     | Region | **West US 3 (4)** |
 
-     ![image](../media/up14-10-lab10-41.png)
+     ![image](./media/up14-10-lab10-41.png)
 
      >**Note:** Make sure that you specify a **different** region than the virtual machine.
 
@@ -328,7 +328,7 @@ In this task, you will enable replication for a virtual machine to ensure busine
 
 1. On the **Compute infrastructure | Virtual machines** page, click the **az104-10-vm0** virtual machine.
 
-     ![image](../media/up14-10-lab10-43.png)
+     ![image](./media/up14-10-lab10-43.png)
 
 1. From the left navigation pane,in the **Backup + disaster recovery (1)** blade, select **Disaster recovery (2)**. 
 
