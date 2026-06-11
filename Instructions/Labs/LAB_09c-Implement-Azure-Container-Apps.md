@@ -19,7 +19,7 @@ Azure Container Apps take the concept of a managed Kubernetes cluster a step fur
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Container apps (1)**, and then select **Container apps (2)** under services.
 
-     ![image](../media/14-10-lab9-43.png)
+     ![image](./media/14-10-lab9-43.png)
    
 1. **Container instances** blade, click **+ Create (1)**, from drop-down menu, select **Container App (2)**. Notice the other choices.
 
@@ -55,7 +55,7 @@ By default, the Azure container app that you create will accept traffic on port 
 
 1. Select **Go to resource** to view your new container app.
 
-     ![image](../media/14-10-lab9-49.png)
+     ![image](./media/14-10-lab9-49.png)
 
 1. Select the link next to **Application URL** to view your application.
 

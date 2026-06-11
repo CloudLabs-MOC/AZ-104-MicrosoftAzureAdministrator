@@ -9,7 +9,7 @@ In this lab, you will complete the following tasks:
 - Task 1: Create a container app and environment
 - Task 2: Test and verify deployment of the container app
 
-## Estimated timing: 20 minutes
+## Estimated timing: 20 Minutes
 
 ## Architecture diagram
 
