@@ -24,11 +24,11 @@ In this task, you will create an Azure Web App, which is a platform-as-a-service
 
 1. In the Azure portal, search for **App services (1)** and select **App services (2)** from results.
 
-   ![image](../media/14-10-lab9-2.png)
+   ![image](./media/14-10-lab9-2.png)
 
 1. On the **App Services** blade. Click **+ Create (1)** and choose **+ Web App (2)**
 
-   ![image](../media/14-10-lab9-3.png)
+   ![image](./media/14-10-lab9-3.png)
    
 1. On the **Basics** tab, specify the following settings (leave others with their default values):
 
@@ -61,7 +61,7 @@ In this task, you will create an Azure Web App, which is a platform-as-a-service
    
 1. On the **Review + create** tab of the **Create Web App** blade, ensure that the validation passed and click **Create**.
 
-     ![image](../media/r42.png)
+     ![image](./media/r42.png)
 
      >**Note:** Wait until the web app is created before you proceed to the next task. This should take about a minute.
 
@@ -69,7 +69,7 @@ In this task, you will create an Azure Web App, which is a platform-as-a-service
 
 1. On the deployment blade, click **Go to resource**.
 
-     ![image](../media/14-10-lab9-7.png)
+     ![image](./media/14-10-lab9-7.png)
 
 ### Task 2: Create and configure a deployment slot
 
@@ -115,6 +115,16 @@ In this task, you will create a staging deployment slot in Azure Web Apps, which
 ## Task 3: Configure Web App deployment settings
 
 In this task, you will configure Web App deployment settings. Deployment settings allow for continuous deployment. This ensures that the app service has the latest version of the application.
+
+1. In the **staging** slot, under **Settings (1)** select **Configuration (2)** then **General settings (3)**.
+
+    >**Note:** Make sure you are on the staging slot blade (instead of the production slot).
+    
+1. Under **SCM Basic Auth Publishing Credentials (4)**, enable the checkbox and select **Apply (5)**.
+
+     ![image](./media/rh35.png)
+
+1. If an alert banner appears stating "SCM basic authentication is disabled for your app", select **Enable here** and complete the steps to enable it.
 
 1. In the staging slot, select **Deployment Center (1)** from the left navigation pane  and then select **Settings (2)**.
 
@@ -180,13 +190,32 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
      - From the **Scaling** section, select **Automatic (3)**. Notice the **Rules Based** option. Rules based scaling can be configured for different app metrics. 
 
-     - In the **Maximum burst** field, select **2 (4)**.
+     - In the **Maximum burst** field, select **2 (4)**, set **Minimum instances** to 1.
 
-     - Select **Save (5)**.
-
-       ![image](../media/14-10-lab9-20.png)
+       ![image](./media/14-10-lab9-20.png)
 
         >**Note:** Please disregard any scale-out errors and proceed with the subsequent steps.
+
+     - Select the **Cloud Shell (1)** icon in the top right of the Azure Portal, when prompted to select either **Bash** or **PowerShell**, select **PowerShell (2)**.
+
+          ![image](./media/hs45.png)
+
+          >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar.
+
+     - In the **Getting started** window, select **No storage account required (1)**, choose the **subscription (2)** from the dropdown, and click **Apply (3)** to continue.
+      
+          ![image](./media/hs46.png)
+
+     - Run the following command to set the staging slot **minimum elastic instance count to 1** before selecting Save:
+
+          ```bash
+          az webapp update --resource-group az104-09a-rg1 --name <your-web-app-name> --slot staging --minimum-elastic-instance-count 1
+          ```
+          ![image](./media/rh36.png)
+
+          >**Note:** Replace `<your-web-app-name>` with your app name. After the command succeeds, return to **Scale out** on the production web app and select **Save**.
+
+     - Select **Save (5)**.
    
 1. Select **Diagnose and solve problems (1)** (left pane) and in the **Load Test your App** box, select **Create Load Test (2)**.
 
@@ -205,7 +234,7 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
     | load test name | **loadtest<inject key="DeploymentID" enableCopy="false" /> (3)**|
     |region  | Leave the region as default **(4)**|
 
-     ![image](../media/14-10-lab9-23.png)
+     ![image](./media/14-10-lab9-23.png)
    
 1. On the **Review + create** tab, verify the configuration details and select **Create** to deploy the load testing resource.  
 
@@ -213,11 +242,11 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
 1. Wait for the load test to create, and then select **Go to resource**.
 
-     ![image](../media/14-10-lab9-25.png)
+     ![image](./media/14-10-lab9-25.png)
 
 1. From the **Overview (1)**  of Azure load testing blade, under **create by adding HTTP requests**, select **Create (2)**.
 
-    ![image](../media/14-10-lab9-26.png)
+    ![image](./media/14-10-lab9-26.png)
 
 1. On the **Test plan (1)** tab, click **Add request (2)**. In the **URL field**, paste in your **Default domain (3)** URL we had copied in task 2 step number 1. Ensure this is properly formatted and begins with **https://** then click **Add (4)**.
 
@@ -233,21 +262,21 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
 1. Select **Test (1)** and then the name of the test **(2)**.
 
-    ![image](../media/r47.png)
+    ![image](./media/r47.png)
 
 1. Select the Test run.
 
-    ![image](../media/r48.png)
+    ![image](./media/r48.png)
 
 1. It may take a couple of minutes to process. Once it is done, review the test results including **Virtual users**, **Response time**, and **Requests/sec**.
 
-     ![image](../media/14-10-lab9-29.png)
+     ![image](./media/14-10-lab9-29.png)
 
-     ![image](../media/14-10-lab9-30.png)
+     ![image](./media/14-10-lab9-30.png)
 
-1. Select **Stop** to complete the test run.
+1. Select **Stop** to initiate the stop request. 
 
-     ![image](../media/14-10-lab9-31.png)
+     ![image](./media/14-10-lab9-31.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 

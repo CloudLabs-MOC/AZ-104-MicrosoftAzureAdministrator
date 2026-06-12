@@ -113,7 +113,7 @@ Click on the **Progress** tab to track your progress in the lab. The percentage 
 
 ![](../Labs/media/validation.png)
 
-## **Lab Duration Extension**
+## Lab Duration Extension
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
 

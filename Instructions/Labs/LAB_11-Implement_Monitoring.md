@@ -25,7 +25,7 @@ In this task, you will deploy a virtual machine (VM) on Azure, which will serve 
 
 1. In the Azure Portal page, in the **Search resources, services and docs (G+/)** box at the top of the portal search for **Deploy a custom template (1)** and select **Deploy a custom template (2)** resource.
 
-   ![image](../media/7-10-lab4-12.png)
+   ![image](./media/7-10-lab4-12.png)
 
 1. On the custom deployment page, select **Build you own template in the editor**.
 
@@ -61,17 +61,17 @@ In this task, you will deploy a virtual machine (VM) on Azure, which will serve 
 
 1. Wait for the deployment to finish, then click **Go to resource group**.
 
-   ![image](../media/14-10-lab11-6.png)
+   ![image](./media/14-10-lab11-6.png)
 
 1. Review what resources were deployed. There should be one virtual network with one virtual machine.
 
-    ![image](../media/14-10-lab11-7.png)
+    ![image](./media/14-10-lab11-7.png)
 
 **Configure Azure Monitor for virtual machines (this will be used in the last task)**
 
 1. In the Azure Portal page, in the **Search resources, services and docs (G+/)** box at the top of the portal search for **Monitor (1)** and select **Monitor (2)** resource.
 
-    ![image](../media/14-10-lab11-8.png)
+    ![image](./media/14-10-lab11-8.png)
 
 1. Take a minute to review all the insights, detection, triage, and diagnosis tools that are available.
 
@@ -81,15 +81,16 @@ In this task, you will deploy a virtual machine (VM) on Azure, which will serve 
 
     ![image](../media/14-10-lab11-10.png)
 
-1. Select **Enable** next to your virtual machine, and then **Review + enable** on the **Azure Monitor - Insights Onboarding** blade.
-
+1. Select **Enable** next to your virtual machine.
     ![image](../media/up14-10-lab11-11.png)
 
-    ![image](../media/configmoni.png)
+1. Ensure **Open Telemetry Metrics (1)** is **not** checked, select **[Classic] Log-based metrics**, then click **Review + enable (3)**. 
+
+    ![image](./media/configmoni.png)
 
 1. Take the defaults for subscription and data collection rules, by selecting **enable**. 
 
-    ![image](../media/configmoni2.png)
+    ![image](./media/configmoni2.png)
 
 1. It will take a few minutes for the virtual machine agent to install and configure, please proceed to the next step.
 
@@ -105,17 +106,15 @@ In this task, you will set up an alert within Azure Monitor to notify you when a
 
 1. Select the check box for the **az104-11-rg1 (1)** resource group, then select **Apply (2)**. This alert will apply to any virtual machines in the resource group. Alternatively, you could just specify one particular machine. 
 
-    ![image](../media/14-10-lab11-15.png)
+    ![image](./media/14-10-lab11-15.png)
 
-1. Click **Next: Condition >** to proceed.  On the **Condition** tab, select **See all signals** link.
-
+1. Click **Next: Condition >** to proceed.
+   
    ![image](../media/14-10-lab11-16.png)
 
-   ![image](../media/14-10-lab11-17.png)
+1.  On the **Condition (1)** tab, select **See all signals (2)** link. In the **Select a signal** window, search for **Delete Virtual Machine (Virtual Machines) (3)**, select it under **Activity log (4)**, and click **Apply (5)**.  
 
-1. In the **Select a signal** window, search for **Delete Virtual Machine (Virtual Machines) (1)**, select it under **Activity log (2)**, and click **Apply (3)**.  
-
-   ![image](../media/14-10-lab11-18.png)
+    ![image](./media/14-10-lab11-18.png)
 
 1. In the **Alert logic** area (scroll down), review the **Event level** selections. Leave the default of **All selected**.
 
@@ -129,13 +128,13 @@ In this task, you will configure an action group that sends an email notificatio
 
 1. Continue working on your alert. Select **Next: Actions >**.
 
-    ![image](../media/14-10-lab11-19.png)
+    ![image](./media/14-10-lab11-19.png)
 
      >**Did you know?** You can add up to five action groups to an alert rule. Action groups are executed concurrently, in no specific order. Multiple alert rules can use the same action group.
 
 1. On the **Actions** tab, click **+ Create action group**.  
 
-    ![image](../media/lab11-e1t2p1.png)
+    ![image](./media/lab11-e1t2p1.png)
 
 1. On the **Basics** tab, enter the following values for each setting.
 
@@ -172,7 +171,7 @@ In this task, you will configure an action group that sends an email notificatio
 
 1. On the **Review + create** tab, review the configuration details and click **Create** to finalize the action group.  
 
-    ![image](../media/14-10-lab11-25.png)
+    ![image](./media/14-10-lab11-25.png)
 
 1. Once the action group is created move to the **Next: Details >** tab and enter the following values for each setting.
 
@@ -208,15 +207,17 @@ In this task, you will manually trigger the alert by performing an action that m
 
     ![image](../media/14-10-lab11-29.png)
 
-1. Select **Apply force delete (1)**, type **delete (2)** to confirm, and click **Delete (3)**.  
+1. Type **delete (1)** to confirm, and click **Delete (2)**.  
 
-    ![image](../media/14-10-lab11-30.png)
+    ![image](./media/14-10-lab11-30.png)
 
     >**Note:** When prompted with a confirmation notification, click **Delete** again to finalize the removal of the virtual machine.
 
-    ![image](../media/lab11-e1t4p1.png)  
+    ![image](./media/lab11-e1t4p1.png)  
 
 1. In the title bar, select the **Notifications** icon and wait until **vm0** is successfully deleted.
+
+    ![image](./media/hs47.png) 
 
 1. You should receive a notification email that reads, **Important notice: Azure Monitor alert VM was deleted was activated...** If not, open your email program and look for an email from azure-noreply@microsoft.com.
 
@@ -226,7 +227,7 @@ In this task, you will manually trigger the alert by performing an action that m
 
 1. You should get the verbose alerts that were generated by deleting **vm0**.
 
-    ![image](../media/up14-10-lab11-31.1.png)
+    ![image](./media/hs48.png)
    
     >**Note:** It can take a few minutes for the alert email to be sent and for the alerts to be updated in the portal. If you don't want to wait, continue to the next task and then return. 
 
@@ -281,7 +282,7 @@ Enter these settings for the scheduling of the alert processing rule:
     | Rule name | `Planned Maintenance` **(2)**|
     | Description | `Suppress notifications during planned maintenance.` **(3)**|
 
-    ![image](../media/14-10-lab11-39.png)
+    ![image](./media/14-10-lab11-39.png)
 
 1. Review the alert processing rule summary and click **Create** to finalize and deploy the rule.  
 
