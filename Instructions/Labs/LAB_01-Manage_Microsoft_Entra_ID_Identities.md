@@ -135,7 +135,7 @@ In this task, you will create a group account. Group accounts can include user a
 
     - Select **No owners selected (5)**.
 
-    - In the **Add owners** page, search for **<inject key="AzureAdUserEmail"></inject>** and select **<inject key="AzureAdUserEmail"></inject> (7)** (shown in the top right corner) as the owner. Notice you can have more than one owner. 
+    - In the **Add owners** page, search for **<inject key="AzureAdUserEmail"></inject> (6)** and select **<inject key="AzureAdUserEmail"></inject> (7)** (shown in the top right corner) as the owner. Notice you can have more than one owner. 
 
       ![image](../Labs/media/lab1-11.png)
 

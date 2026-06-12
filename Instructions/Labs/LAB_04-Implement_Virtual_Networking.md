@@ -79,7 +79,7 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. Wait for the virtual network to deploy and then select **Go to resource**.
 
-    ![image](../media/7-10-lab4-10.png)
+    ![image](./media/7-10-lab4-10.png)
    
 1. Take a minute to verify the **Address space** and the **Subnets**. Notice your other choices in the **Settings** blade. 
    
@@ -192,7 +192,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 1. After the NSG is deployed, click **Go to resource**.
 
-     ![image](../media/7-10-lab4-22.png)
+     ![image](./media/7-10-lab4-22.png)
 
 1. Under **Settings (1)** click **Subnets (2)** and then **+ Associate (3)**.
 
@@ -299,7 +299,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
    
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
 
-     ![image](../media/7-10-lab4-32.png)
+     ![image](./media/7-10-lab4-32.png)
 
 1. On the **Overview** blade  select **Recordsets** and notice the names of the four Azure DNS name servers assigned to the zone.
 
@@ -370,7 +370,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
 
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
 
-     ![image](../media/7-10-lab4-43.png)
+     ![image](./media/7-10-lab4-43.png)
 
 1. Notice on the **Overview** blade there are no name server records. 
 

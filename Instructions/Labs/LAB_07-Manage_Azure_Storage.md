@@ -240,7 +240,7 @@ In this task, you will create a blob container and upload a blob into it.
 ### Task 3: Create and configure an Azure File storage
 In this task, you will create and configure Azure Files shares.
 
-1. In the Azure portal, navigate back to the blade of the storage account you created in the task 2 of this lab and, in the **Data storage** section, click **Classic File shares (1)**. Click **+ Classic File share (2)**.
+1. In the Azure portal, navigate back to the blade of the storage account you created in the task 2 of this lab and, in the **Data storage** section, click **Classic file shares (1)**. Click **+ Classic file share (2)**.
 
      ![image](./media/10-10-lab7-30.png)
 
@@ -271,7 +271,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. Return to your storage account and select **Storage Browser (1)**. The Azure Storage Browser is a portal tool that lets you quickly view all the storage services under your account.
 
-1. Select **File shares (2)** and verify your **az104-07-share (3)** directory is present.
+1. Select **Classic file shares (2)** and verify your **az104-07-share (3)** directory is present.
 
      ![image](./media/up10-10-lab7-35.png)
 
