@@ -191,7 +191,7 @@ In this task, you will implement Azure virtual-machine level backup to ensure da
   
         >**Note:** Wait for the backup to be enabled. This should take about 2 minutes.
 
-1. Once deployment finish click on **Go to Resouces**.
+1. Once deployment finish click on **Go to Resources**.
    
     ![image](../media/14-10-lab10-25.png)
 
