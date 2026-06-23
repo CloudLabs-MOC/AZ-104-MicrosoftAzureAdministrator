@@ -75,13 +75,16 @@ In this task, you will deploy a virtual machine (VM) on Azure, which will serve 
 
 1. Take a minute to review all the insights, detection, triage, and diagnosis tools that are available.
 
-1. Select **View** in the **VM Insights** box, and then select **Configure Insights**.
+1. Select **View** in the **VM Insights** box.
 
     ![image](../media/14-10-lab11-9.png)
+
+1. Then select **Configure Insights**.
 
     ![image](../media/14-10-lab11-10.png)
 
 1. Select **Enable** next to your virtual machine.
+
     ![image](../media/up14-10-lab11-11.png)
 
 1. Ensure **Open Telemetry Metrics (1)** is **not** checked, select **[Classic] Log-based metrics**, then click **Review + enable (3)**. 
@@ -271,10 +274,11 @@ Enter these settings for the scheduling of the alert processing rule:
     | Start | Enter today's date at 10 pm. **(2)** |
     | End | Enter tomorrow's date at 7 am. **(3)** |
     | Time zone | Select the local timezone. **(4)** |
+    | Select **Next: Details > (5)** |
 
     ![image](../media/14-10-lab11-38.png)
 
-1. Select **Next: Details > (5)** and enter the following settings, then click **Review + create (4)**.
+1. Enter the following settings, then click **Review + create (4)**.
 
     | Setting | Value |
     |---------|---------|
@@ -282,7 +286,7 @@ Enter these settings for the scheduling of the alert processing rule:
     | Rule name | `Planned Maintenance` **(2)**|
     | Description | `Suppress notifications during planned maintenance.` **(3)**|
 
-    ![image](./media/14-10-lab11-39.png)
+    ![image](../media/14-10-lab11-39.png)
 
 1. Review the alert processing rule summary and click **Create** to finalize and deploy the rule.  
 
@@ -307,6 +311,8 @@ In this task, you will utilize Azure Monitor to query and analyze the data colle
 1. Select  **Queries (1)** tab, search for `Count heartbeats` **(2)** and then under **Virtual machines**, select **Count heartbeats (3)**.
 
     ![image](../media/lab11-e1t6p2.png)
+
+    > **Note:** Please wait `10-15 mins` to get the logs.
 
 1. You should receive a heartbeat count **(1)** for when the virtual machine was running.
 

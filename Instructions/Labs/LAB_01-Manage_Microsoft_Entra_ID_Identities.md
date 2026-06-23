@@ -36,15 +36,15 @@ In this task, you will create new user accounts in Microsoft Entra ID and config
 
      ![](../Labs/media/2-10-l1-6.png)
 
-1. Create a new user on the **Basics (1)** tab with the following settings (leave others with their defaults) and select **Next: properties (6) >**.
+1. Create a new user on the **Basics** tab with the following settings (leave others with their defaults) and select **Next: properties (6) >**.
 
     | Setting | Value |
     | --- | --- |
-    | User principal name | **`az104-user1` (2)**  |
-    | Display Name | **`az104-user1` (3)** |
-    | Auto-generate password | unchecked **(4)** |
-    | Password | **Provide a secure password (5)** |
-    | Account enabled | **Checked (7)** |
+    | User principal name | **`az104-user1` (1)**  |
+    | Display Name | **`az104-user1` (2)** |
+    | Auto-generate password | unchecked **(3)** |
+    | Password | **Provide a secure password (4)** |
+    | Account enabled | **Checked (5)** |
     
       >**Note:** **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
     
@@ -70,7 +70,7 @@ In this task, you will create new user accounts in Microsoft Entra ID and config
 
    ![image](../Labs/media/lab1-4.png)
 
-1. Navigate back to the **Users - All users** blade, and then click **+ New user (1)** then select **+ Invite external user (2)**.
+1. Navigate back to the **Users - All users** blade, and then click **+ New user (1)** then select **Invite external user (2)**.
 
      ![](../Labs/media/10-lab1-2.png)
 
@@ -111,7 +111,7 @@ In this task, you will create new user accounts in Microsoft Entra ID and config
 
 In this task, you will create a group account. Group accounts can include user accounts or devices. These are two basic ways members are assigned to groups: Statically and Dynamically. Static groups require administrators to add and remove members manually. Dynamic groups update automatically based on the properties of a user account or device. For example, job title.
         
-1. In the Azure portal, navigate back to the **Entra ID tenant** blade and under **manage (1)** click **Groups (2)**.
+1. In the Azure portal, navigate back to the **Entra ID tenant** blade and under **Manage (1)** click **Groups (2)**.
 
     ![](../Labs/media/2-10-l1-18.png)           
 

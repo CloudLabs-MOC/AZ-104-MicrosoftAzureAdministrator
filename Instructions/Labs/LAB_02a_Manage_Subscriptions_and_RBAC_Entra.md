@@ -87,7 +87,7 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
     ![image](./media/10-lab2-5.png) 
 
-1. On the **Add role assignment** blade, search for and select the **Virtual Machine Contributor (2)**. The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to. Select **Next (3)**.
+1. On the **Add role assignment** blade, search for **Virtual Machine Contributor (1)** and select the **Virtual Machine Contributor (2)**. The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to. Select **Next (3)**.
 
     ![image](./media/3-10-l2-8.png) 
 

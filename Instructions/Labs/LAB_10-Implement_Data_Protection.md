@@ -41,9 +41,11 @@ In this task, you will deploy two virtual machines that will serve as test envir
 
      ![image](../media/14-10-lab10-3.png)
 
-1. Select **Edit parameters** and then select the **Load file** option.
+1. Select **Edit parameters**.
 
-    ![image](../media/14-10-lab10-4.png)
+     ![image](../media/14-10-lab10-4.png)
+
+1. Then select the **Load file** option.
 
     ![image](../media/14-10-lab10-5.png)
 
