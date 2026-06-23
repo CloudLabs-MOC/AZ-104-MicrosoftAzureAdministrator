@@ -161,7 +161,7 @@ In this task, you will focus on identifying and remediating non-compliant resour
 
       ![image](../Labs/media/l2-image37n.png)
 
-1. To specify the **Policy definition**, click the ellipsis button **(1)** and then search for and select **Inherit a tag from the resource group if missing (2)** then click on **Add (3)** if not selected in the definition.
+1. To specify the **Policy definition**, click the ellipsis button **(1)** and then search for **Inherit a tag from the resource group if missing (2)** and select **Inherit a tag from the resource group if missing (3)** then click on **Add (4)** if not selected in the definition.
 
     ![image](./media/l2-image37.png)
 
@@ -204,7 +204,7 @@ In this task, you will focus on identifying and remediating non-compliant resour
     
     >**Note:** **It might take between 5 and 25 minutes for the policy to take effect.**
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search and select **Storage accounts** under services.  
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search **Storage accounts (1)** and select **Storage accounts (2)** under services.  
 
     ![image](./media/3-10-l2-57.png)
 

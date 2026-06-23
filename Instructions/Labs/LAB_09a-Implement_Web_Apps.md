@@ -85,16 +85,16 @@ In this task, you will create a staging deployment slot in Azure Web Apps, which
 
      ![image](../media/r-44.png)    
 
-1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section in the left navigation pane of the web app blade, click **Deployment slots (1)**.
+1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section in the left navigation pane of the web app blade, click **Deployment slots (1)**, click **Add slot (2)**.
 
-1. Click **Add slot (2)**, and add a new slot with the following settings then click on **Add (3)**. 
+     ![image](../media/14-10-lab9-9.png)
+
+1. Add a new slot with the following settings then click on **Add (3)**. 
 
     | Setting | Value |
     | --- | ---|
     | Name | **staging (1)** |
     | Clone settings from | **Do not clone settings (2)**|
-
-    ![image](../media/14-10-lab9-9.png)
 
     ![image](../media/up14-10-lab9-10.png)
 

@@ -95,7 +95,7 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
  
 1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
-    ![Launch Azure Portal](../Labs/media/za1.png)
+   ![Launch Azure Portal](../Labs/media/za1.png)
  
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  

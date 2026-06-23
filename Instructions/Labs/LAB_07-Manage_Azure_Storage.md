@@ -291,7 +291,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. Navigate to File share and select **az104-07-share**.
 
-1. Select **Upload**. click on **Browse to a file**.
+1. Select **Upload (1)**. click on **Browse to a file (2)**.
 
      ![image](./media/az104-65.png)
 
@@ -396,8 +396,6 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 + [Optimize your cost with Azure Blob Storage](https://learn.microsoft.com/training/modules/optimize-your-cost-azure-blob-storage/). Learn how to optimize your cost with Azure Blob Storage.
 + [Control access to Azure Storage with shared access signatures](https://learn.microsoft.com/training/modules/control-access-to-azure-storage-with-sas/). Grant access to data stored in your Azure Storage accounts securely by using shared access signatures.
-
-
 
 
 ### You have successfully completed the lab
