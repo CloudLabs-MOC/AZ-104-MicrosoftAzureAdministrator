@@ -22,7 +22,7 @@ In this task, you will create and configure an Azure Storage account.
    
      ![image](./media/10-10-lab7-3.png)
 
-1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values) then click on **Next (8)**:
+1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values) then click on **Next (9)**:
 
     | Setting | Value |
     | --- | --- |
@@ -30,9 +30,10 @@ In this task, you will create and configure an Azure Storage account.
     | Resource group | Select **existing** resource group **az104-07-rg1 (2)** |
     | Storage account name | **strgaz104t07<inject key="DeploymentID" enableCopy="false" /> (3)** |
     | Region | **<inject key="Region" enableCopy="false"/> (4)**  |
-    | Performance | **Standard (5)** |
-    | Redundancy | **Geo-redundant storage (GRS) (6)** |
-    | Make read access to data available in the event of regional unavailability. | **Check the box (7)**|
+    | Preferred storage type | **Azure Blob Storage or Azure Data Lake Storage (5)** |
+    | Performance | **Standard (6)** |
+    | Redundancy | **Geo-redundant storage (GRS) (7)** |
+    | Make read access to data available in the event of regional unavailability. | **Check the box (8)**|
 
      ![image](./media/up10-10-lab7-4-new.png)
 
@@ -100,13 +101,12 @@ In this task, you will create and configure an Azure Storage account.
 
         ![image](../media/10-10-lab7-16.png)
       
-      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-      > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-      > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com
-. We are available 24/7 to help
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
       
-      <validation step="a2a7470f-6ebd-4f12-a4e5-2b80c67dda29" />
+  <validation step="a2a7470f-6ebd-4f12-a4e5-2b80c67dda29" />
 
 ### Task 2: Create and configure secure blob storage
 
@@ -249,17 +249,19 @@ In this task, you will create and configure Azure Files shares.
     | Setting | Value |
     | --- | --- |
     | Name | **az104-07-share (1)** |
-    | Tier | **transaction optimized (2)** |
+    | Tier | **Transaction optimized (2)** |
 
      ![image](./media/az104-24.png)    
 
-1. In the **Backup** tab, uncheck **Enable backup (1)**, then click **Review + create (2)** and select **Create** to finalize the file share setup.
+1. In the **Backup** tab, uncheck **Enable backup (1)**, then click **Review + create (2)**.
 
     | Setting | Value |
     | --- | --- |
     | Enable backup | **Uncheck (1)** |
 
      ![image](./media/10-10-lab7-32.png)
+
+1. Select **Create** to finalize the file share setup.
 
      ![image](./media/10-10-lab7-33.png)
 
@@ -373,7 +375,7 @@ In this task, you will create and configure Azure Files shares.
 
     >**Note:** You should receive a message *not authorized to perform this operation*. You are not connecting from the virtual network. It may take a couple of minutes for this to take effect.
 
-     ![image](../media/10-10-lab7-45.png)
+     ![image](./media/10-10-lab7-45.png)
 
 ### Review
 
