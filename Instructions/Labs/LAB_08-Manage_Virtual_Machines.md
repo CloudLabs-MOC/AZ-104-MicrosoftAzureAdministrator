@@ -23,9 +23,9 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
       ![Image](../Labs/media/r26.png)
 
-1. On the **Compute infrastructure | Virtual machines** blade, click **+ Create (1)**, and then select in the drop-down **Virtual machine**. Notice your other choices.
+1. On the **Compute infrastructure | Virtual machines** blade, click **+ Create (1)**, and then select in the drop-down **Virtual machine (2)**. Notice your other choices.
 
-    ![image](./media/13-10-lab8-2.png)
+    ![image](./media/h2.png)
 
 1. On the **Basics** tab, in the **Availability zone** drop down menu, place a checkmark next to **Zone 2**. This should select both **Zone 1** and **Zone 2**.
 

@@ -45,6 +45,7 @@ In this task, you create a core services virtual network with a virtual machine.
     | Public inbound ports | **None (12)** |
 
     ![image](./media/h3.png)
+    
     ![image](./media/h4.png)        
 
 1. On the **Disks** tab take the defaults and then select **Next : Networking >**.

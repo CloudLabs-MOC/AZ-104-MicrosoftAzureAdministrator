@@ -398,6 +398,4 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + [Control access to Azure Storage with shared access signatures](https://learn.microsoft.com/training/modules/control-access-to-azure-storage-with-sas/). Grant access to data stored in your Azure Storage accounts securely by using shared access signatures.
 
 
-
-
 ### You have successfully completed the lab
