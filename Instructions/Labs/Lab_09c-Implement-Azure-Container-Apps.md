@@ -1,94 +1,99 @@
-# Lab : Implement Azure Container Apps
+# Lab - Implement Azure Container Apps
 
-## Lab scenario
-Azure Container Apps enables you to run microservices and containerized applications on a serverless platform. With Container Apps, you enjoy the benefits of running containers while leaving behind the concerns of manually configuring cloud infrastructure and complex container orchestrators.
+## Lab Overview
 
-## Lab objectives
-In this lab, you will complete the following tasks:
+In this lab, you will learn how to implement and deploy Azure Container Apps (ACA), a serverless platform designed for running containerized applications with minimal infrastructure management. ACA abstracts the complexities of setting up and managing the underlying Kubernetes clusters, allowing you to focus purely on deploying and running containers in the cloud.
 
-- Task 1: Create a container app and environment
-- Task 2: Test and verify deployment of the container app
+## Lab Objectives
 
-## Estimated timing: 20 Minutes
+- Task 1: Create and configure an Azure Container App and environment.
+- Task 2: Test and verify deployment of the Azure Container App.
 
-## Architecture diagram
+## Exercise 3: Implement Azure Container Apps
 
-   ![image](../media/az-104lab(9)new(1).png)
- 
+In this exercise, you will explore the process of creating and deploying containerized applications using Azure Container Apps (ACA), a fully managed serverless platform
 
-## Task 1: Create a container app and environment
+## Task 1: Create and configure an Azure Container App and environment
 
-1. In the Azure portal, in the Search resources, services, and docs search and select **Container apps** then on the **Container instances** blade, click **+ Create**.
+Azure Container Apps take the concept of a managed Kubernetes cluster a step further and manages the cluster environment as well as provides other managed services on top of the cluster. Unlike an Azure Kubernetes cluster, where you must still manage the cluster, an Azure Container Apps instance removes some of the complexity to setting up a Kubernetes cluster.
 
-### Basics tab
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Container apps (1)**, and then select **Container apps (2)** under services.
 
-In the **Basics** tab, Specify the following actions.
+     ![image](./media/14-10-lab9-43.png)
+   
+1. **Container instances** blade, click **+ Create (1)**, from drop-down menu, select **Container App (2)**. Notice the other choices.
 
-1. Enter the following values in the **Project details** section.
+     ![image](../media/14-10-lab9-44.png)
+
+1. Use the following information to fill out the details on the **Basics** tab and click on **Next: Container > (8)**
 
     | Setting | Action |
     |---|---|
-    | Subscription | Select your Azure subscription. |
-    | Resource group | Select `az104-09c-rg1`. |
-    | Container app name |  Enter `my-container-app`. |
+    | Subscription | Select your Azure subscription **(1)** |
+    | Resource group | az104-09c-rg1 **(2)** |
+    | Container app name |  az-104-9c-ca **(3)**|
+    | Region    | **<inject key="Region" enableCopy="false" /> (4)** |
+    | Container Apps Environment |  Select **Create new (5)** > Environment name to **my-environment (6)** > **Create (7)** |
 
-#### Create an environment
+    ![image](../media/14-10-lab9-46.png)
 
-Next, create an environment for your container app.
-
-1. Select the appropriate region.
-
-    | Setting | Value |
-    |--|--|
-    | Region | **Your choice**. |
-
-1. In the **Create Container Apps environment** field, select the **Create new** link.
-1. In the **Create Container Apps Environment** page on the **Basics** tab, enter the following values:
-
-    | Setting | Value |
-    |--|--|
-    | Environment name | Enter `my-environment`. |
-    | Zone redundancy | Select **Disabled** |
-
-1. Select the **Monitoring** tab to create a Log Analytics workspace.
-1. Select the **Create new** link in the **Log Analytics workspace** field and enter the following values.
-
-    | Setting | Value |
-    |--|--|
-    | Name | Enter `my-container-apps-logs` |
-  
-    >**Note**: The **Location** field is pre-filled with your region for you.
-
-1. Select **OK** and then **Create**. 
-
-1. Back on the **Create Container App** page  click **Next: Container**.
-
-1. On the **Container** tab, Check the box next to **Use quickstart image**.
-
-1. Select the **Review and create** button at the bottom of the page.
-
-1. Select **Create**, This step may take a couple of minutes. 
-
-    >**Note**: A page with the message **Deployment is in progress** is displayed.  Once the deployment is successfully completed, you'll see the message: **Your deployment is complete**.
+    ![image](../media/14-10-lab9-45.png)
    
-## Task 2: Test and verify deployment of the container app
+1. On the **Container** tab, ensure that **Use quickstart image (1)** is enabled and that the quickstart image is set to **Simple hello world container (2)**. Select the **Review + create (3)**. 
+
+    ![image](../media/14-10-lab9-47.png)
+
+1. Select **Create**.
+
+    ![image](../media/up14-10-lab9-48.png)
+
+     >**Note:** Wait for the container app to deploy. This will take a couple of minutes. 
+ 
+## Task 2: Test and verify deployment of the Azure Container App
+
+By default, the Azure container app that you create will accept traffic on port 80 using the sample Hello World application. Azure Container Apps will provide a DNS name for the application. Copy and navigate to this URL to ensure that the application is up and running.
 
 1. Select **Go to resource** to view your new container app.
 
+     ![image](./media/14-10-lab9-49.png)
+
 1. Select the link next to **Application URL** to view your application.
 
+    ![image](../media/up14-10-lab9-50.png)
+
 1. Verify you receive the **Your Azure Container Apps app is live** message.
+   
+    ![image](../media/up14-10-lab9-51.png)
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.   
+   <validation step="a44b06f7-b794-410a-8f4a-149c92269c02" />
 
-## Review
-In this lab, you have completed:
-+ Create a container app and environment
-+ Test and verify deployment of the container app
+### Review
+In this lab, you have completed the following:
 
-## You have successfully completed the lab
+- Created and configured an Azure Container App and environment.
+- Tested and verified deployment of the Azure Container App.
+
+## Extend your learning with Copilot
+Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
+
++ Summarize the steps to create and configure an Azure Container App.
++ Compare and contrast Azure Container Apps to Azure Kubernetes Service.
+
+## Learn more with self-paced training
+
++ [Configure a container app in Azure Container Apps](https://learn.microsoft.com/training/modules/configure-container-app-azure-container-apps/). Examines the features and capabilities of Azure Container Apps, and then focuses on how to create, configure, scale, and manage container apps using Azure Container Apps.
+
+## Key takeaways
+
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
++ Azure Container Apps (ACA) is a serverless platform that allows you to maintain less infrastructure and save costs while running containerized applications.
++ Container Apps provides server configuration, container orchestration, and deployment details. 
++ Workloads on ACA are usually long-running processes like a Web App.
+
+### You have successfully completed the lab
